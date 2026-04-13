@@ -616,7 +616,7 @@ def build_embed(site_name, site_color, items, show_brand=False):
         price = item.get("price", "")
         url = item.get("url", "")
 
-        name_part = name
+        name_part = f"[{name}]({url})" if url else name
         brand_part = f" `{brand}`" if brand and show_brand else ""
         price_part = f"  {price}" if price else ""
 
