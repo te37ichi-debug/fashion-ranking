@@ -46,6 +46,9 @@ def fetch_zozotown(max_items=20):
     options.add_argument("--lang=ja-JP")
     options.add_argument("--window-size=1280,720")
 
+    chrome_path = os.environ.get("CHROME_PATH")
+    if chrome_path:
+        options.binary_location = chrome_path
     driver = uc.Chrome(options=options, headless=IS_CI, version_main=None if IS_CI else 146)
 
     try:
@@ -113,6 +116,9 @@ def fetch_zara(max_items=20):
     options.add_argument("--lang=ja-JP")
     options.add_argument("--window-size=1280,720")
 
+    chrome_path = os.environ.get("CHROME_PATH")
+    if chrome_path:
+        options.binary_location = chrome_path
     driver = uc.Chrome(options=options, headless=IS_CI, version_main=None if IS_CI else 146)
 
     try:
