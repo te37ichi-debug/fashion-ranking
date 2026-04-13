@@ -1,6 +1,6 @@
 {
   "date": "2026-04-13",
-  "fetched_at": "2026-04-13T01:57:14.416837",
+  "fetched_at": "2026-04-13T02:01:40.943740",
   "zara": {
     "source": "zara.com (official API)",
     "count": 20,
@@ -456,31 +456,31 @@
       },
       {
         "rank": 2,
-        "name": "シュプリーム x MM6 メゾンマルジェラ ボックスロゴ ジップアップ フーデッドスウェットシャツ \"ネイビー\"",
-        "price": "¥86,500〜",
-        "image": "https://cdn.snkrdunk.com/upload_bg_removed/78fdcb98-147d-424f-bd49-9cbc9aa7d426.webp?size=m",
-        "url": "https://snkrdunk.com/apparels/781177?slide=right"
-      },
-      {
-        "rank": 3,
         "name": "パレス x ナイキ フォントスウッシュ Tシャツ \"ブラック\"",
         "price": "¥15,996〜",
         "image": "https://cdn.snkrdunk.com/upload_bg_removed/a249ced9-d089-479f-bc8a-9183a2667d5a.webp?size=m",
         "url": "https://snkrdunk.com/apparels/797913?slide=right"
       },
       {
-        "rank": 4,
+        "rank": 3,
         "name": "キズナアイ x スニーカーダンク \\ 万年喪服 描き下ろしアクリルスタンド \"マルチ\"",
         "price": "",
         "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260311035957-0.webp?size=m",
         "url": "https://snkrdunk.com/apparels/772227?slide=right"
       },
       {
-        "rank": 5,
+        "rank": 4,
         "name": "シュプリーム x MM6 メゾンマルジェラ ボックスロゴ ジップアップ フーデッドスウェットシャツ \"ブラック\"",
         "price": "¥77,500〜",
         "image": "https://cdn.snkrdunk.com/upload_bg_removed/ac64dc36-688e-4c00-abfc-46cbf1ddeb70.webp?size=m",
         "url": "https://snkrdunk.com/apparels/781175?slide=right"
+      },
+      {
+        "rank": 5,
+        "name": "シュプリーム x MM6 メゾンマルジェラ ボックスロゴ ジップアップ フーデッドスウェットシャツ \"ネイビー\"",
+        "price": "¥86,500〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/78fdcb98-147d-424f-bd49-9cbc9aa7d426.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/781177?slide=right"
       },
       {
         "rank": 6,
@@ -527,7 +527,7 @@
       {
         "rank": 12,
         "name": "リーバイスビンテージクロージング 1944 501 ジーンズ リジット \"ダーク インディゴ ブルー\"",
-        "price": "¥41,963〜",
+        "price": "¥41,962〜",
         "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251030093656-4.webp?size=m",
         "url": "https://snkrdunk.com/apparels/107382?slide=right"
       },
