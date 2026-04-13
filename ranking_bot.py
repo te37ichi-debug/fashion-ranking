@@ -60,7 +60,7 @@ def fetch_zozotown(max_items=20):
             pass
     elif not IS_CI:
         version_main = 146
-    driver = uc.Chrome(options=options, headless=IS_CI, version_main=version_main)
+    driver = uc.Chrome(options=options, headless=False, version_main=version_main)
 
     try:
         driver.get("https://zozo.jp/ranking/all-sales-men.html")
@@ -141,7 +141,7 @@ def fetch_zara(max_items=20):
             pass
     elif not IS_CI:
         version_main = 146
-    driver = uc.Chrome(options=options, headless=IS_CI, version_main=version_main)
+    driver = uc.Chrome(options=options, headless=False, version_main=version_main)
 
     try:
         driver.get("https://www.zara.com/jp/")

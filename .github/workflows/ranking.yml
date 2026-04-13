@@ -37,10 +37,14 @@ jobs:
       - name: Set Chrome binary path
         run: echo "CHROME_PATH=${{ steps.setup-chrome.outputs.chrome-path }}" >> $GITHUB_ENV
 
+      - name: Install xvfb
+        run: sudo apt-get install -y xvfb
+
       - name: Run ranking bot
         env:
           RANKING_WEBHOOK_URL: ${{ secrets.RANKING_WEBHOOK_URL }}
-        run: python ranking_bot.py
+          DISPLAY: ":99"
+        run: xvfb-run --auto-servernum --server-args="-screen 0 1280x720x24" python ranking_bot.py
 
       - name: Commit and push results
         run: |
