@@ -49,7 +49,18 @@ def fetch_zozotown(max_items=20):
     chrome_path = os.environ.get("CHROME_PATH")
     if chrome_path:
         options.binary_location = chrome_path
-    driver = uc.Chrome(options=options, headless=IS_CI, version_main=None if IS_CI else 146)
+    # Chrome バージョンを自動検出
+    version_main = None
+    if IS_CI and chrome_path:
+        import subprocess as _sp
+        try:
+            out = _sp.check_output([chrome_path, "--version"], text=True)
+            version_main = int(out.strip().split()[-1].split(".")[0])
+        except Exception:
+            pass
+    elif not IS_CI:
+        version_main = 146
+    driver = uc.Chrome(options=options, headless=IS_CI, version_main=version_main)
 
     try:
         driver.get("https://zozo.jp/ranking/all-sales-men.html")
@@ -119,7 +130,18 @@ def fetch_zara(max_items=20):
     chrome_path = os.environ.get("CHROME_PATH")
     if chrome_path:
         options.binary_location = chrome_path
-    driver = uc.Chrome(options=options, headless=IS_CI, version_main=None if IS_CI else 146)
+    # Chrome バージョンを自動検出
+    version_main = None
+    if IS_CI and chrome_path:
+        import subprocess as _sp
+        try:
+            out = _sp.check_output([chrome_path, "--version"], text=True)
+            version_main = int(out.strip().split()[-1].split(".")[0])
+        except Exception:
+            pass
+    elif not IS_CI:
+        version_main = 146
+    driver = uc.Chrome(options=options, headless=IS_CI, version_main=version_main)
 
     try:
         driver.get("https://www.zara.com/jp/")
@@ -687,10 +709,18 @@ def main():
     snkr_apparel = fetch_snkrdunk_apparel()
 
     # 4. ZOZOTOWN（undetected-chromedriver）
-    zozotown_items = fetch_zozotown()
+    try:
+        zozotown_items = fetch_zozotown()
+    except Exception as e:
+        print(f"[ZOZOTOWN] 致命的エラー: {e}")
+        zozotown_items = []
 
     # 5. ZARA（undetected-chromedriver）
-    zara_items = fetch_zara()
+    try:
+        zara_items = fetch_zara()
+    except Exception as e:
+        print(f"[ZARA] 致命的エラー: {e}")
+        zara_items = []
 
     # 結果表示
     print_summary("ZARA", zara_items)
