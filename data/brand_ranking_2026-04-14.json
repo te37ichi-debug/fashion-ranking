@@ -1,6 +1,6 @@
 {
   "date": "2026-04-14",
-  "fetched_at": "2026-04-14T20:23:45.683729",
+  "fetched_at": "2026-04-14T20:34:45.605787",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -253,66 +253,66 @@
         },
         {
           "rank": 12,
-          "name": "adidas WAFFLE CLASSIC TRACK TOP",
-          "price": "¥14,300",
-          "image": "https://assets.atmos-tokyo.com/items/S/kq6865-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kq6865"
-        },
-        {
-          "rank": 13,
           "name": "adidas WAFFLE LONG SLEEVE POLO",
           "price": "¥8,800",
           "image": "https://assets.atmos-tokyo.com/items/S/kq6866-1s.jpg",
           "url": "https://www.atmos-tokyo.com/item/adidas/kq6866"
         },
         {
-          "rank": 14,
+          "rank": 13,
           "name": "adidas WAFFLE LONG SLEEVE POLO",
           "price": "¥8,800",
           "image": "https://assets.atmos-tokyo.com/items/S/kq6867-1s.jpg",
           "url": "https://www.atmos-tokyo.com/item/adidas/kq6867"
         },
         {
-          "rank": 15,
+          "rank": 14,
           "name": "adidas ADIZERO ADIOS PRO 4 M",
           "price": "¥28,600",
           "image": "https://assets.atmos-tokyo.com/items/S/jq4445-1s.jpg",
           "url": "https://www.atmos-tokyo.com/item/adidas/jq4445"
         },
         {
-          "rank": 16,
+          "rank": 15,
           "name": "adidas ADIZERO ADIOS PRO 4 W",
           "price": "¥28,600",
           "image": "https://assets.atmos-tokyo.com/items/S/jq4446-1s.jpg",
           "url": "https://www.atmos-tokyo.com/item/adidas/jq4446"
         },
         {
-          "rank": 17,
+          "rank": 16,
           "name": "adidas ZX 8000 Made in Germany",
           "price": "¥28,600",
           "image": "https://assets.atmos-tokyo.com/items/S/jr4609-1s.jpg",
           "url": "https://www.atmos-tokyo.com/item/adidas/jr4609"
         },
         {
-          "rank": 18,
+          "rank": 17,
           "name": "adidas ADILENIUM 5.0  TRACK TOP",
           "price": "¥18,700",
           "image": "https://assets.atmos-tokyo.com/items/S/kx4830-1s.jpg",
           "url": "https://www.atmos-tokyo.com/item/adidas/kx4830"
         },
         {
-          "rank": 19,
+          "rank": 18,
           "name": "adidas ADILENIUM 5.0  TRACK TOP",
           "price": "¥18,700",
           "image": "https://assets.atmos-tokyo.com/items/S/kx4831-1s.jpg",
           "url": "https://www.atmos-tokyo.com/item/adidas/kx4831"
         },
         {
-          "rank": 20,
+          "rank": 19,
           "name": "adidas ADILENIUM 5.0  TRACKPANT",
           "price": "¥15,950",
           "image": "https://assets.atmos-tokyo.com/items/S/kx4832-1s.jpg",
           "url": "https://www.atmos-tokyo.com/item/adidas/kx4832"
+        },
+        {
+          "rank": 20,
+          "name": "adidas ADILENIUM 5.0  TRACKPANT",
+          "price": "¥15,950",
+          "image": "https://assets.atmos-tokyo.com/items/S/kx4833-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kx4833"
         }
       ]
     },
@@ -365,17 +365,17 @@
         },
         {
           "rank": 7,
-          "name": "【Thug Club】Armor Hoodie [正規品] フーディ パーカー 韓国",
-          "price": "¥20,760",
-          "image": "https://cdn-images.buyma.com/imgdata/item/240213/0103692516/599925018/210.jpg",
-          "url": "https://www.buyma.com/item/103692516/"
-        },
-        {
-          "rank": 8,
           "name": "【THUG CLUB】Thug Club Armor Hoodie◆",
           "price": "¥23,980",
           "image": "https://cdn-images.buyma.com/imgdata/item/240317/0104863674/608466674/210.jpg",
           "url": "https://www.buyma.com/item/104863674/"
+        },
+        {
+          "rank": 8,
+          "name": "【Thug Club】Armor Hoodie [正規品] フーディ パーカー 韓国",
+          "price": "¥20,760",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240213/0103692516/599925018/210.jpg",
+          "url": "https://www.buyma.com/item/103692516/"
         },
         {
           "rank": 9,
@@ -1762,6 +1762,153 @@
           "price": "¥8,800",
           "image": "https://jp.supreme.com/cdn/shop/files/BN18_SS26_NewEraTokyoScriptBN_WhiteStripe01_360x.jpg?v=1775595863",
           "url": "https://jp.supreme.com/products/gcg-6fzsuqkcxbf?new=1"
+        }
+      ]
+    },
+    "stussy_snkrdunk": {
+      "name": "Stüssy (SNKRDUNK)",
+      "source": "https://snkrdunk.com/search?brandIds=stussy&sort=hottest&page=1",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "Stussy x Patta Sound Connection Tee \"Black\" 3903843",
+          "price": "¥9,300",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250308085220-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/284097"
+        },
+        {
+          "rank": 2,
+          "name": "Stussy × Nike Air Force 1 Mid \"Black and Light Bone\"",
+          "price": "¥23,800",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20211222005421-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/DJ7840-002"
+        },
+        {
+          "rank": 3,
+          "name": "Stussy x Nike Stone Washed Fleece Zip Hoodie \"Grey Heather\" (Asia Size) FJ9182-050",
+          "price": "¥27,727",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260207051215-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/717981"
+        },
+        {
+          "rank": 4,
+          "name": "Stussy Joker Tee \"White\"",
+          "price": "¥10,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/ST-SS25-296-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/639078"
+        },
+        {
+          "rank": 5,
+          "name": "Stussy x Our Legacy Work Shop Collegiate Pigment Dyed Tee \"Natural\" 3903958",
+          "price": "",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240927011839-2.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/400618"
+        },
+        {
+          "rank": 6,
+          "name": "Stussy × Nike Vandal High \"Deep Royal Blue\"",
+          "price": "¥11,600",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230601042334-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/DX5425-400"
+        },
+        {
+          "rank": 7,
+          "name": "Stussy × Nike LD-1000 SP \"Action Green\"",
+          "price": "¥14,600",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240710012031-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/FQ5369-300"
+        },
+        {
+          "rank": 8,
+          "name": "Stussy × Nike Air Force 1 Mid \"Fossil Stone\"",
+          "price": "¥19,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20220513111548-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/DJ7841-200"
+        },
+        {
+          "rank": 9,
+          "name": "Stussy × Nike Air Force 1 Mid \"Black/Black\"",
+          "price": "¥19,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20220513111548-1.webp?size=m",
+          "url": "https://snkrdunk.com/products/DJ7840-001"
+        },
+        {
+          "rank": 10,
+          "name": "Stussy × Nike Air Flight 89 Low SP \"White Habanero Red\"",
+          "price": "¥14,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20231128035416-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/FD6475-101"
+        },
+        {
+          "rank": 11,
+          "name": "Stussy × Nike Air Huarache \"Dark Olive\"",
+          "price": "¥9,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20210211012053-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/DD1381-300"
+        },
+        {
+          "rank": 12,
+          "name": "Stussy × Nike Air Penny 2 \"Fossil\"",
+          "price": "¥20,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230211004243-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/DQ5674-200"
+        },
+        {
+          "rank": 13,
+          "name": "Stussy × Nike Air Force 1 Low \"Fossil Stone\"",
+          "price": "¥44,444",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20201207074252-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/CZ9084-200"
+        },
+        {
+          "rank": 14,
+          "name": "Stussy × Nike Air Max 2013 \"Fossil\"",
+          "price": "¥33,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20220805020922-1.webp?size=m",
+          "url": "https://snkrdunk.com/products/DM6447-200"
+        },
+        {
+          "rank": 15,
+          "name": "Stussy × Nike Air Flight 89 Low SP \"White and Pecan\"",
+          "price": "¥18,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20231201032737-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/FD6475-100"
+        },
+        {
+          "rank": 16,
+          "name": "Stussy × Nike Air Penny 2 \"Rattan and Limestone\"",
+          "price": "¥22,879",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230131040959-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/DX6934-200"
+        },
+        {
+          "rank": 17,
+          "name": "Stussy × Nike Baltoro High \"Black/White\"",
+          "price": "¥18,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251010062411-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/HV0484-001"
+        },
+        {
+          "rank": 18,
+          "name": "Stussy × Nike Air Huarache \"Desert Oak\"",
+          "price": "¥15,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20210215063043-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/DD1381-200"
+        },
+        {
+          "rank": 19,
+          "name": "Stussy × Nike LD-1000 \"Particle Grey\"",
+          "price": "¥13,998",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240803010639-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/FQ5369-002"
+        },
+        {
+          "rank": 20,
+          "name": "Stussy x Patta Sound Connection Tee \"White\"",
+          "price": "¥11,200",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260202051735-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/284098"
         }
       ]
     }
