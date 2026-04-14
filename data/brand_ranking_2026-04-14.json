@@ -1,6 +1,6 @@
 {
   "date": "2026-04-14",
-  "fetched_at": "2026-04-14T19:37:41.197900",
+  "fetched_at": "2026-04-14T19:41:42.949216",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -760,21 +760,147 @@
     "satur_buyma": {
       "name": "SATUR (BUYMA)",
       "source": "https://www.buyma.com/r/_SATUR-%E3%82%BB%E3%82%BF%E3%83%BC/",
-      "count": 2,
+      "count": 20,
       "items": [
         {
           "rank": 1,
-          "name": "SATURを条件から外す",
+          "name": "★SATUR★Waffle Henry Neck T-shirt",
           "price": "¥8,720",
           "image": "https://cdn-images.buyma.com/imgdata/item/260313/0129253861/768569611/210.jpg",
           "url": "https://www.buyma.com/item/129253861/"
         },
         {
           "rank": 2,
-          "name": "タイムセール",
+          "name": "★SATUR★Small Logo Hood Zip-up",
+          "price": "¥11,220",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089297/752378126/210.jpg",
+          "url": "https://www.buyma.com/item/127089297/"
+        },
+        {
+          "rank": 3,
+          "name": "★SATUR★Essential Lawton Track Zip-up Jacket",
+          "price": "¥10,420",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086480/752357772/210.jpg",
+          "url": "https://www.buyma.com/item/127086480/"
+        },
+        {
+          "rank": 4,
+          "name": "★SATUR★Faro Over Size Boucle Cardigan",
+          "price": "¥10,999",
+          "image": "https://cdn-images.buyma.com/imgdata/item/241008/0111261892/649443801/210.jpg",
+          "url": "https://www.buyma.com/item/111261892/"
+        },
+        {
+          "rank": 5,
+          "name": "★SATUR★Teo Cotton All Day Hood Zip-up",
+          "price": "¥10,999",
+          "image": "https://cdn-images.buyma.com/imgdata/item/220824/0086251937/639346164/210.jpg",
+          "url": "https://www.buyma.com/item/86251937/"
+        },
+        {
+          "rank": 6,
+          "name": "★SATUR★刺繍 ロゴ 半袖 Ｔシャツ",
+          "price": "¥5,790",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250429/0118056330/694448051/210.jpg",
+          "url": "https://www.buyma.com/item/118056330/"
+        },
+        {
+          "rank": 7,
+          "name": "★SATUR★Lawton Lining Collar Track Zip-up Jacket",
+          "price": "¥12,720",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089084/752378274/210.jpg",
+          "url": "https://www.buyma.com/item/127089084/"
+        },
+        {
+          "rank": 8,
+          "name": "★SATUR★Mirrorball Vintage Graphic Long Sleeve",
           "price": "¥7,771",
           "image": "https://cdn-images.buyma.com/imgdata/item/260327/0129913700/773339896/210.jpg",
           "url": "https://www.buyma.com/item/129913700/"
+        },
+        {
+          "rank": 9,
+          "name": "★SATUR★Loren Small Logo Basic Sweatshirt",
+          "price": "¥8,920",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089701/752386442/210.jpg",
+          "url": "https://www.buyma.com/item/127089701/"
+        },
+        {
+          "rank": 10,
+          "name": "[24FW]★SATUR★Lawton Loose Fit Hood Zip-up★ジップアップ★",
+          "price": "¥12,890",
+          "image": "https://cdn-images.buyma.com/imgdata/item/241023/0111830677/652996865/210.jpg",
+          "url": "https://www.buyma.com/item/111830677/"
+        },
+        {
+          "rank": 11,
+          "name": "SATUR Classic Small Logo T-Shirt 5SA019",
+          "price": "¥6,690",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250404/0117305598/693441137/210.jpg",
+          "url": "https://www.buyma.com/item/117305598/"
+        },
+        {
+          "rank": 12,
+          "name": "★SATUR★Basic Crew Neck Fine Cardigan",
+          "price": "¥14,420",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240905/0110284515/720062045/210.jpg",
+          "url": "https://www.buyma.com/item/110284515/"
+        },
+        {
+          "rank": 13,
+          "name": "★SATUR★Basic Logo T-Shirt  [3PACK]",
+          "price": "¥5,949",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260327/0129914759/773340083/210.jpg",
+          "url": "https://www.buyma.com/item/129914759/"
+        },
+        {
+          "rank": 14,
+          "name": "★SATUR★ストライプデニム ジャケット",
+          "price": "¥16,320",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260227/0128593903/763668392/210.jpg",
+          "url": "https://www.buyma.com/item/128593903/"
+        },
+        {
+          "rank": 15,
+          "name": "26SS SATUR Stitch Waffle Henley Neck Long Sleeve",
+          "price": "¥8,960",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260202/0127459619/769391724/210.jpg",
+          "url": "https://www.buyma.com/item/127459619/"
+        },
+        {
+          "rank": 16,
+          "name": "SATUR Fleece Crew Neck Cardigan SA5D0640",
+          "price": "¥16,850",
+          "image": "https://cdn-images.buyma.com/imgdata/item/251002/0123262844/727801135/210.jpg",
+          "url": "https://www.buyma.com/item/123262844/"
+        },
+        {
+          "rank": 17,
+          "name": "★SATUR★Lawton All Day Track Zip-up Jacket",
+          "price": "¥10,999",
+          "image": "https://cdn-images.buyma.com/imgdata/item/230130/0091479078/679522100/210.jpg",
+          "url": "https://www.buyma.com/item/91479078/"
+        },
+        {
+          "rank": 18,
+          "name": "★SATUR★Fatigue Cargo Sweatpants",
+          "price": "¥8,820",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086074/752350697/210.jpg",
+          "url": "https://www.buyma.com/item/127086074/"
+        },
+        {
+          "rank": 19,
+          "name": "★SATUR★Seersucker Shirt",
+          "price": "¥9,344",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260327/0129919578/773363479/210.jpg",
+          "url": "https://www.buyma.com/item/129919578/"
+        },
+        {
+          "rank": 20,
+          "name": "★SATUR★Plain Long Sleeve Cardigan",
+          "price": "¥9,420",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250718/0120419241/710381690/210.jpg",
+          "url": "https://www.buyma.com/item/120419241/"
         }
       ]
     },
@@ -834,94 +960,94 @@
         },
         {
           "rank": 8,
-          "name": "山田涼介さん着用 AMIPARIS ロゴストライプシャツ 関税送料込み",
+          "name": "AMI PARIS",
           "price": "¥66,500",
           "image": "https://cdn-images.buyma.com/imgdata/item/250830/0121786400/719224540/210.jpg",
           "url": "https://www.buyma.com/item/121786400/"
         },
         {
           "rank": 9,
-          "name": "[AMI PARIS] スモールハートロゴ 半袖Tシャツ ☆送料込☆",
-          "price": "¥16,820",
-          "image": "https://cdn-images.buyma.com/imgdata/item/250523/0118685948/698785591/210.jpg",
-          "url": "https://www.buyma.com/item/118685948/"
-        },
-        {
-          "rank": 10,
           "name": "【AMI Paris】Ami de COEUR オーガニックコットンポロシャツ",
           "price": "¥15,800",
           "image": "https://cdn-images.buyma.com/imgdata/item/230409/0093763869/533099556/210.jpg",
           "url": "https://www.buyma.com/item/93763869/"
         },
         {
-          "rank": 11,
+          "rank": 10,
           "name": "送料関税込☆AMI PARIS フリース　シェルパ ジャケット☆超人気",
           "price": "¥56,500",
           "image": "https://cdn-images.buyma.com/imgdata/item/230113/0090918159/512836539/210.jpg",
           "url": "https://www.buyma.com/item/90918159/"
         },
         {
-          "rank": 12,
+          "rank": 11,
           "name": "送料関税込★AMI PARIS★Ami De Coeur ジップアップ パーカー",
           "price": "¥66,500",
           "image": "https://cdn-images.buyma.com/imgdata/item/250705/0120025375/707656194/210.jpg",
           "url": "https://www.buyma.com/item/120025375/"
         },
         {
-          "rank": 13,
+          "rank": 12,
           "name": "【本物保証 /国内発送】AMIPARIS アミパリス ロゴ Tシャツ",
           "price": "¥34,800",
           "image": "https://cdn-images.buyma.com/imgdata/item/260310/0128994489/766853851/210.jpg",
           "url": "https://www.buyma.com/item/128994489/"
         },
         {
-          "rank": 14,
+          "rank": 13,
           "name": "☆SALE☆【即発】AMIPARIS Ami de Coeur 定番　ニット・セーター",
           "price": "¥39,800",
           "image": "https://cdn-images.buyma.com/imgdata/item/250917/0122572355/723912705/210.jpg",
           "url": "https://www.buyma.com/item/122572355/"
         },
         {
-          "rank": 15,
-          "name": "AmiParis Logo PatchShort SleeveTshirt UTS0757264011★送料込",
-          "price": "¥21,000",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260223/0128348254/761867137/210.jpg",
-          "url": "https://www.buyma.com/item/128348254/"
-        },
-        {
-          "rank": 16,
+          "rank": 14,
           "name": "★送料・関税込★AMI★レタリングカードウォレット★",
           "price": "¥15,819",
           "image": "https://cdn-images.buyma.com/imgdata/item/230828/0098317034/564068572/210.jpg",
           "url": "https://www.buyma.com/item/98317034/"
         },
         {
-          "rank": 17,
+          "rank": 15,
           "name": "★送料・関税込★AMI★ハートロゴ スウェット シャツ★",
           "price": "¥33,900",
           "image": "https://cdn-images.buyma.com/imgdata/item/250610/0119212603/702328448/210.jpg",
           "url": "https://www.buyma.com/item/119212603/"
         },
         {
-          "rank": 18,
+          "rank": 16,
           "name": "【国内発送関税無】AMI Paris ナイロンスタッズキャップ",
           "price": "¥23,500",
           "image": "https://cdn-images.buyma.com/imgdata/item/251012/0123604186/734870806/210.jpg",
           "url": "https://www.buyma.com/item/123604186/"
         },
         {
-          "rank": 19,
+          "rank": 17,
           "name": "AMIPARIS アミパリス　ブレスレット　メンズファッション",
           "price": "¥55,600",
           "image": "https://cdn-images.buyma.com/imgdata/item/260115/0126823498/750574101/210.jpg",
           "url": "https://www.buyma.com/item/126823498/"
         },
         {
-          "rank": 20,
+          "rank": 18,
           "name": "国内即発 AMIPARIS ナイロンキャンバス Marcel ショルダーバッグ",
           "price": "¥79,800",
           "image": "https://cdn-images.buyma.com/imgdata/item/260109/0126649674/749420069/210.jpg",
           "url": "https://www.buyma.com/item/126649674/"
+        },
+        {
+          "rank": 19,
+          "name": "国内発【AMI PARIS】撥水ナイロン Marcel/クロスボディバッグ",
+          "price": "¥84,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250717/0120376604/746470491/210.jpg",
+          "url": "https://www.buyma.com/item/120376604/"
+        },
+        {
+          "rank": 20,
+          "name": "AMIPARIS アミパリスハートフレンド スウェットセーター",
+          "price": "¥45,000",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260321/0129598637/771191388/210.jpg",
+          "url": "https://www.buyma.com/item/129598637/"
         }
       ]
     },
