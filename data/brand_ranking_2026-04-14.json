@@ -1,6 +1,6 @@
 {
   "date": "2026-04-14",
-  "fetched_at": "2026-04-14T18:35:22.909032",
+  "fetched_at": "2026-04-14T18:45:18.594743",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -166,6 +166,153 @@
           "price": "¥26,400",
           "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/ca660acd1b694d5eb3b934ba2905cb38_9366/Chavarria_SST_KJ2029_00_plp_standard.jpg",
           "url": "https://www.adidas.jp/chavarria-sst/KJ2029.html"
+        }
+      ]
+    },
+    "adidas_atmos": {
+      "name": "adidas (atmos)",
+      "source": "https://www.atmos-tokyo.com/category/all?brand=adidas",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "adidas VIRGINIA VARIO FLAT EARTHER by Pharrell",
+          "price": "¥23,100",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki7668-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki7668"
+        },
+        {
+          "rank": 2,
+          "name": "adidas VIRGINIA VARIO FLAT EARTHER by Pharrell",
+          "price": "¥23,100",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki7669-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki7669"
+        },
+        {
+          "rank": 3,
+          "name": "adidas SATIN FOOTBALL JERSEY",
+          "price": "¥9,900",
+          "image": "https://assets.atmos-tokyo.com/items/S/ka2671-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ka2671"
+        },
+        {
+          "rank": 4,
+          "name": "adidas KNITTED CROCHET FIREBIRD TRACKPANTS",
+          "price": "¥15,400",
+          "image": "https://assets.atmos-tokyo.com/items/S/ke0201-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ke0201"
+        },
+        {
+          "rank": 5,
+          "name": "adidas MEGARIDE AG",
+          "price": "¥31,900",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki6716-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki6716"
+        },
+        {
+          "rank": 6,
+          "name": "adidas MEGARIDE AG",
+          "price": "¥31,900",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki6720-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki6720"
+        },
+        {
+          "rank": 7,
+          "name": "adidas WAFFLE SHORT SLEEVE POLO",
+          "price": "¥7,150",
+          "image": "https://assets.atmos-tokyo.com/items/S/jv9265-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jv9265"
+        },
+        {
+          "rank": 8,
+          "name": "adidas WAFFLE SHORT SLEEVE POLO",
+          "price": "¥7,150",
+          "image": "https://assets.atmos-tokyo.com/items/S/jv9266-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jv9266"
+        },
+        {
+          "rank": 9,
+          "name": "adidas WAFFLE SHORT SLEEVE POLO",
+          "price": "¥7,150",
+          "image": "https://assets.atmos-tokyo.com/items/S/kb5462-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kb5462"
+        },
+        {
+          "rank": 10,
+          "name": "adidas WAFFLE CLASSIC TRACK TOP",
+          "price": "¥14,300",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6863-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6863"
+        },
+        {
+          "rank": 11,
+          "name": "adidas WAFFLE CLASSIC TRACK TOP",
+          "price": "¥14,300",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6864-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6864"
+        },
+        {
+          "rank": 12,
+          "name": "adidas WAFFLE CLASSIC TRACK TOP",
+          "price": "¥14,300",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6865-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6865"
+        },
+        {
+          "rank": 13,
+          "name": "adidas WAFFLE LONG SLEEVE POLO",
+          "price": "¥8,800",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6866-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6866"
+        },
+        {
+          "rank": 14,
+          "name": "adidas WAFFLE LONG SLEEVE POLO",
+          "price": "¥8,800",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6867-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6867"
+        },
+        {
+          "rank": 15,
+          "name": "adidas ADIZERO ADIOS PRO 4 M",
+          "price": "¥28,600",
+          "image": "https://assets.atmos-tokyo.com/items/S/jq4445-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jq4445"
+        },
+        {
+          "rank": 16,
+          "name": "adidas ADIZERO ADIOS PRO 4 W",
+          "price": "¥28,600",
+          "image": "https://assets.atmos-tokyo.com/items/S/jq4446-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jq4446"
+        },
+        {
+          "rank": 17,
+          "name": "adidas ZX 8000 Made in Germany",
+          "price": "¥28,600",
+          "image": "https://assets.atmos-tokyo.com/items/S/jr4609-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jr4609"
+        },
+        {
+          "rank": 18,
+          "name": "adidas ADILENIUM 5.0  TRACK TOP",
+          "price": "¥18,700",
+          "image": "https://assets.atmos-tokyo.com/items/S/kx4830-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kx4830"
+        },
+        {
+          "rank": 19,
+          "name": "adidas ADILENIUM 5.0  TRACK TOP",
+          "price": "¥18,700",
+          "image": "https://assets.atmos-tokyo.com/items/S/kx4831-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kx4831"
+        },
+        {
+          "rank": 20,
+          "name": "adidas ADILENIUM 5.0  TRACKPANT",
+          "price": "¥15,950",
+          "image": "https://assets.atmos-tokyo.com/items/S/kx4832-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kx4832"
         }
       ]
     }
