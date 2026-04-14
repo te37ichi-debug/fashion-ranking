@@ -1,0 +1,119 @@
+[
+  {
+    "key": "adidas",
+    "name": "adidas",
+    "url": "https://www.adidas.jp/search?sort=newest-to-oldest",
+    "view_all": "https://www.adidas.jp/search?sort=newest-to-oldest",
+    "badge_color": "#000",
+    "badge_label": "NEW",
+    "fetcher": "fetch_adidas"
+  },
+  {
+    "key": "adidas_atmos",
+    "name": "adidas (atmos)",
+    "url": "https://www.atmos-tokyo.com/category/all?brand=adidas",
+    "view_all": "https://www.atmos-tokyo.com/category/all?brand=adidas",
+    "badge_color": "#1a1a1a",
+    "badge_label": "NEW",
+    "fetcher": "fetch_adidas_atmos"
+  },
+  {
+    "key": "thug_club_buyma",
+    "name": "Thug Club (BUYMA)",
+    "url": "https://www.buyma.com/r/Thug%20Club/",
+    "view_all": "https://www.buyma.com/r/Thug%20Club/",
+    "badge_color": "#000000",
+    "badge_label": "POPULAR",
+    "fetcher": "fetch_thug_club_buyma"
+  },
+  {
+    "key": "stussy",
+    "name": "Stüssy",
+    "url": "https://jp.stussy.com/collections/new-arrivals",
+    "view_all": "https://jp.stussy.com/collections/new-arrivals",
+    "badge_color": "#1a1a1a",
+    "badge_label": "NEW",
+    "fetcher": "fetch_stussy"
+  },
+  {
+    "key": "stussy_snkrdunk",
+    "name": "Stüssy (SNKRDUNK)",
+    "url": "https://snkrdunk.com/search?keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&searchCategoryIds=2&brandIds=stussy&sort=hottest&page=1",
+    "view_all": "https://snkrdunk.com/search?keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&searchCategoryIds=2&brandIds=stussy&sort=hottest&page=1",
+    "badge_color": "#1a1a1a",
+    "badge_label": "POPULAR",
+    "fetcher": "fetch_stussy_snkrdunk"
+  },
+  {
+    "key": "supreme_snkrdunk",
+    "name": "Supreme (SNKRDUNK)",
+    "url": "https://snkrdunk.com/search?brandIds=supreme",
+    "view_all": "https://snkrdunk.com/search?brandIds=supreme",
+    "badge_color": "#e60000",
+    "badge_label": "POPULAR",
+    "fetcher": "fetch_supreme_snkrdunk"
+  },
+  {
+    "key": "supreme",
+    "name": "Supreme",
+    "url": "https://jp.supreme.com/collections/new",
+    "view_all": "https://jp.supreme.com/collections/new",
+    "badge_color": "#e60000",
+    "badge_label": "NEW",
+    "fetcher": "fetch_supreme"
+  },
+  {
+    "key": "carhartt",
+    "name": "Carhartt WIP",
+    "url": "https://carhartt-wip.jp/collections/men-new",
+    "view_all": "https://carhartt-wip.jp/collections/men-new",
+    "badge_color": "#5c3a1e",
+    "badge_label": "NEW",
+    "fetcher": "fetch_carhartt"
+  },
+  {
+    "key": "diesel",
+    "name": "DIESEL",
+    "url": "https://www.diesel.co.jp/ja/man/new-arrivals/apparel/",
+    "view_all": "https://www.diesel.co.jp/ja/man/new-arrivals/apparel/",
+    "badge_color": "#cc0000",
+    "badge_label": "NEW",
+    "fetcher": "fetch_diesel"
+  },
+  {
+    "key": "satur",
+    "name": "SATUR",
+    "url": "https://satur-jp.com/collections/man?sort_by=best-selling",
+    "view_all": "https://satur-jp.com/collections/man?sort_by=best-selling",
+    "badge_color": "#2e5ea8",
+    "badge_label": "POPULAR",
+    "fetcher": "fetch_satur"
+  },
+  {
+    "key": "satur_buyma",
+    "name": "SATUR (BUYMA)",
+    "url": "https://www.buyma.com/r/_SATUR-%E3%82%BB%E3%82%BF%E3%83%BC/",
+    "view_all": "https://www.buyma.com/r/_SATUR-%E3%82%BB%E3%82%BF%E3%83%BC/",
+    "badge_color": "#2e5ea8",
+    "badge_label": "POPULAR",
+    "fetcher": "fetch_satur_buyma"
+  },
+  {
+    "key": "ami_paris",
+    "name": "AMI PARIS (BUYMA)",
+    "url": "https://www.buyma.com/r/-C1002/amiparis/",
+    "view_all": "https://www.buyma.com/r/-C1002/amiparis/",
+    "badge_color": "#c41e3a",
+    "badge_label": "POPULAR",
+    "fetcher": "fetch_ami_paris"
+  },
+  {
+    "key": "acne_studios",
+    "name": "Acne Studios",
+    "url": "https://www.acnestudios.com/jp/ja/man/new-arrivals/?sz=56",
+    "view_all": "https://www.acnestudios.com/jp/ja/man/new-arrivals/?sz=56",
+    "badge_color": "#555",
+    "badge_label": "NEW",
+    "fetcher": "fetch_acne_studios"
+  }
+]

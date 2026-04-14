@@ -46,6 +46,12 @@ jobs:
           DISPLAY: ":99"
         run: xvfb-run --auto-servernum --server-args="-screen 0 1280x720x24" python ranking_bot.py
 
+      - name: Run brand ranking bot
+        env:
+          BRAND_WEBHOOK_URL: ${{ secrets.BRAND_WEBHOOK_URL }}
+          DISPLAY: ":99"
+        run: xvfb-run --auto-servernum --server-args="-screen 0 1280x720x24" python brand_ranking_bot.py
+
       - name: Commit and push results
         run: |
           git config user.name "github-actions[bot]"

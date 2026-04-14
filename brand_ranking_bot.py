@@ -22,7 +22,7 @@ IS_CI = os.environ.get("CI") == "true"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 
 # Discord Webhook（ブランドランキング専用チャンネル）
-BRAND_WEBHOOK_URL = "https://discord.com/api/webhooks/1493543560463777872/UjBRzjBcRgHAWQtNuVwalFOpEr-Q5cPh2WGoLtkT1sTpewRyTY5OGfAFRyTvFXd9_gg1"
+BRAND_WEBHOOK_URL = os.environ.get("BRAND_WEBHOOK_URL", "https://discord.com/api/webhooks/1493543560463777872/UjBRzjBcRgHAWQtNuVwalFOpEr-Q5cPh2WGoLtkT1sTpewRyTY5OGfAFRyTvFXd9_gg1")
 
 
 def ensure_output_dir():
@@ -33,88 +33,12 @@ def ensure_output_dir():
 # ブランド定義
 # ──────────────────────────────────────────────────────────
 
-BRANDS = {
-    "adidas": {
-        "name": "adidas",
-        "url": "https://www.adidas.jp/search?sort=newest-to-oldest",
-        "view_all": "https://www.adidas.jp/search?sort=newest-to-oldest",
-        "badge_color": "#000",
-        "badge_label": "NEW",
-        "fetcher": "fetch_adidas",
-    },
-    "adidas_atmos": {
-        "name": "adidas (atmos)",
-        "url": "https://www.atmos-tokyo.com/category/all?brand=adidas",
-        "view_all": "https://www.atmos-tokyo.com/category/all?brand=adidas",
-        "badge_color": "#1a1a1a",
-        "badge_label": "NEW",
-        "fetcher": "fetch_adidas_atmos",
-    },
-    "carhartt": {
-        "name": "Carhartt WIP",
-        "url": "https://carhartt-wip.jp/collections/men-new",
-        "view_all": "https://carhartt-wip.jp/collections/men-new",
-        "badge_color": "#5c3a1e",
-        "badge_label": "NEW",
-        "fetcher": "fetch_carhartt",
-    },
-    "diesel": {
-        "name": "DIESEL",
-        "url": "https://www.diesel.co.jp/ja/man/new-arrivals/apparel/",
-        "view_all": "https://www.diesel.co.jp/ja/man/new-arrivals/apparel/",
-        "badge_color": "#cc0000",
-        "badge_label": "NEW",
-        "fetcher": "fetch_diesel",
-    },
-    "satur": {
-        "name": "SATUR",
-        "url": "https://satur-jp.com/collections/man?sort_by=best-selling",
-        "view_all": "https://satur-jp.com/collections/man?sort_by=best-selling",
-        "badge_color": "#2e5ea8",
-        "badge_label": "POPULAR",
-        "fetcher": "fetch_satur",
-    },
-    "satur_buyma": {
-        "name": "SATUR (BUYMA)",
-        "url": "https://www.buyma.com/r/_SATUR-%E3%82%BB%E3%82%BF%E3%83%BC/",
-        "view_all": "https://www.buyma.com/r/_SATUR-%E3%82%BB%E3%82%BF%E3%83%BC/",
-        "badge_color": "#2e5ea8",
-        "badge_label": "POPULAR",
-        "fetcher": "fetch_satur_buyma",
-    },
-    "ami_paris": {
-        "name": "AMI PARIS (BUYMA)",
-        "url": "https://www.buyma.com/r/-C1002/amiparis/",
-        "view_all": "https://www.buyma.com/r/-C1002/amiparis/",
-        "badge_color": "#c41e3a",
-        "badge_label": "POPULAR",
-        "fetcher": "fetch_ami_paris",
-    },
-    "thug_club_buyma": {
-        "name": "Thug Club (BUYMA)",
-        "url": "https://www.buyma.com/r/Thug%20Club/",
-        "view_all": "https://www.buyma.com/r/Thug%20Club/",
-        "badge_color": "#000",
-        "badge_label": "POPULAR",
-        "fetcher": "fetch_thug_club_buyma",
-    },
-    "acne_studios": {
-        "name": "Acne Studios",
-        "url": "https://www.acnestudios.com/jp/ja/man/new-arrivals/?sz=56",
-        "view_all": "https://www.acnestudios.com/jp/ja/man/new-arrivals/?sz=56",
-        "badge_color": "#555",
-        "badge_label": "NEW",
-        "fetcher": "fetch_acne_studios",
-    },
-    "stussy": {
-        "name": "Stüssy",
-        "url": "https://jp.stussy.com/collections/new-arrivals",
-        "view_all": "https://jp.stussy.com/collections/new-arrivals",
-        "badge_color": "#1a1a1a",
-        "badge_label": "NEW",
-        "fetcher": "fetch_stussy",
-    },
-}
+BRANDS_CONFIG = os.path.join(SCRIPT_DIR, "brands_config.json")
+
+def load_brands():
+    with open(BRANDS_CONFIG, encoding="utf-8") as f:
+        brands_list = json.load(f)
+    return {b["key"]: {k: v for k, v in b.items() if k != "key"} for b in brands_list}
 
 
 # ──────────────────────────────────────────────────────────
@@ -782,10 +706,174 @@ def fetch_stussy(max_items=20):
     return items
 
 
+
+# ──────────────────────────────────────────────────────────
+# Supreme 公式
+# ──────────────────────────────────────────────────────────
+
+def fetch_supreme(max_items=20):
+    print("[Supreme] 新着アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+    import re
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto("https://jp.supreme.com/collections/new", wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            links = soup.select("a[href*='/products/']")
+            seen_names = set()
+            for el in links:
+                if len(items) >= max_items:
+                    break
+
+                text = el.get_text(separator="|", strip=True)
+                parts = [p.strip() for p in text.split("|") if p.strip()]
+
+                # 商品名: "new", "sold out" 以外の最初のテキスト
+                name = ""
+                for part in parts:
+                    if part.lower() in ("new", "sold out"):
+                        continue
+                    if "¥" in part:
+                        break
+                    name = part
+                    break
+
+                if not name or name in seen_names:
+                    continue
+                seen_names.add(name)
+
+                href = el.get("href", "")
+                url = f"https://jp.supreme.com{href}" if href.startswith("/") else href
+
+                price = ""
+                m = re.search(r'¥[\d,]+', text)
+                if m:
+                    price = m.group()
+
+                image = ""
+                img_el = el.select_one("img")
+                if img_el:
+                    src = img_el.get("src", "")
+                    image = f"https:{src}" if src.startswith("//") else src
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[Supreme] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[Supreme] {len(items)} 件取得")
+    return items
+
+
+# ──────────────────────────────────────────────────────────
+# SNKRDUNK ブランド検索（汎用）
+# ──────────────────────────────────────────────────────────
+
+def _fetch_snkrdunk_brand(label, url, max_items=20):
+    print(f"[{label}] 人気アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+    import re
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("a[class*='productTile']")
+            seen_names = set()
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                name_el = card.select_one("span[class*='productName']")
+                name = name_el.get_text(strip=True) if name_el else ""
+                if not name or name in seen_names:
+                    continue
+                seen_names.add(name)
+
+                href = card.get("href", "")
+                item_url = href if href.startswith("http") else f"https://snkrdunk.com{href}"
+
+                price = ""
+                text = card.get_text(separator="|", strip=True)
+                m = re.search(r'¥\|?([\d,]+)', text)
+                if m:
+                    price = f"¥{m.group(1)}"
+
+                image = ""
+                img_el = card.select_one("img")
+                if img_el:
+                    image = img_el.get("src", "") or img_el.get("data-src", "")
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": item_url,
+                })
+
+        except Exception as e:
+            print(f"[{label}] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[{label}] {len(items)} 件取得")
+    return items
+
+
+def fetch_supreme_snkrdunk(max_items=20):
+    return _fetch_snkrdunk_brand(
+        "Supreme (SNKRDUNK)",
+        "https://snkrdunk.com/search?brandIds=supreme",
+        max_items,
+    )
+
+
+def fetch_stussy_snkrdunk(max_items=20):
+    return _fetch_snkrdunk_brand(
+        "Stüssy (SNKRDUNK)",
+        "https://snkrdunk.com/search?keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&searchCategoryIds=2&brandIds=stussy&sort=hottest&page=1",
+        max_items,
+    )
+
+
 # 保存 (JSON + HTML)
 # ──────────────────────────────────────────────────────────
 
-def save_json(brand_results):
+def save_json(brand_results, BRANDS):
     ensure_output_dir()
 
     result = {
@@ -810,7 +898,7 @@ def save_json(brand_results):
     return filepath
 
 
-def save_html(brand_results):
+def save_html(brand_results, BRANDS):
     ensure_output_dir()
 
     def render_items(items, show_brand=False):
@@ -1006,7 +1094,7 @@ def build_embed(brand_name, color, items, show_brand=False, badge_label="NEW"):
     }
 
 
-def post_to_discord(brand_results):
+def post_to_discord(brand_results, BRANDS):
     print("[Discord] ブランドランキングを投稿中...")
 
     header_payload = {
@@ -1070,11 +1158,16 @@ FETCHERS = {
     "fetch_thug_club_buyma": fetch_thug_club_buyma,
     "fetch_acne_studios": fetch_acne_studios,
     "fetch_stussy": fetch_stussy,
+    "fetch_supreme_snkrdunk": fetch_supreme_snkrdunk,
+    "fetch_supreme": fetch_supreme,
+    "fetch_stussy_snkrdunk": fetch_stussy_snkrdunk,
 }
 
 
 def main():
     print(f"=== ブランド新着情報&人気ランキング Bot ({TODAY}) ===\n")
+
+    BRANDS = load_brands()
 
     brand_results = {}
     for key, conf in BRANDS.items():
@@ -1102,8 +1195,8 @@ def main():
         print_summary(BRANDS[key]["name"], items)
 
     # 保存
-    json_path = save_json(brand_results)
-    html_path = save_html(brand_results)
+    json_path = save_json(brand_results, BRANDS)
+    html_path = save_html(brand_results, BRANDS)
 
     total = sum(len(items) for items in brand_results.values())
     print(f"\n合計 {total} 件のブランドデータを取得しました。")
@@ -1120,7 +1213,7 @@ def main():
             print(f"[GitHub] push 失敗: {e.stderr.decode()[:200] if e.stderr else e}")
 
     # Discord に投稿
-    post_to_discord(brand_results)
+    post_to_discord(brand_results, BRANDS)
 
     print(f"HTML で確認: open {html_path}")
     return json_path, html_path
