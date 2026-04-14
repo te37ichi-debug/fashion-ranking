@@ -356,6 +356,118 @@ def fetch_buyma(max_items=20):
     return items
 
 
+# ─── FARFETCH (farfetch.com) ──────────────────────────────
+
+def fetch_farfetch(max_items=20):
+    print("[FARFETCH] メンズ新着アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto(
+                "https://www.farfetch.com/jp/sets/new-in-this-week-eu-men.aspx?category=141259",
+                wait_until="domcontentloaded",
+                timeout=30000,
+            )
+            page.wait_for_timeout(5000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 800)")
+                page.wait_for_timeout(600)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            # 商品カードを検索（Farfetch のクラス名はハッシュ付きだが data-component で探す）
+            product_cards = soup.select("[data-component='ProductCardLink']")
+            if not product_cards:
+                product_cards = soup.select("a[href*='/shopping/']")
+
+            seen_urls = set()
+            for el in product_cards:
+                if len(items) >= max_items:
+                    break
+
+                href = el.get("href", "")
+                if not href or href in seen_urls or "/shopping/" not in href:
+                    continue
+                seen_urls.add(href)
+                url = f"https://www.farfetch.com{href}" if href.startswith("/") else href
+
+                # 親要素から情報を取得
+                card = el.find_parent("div") or el
+                for _ in range(5):
+                    parent = card.find_parent("div")
+                    if parent and parent.select("img"):
+                        card = parent
+                        break
+
+                # ブランド名
+                brand = ""
+                brand_el = card.select_one("[data-component='ProductCardBrandName']")
+                if not brand_el:
+                    # p タグやスパンで探す
+                    for p_el in card.select("p, span"):
+                        text = p_el.get_text(strip=True)
+                        if text and len(text) < 40 and text[0].isupper():
+                            brand = text
+                            break
+                else:
+                    brand = brand_el.get_text(strip=True)
+
+                # 商品名
+                name = ""
+                name_el = card.select_one("[data-component='ProductCardDescription']")
+                if name_el:
+                    name = name_el.get_text(strip=True)
+                else:
+                    name = el.get("aria-label", "") or el.get_text(strip=True)[:60]
+
+                if not name:
+                    name = brand or "New Item"
+
+                # 価格
+                price = ""
+                price_el = card.select_one("[data-component='Price']")
+                if not price_el:
+                    for span in card.select("span, p"):
+                        text = span.get_text(strip=True)
+                        if "¥" in text or "￥" in text:
+                            price = text
+                            break
+                else:
+                    price = price_el.get_text(strip=True)
+
+                # 画像
+                image = ""
+                img_el = card.select_one("img[src*='farfetch'], img[src*='cdn']")
+                if not img_el:
+                    img_el = card.select_one("img")
+                if img_el:
+                    image = img_el.get("src", "") or img_el.get("data-src", "")
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "brand": brand,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[FARFETCH] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[FARFETCH] {len(items)} 件取得")
+    return items
+
+
 # ─── スニーカーダンク (snkrdunk.com) ──────────────────────
 
 def _parse_snkrdunk_items(soup, link_prefix, max_items=20):
@@ -446,7 +558,7 @@ def fetch_snkrdunk_apparel(max_items=20):
 
 # ─── 保存 (JSON + HTML) ───────────────────────────────────
 
-def save_json(zara, musinsa, buyma, snkr_sneakers, snkr_apparel, zozotown):
+def save_json(zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozotown):
     ensure_output_dir()
 
     result = {
@@ -466,6 +578,11 @@ def save_json(zara, musinsa, buyma, snkr_sneakers, snkr_apparel, zozotown):
             "source": "buyma.com",
             "count": len(buyma),
             "items": buyma,
+        },
+        "farfetch": {
+            "source": "farfetch.com",
+            "count": len(farfetch),
+            "items": farfetch,
         },
         "snkrdunk_sneakers": {
             "source": "snkrdunk.com",
@@ -492,7 +609,7 @@ def save_json(zara, musinsa, buyma, snkr_sneakers, snkr_apparel, zozotown):
     return filepath
 
 
-def save_html(zara, musinsa, buyma, snkr_sneakers, snkr_apparel, zozotown):
+def save_html(zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozotown):
     ensure_output_dir()
 
     def render_items(items, show_brand=False):
@@ -533,7 +650,7 @@ def save_html(zara, musinsa, buyma, snkr_sneakers, snkr_apparel, zozotown):
 <title>Men's Fashion Ranking {TODAY}</title>
 <style>
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-  body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #333; padding: 20px; }}
+  body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #333; padding: 20px; padding-top: 60px; }}
   h1 {{ text-align: center; margin-bottom: 8px; font-size: 1.8em; }}
   .date {{ text-align: center; color: #888; margin-bottom: 30px; font-size: 0.95em; }}
   .section {{ background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }}
@@ -543,6 +660,7 @@ def save_html(zara, musinsa, buyma, snkr_sneakers, snkr_apparel, zozotown):
   .badge-zara {{ background: #000; }}
   .badge-musinsa {{ background: #1a1a1a; }}
   .badge-buyma {{ background: #e91e63; }}
+  .badge-farfetch {{ background: #222; }}
   .badge-snkrdunk {{ background: #ff5722; }}
   .items {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }}
   .item {{ background: #fafafa; border-radius: 8px; overflow: hidden; transition: transform 0.15s; border: 1px solid #eee; }}
@@ -559,54 +677,120 @@ def save_html(zara, musinsa, buyma, snkr_sneakers, snkr_apparel, zozotown):
   .price {{ display: block; font-size: 0.9em; font-weight: 600; color: #e44; }}
   .empty {{ color: #aaa; text-align: center; padding: 40px; }}
   .count {{ font-size: 0.8em; color: #999; font-weight: normal; }}
+  nav.toc {{ position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #ffffff; margin: 0; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }}
+  nav.toc ul {{ list-style: none; display: flex; flex-wrap: wrap; gap: 0; margin: 0; padding: 0; justify-content: center; }}
+  nav.toc li {{ flex-shrink: 0; }}
+  nav.toc li a {{ display: block; padding: 10px 14px; color: #555; text-decoration: none; font-size: 12px; font-weight: 600; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }}
+  nav.toc li a:hover, nav.toc li a.active {{ color: #000; border-bottom-color: #000; }}
+  @media (max-width: 600px) {{
+    body {{ padding-top: 80px; }}
+    nav.toc ul {{ justify-content: flex-start; }}
+    nav.toc li a {{ padding: 8px 11px; font-size: 11px; }}
+    .section {{ scroll-margin-top: 80px; }}
+  }}
+  .section {{ scroll-margin-top: 52px; }}
+  .btn-all {{ display: block; margin: 16px auto 0; padding: 10px 24px; background: #333; color: #fff; border: none; border-radius: 8px; font-size: 0.85em; font-weight: 600; text-decoration: none; text-align: center; width: fit-content; transition: background 0.2s; }}
+  .btn-all:hover {{ background: #555; }}
 </style>
 </head>
 <body>
+<nav class="toc">
+  <ul>
+    <li><a href="#zara">ZARA</a></li>
+    <li><a href="#musinsa">MUSINSA</a></li>
+    <li><a href="#buyma">BUYMA</a></li>
+    <li><a href="#farfetch">FARFETCH</a></li>
+    <li><a href="#snkrdunk-sneakers">SNKRDUNK スニーカー</a></li>
+    <li><a href="#snkrdunk-streetwear">SNKRDUNK ストリート</a></li>
+    <li><a href="#zozotown">ZOZOTOWN</a></li>
+  </ul>
+</nav>
 <h1>Men's Fashion Ranking</h1>
 <p class="date">{TODAY}</p>
 
-<div class="section">
+<div class="section" id="zara">
   <h2>ZARA <span class="badge badge-zara">JP</span> <span class="count">{len(zara)} items</span></h2>
   <div class="items">
     {render_items(zara, show_brand=False)}
   </div>
+  <a href="https://www.zara.com/jp/ja/man-all-products-l7465.html?v1=2458839" target="_blank" class="btn-all">ZARA を全部見る</a>
 </div>
 
-<div class="section">
+<div class="section" id="musinsa">
   <h2>MUSINSA <span class="badge badge-musinsa">JP</span> <span class="count">{len(musinsa)} items</span></h2>
   <div class="items">
     {render_items(musinsa, show_brand=True)}
   </div>
+  <a href="https://global.musinsa.com/jp/trending/items?gender=M&page=1&toggleCountry=kr" target="_blank" class="btn-all">MUSINSA を全部見る</a>
 </div>
 
-<div class="section">
+<div class="section" id="buyma">
   <h2>BUYMA <span class="badge badge-buyma">JP</span> <span class="count">{len(buyma)} items</span></h2>
   <div class="items">
     {render_items(buyma, show_brand=True)}
   </div>
+  <a href="https://www.buyma.com/rank/-C1002/" target="_blank" class="btn-all">BUYMA を全部見る</a>
 </div>
 
-<div class="section">
+<div class="section" id="farfetch">
+  <h2>FARFETCH <span class="badge badge-farfetch">NEW IN</span> <span class="count">{len(farfetch)} items</span></h2>
+  <div class="items">
+    {render_items(farfetch, show_brand=True)}
+  </div>
+  <a href="https://www.farfetch.com/jp/sets/new-in-this-week-eu-men.aspx?category=141259" target="_blank" class="btn-all">FARFETCH を全部見る</a>
+</div>
+
+<div class="section" id="snkrdunk-sneakers">
   <h2>SNKRDUNK 人気スニーカー <span class="badge badge-snkrdunk">JP</span> <span class="count">{len(snkr_sneakers)} items</span></h2>
   <div class="items">
     {render_items(snkr_sneakers, show_brand=False)}
   </div>
+  <a href="https://snkrdunk.com/products?type=hottest" target="_blank" class="btn-all">SNKRDUNK スニーカーを全部見る</a>
 </div>
 
-<div class="section">
+<div class="section" id="snkrdunk-streetwear">
   <h2>SNKRDUNK 人気ストリートウェア <span class="badge badge-snkrdunk">JP</span> <span class="count">{len(snkr_apparel)} items</span></h2>
   <div class="items">
     {render_items(snkr_apparel, show_brand=False)}
   </div>
+  <a href="https://snkrdunk.com/apparels?type=hottest&department=apparel" target="_blank" class="btn-all">SNKRDUNK ストリートを全部見る</a>
 </div>
 
-<div class="section">
+<div class="section" id="zozotown">
   <h2>ZOZOTOWN <span class="badge badge-zozo">JP</span> <span class="count">{len(zozotown)} items</span></h2>
   <div class="items">
     {render_items(zozotown, show_brand=True)}
   </div>
+  <a href="https://zozo.jp/ranking/all-sales-men.html" target="_blank" class="btn-all">ZOZOTOWN を全部見る</a>
 </div>
 
+<script>
+(function(){{
+  var links = document.querySelectorAll('.toc a');
+  var sections = [];
+  links.forEach(function(a){{
+    var s = document.querySelector(a.getAttribute('href'));
+    if(s) sections.push({{el:s, link:a}});
+  }});
+  function update(){{
+    var scrollY = window.scrollY + 60;
+    var current = sections[0];
+    sections.forEach(function(s){{
+      if(s.el.offsetTop <= scrollY) current = s;
+    }});
+    links.forEach(function(a){{ a.classList.remove('active'); }});
+    if(current) {{
+      current.link.classList.add('active');
+      var nav = document.querySelector('.toc ul');
+      var linkLeft = current.link.offsetLeft;
+      var navWidth = nav.offsetWidth;
+      nav.scrollTo({{left: linkLeft - navWidth/2 + current.link.offsetWidth/2, behavior:'smooth'}});
+    }}
+  }}
+  window.addEventListener('scroll', update, {{passive:true}});
+  update();
+}})();
+</script>
 </body>
 </html>'''
 
@@ -718,7 +902,7 @@ def build_embed(site_name, site_color, items, show_brand=False):
     }
 
 
-def post_to_discord(webhook_url, zara, musinsa, buyma, snkr_sneakers, snkr_apparel, zozotown, html_path):
+def post_to_discord(webhook_url, zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozotown, html_path):
     """Discord Webhook にランキングを投稿"""
     print("[Discord] ランキングを投稿中...")
 
@@ -726,6 +910,7 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, snkr_sneakers, snkr_appar
         build_embed("ZARA", 0x000000, zara, show_brand=False),
         build_embed("MUSINSA", 0x1A1A1A, musinsa, show_brand=True),
         build_embed("BUYMA", 0xE91E63, buyma, show_brand=True),
+        build_embed("FARFETCH", 0x222222, farfetch, show_brand=True),
         build_embed("SNKRDUNK スニーカー", 0xFF5722, snkr_sneakers, show_brand=False),
         build_embed("SNKRDUNK ストリートウェア", 0xFF5722, snkr_apparel, show_brand=False),
     ]
@@ -740,13 +925,12 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, snkr_sneakers, snkr_appar
     else:
         print(f"[Discord] 投稿失敗: {resp.status_code} {resp.text[:200]}")
 
-    # Embed を投稿（4件ずつ）
-    # 5件 + ZOZOTOWN を分割投稿（1メッセージ最大10 Embed）
+    # Embed を投稿（3件ずつ分割）
     time.sleep(0.5)
     requests.post(webhook_url, json={"embeds": embeds[:3]}, timeout=15)
 
     time.sleep(0.5)
-    requests.post(webhook_url, json={"embeds": embeds[3:5]}, timeout=15)
+    requests.post(webhook_url, json={"embeds": embeds[3:6]}, timeout=15)
 
     # ZOZOTOWN は別メッセージで
     time.sleep(0.5)
@@ -757,6 +941,7 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, snkr_sneakers, snkr_appar
         ("ZARA", zara, 0x000000),
         ("MUSINSA", musinsa, 0x1A1A1A),
         ("BUYMA", buyma, 0xE91E63),
+        ("FARFETCH", farfetch, 0x222222),
         ("SNKRDUNK", snkr_sneakers, 0xFF5722),
         ("ZOZOTOWN", zozotown, 0x00A0E9),
     ]:
@@ -791,20 +976,27 @@ def main():
     # 2. BUYMA（Playwright）
     buyma_items = fetch_buyma()
 
-    # 3. スニーカーダンク - スニーカー（requests のみ）
+    # 3. FARFETCH（Playwright）
+    try:
+        farfetch_items = fetch_farfetch()
+    except Exception as e:
+        print(f"[FARFETCH] 致命的エラー: {e}")
+        farfetch_items = []
+
+    # 4. スニーカーダンク - スニーカー（requests のみ）
     snkr_sneakers = fetch_snkrdunk_sneakers()
 
-    # 4. スニーカーダンク - ストリートウェア（Playwright）
+    # 5. スニーカーダンク - ストリートウェア（Playwright）
     snkr_apparel = fetch_snkrdunk_apparel()
 
-    # 5. ZOZOTOWN（undetected-chromedriver）
+    # 6. ZOZOTOWN（undetected-chromedriver）
     try:
         zozotown_items = fetch_zozotown()
     except Exception as e:
         print(f"[ZOZOTOWN] 致命的エラー: {e}")
         zozotown_items = []
 
-    # 6. ZARA（undetected-chromedriver）
+    # 7. ZARA（undetected-chromedriver）
     try:
         zara_items = fetch_zara()
     except Exception as e:
@@ -815,15 +1007,16 @@ def main():
     print_summary("ZARA", zara_items)
     print_summary("MUSINSA", musinsa_items)
     print_summary("BUYMA", buyma_items)
+    print_summary("FARFETCH", farfetch_items)
     print_summary("SNKRDUNK スニーカー", snkr_sneakers)
     print_summary("SNKRDUNK ストリートウェア", snkr_apparel)
     print_summary("ZOZOTOWN", zozotown_items)
 
     # 保存
-    json_path = save_json(zara_items, musinsa_items, buyma_items, snkr_sneakers, snkr_apparel, zozotown_items)
-    html_path = save_html(zara_items, musinsa_items, buyma_items, snkr_sneakers, snkr_apparel, zozotown_items)
+    json_path = save_json(zara_items, musinsa_items, buyma_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items)
+    html_path = save_html(zara_items, musinsa_items, buyma_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items)
 
-    total = len(zara_items) + len(musinsa_items) + len(buyma_items) + len(snkr_sneakers) + len(snkr_apparel) + len(zozotown_items)
+    total = len(zara_items) + len(musinsa_items) + len(buyma_items) + len(farfetch_items) + len(snkr_sneakers) + len(snkr_apparel) + len(zozotown_items)
     print(f"\n合計 {total} 件のランキングデータを取得しました。")
 
     # GitHub Pages に push（ローカル実行時のみ。CI では workflow が push する）
@@ -840,7 +1033,7 @@ def main():
     # Discord に投稿
     webhook_url = load_webhook_url()
     if webhook_url:
-        post_to_discord(webhook_url, zara_items, musinsa_items, buyma_items, snkr_sneakers, snkr_apparel, zozotown_items, html_path)
+        post_to_discord(webhook_url, zara_items, musinsa_items, buyma_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items, html_path)
     else:
         print("[Discord] Webhook 未設定のため Discord 投稿をスキップ")
 

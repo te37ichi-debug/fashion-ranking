@@ -34,12 +34,19 @@
   .empty { color: #aaa; text-align: center; padding: 40px; }
   .count { font-size: 0.8em; color: #999; font-weight: normal; }
   nav.toc { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #ffffff; margin: 0; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-  nav.toc ul { list-style: none; display: flex; gap: 0; margin: 0; padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-  nav.toc ul::-webkit-scrollbar { display: none; }
+  nav.toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0; margin: 0; padding: 0; justify-content: center; }
   nav.toc li { flex-shrink: 0; }
-  nav.toc li a { display: block; padding: 14px 16px; color: #555; text-decoration: none; font-size: 13px; font-weight: 600; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  nav.toc li a { display: block; padding: 10px 14px; color: #555; text-decoration: none; font-size: 12px; font-weight: 600; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
   nav.toc li a:hover, nav.toc li a.active { color: #000; border-bottom-color: #000; }
+  @media (max-width: 600px) {
+    body { padding-top: 80px; }
+    nav.toc ul { justify-content: flex-start; }
+    nav.toc li a { padding: 8px 11px; font-size: 11px; }
+    .section { scroll-margin-top: 80px; }
+  }
   .section { scroll-margin-top: 52px; }
+  .btn-all { display: block; margin: 16px auto 0; padding: 10px 24px; background: #333; color: #fff; border: none; border-radius: 8px; font-size: 0.85em; font-weight: 600; text-decoration: none; text-align: center; width: fit-content; transition: background 0.2s; }
+  .btn-all:hover { background: #555; }
 </style>
 </head>
 <body>
@@ -261,6 +268,7 @@
               </div>
             </div>
   </div>
+  <a href="https://www.zara.com/jp/ja/man-all-products-l7465.html?v1=2458839" target="_blank" class="btn-all">ZARA を全部見る</a>
 </div>
 
 <div class="section" id="musinsa">
@@ -447,6 +455,7 @@
               </div>
             </div>
   </div>
+  <a href="https://global.musinsa.com/jp/trending/items?gender=M&page=1&toggleCountry=kr" target="_blank" class="btn-all">MUSINSA を全部見る</a>
 </div>
 
 <div class="section" id="buyma">
@@ -653,6 +662,7 @@
               </div>
             </div>
   </div>
+  <a href="https://www.buyma.com/rank/-C1002/" target="_blank" class="btn-all">BUYMA を全部見る</a>
 </div>
 
 <div class="section" id="farfetch">
@@ -859,6 +869,7 @@
               </div>
             </div>
   </div>
+  <a href="https://www.farfetch.com/jp/sets/new-in-this-week-eu-men.aspx?category=141259" target="_blank" class="btn-all">FARFETCH を全部見る</a>
 </div>
 
 <div class="section" id="snkrdunk-sneakers">
@@ -1065,6 +1076,7 @@
               </div>
             </div>
   </div>
+  <a href="https://snkrdunk.com/products?type=hottest" target="_blank" class="btn-all">SNKRDUNK スニーカーを全部見る</a>
 </div>
 
 <div class="section" id="snkrdunk-streetwear">
@@ -1271,6 +1283,7 @@
               </div>
             </div>
   </div>
+  <a href="https://snkrdunk.com/apparels?type=hottest&department=apparel" target="_blank" class="btn-all">SNKRDUNK ストリートを全部見る</a>
 </div>
 
 <div class="section" id="zozotown">
@@ -1477,6 +1490,7 @@
               </div>
             </div>
   </div>
+  <a href="https://zozo.jp/ranking/all-sales-men.html" target="_blank" class="btn-all">ZOZOTOWN を全部見る</a>
 </div>
 
 <script>
