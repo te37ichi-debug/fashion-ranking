@@ -1172,52 +1172,30 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, stockx, ssense, farfetch,
 def main():
     print(f"=== Men's Fashion Ranking Bot ({TODAY}) ===\n")
 
-    # 1. MUSINSA Japan（requests のみ、高速）
-    musinsa_items = fetch_musinsa()
+    def fetch_with_retry(name, fetcher, max_retries=3):
+        items = []
+        for attempt in range(1, max_retries + 1):
+            try:
+                items = fetcher()
+            except Exception as e:
+                print(f"[{name}] 致命的エラー: {e}")
+                items = []
+            if items:
+                return items
+            if attempt < max_retries:
+                print(f"[{name}] 0件のためリトライ ({attempt}/{max_retries})...")
+                time.sleep(3)
+        return items
 
-    # 2. BUYMA（Playwright）
-    buyma_items = fetch_buyma()
-
-    # 3. StockX（Playwright）
-    try:
-        stockx_items = fetch_stockx()
-    except Exception as e:
-        print(f"[StockX] 致命的エラー: {e}")
-        stockx_items = []
-
-    # 4. SSENSE（Playwright）
-    try:
-        ssense_items = fetch_ssense()
-    except Exception as e:
-        print(f"[SSENSE] 致命的エラー: {e}")
-        ssense_items = []
-
-    # 4. FARFETCH（Playwright）
-    try:
-        farfetch_items = fetch_farfetch()
-    except Exception as e:
-        print(f"[FARFETCH] 致命的エラー: {e}")
-        farfetch_items = []
-
-    # 4. スニーカーダンク - スニーカー（requests のみ）
-    snkr_sneakers = fetch_snkrdunk_sneakers()
-
-    # 5. スニーカーダンク - ストリートウェア（Playwright）
-    snkr_apparel = fetch_snkrdunk_apparel()
-
-    # 6. ZOZOTOWN（undetected-chromedriver）
-    try:
-        zozotown_items = fetch_zozotown()
-    except Exception as e:
-        print(f"[ZOZOTOWN] 致命的エラー: {e}")
-        zozotown_items = []
-
-    # 7. ZARA（undetected-chromedriver）
-    try:
-        zara_items = fetch_zara()
-    except Exception as e:
-        print(f"[ZARA] 致命的エラー: {e}")
-        zara_items = []
+    musinsa_items = fetch_with_retry("MUSINSA", fetch_musinsa)
+    buyma_items = fetch_with_retry("BUYMA", fetch_buyma)
+    stockx_items = fetch_with_retry("StockX", fetch_stockx)
+    ssense_items = fetch_with_retry("SSENSE", fetch_ssense)
+    farfetch_items = fetch_with_retry("FARFETCH", fetch_farfetch)
+    snkr_sneakers = fetch_with_retry("SNKRDUNK スニーカー", fetch_snkrdunk_sneakers)
+    snkr_apparel = fetch_with_retry("SNKRDUNK ストリート", fetch_snkrdunk_apparel)
+    zozotown_items = fetch_with_retry("ZOZOTOWN", fetch_zozotown)
+    zara_items = fetch_with_retry("ZARA", fetch_zara)
 
     # 結果表示
     print_summary("ZARA", zara_items)

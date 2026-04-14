@@ -1084,11 +1084,18 @@ def main():
             print(f"[{conf['name']}] フェッチャーが見つかりません: {fetcher_name}")
             brand_results[key] = []
             continue
-        try:
-            brand_results[key] = fetcher()
-        except Exception as e:
-            print(f"[{conf['name']}] 致命的エラー: {e}")
-            brand_results[key] = []
+        max_retries = 3
+        for attempt in range(1, max_retries + 1):
+            try:
+                brand_results[key] = fetcher()
+            except Exception as e:
+                print(f"[{conf['name']}] 致命的エラー: {e}")
+                brand_results[key] = []
+            if brand_results[key]:
+                break
+            if attempt < max_retries:
+                print(f"[{conf['name']}] 0件のためリトライ ({attempt}/{max_retries})...")
+                time.sleep(3)
 
     # 結果表示
     for key, items in brand_results.items():
