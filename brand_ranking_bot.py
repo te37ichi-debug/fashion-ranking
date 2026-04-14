@@ -37,7 +37,7 @@ BRANDS = {
     "adidas": {
         "name": "adidas",
         "url": "https://www.adidas.jp/search?sort=newest-to-oldest",
-        "view_all": "https://www.adidas.jp/men",
+        "view_all": "https://www.adidas.jp/search?sort=newest-to-oldest",
         "badge_color": "#000",
         "badge_label": "NEW",
         "fetcher": "fetch_adidas",
