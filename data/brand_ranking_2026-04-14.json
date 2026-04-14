@@ -1,6 +1,6 @@
 {
   "date": "2026-04-14",
-  "fetched_at": "2026-04-14T19:31:10.242801",
+  "fetched_at": "2026-04-14T19:37:41.197900",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -754,6 +754,27 @@
           "price": "¥18,900",
           "image": "https://satur-jp.com/cdn/shop/files/2d44664534570281141870ec46464bb9.jpg?v=1763613022&width=1000",
           "url": "https://satur-jp.com/products/u-apero-loose-fit-tuck-detail-pocket-hoodie-st0109"
+        }
+      ]
+    },
+    "satur_buyma": {
+      "name": "SATUR (BUYMA)",
+      "source": "https://www.buyma.com/r/_SATUR-%E3%82%BB%E3%82%BF%E3%83%BC/",
+      "count": 2,
+      "items": [
+        {
+          "rank": 1,
+          "name": "SATURを条件から外す",
+          "price": "¥8,720",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260313/0129253861/768569611/210.jpg",
+          "url": "https://www.buyma.com/item/129253861/"
+        },
+        {
+          "rank": 2,
+          "name": "タイムセール",
+          "price": "¥7,771",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260327/0129913700/773339896/210.jpg",
+          "url": "https://www.buyma.com/item/129913700/"
         }
       ]
     },
