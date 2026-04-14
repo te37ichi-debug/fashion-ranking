@@ -793,13 +793,13 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
             img_src = item.get("image", "")
             url = item.get("url", "")
             img_inner = f'<img src="{img_src}" alt="" loading="lazy">' if img_src else '<div class="no-img">NO IMAGE</div>'
-            img_tag = f'<a href="{url}" target="_blank">{img_inner}</a>' if url and img_src else img_inner
+            img_tag = f'<a href="{url}" target="_blank" rel="noreferrer">{img_inner}</a>' if url and img_src else img_inner
             name = item.get("name", "")
             brand = item.get("brand", "")
             price = item.get("price", "")
             rank = item.get("rank", "?")
 
-            name_html = f'<a href="{url}" target="_blank">{name}</a>' if url else name
+            name_html = f'<a href="{url}" target="_blank" rel="noreferrer">{name}</a>' if url else name
             brand_html = f'<span class="brand">{brand}</span>' if brand and show_brand else ""
             price_html = f'<span class="price">{price}</span>' if price else ""
 
@@ -893,7 +893,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <div class="items">
     {render_items(zara, show_brand=False)}
   </div>
-  <a href="https://www.zara.com/jp/ja/man-all-products-l7465.html?v1=2458839" target="_blank" class="btn-all">ZARA を全部見る</a>
+  <a href="https://www.zara.com/jp/ja/man-all-products-l7465.html?v1=2458839" target="_blank" rel="noreferrer" class="btn-all">ZARA を全部見る</a>
 </div>
 
 <div class="section" id="musinsa">
@@ -901,7 +901,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <div class="items">
     {render_items(musinsa, show_brand=True)}
   </div>
-  <a href="https://global.musinsa.com/jp/trending/items?gender=M&page=1&toggleCountry=kr" target="_blank" class="btn-all">MUSINSA を全部見る</a>
+  <a href="https://global.musinsa.com/jp/trending/items?gender=M&page=1&toggleCountry=kr" target="_blank" rel="noreferrer" class="btn-all">MUSINSA を全部見る</a>
 </div>
 
 <div class="section" id="buyma">
@@ -909,7 +909,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <div class="items">
     {render_items(buyma, show_brand=True)}
   </div>
-  <a href="https://www.buyma.com/rank/-C1002/" target="_blank" class="btn-all">BUYMA を全部見る</a>
+  <a href="https://www.buyma.com/rank/-C1002/" target="_blank" rel="noreferrer" class="btn-all">BUYMA を全部見る</a>
 </div>
 
 <div class="section" id="stockx">
@@ -917,7 +917,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <div class="items">
     {render_items(stockx, show_brand=False)}
   </div>
-  <a href="https://stockx.com/ja-jp/browse/men?sort=featured" target="_blank" class="btn-all">StockX を全部見る</a>
+  <a href="https://stockx.com/ja-jp/browse/men?sort=featured" target="_blank" rel="noreferrer" class="btn-all">StockX を全部見る</a>
 </div>
 
 <div class="section" id="ssense">
@@ -925,7 +925,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <div class="items">
     {render_items(ssense, show_brand=True)}
   </div>
-  <a href="https://www.ssense.com/ja-jp/men?sort=popularity-desc" target="_blank" class="btn-all">SSENSE を全部見る</a>
+  <a href="https://www.ssense.com/ja-jp/men?sort=popularity-desc" target="_blank" rel="noreferrer" class="btn-all">SSENSE を全部見る</a>
 </div>
 
 <div class="section" id="farfetch">
@@ -933,7 +933,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <div class="items">
     {render_items(farfetch, show_brand=True)}
   </div>
-  <a href="https://www.farfetch.com/jp/sets/new-in-this-week-eu-men.aspx?category=141259" target="_blank" class="btn-all">FARFETCH を全部見る</a>
+  <a href="https://www.farfetch.com/jp/sets/new-in-this-week-eu-men.aspx?category=141259" target="_blank" rel="noreferrer" class="btn-all">FARFETCH を全部見る</a>
 </div>
 
 <div class="section" id="snkrdunk-sneakers">
@@ -941,7 +941,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <div class="items">
     {render_items(snkr_sneakers, show_brand=False)}
   </div>
-  <a href="https://snkrdunk.com/products?type=hottest" target="_blank" class="btn-all">SNKRDUNK スニーカーを全部見る</a>
+  <a href="https://snkrdunk.com/products?type=hottest" target="_blank" rel="noreferrer" class="btn-all">SNKRDUNK スニーカーを全部見る</a>
 </div>
 
 <div class="section" id="snkrdunk-streetwear">
@@ -949,7 +949,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <div class="items">
     {render_items(snkr_apparel, show_brand=False)}
   </div>
-  <a href="https://snkrdunk.com/apparels?type=hottest&department=apparel" target="_blank" class="btn-all">SNKRDUNK ストリートを全部見る</a>
+  <a href="https://snkrdunk.com/apparels?type=hottest&department=apparel" target="_blank" rel="noreferrer" class="btn-all">SNKRDUNK ストリートを全部見る</a>
 </div>
 
 <div class="section" id="zozotown">
@@ -957,7 +957,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <div class="items">
     {render_items(zozotown, show_brand=True)}
   </div>
-  <a href="https://zozo.jp/ranking/all-sales-men.html" target="_blank" class="btn-all">ZOZOTOWN を全部見る</a>
+  <a href="https://zozo.jp/ranking/all-sales-men.html" target="_blank" rel="noreferrer" class="btn-all">ZOZOTOWN を全部見る</a>
 </div>
 
 <script>

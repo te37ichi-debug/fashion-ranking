@@ -821,13 +821,13 @@ def save_html(brand_results):
             img_src = item.get("image", "")
             url = item.get("url", "")
             img_inner = f'<img src="{img_src}" alt="" loading="lazy">' if img_src else '<div class="no-img">NO IMAGE</div>'
-            img_tag = f'<a href="{url}" target="_blank">{img_inner}</a>' if url and img_src else img_inner
+            img_tag = f'<a href="{url}" target="_blank" rel="noreferrer">{img_inner}</a>' if url and img_src else img_inner
             name = item.get("name", "")
             brand = item.get("brand", "")
             price = item.get("price", "")
             rank = item.get("rank", "?")
 
-            name_html = f'<a href="{url}" target="_blank">{name}</a>' if url else name
+            name_html = f'<a href="{url}" target="_blank" rel="noreferrer">{name}</a>' if url else name
             brand_html = f'<span class="brand">{brand}</span>' if brand and show_brand else ""
             price_html = f'<span class="price">{price}</span>' if price else ""
 
@@ -859,7 +859,7 @@ def save_html(brand_results):
   <div class="items">
     {render_items(items, show_brand=True)}
   </div>
-  <a href="{conf["view_all"]}" target="_blank" class="btn-all">{conf["name"]} を全部見る</a>
+  <a href="{conf["view_all"]}" target="_blank" rel="noreferrer" class="btn-all">{conf["name"]} を全部見る</a>
 </div>
 '''
 
