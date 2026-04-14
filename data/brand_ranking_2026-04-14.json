@@ -1,6 +1,6 @@
 {
   "date": "2026-04-14",
-  "fetched_at": "2026-04-14T18:45:18.594743",
+  "fetched_at": "2026-04-14T18:51:42.391343",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -313,6 +313,153 @@
           "price": "¥15,950",
           "image": "https://assets.atmos-tokyo.com/items/S/kx4832-1s.jpg",
           "url": "https://www.atmos-tokyo.com/item/adidas/kx4832"
+        }
+      ]
+    },
+    "carhartt": {
+      "name": "Carhartt WIP",
+      "source": "https://carhartt-wip.jp/collections/men-new",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "OG Double Front Jacket - Opuntia (chalk wash)",
+          "price": "¥41,800",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036496_2ZX_5F-ST-01_f1cc8f72-ca01-4e54-8f7f-9ef698309efb.jpg?v=1775800567&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036496-26s-2zx5f"
+        },
+        {
+          "rank": 2,
+          "name": "OG Detroit Jacket - Deep Night / Black (rinsed)",
+          "price": "¥41,800",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036489_3AM_02-ST-01.jpg?v=1775806635&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036489-26s-3am02"
+        },
+        {
+          "rank": 3,
+          "name": "OG Detroit Jacket - Barchan / Black (rinsed)",
+          "price": "¥41,800",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036489_3NH_02-ST-01.jpg?v=1775800080&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036489-26s-3nh02"
+        },
+        {
+          "rank": 4,
+          "name": "Aden Chore Coat - Black (grind wash)",
+          "price": "¥37,400",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036256_89_B7-ST-01_696ab51c-6027-4ad6-89ad-e7461b444378.jpg?v=1775797713&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036256-26sp1-89b7"
+        },
+        {
+          "rank": 5,
+          "name": "Detroit Jacket - Leaf / Leaf (stone canvas)",
+          "price": "¥41,800",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I034819_3MA_4O-ST-01.jpg?v=1775798582&width=1500",
+          "url": "https://carhartt-wip.jp/products/i034819-26s-3ma4o"
+        },
+        {
+          "rank": 6,
+          "name": "OG Detroit Jacket - Blue / Dusty H Brown, Dark used wash",
+          "price": "¥44,000",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036593_2XN_4L-ST-01.jpg?v=1775800277&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036593-26s1-2xn4l"
+        },
+        {
+          "rank": 7,
+          "name": "OG Detroit Jacket - Blue / Dusty H Brown, Burst washed",
+          "price": "¥46,200",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036593_2XN_UR-ST-01_821a0b7a-be53-4b9e-b707-cdd53a8e612f.jpg?v=1775800185&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036593-26s2-2xnur"
+        },
+        {
+          "rank": 8,
+          "name": "Warren Chore Coat - Blue / Dusty H Brown",
+          "price": "¥34,100",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036592_2XN_4L-ST-01.jpg?v=1775806549&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036592-26s1-2xn4l"
+        },
+        {
+          "rank": 9,
+          "name": "Belmar Jacket - Blue (rinsed)",
+          "price": "¥31,900",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036586_01_02-ST-01_ffc6b777-edab-46a9-a2cf-926aabcaaefc.jpg?v=1775797811&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036586-26s-0102"
+        },
+        {
+          "rank": 10,
+          "name": "Prescott Shirt Jac - Hamilton Brown / Tobacco (garment dyed)",
+          "price": "¥37,400",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036484_00S_GD-ST-01.jpg?v=1775801655&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036484-26s-00sgd"
+        },
+        {
+          "rank": 11,
+          "name": "Prescott Shirt Jac - String / Leather (garment dyed)",
+          "price": "¥37,400",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036484_3VY_GD-ST-01.jpg?v=1775801687&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036484-26s-3vygd"
+        },
+        {
+          "rank": 12,
+          "name": "Parrish Shirt Jac - Blue (stone washed)",
+          "price": "¥33,000",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036485_01_06-ST-01.jpg?v=1775801554&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036485-26s-0106"
+        },
+        {
+          "rank": 13,
+          "name": "S/S Snake Camo Shirt - Snake Camo, Leaf (garment dyed)",
+          "price": "¥23,100",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036275_3QA_GD-ST-01.jpg?v=1775804376&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036275-26s-3qagd"
+        },
+        {
+          "rank": 14,
+          "name": "S/S Snake Camo Shirt - Snake Camo, Velvet Blue (garment dyed)",
+          "price": "¥23,100",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036275_3QB_GD-ST-01_adaec8e6-e13d-4350-b9c9-d4a908ce765e.jpg?v=1775804467&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036275-26s-3qbgd"
+        },
+        {
+          "rank": 15,
+          "name": "L/S Snake Polo - Snake Camo Jacquard, Velvet Blue",
+          "price": "¥35,200",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I036170_3QK_XX-ST-01_38abcfcd-452e-4fe1-809a-00d83afccc9b.jpg?v=1775799711&width=1500",
+          "url": "https://carhartt-wip.jp/products/i036170-26s-3qkxx"
+        },
+        {
+          "rank": 16,
+          "name": "S/S Pocket T-Shirt - Black",
+          "price": "¥7,700",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I030434_89_XX-ST-01_04b3b6ac-c913-46d2-915a-80029c562632.jpg?v=1775802917&width=1500",
+          "url": "https://carhartt-wip.jp/products/i030434-26s-89xx"
+        },
+        {
+          "rank": 17,
+          "name": "S/S Pocket T-Shirt - White",
+          "price": "¥7,700",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I030434_02_XX-ST-01_698c49b1-1af1-4671-a9e5-855537386408.jpg?v=1775803310&width=1500",
+          "url": "https://carhartt-wip.jp/products/i030434-26s-02xx"
+        },
+        {
+          "rank": 18,
+          "name": "S/S Pocket T-Shirt - Dark Navy",
+          "price": "¥7,700",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I030434_1C_XX-ST-01_3ff3f21a-da49-4c05-ae8c-5d265273f0d1.jpg?v=1775803053&width=1500",
+          "url": "https://carhartt-wip.jp/products/i030434-26s-1cxx"
+        },
+        {
+          "rank": 19,
+          "name": "S/S Pocket T-Shirt - Velvet Green",
+          "price": "¥7,700",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I030434_3GD_XX-ST-01.jpg?v=1775803219&width=1500",
+          "url": "https://carhartt-wip.jp/products/i030434-26s-3gdxx"
+        },
+        {
+          "rank": 20,
+          "name": "S/S Pocket T-Shirt - Gentle Orange",
+          "price": "¥7,700",
+          "image": "https://carhartt-wip.jp/cdn/shop/files/I030434_3IA_XX-ST-01_89955f0f-e580-433e-ac7f-0920e759e7ce.jpg?v=1775803088&width=1500",
+          "url": "https://carhartt-wip.jp/products/i030434-26s-3iaxx"
         }
       ]
     }
