@@ -6,7 +6,7 @@
 <title>Men's Fashion Ranking 2026-04-13</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #333; padding: 20px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #333; padding: 20px; padding-top: 60px; }
   h1 { text-align: center; margin-bottom: 8px; font-size: 1.8em; }
   .date { text-align: center; color: #888; margin-bottom: 30px; font-size: 0.95em; }
   .section { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
@@ -17,6 +17,7 @@
   .badge-musinsa { background: #1a1a1a; }
   .badge-buyma { background: #e91e63; }
   .badge-snkrdunk { background: #ff5722; }
+  .badge-buyma { background: #e91e63; }
   .items { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
   .item { background: #fafafa; border-radius: 8px; overflow: hidden; transition: transform 0.15s; border: 1px solid #eee; }
   .item:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
@@ -32,13 +33,63 @@
   .price { display: block; font-size: 0.9em; font-weight: 600; color: #e44; }
   .empty { color: #aaa; text-align: center; padding: 40px; }
   .count { font-size: 0.8em; color: #999; font-weight: normal; }
+  nav.toc {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  nav.toc ul {
+    list-style: none !important;
+    display: flex !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  nav.toc ul::-webkit-scrollbar { display: none; }
+  nav.toc li { flex-shrink: 0; }
+  nav.toc li a {
+    display: block !important;
+    padding: 14px 16px !important;
+    color: #555 !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  nav.toc li a:hover, nav.toc li a.active { color: #000 !important; border-bottom-color: #000 !important; }
+  .section { scroll-margin-top: 52px; }
 </style>
 </head>
 <body>
+<nav class="toc">
+  <ul>
+    <li><a href="#zara">ZARA</a></li>
+    <li><a href="#musinsa">MUSINSA</a></li>
+    <li><a href="#buyma">BUYMA</a></li>
+    <li><a href="#snkrdunk-sneakers">SNKRDUNK スニーカー</a></li>
+    <li><a href="#snkrdunk-streetwear">SNKRDUNK ストリート</a></li>
+    <li><a href="#zozotown">ZOZOTOWN</a></li>
+  </ul>
+</nav>
 <h1>Men's Fashion Ranking</h1>
 <p class="date">2026-04-13</p>
 
-<div class="section">
+<div class="section" id="zara">
   <h2>ZARA <span class="badge badge-zara">JP</span> <span class="count">20 items</span></h2>
   <div class="items">
     
@@ -244,7 +295,7 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section" id="musinsa">
   <h2>MUSINSA <span class="badge badge-musinsa">JP</span> <span class="count">18 items</span></h2>
   <div class="items">
     
@@ -430,7 +481,7 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section" id="buyma">
   <h2>BUYMA <span class="badge badge-buyma">JP</span> <span class="count">20 items</span></h2>
   <div class="items">
     
@@ -636,7 +687,7 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section" id="snkrdunk-sneakers">
   <h2>SNKRDUNK 人気スニーカー <span class="badge badge-snkrdunk">JP</span> <span class="count">20 items</span></h2>
   <div class="items">
     
@@ -842,7 +893,7 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section" id="snkrdunk-streetwear">
   <h2>SNKRDUNK 人気ストリートウェア <span class="badge badge-snkrdunk">JP</span> <span class="count">20 items</span></h2>
   <div class="items">
     
@@ -1048,7 +1099,7 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section" id="zozotown">
   <h2>ZOZOTOWN <span class="badge badge-zozo">JP</span> <span class="count">20 items</span></h2>
   <div class="items">
     
@@ -1254,5 +1305,33 @@
   </div>
 </div>
 
+<script>
+(function(){
+  var links = document.querySelectorAll('.toc a');
+  var sections = [];
+  links.forEach(function(a){
+    var s = document.querySelector(a.getAttribute('href'));
+    if(s) sections.push({el:s, link:a});
+  });
+  function update(){
+    var scrollY = window.scrollY + 60;
+    var current = sections[0];
+    sections.forEach(function(s){
+      if(s.el.offsetTop <= scrollY) current = s;
+    });
+    links.forEach(function(a){ a.classList.remove('active'); });
+    if(current) {
+      current.link.classList.add('active');
+      // Auto-scroll the nav bar to show active item
+      var nav = document.querySelector('.toc ul');
+      var linkLeft = current.link.offsetLeft;
+      var navWidth = nav.offsetWidth;
+      nav.scrollTo({left: linkLeft - navWidth/2 + current.link.offsetWidth/2, behavior:'smooth'});
+    }
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  update();
+})();
+</script>
 </body>
 </html>
