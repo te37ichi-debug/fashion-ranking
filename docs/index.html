@@ -21,6 +21,9 @@
   .badge-farfetch { background: #222; }
   .badge-snkrdunk { background: #ff5722; }
   .items { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+  @media (max-width: 600px) {
+    .items { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  }
   .item { background: #fafafa; border-radius: 8px; overflow: hidden; transition: transform 0.15s; border: 1px solid #eee; }
   .item:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
   .rank { position: absolute; top: 6px; left: 6px; background: rgba(0,0,0,0.75); color: #fff; font-weight: 700; font-size: 0.85em; padding: 2px 8px; border-radius: 4px; z-index: 1; }

@@ -1,0 +1,1123 @@
+#!/usr/bin/env python3
+"""
+ブランド新着情報&人気ランキング Bot
+ブランドごとの新着・人気アイテムを取得・保存するスクリプト
+"""
+
+import json
+import os
+import time
+from datetime import datetime
+
+import requests
+from bs4 import BeautifulSoup
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "data")
+REPO_DIR = SCRIPT_DIR
+TODAY = datetime.now().strftime("%Y-%m-%d")
+PAGES_URL = "https://te37ichi-debug.github.io/fashion-ranking/brands.html"
+IS_CI = os.environ.get("CI") == "true"
+
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+
+# Discord Webhook（ブランドランキング専用チャンネル）
+BRAND_WEBHOOK_URL = "https://discord.com/api/webhooks/1493543560463777872/UjBRzjBcRgHAWQtNuVwalFOpEr-Q5cPh2WGoLtkT1sTpewRyTY5OGfAFRyTvFXd9_gg1"
+
+
+def ensure_output_dir():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+
+# ──────────────────────────────────────────────────────────
+# ブランド定義
+# ──────────────────────────────────────────────────────────
+
+BRANDS = {
+    "adidas": {
+        "name": "adidas",
+        "url": "https://www.adidas.jp/search?sort=newest-to-oldest",
+        "view_all": "https://www.adidas.jp/search?sort=newest-to-oldest",
+        "badge_color": "#000",
+        "badge_label": "NEW",
+        "fetcher": "fetch_adidas",
+    },
+    "adidas_atmos": {
+        "name": "adidas (atmos)",
+        "url": "https://www.atmos-tokyo.com/category/all?brand=adidas",
+        "view_all": "https://www.atmos-tokyo.com/category/all?brand=adidas",
+        "badge_color": "#1a1a1a",
+        "badge_label": "NEW",
+        "fetcher": "fetch_adidas_atmos",
+    },
+    "carhartt": {
+        "name": "Carhartt WIP",
+        "url": "https://carhartt-wip.jp/collections/men-new",
+        "view_all": "https://carhartt-wip.jp/collections/men-new",
+        "badge_color": "#5c3a1e",
+        "badge_label": "NEW",
+        "fetcher": "fetch_carhartt",
+    },
+    "diesel": {
+        "name": "DIESEL",
+        "url": "https://www.diesel.co.jp/ja/man/new-arrivals/apparel/",
+        "view_all": "https://www.diesel.co.jp/ja/man/new-arrivals/apparel/",
+        "badge_color": "#cc0000",
+        "badge_label": "NEW",
+        "fetcher": "fetch_diesel",
+    },
+    "satur": {
+        "name": "SATUR",
+        "url": "https://satur-jp.com/collections/man?sort_by=best-selling",
+        "view_all": "https://satur-jp.com/collections/man?sort_by=best-selling",
+        "badge_color": "#2e5ea8",
+        "badge_label": "POPULAR",
+        "fetcher": "fetch_satur",
+    },
+    "satur_buyma": {
+        "name": "SATUR (BUYMA)",
+        "url": "https://www.buyma.com/r/_SATUR-%E3%82%BB%E3%82%BF%E3%83%BC/",
+        "view_all": "https://www.buyma.com/r/_SATUR-%E3%82%BB%E3%82%BF%E3%83%BC/",
+        "badge_color": "#2e5ea8",
+        "badge_label": "POPULAR",
+        "fetcher": "fetch_satur_buyma",
+    },
+    "ami_paris": {
+        "name": "AMI PARIS (BUYMA)",
+        "url": "https://www.buyma.com/r/-C1002/amiparis/",
+        "view_all": "https://www.buyma.com/r/-C1002/amiparis/",
+        "badge_color": "#c41e3a",
+        "badge_label": "POPULAR",
+        "fetcher": "fetch_ami_paris",
+    },
+    "thug_club_buyma": {
+        "name": "Thug Club (BUYMA)",
+        "url": "https://www.buyma.com/r/Thug%20Club/",
+        "view_all": "https://www.buyma.com/r/Thug%20Club/",
+        "badge_color": "#000",
+        "badge_label": "POPULAR",
+        "fetcher": "fetch_thug_club_buyma",
+    },
+    "acne_studios": {
+        "name": "Acne Studios",
+        "url": "https://www.acnestudios.com/jp/ja/man/new-arrivals/?sz=56",
+        "view_all": "https://www.acnestudios.com/jp/ja/man/new-arrivals/?sz=56",
+        "badge_color": "#555",
+        "badge_label": "NEW",
+        "fetcher": "fetch_acne_studios",
+    },
+    "stussy": {
+        "name": "Stüssy",
+        "url": "https://jp.stussy.com/collections/new-arrivals",
+        "view_all": "https://jp.stussy.com/collections/new-arrivals",
+        "badge_color": "#1a1a1a",
+        "badge_label": "NEW",
+        "fetcher": "fetch_stussy",
+    },
+}
+
+
+# ──────────────────────────────────────────────────────────
+# adidas
+# ──────────────────────────────────────────────────────────
+
+def fetch_adidas(max_items=20):
+    print("[adidas] 新着アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto("https://www.adidas.jp/search?sort=newest-to-oldest", wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("article[class*='product-card']")
+            seen_names = set()
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                link = card.select_one("a[href]")
+                href = link.get("href", "") if link else ""
+                url = f"https://www.adidas.jp{href}" if href.startswith("/") else href
+
+                # 商品名（最初のname/title要素）
+                name = ""
+                for el in card.select("[class*='name'], [class*='Name'], [class*='title'], [class*='Title']"):
+                    t = el.get_text(strip=True)
+                    if t and len(t) > 3:
+                        name = t
+                        break
+
+                if not name or name in seen_names:
+                    continue
+                seen_names.add(name)
+
+                # カテゴリ
+                category = ""
+                for el in card.select("p, span"):
+                    t = el.get_text(strip=True)
+                    if "オリジナルス" in t or "メンズ" in t or "レディース" in t or "ランニング" in t:
+                        category = t
+                        break
+
+                # 価格
+                price = ""
+                for el in card.select("[class*='price'], [class*='Price']"):
+                    t = el.get_text(strip=True)
+                    if "¥" in t:
+                        # "価格¥19,800CONFIRMEDアプリ限定" -> "¥19,800"
+                        import re
+                        m = re.search(r'¥[\d,]+', t)
+                        if m:
+                            price = m.group()
+                            break
+
+                # 画像
+                image = ""
+                img_el = card.select_one("img[src*='assets.adidas']")
+                if img_el:
+                    image = img_el.get("src", "")
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "brand": category,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[adidas] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[adidas] {len(items)} 件取得")
+    return items
+
+
+# ──────────────────────────────────────────────────────────
+# ──────────────────────────────────────────────────────────
+# adidas (atmos)
+# ──────────────────────────────────────────────────────────
+
+def fetch_adidas_atmos(max_items=20):
+    print("[adidas (atmos)] 新着アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto("https://www.atmos-tokyo.com/category/all?brand=adidas", wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("li.lists-products-item")
+            seen_urls = set()
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                link = card.select_one("a[href]")
+                href = link.get("href", "") if link else ""
+                if not href or href in seen_urls:
+                    continue
+                seen_urls.add(href)
+                url = href if href.startswith("http") else f"https://www.atmos-tokyo.com{href}"
+
+                # 商品名
+                name_el = card.select_one("h2")
+                name = name_el.get_text(strip=True) if name_el else ""
+                if not name:
+                    continue
+
+                # 価格
+                import re
+                price = ""
+                text = card.get_text(separator="|", strip=True)
+                m = re.search(r'¥[\d,]+', text)
+                if m:
+                    price = m.group()
+
+                # 画像
+                image = ""
+                img_el = card.select_one("img.u-object-fit")
+                if img_el:
+                    image = img_el.get("src", "")
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[adidas (atmos)] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[adidas (atmos)] {len(items)} 件取得")
+    return items
+
+
+# ──────────────────────────────────────────────────────────
+# Carhartt WIP
+# ──────────────────────────────────────────────────────────
+
+def fetch_carhartt(max_items=20):
+    print("[Carhartt WIP] メンズ新着アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+    import re
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto("https://carhartt-wip.jp/collections/men-new", wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("product-card")
+            seen_names = set()
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                # 商品名
+                name_el = card.select_one("a.bold")
+                name = name_el.get_text(strip=True) if name_el else ""
+                if not name or name in seen_names:
+                    continue
+                seen_names.add(name)
+
+                # URL
+                href = name_el.get("href", "") if name_el else ""
+                url = f"https://carhartt-wip.jp{href}" if href.startswith("/") else href
+
+                # 価格
+                price = ""
+                text = card.get_text(separator="|", strip=True)
+                m = re.search(r'¥[\d,]+', text)
+                if m:
+                    price = m.group()
+
+                # 画像
+                image = ""
+                img_el = card.select_one("img[alt]")
+                if img_el:
+                    src = img_el.get("src", "")
+                    if src.startswith("//"):
+                        src = "https:" + src
+                    image = src
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[Carhartt WIP] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[Carhartt WIP] {len(items)} 件取得")
+    return items
+
+
+# ──────────────────────────────────────────────────────────
+# DIESEL
+# ──────────────────────────────────────────────────────────
+
+def fetch_diesel(max_items=20):
+    print("[DIESEL] メンズ新着アパレル取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+    import re
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto(
+                "https://www.diesel.co.jp/ja/man/new-arrivals/apparel/?cgid=diesel-newin-man-features-NAapparel&prefn1=displayOnlyOnSale&prefv1=false",
+                wait_until="domcontentloaded",
+                timeout=30000,
+            )
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("div.product-tile")
+            seen_urls = set()
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                link = card.select_one("a[href]")
+                href = link.get("href", "") if link else ""
+                if not href or href in seen_urls:
+                    continue
+                seen_urls.add(href)
+                url = href if href.startswith("http") else f"https://www.diesel.co.jp{href}"
+
+                # 商品名: テキストの最初の要素
+                text = card.get_text(separator="|", strip=True)
+                parts = [p.strip() for p in text.split("|") if p.strip()]
+                # "responsible" などのラベルをスキップ
+                name = ""
+                for part in parts:
+                    if part in ("responsible", "NEW"):
+                        continue
+                    if "¥" in part or "Colours" in part.lower():
+                        break
+                    name = part
+                    break
+
+                if not name:
+                    continue
+
+                # 価格
+                price = ""
+                m = re.search(r'¥\s*[\d,]+', text)
+                if m:
+                    price = m.group().replace(" ", "")
+
+                # 画像
+                image = ""
+                img_el = card.select_one("img[src*='diesel']")
+                if img_el:
+                    image = img_el.get("src", "")
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[DIESEL] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[DIESEL] {len(items)} 件取得")
+    return items
+
+
+# ──────────────────────────────────────────────────────────
+# SATUR
+# ──────────────────────────────────────────────────────────
+
+def fetch_satur(max_items=20):
+    print("[SATUR] メンズ人気アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+    import re
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto("https://satur-jp.com/collections/man?sort_by=best-selling", wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("product-item")
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                title_el = card.select_one("a.product-item-meta__title")
+                name = title_el.get_text(strip=True) if title_el else ""
+                if not name:
+                    continue
+
+                href = title_el.get("href", "") if title_el else ""
+                url = f"https://satur-jp.com{href}" if href.startswith("/") else href
+
+                price = ""
+                text = card.get_text(separator="|", strip=True)
+                m = re.search(r'¥[\d,]+', text)
+                if m:
+                    price = m.group()
+
+                image = ""
+                img_el = card.select_one("img[src*='cdn']")
+                if img_el:
+                    src = img_el.get("src", "")
+                    image = f"https:{src}" if src.startswith("//") else src
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[SATUR] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[SATUR] {len(items)} 件取得")
+    return items
+
+
+# ──────────────────────────────────────────────────────────
+# BUYMA 共通パーサー
+# ──────────────────────────────────────────────────────────
+
+def _fetch_buyma_brand(label, url, max_items=20):
+    """BUYMA のブランドページから人気アイテムを取得する共通関数"""
+    print(f"[{label}] 人気アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+    import re
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(5000)
+
+            for _ in range(3):
+                page.evaluate("window.scrollBy(0, 800)")
+                page.wait_for_timeout(600)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("li.product")
+            seen_names = set()
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                name = ""
+                item_url = ""
+
+                # URL: item-url 属性 or リンクから
+                action_el = card.select_one("[item-url]")
+                if action_el:
+                    iurl = action_el.get("item-url", "")
+                    if iurl:
+                        item_url = f"https://www.buyma.com{iurl}" if iurl.startswith("/") else iurl
+
+                name_el = card.select_one("h2.name a") or card.select_one("a[data-ga-item-name]")
+                if name_el:
+                    name = name_el.get("data-ga-item-name", "") or name_el.get_text(strip=True)
+                    if not item_url:
+                        href = name_el.get("href", "")
+                        item_url = f"https://www.buyma.com{href}" if href.startswith("/") else href
+
+                if not name:
+                    skip_words = ["商品情報", "絞り込む", "除外する", "条件から外す", "タイムセール", "PERSONAL SHOPPER", "関税負担", "返品補償", "スピード配送", "送料込"]
+                    text = card.get_text(separator="|", strip=True)
+                    parts = [p.strip() for p in text.split("|") if p.strip()]
+                    for part in parts:
+                        if any(sw in part for sw in skip_words):
+                            continue
+                        if len(part) > 5 and "¥" not in part and "OFF" not in part and "カラー" not in part:
+                            name = part
+                            break
+
+                if not name or name in seen_names:
+                    continue
+                seen_names.add(name)
+
+                if not item_url:
+                    link = card.select_one("a[href*='/item/']")
+                    if link:
+                        href = link.get("href", "")
+                        item_url = f"https://www.buyma.com{href}" if href.startswith("/") else href
+
+                price = ""
+                price_el = card.select_one(".pricetxt")
+                if price_el:
+                    price = price_el.get_text(strip=True)
+                else:
+                    text = card.get_text(separator="|", strip=True)
+                    m = re.search(r'¥[\d,]+', text)
+                    if m:
+                        price = m.group()
+
+                image = ""
+                img_el = card.select_one("img[src*='buyma']")
+                if img_el:
+                    image = img_el.get("src", "")
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": item_url,
+                })
+
+        except Exception as e:
+            print(f"[{label}] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[{label}] {len(items)} 件取得")
+    return items
+
+
+# ──────────────────────────────────────────────────────────
+# SATUR (BUYMA)
+# ──────────────────────────────────────────────────────────
+
+def fetch_satur_buyma(max_items=20):
+    return _fetch_buyma_brand(
+        "SATUR (BUYMA)",
+        "https://www.buyma.com/r/_SATUR-%E3%82%BB%E3%82%BF%E3%83%BC/",
+        max_items,
+    )
+
+
+# ──────────────────────────────────────────────────────────
+# AMI PARIS
+# ──────────────────────────────────────────────────────────
+
+def fetch_ami_paris(max_items=20):
+    return _fetch_buyma_brand(
+        "AMI PARIS (BUYMA)",
+        "https://www.buyma.com/r/-C1002/amiparis/",
+        max_items,
+    )
+
+
+def fetch_thug_club_buyma(max_items=20):
+    return _fetch_buyma_brand(
+        "Thug Club (BUYMA)",
+        "https://www.buyma.com/r/Thug%20Club/",
+        max_items,
+    )
+
+
+# ──────────────────────────────────────────────────────────
+# Acne Studios
+# ──────────────────────────────────────────────────────────
+
+def fetch_acne_studios(max_items=20):
+    print("[Acne Studios] メンズ新着アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto("https://www.acnestudios.com/jp/ja/man/new-arrivals/?sz=56", wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("div.product-tile")
+            seen_names = set()
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                name_el = card.select_one(".product-tile__name")
+                name = name_el.get_text(strip=True) if name_el else ""
+                if not name or name in seen_names:
+                    continue
+                seen_names.add(name)
+
+                price_el = card.select_one(".product-tile__price")
+                price = price_el.get_text(strip=True) if price_el else ""
+
+                link = card.select_one("a.tile__link") or card.select_one("a[href]")
+                url = link.get("href", "") if link else ""
+
+                img_el = card.select_one("img[src*='acnestudios']")
+                image = img_el.get("src", "") if img_el else ""
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[Acne Studios] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[Acne Studios] {len(items)} 件取得")
+    return items
+
+
+# ──────────────────────────────────────────────────────────
+# Stüssy
+# ──────────────────────────────────────────────────────────
+
+def fetch_stussy(max_items=20):
+    print("[Stüssy] 新着アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+    import re
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto("https://jp.stussy.com/collections/new-arrivals", wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            title_links = soup.select("a.product-card__title-link")
+            seen_names = set()
+            for tl in title_links:
+                if len(items) >= max_items:
+                    break
+
+                name = tl.get_text(strip=True)
+                if not name or name in seen_names:
+                    continue
+                seen_names.add(name)
+
+                href = tl.get("href", "")
+                url = f"https://jp.stussy.com{href}" if href.startswith("/") else href
+
+                parent = tl.find_parent("div", class_=lambda c: c and "product-card" in " ".join(c)) or tl.find_parent("li") or tl.find_parent("div")
+
+                price = ""
+                if parent:
+                    for el in parent.select("[class*='price']"):
+                        t = el.get_text(strip=True)
+                        if "¥" in t:
+                            m = re.search(r'¥[\d,]+', t)
+                            if m:
+                                price = m.group()
+                                break
+
+                image = ""
+                if parent:
+                    img_el = parent.select_one("img[src*='stussy'], img[src*='cdn']")
+                    if img_el:
+                        src = img_el.get("src", "")
+                        image = f"https:{src}" if src.startswith("//") else src
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[Stüssy] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[Stüssy] {len(items)} 件取得")
+    return items
+
+
+# 保存 (JSON + HTML)
+# ──────────────────────────────────────────────────────────
+
+def save_json(brand_results):
+    ensure_output_dir()
+
+    result = {
+        "date": TODAY,
+        "fetched_at": datetime.now().isoformat(),
+        "brands": {},
+    }
+    for key, items in brand_results.items():
+        conf = BRANDS[key]
+        result["brands"][key] = {
+            "name": conf["name"],
+            "source": conf["url"],
+            "count": len(items),
+            "items": items,
+        }
+
+    filepath = os.path.join(OUTPUT_DIR, f"brand_ranking_{TODAY}.json")
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+
+    print(f"JSON 保存完了: {filepath}")
+    return filepath
+
+
+def save_html(brand_results):
+    ensure_output_dir()
+
+    def render_items(items, show_brand=False):
+        if not items:
+            return '<p class="empty">取得できませんでした</p>'
+        rows = []
+        for item in items:
+            img_src = item.get("image", "")
+            url = item.get("url", "")
+            img_inner = f'<img src="{img_src}" alt="" loading="lazy">' if img_src else '<div class="no-img">NO IMAGE</div>'
+            img_tag = f'<a href="{url}" target="_blank">{img_inner}</a>' if url and img_src else img_inner
+            name = item.get("name", "")
+            brand = item.get("brand", "")
+            price = item.get("price", "")
+            rank = item.get("rank", "?")
+
+            name_html = f'<a href="{url}" target="_blank">{name}</a>' if url else name
+            brand_html = f'<span class="brand">{brand}</span>' if brand and show_brand else ""
+            price_html = f'<span class="price">{price}</span>' if price else ""
+
+            rows.append(f'''
+            <div class="item">
+              <span class="rank">#{rank}</span>
+              <div class="img-wrap">{img_tag}</div>
+              <div class="info">
+                <div class="name">{name_html}</div>
+                {brand_html}
+                {price_html}
+              </div>
+            </div>''')
+        return "\n".join(rows)
+
+    # 目次
+    toc_items = "\n".join(
+        f'    <li><a href="#{key}">{conf["name"]}</a></li>'
+        for key, conf in BRANDS.items()
+    )
+
+    # セクション
+    sections = ""
+    for key, items in brand_results.items():
+        conf = BRANDS[key]
+        sections += f'''
+<div class="section" id="{key}">
+  <h2>{conf["name"]} <span class="badge" style="background:{conf["badge_color"]}">{conf["badge_label"]}</span> <span class="count">{len(items)} items</span></h2>
+  <div class="items">
+    {render_items(items, show_brand=True)}
+  </div>
+  <a href="{conf["view_all"]}" target="_blank" class="btn-all">{conf["name"]} を全部見る</a>
+</div>
+'''
+
+    html = f'''<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ブランド新着情報&人気ランキング {TODAY}</title>
+<style>
+  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+  body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #333; padding: 20px; padding-top: 60px; }}
+  h1 {{ text-align: center; margin-bottom: 8px; font-size: 1.8em; }}
+  .date {{ text-align: center; color: #888; margin-bottom: 30px; font-size: 0.95em; }}
+  .section {{ background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }}
+  .section h2 {{ font-size: 1.3em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #eee; }}
+  .section h2 .badge {{ font-size: 0.65em; padding: 3px 8px; border-radius: 4px; color: #fff; vertical-align: middle; margin-left: 8px; }}
+  .items {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }}
+  @media (max-width: 600px) {{
+    .items {{ grid-template-columns: repeat(2, 1fr); gap: 10px; }}
+  }}
+  .item {{ background: #fafafa; border-radius: 8px; overflow: hidden; transition: transform 0.15s; border: 1px solid #eee; }}
+  .item:hover {{ transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }}
+  .rank {{ position: absolute; top: 6px; left: 6px; background: rgba(0,0,0,0.75); color: #fff; font-weight: 700; font-size: 0.85em; padding: 2px 8px; border-radius: 4px; z-index: 1; }}
+  .img-wrap {{ position: relative; width: 100%; aspect-ratio: 1; background: #eee; overflow: hidden; }}
+  .img-wrap img {{ width: 100%; height: 100%; object-fit: cover; }}
+  .no-img {{ width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 0.8em; }}
+  .info {{ padding: 10px; }}
+  .name {{ font-size: 0.85em; line-height: 1.4; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
+  .name a {{ color: #333; text-decoration: none; }}
+  .name a:hover {{ text-decoration: underline; }}
+  .brand {{ display: block; font-size: 0.75em; color: #888; margin-bottom: 4px; }}
+  .price {{ display: block; font-size: 0.9em; font-weight: 600; color: #e44; }}
+  .empty {{ color: #aaa; text-align: center; padding: 40px; }}
+  .count {{ font-size: 0.8em; color: #999; font-weight: normal; }}
+  nav.toc {{ position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #ffffff; margin: 0; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }}
+  nav.toc ul {{ list-style: none; display: flex; flex-wrap: wrap; gap: 0; margin: 0; padding: 0; justify-content: center; }}
+  nav.toc li {{ flex-shrink: 0; }}
+  nav.toc li a {{ display: block; padding: 10px 14px; color: #555; text-decoration: none; font-size: 12px; font-weight: 600; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }}
+  nav.toc li a:hover, nav.toc li a.active {{ color: #000; border-bottom-color: #000; }}
+  @media (max-width: 600px) {{
+    body {{ padding-top: 80px; }}
+    nav.toc ul {{ justify-content: flex-start; }}
+    nav.toc li a {{ padding: 8px 11px; font-size: 11px; }}
+    .section {{ scroll-margin-top: 80px; }}
+  }}
+  .section {{ scroll-margin-top: 52px; }}
+  .btn-all {{ display: block; margin: 16px auto 0; padding: 10px 24px; background: #333; color: #fff; border: none; border-radius: 8px; font-size: 0.85em; font-weight: 600; text-decoration: none; text-align: center; width: fit-content; transition: background 0.2s; }}
+  .btn-all:hover {{ background: #555; }}
+</style>
+</head>
+<body>
+<nav class="toc">
+  <ul>
+{toc_items}
+  </ul>
+</nav>
+<h1>ブランド新着情報&人気ランキング</h1>
+<p class="date">{TODAY}</p>
+{sections}
+<script>
+(function(){{
+  var links = document.querySelectorAll('.toc a');
+  var sections = [];
+  links.forEach(function(a){{
+    var s = document.querySelector(a.getAttribute('href'));
+    if(s) sections.push({{el:s, link:a}});
+  }});
+  function update(){{
+    var scrollY = window.scrollY + 60;
+    var current = sections[0];
+    sections.forEach(function(s){{
+      if(s.el.offsetTop <= scrollY) current = s;
+    }});
+    links.forEach(function(a){{ a.classList.remove('active'); }});
+    if(current) {{
+      current.link.classList.add('active');
+      var nav = document.querySelector('.toc ul');
+      var linkLeft = current.link.offsetLeft;
+      var navWidth = nav.offsetWidth;
+      nav.scrollTo({{left: linkLeft - navWidth/2 + current.link.offsetWidth/2, behavior:'smooth'}});
+    }}
+  }}
+  window.addEventListener('scroll', update, {{passive:true}});
+  update();
+}})();
+</script>
+</body>
+</html>'''
+
+    filepath = os.path.join(OUTPUT_DIR, f"brand_ranking_{TODAY}.html")
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(html)
+
+    # GitHub Pages 用
+    docs_dir = os.path.join(os.path.dirname(OUTPUT_DIR), "docs")
+    os.makedirs(docs_dir, exist_ok=True)
+    docs_path = os.path.join(docs_dir, "brands.html")
+    with open(docs_path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+    print(f"HTML 保存完了: {filepath}")
+    return filepath
+
+
+# ──────────────────────────────────────────────────────────
+# Discord 投稿
+# ──────────────────────────────────────────────────────────
+
+def build_embed(brand_name, color, items, show_brand=False, badge_label="NEW"):
+    if not items:
+        return {
+            "title": f"{brand_name} - 取得失敗",
+            "description": "データを取得できませんでした。",
+            "color": color,
+        }
+
+    lines = []
+    for item in items[:10]:
+        rank = item.get("rank", "?")
+        name = item.get("name", "")[:50]
+        brand = item.get("brand", "")
+        price = item.get("price", "")
+        url = item.get("url", "")
+
+        name_part = f"[{name}]({url})" if url else name
+        brand_part = f" `{brand}`" if brand and show_brand else ""
+        price_part = f"  {price}" if price else ""
+
+        lines.append(f"**{rank}.** {name_part}{brand_part}{price_part}")
+
+    if len(items) > 10:
+        lines.append(f"_... 他 {len(items) - 10} 件_")
+
+    thumbnail = {}
+    if items[0].get("image"):
+        thumbnail = {"url": items[0]["image"]}
+
+    return {
+        "title": f"{brand_name} {'人気アイテム' if badge_label == 'POPULAR' else '新着アイテム'} TOP {min(len(items), 10)}",
+        "description": "\n".join(lines),
+        "color": color,
+        "thumbnail": thumbnail,
+    }
+
+
+def post_to_discord(brand_results):
+    print("[Discord] ブランドランキングを投稿中...")
+
+    header_payload = {
+        "content": f"## 👟 ブランド新着情報&人気ランキング - {TODAY}\nまとめはこちら👉 {PAGES_URL}",
+    }
+    resp = requests.post(BRAND_WEBHOOK_URL, json=header_payload, timeout=15)
+    if resp.status_code in (200, 204):
+        print("[Discord] ヘッダー投稿成功")
+
+    embeds = []
+    for key, items in brand_results.items():
+        conf = BRANDS[key]
+        color = int(conf["badge_color"].lstrip("#"), 16)
+        embeds.append(build_embed(conf["name"], color, items, show_brand=True, badge_label=conf.get("badge_label", "NEW")))
+
+    # 3件ずつ投稿
+    for i in range(0, len(embeds), 3):
+        time.sleep(0.5)
+        requests.post(BRAND_WEBHOOK_URL, json={"embeds": embeds[i:i+3]}, timeout=15)
+
+    print("[Discord] 投稿完了")
+
+
+# ──────────────────────────────────────────────────────────
+# コンソール表示
+# ──────────────────────────────────────────────────────────
+
+def print_summary(brand_name, items):
+    print(f"\n{'─' * 60}")
+    print(f"  {brand_name} TOP {min(len(items), 10)}")
+    print(f"{'─' * 60}")
+    if not items:
+        print("  (取得できませんでした)")
+        return
+    for item in items[:10]:
+        rank = item.get("rank", "?")
+        name = item.get("name", "")[:45]
+        price = item.get("price", "")
+        has_img = "img" if item.get("image") else "   "
+        line = f"  {rank:>2}. [{has_img}] {name}"
+        if price:
+            line += f"  {price}"
+        print(line)
+    if len(items) > 10:
+        print(f"  ... 他 {len(items) - 10} 件")
+
+
+# ──────────────────────────────────────────────────────────
+# メイン
+# ──────────────────────────────────────────────────────────
+
+# フェッチャー名 → 関数のマッピング
+FETCHERS = {
+    "fetch_adidas": fetch_adidas,
+    "fetch_adidas_atmos": fetch_adidas_atmos,
+    "fetch_carhartt": fetch_carhartt,
+    "fetch_diesel": fetch_diesel,
+    "fetch_satur": fetch_satur,
+    "fetch_satur_buyma": fetch_satur_buyma,
+    "fetch_ami_paris": fetch_ami_paris,
+    "fetch_thug_club_buyma": fetch_thug_club_buyma,
+    "fetch_acne_studios": fetch_acne_studios,
+    "fetch_stussy": fetch_stussy,
+}
+
+
+def main():
+    print(f"=== ブランド新着情報&人気ランキング Bot ({TODAY}) ===\n")
+
+    brand_results = {}
+    for key, conf in BRANDS.items():
+        fetcher_name = conf["fetcher"]
+        fetcher = FETCHERS.get(fetcher_name)
+        if not fetcher:
+            print(f"[{conf['name']}] フェッチャーが見つかりません: {fetcher_name}")
+            brand_results[key] = []
+            continue
+        try:
+            brand_results[key] = fetcher()
+        except Exception as e:
+            print(f"[{conf['name']}] 致命的エラー: {e}")
+            brand_results[key] = []
+
+    # 結果表示
+    for key, items in brand_results.items():
+        print_summary(BRANDS[key]["name"], items)
+
+    # 保存
+    json_path = save_json(brand_results)
+    html_path = save_html(brand_results)
+
+    total = sum(len(items) for items in brand_results.values())
+    print(f"\n合計 {total} 件のブランドデータを取得しました。")
+
+    # GitHub Pages に push
+    if not IS_CI:
+        import subprocess
+        try:
+            subprocess.run(["git", "add", "docs/", "data/"], cwd=REPO_DIR, check=True, capture_output=True)
+            subprocess.run(["git", "commit", "-m", f"Update brand ranking {TODAY}"], cwd=REPO_DIR, check=True, capture_output=True)
+            subprocess.run(["git", "push"], cwd=REPO_DIR, check=True, capture_output=True)
+            print(f"GitHub Pages 更新完了: {PAGES_URL}")
+        except subprocess.CalledProcessError as e:
+            print(f"[GitHub] push 失敗: {e.stderr.decode()[:200] if e.stderr else e}")
+
+    # Discord に投稿
+    post_to_discord(brand_results)
+
+    print(f"HTML で確認: open {html_path}")
+    return json_path, html_path
+
+
+if __name__ == "__main__":
+    main()

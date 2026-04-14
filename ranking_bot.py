@@ -356,6 +356,169 @@ def fetch_buyma(max_items=20):
     return items
 
 
+# ─── StockX (stockx.com) ──────────────────────────────────
+
+def fetch_stockx(max_items=20):
+    print("[StockX] メンズ人気アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto(
+                "https://stockx.com/ja-jp/browse/men?sort=featured",
+                wait_until="domcontentloaded",
+                timeout=30000,
+            )
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("a[data-testid*='roduct']")
+            seen_urls = set()
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                href = card.get("href", "")
+                if not href or href in seen_urls:
+                    continue
+
+                # スポンサー広告を除外
+                sponsored = card.select_one("[data-testid='sponsored-tag']")
+                if sponsored:
+                    continue
+
+                seen_urls.add(href)
+                url = f"https://stockx.com{href}" if href.startswith("/") else href
+
+                title_el = card.select_one("[data-testid='product-tile-title']")
+                name = title_el.get_text(strip=True) if title_el else ""
+
+                price_el = card.select_one("[data-testid='product-tile-lowest-ask-amount']")
+                price = price_el.get_text(strip=True) if price_el else ""
+
+                img_el = card.select_one("img")
+                image = img_el.get("src", "") if img_el else ""
+
+                if not name:
+                    continue
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[StockX] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[StockX] {len(items)} 件取得")
+    return items
+
+
+# ─── SSENSE (ssense.com) ──────────────────────────────────
+
+def fetch_ssense(max_items=20):
+    print("[SSENSE] メンズ人気ランキング取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto(
+                "https://www.ssense.com/ja-jp/men?sort=popularity-desc",
+                wait_until="domcontentloaded",
+                timeout=30000,
+            )
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            # JSON-LD から商品情報を取得（最も確実）
+            import json as _json
+            ld_scripts = soup.select("script[type='application/ld+json']")
+
+            for script in ld_scripts[:max_items]:
+                if not script.string:
+                    continue
+                try:
+                    data = _json.loads(script.string)
+                except Exception:
+                    continue
+
+                if data.get("@type") != "Product":
+                    continue
+
+                product_id = data.get("productID", "")
+                name = data.get("name", "")
+                brand = ""
+                brand_data = data.get("brand", {})
+                if isinstance(brand_data, dict):
+                    brand = brand_data.get("name", "")
+
+                offers = data.get("offers", {})
+                price_val = offers.get("price")
+                currency = offers.get("priceCurrency", "JPY")
+                price = f"¥{int(price_val):,}" if price_val else ""
+
+                # 画像URL: SSENSEのCDNパターン
+                image = data.get("image", "")
+
+                url = f"https://www.ssense.com/ja-jp/men/product/{product_id}" if product_id else ""
+
+                if not name:
+                    continue
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "brand": brand,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+                if len(items) >= max_items:
+                    break
+
+            # HTMLからリンクURLを補完
+            columns = soup.select("div.plp-products__column")
+            for i, col in enumerate(columns[:len(items)]):
+                link = col.select_one("a[href*='/product/']")
+                if link and i < len(items):
+                    href = link.get("href", "")
+                    items[i]["url"] = f"https://www.ssense.com{href}" if href.startswith("/") else href
+
+        except Exception as e:
+            print(f"[SSENSE] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[SSENSE] {len(items)} 件取得")
+    return items
+
+
 # ─── FARFETCH (farfetch.com) ──────────────────────────────
 
 def fetch_farfetch(max_items=20):
@@ -558,7 +721,7 @@ def fetch_snkrdunk_apparel(max_items=20):
 
 # ─── 保存 (JSON + HTML) ───────────────────────────────────
 
-def save_json(zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozotown):
+def save_json(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snkr_apparel, zozotown):
     ensure_output_dir()
 
     result = {
@@ -578,6 +741,16 @@ def save_json(zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozot
             "source": "buyma.com",
             "count": len(buyma),
             "items": buyma,
+        },
+        "stockx": {
+            "source": "stockx.com",
+            "count": len(stockx),
+            "items": stockx,
+        },
+        "ssense": {
+            "source": "ssense.com",
+            "count": len(ssense),
+            "items": ssense,
         },
         "farfetch": {
             "source": "farfetch.com",
@@ -609,7 +782,7 @@ def save_json(zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozot
     return filepath
 
 
-def save_html(zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozotown):
+def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snkr_apparel, zozotown):
     ensure_output_dir()
 
     def render_items(items, show_brand=False):
@@ -660,9 +833,14 @@ def save_html(zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozot
   .badge-zara {{ background: #000; }}
   .badge-musinsa {{ background: #1a1a1a; }}
   .badge-buyma {{ background: #e91e63; }}
+  .badge-stockx {{ background: #006340; }}
+  .badge-ssense {{ background: #111; }}
   .badge-farfetch {{ background: #222; }}
   .badge-snkrdunk {{ background: #ff5722; }}
   .items {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }}
+  @media (max-width: 600px) {{
+    .items {{ grid-template-columns: repeat(2, 1fr); gap: 10px; }}
+  }}
   .item {{ background: #fafafa; border-radius: 8px; overflow: hidden; transition: transform 0.15s; border: 1px solid #eee; }}
   .item:hover {{ transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }}
   .rank {{ position: absolute; top: 6px; left: 6px; background: rgba(0,0,0,0.75); color: #fff; font-weight: 700; font-size: 0.85em; padding: 2px 8px; border-radius: 4px; z-index: 1; }}
@@ -699,6 +877,8 @@ def save_html(zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozot
     <li><a href="#zara">ZARA</a></li>
     <li><a href="#musinsa">MUSINSA</a></li>
     <li><a href="#buyma">BUYMA</a></li>
+    <li><a href="#stockx">StockX</a></li>
+    <li><a href="#ssense">SSENSE</a></li>
     <li><a href="#farfetch">FARFETCH</a></li>
     <li><a href="#snkrdunk-sneakers">SNKRDUNK スニーカー</a></li>
     <li><a href="#snkrdunk-streetwear">SNKRDUNK ストリート</a></li>
@@ -730,6 +910,22 @@ def save_html(zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozot
     {render_items(buyma, show_brand=True)}
   </div>
   <a href="https://www.buyma.com/rank/-C1002/" target="_blank" class="btn-all">BUYMA を全部見る</a>
+</div>
+
+<div class="section" id="stockx">
+  <h2>StockX <span class="badge badge-stockx">FEATURED</span> <span class="count">{len(stockx)} items</span></h2>
+  <div class="items">
+    {render_items(stockx, show_brand=False)}
+  </div>
+  <a href="https://stockx.com/ja-jp/browse/men?sort=featured" target="_blank" class="btn-all">StockX を全部見る</a>
+</div>
+
+<div class="section" id="ssense">
+  <h2>SSENSE <span class="badge badge-ssense">POPULAR</span> <span class="count">{len(ssense)} items</span></h2>
+  <div class="items">
+    {render_items(ssense, show_brand=True)}
+  </div>
+  <a href="https://www.ssense.com/ja-jp/men?sort=popularity-desc" target="_blank" class="btn-all">SSENSE を全部見る</a>
 </div>
 
 <div class="section" id="farfetch">
@@ -863,8 +1059,10 @@ def load_webhook_url():
         return None
 
 
-def build_embed(site_name, site_color, items, show_brand=False):
+def build_embed(site_name, site_color, items, show_brand=False, title_suffix=None):
     """1サイト分の Discord Embed を構築（TOP10 + サムネイル）"""
+    if title_suffix is None:
+        title_suffix = f"メンズランキング TOP {min(len(items), 10)}" if items else ""
     if not items:
         return {
             "title": f"{site_name} - 取得失敗",
@@ -895,14 +1093,14 @@ def build_embed(site_name, site_color, items, show_brand=False):
         thumbnail = {"url": items[0]["image"]}
 
     return {
-        "title": f"{site_name} メンズランキング TOP {min(len(items), 10)}",
+        "title": f"{site_name} {title_suffix}",
         "description": "\n".join(lines),
         "color": site_color,
         "thumbnail": thumbnail,
     }
 
 
-def post_to_discord(webhook_url, zara, musinsa, buyma, farfetch, snkr_sneakers, snkr_apparel, zozotown, html_path):
+def post_to_discord(webhook_url, zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snkr_apparel, zozotown, html_path):
     """Discord Webhook にランキングを投稿"""
     print("[Discord] ランキングを投稿中...")
 
@@ -910,7 +1108,9 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, farfetch, snkr_sneakers, 
         build_embed("ZARA", 0x000000, zara, show_brand=False),
         build_embed("MUSINSA", 0x1A1A1A, musinsa, show_brand=True),
         build_embed("BUYMA", 0xE91E63, buyma, show_brand=True),
-        build_embed("FARFETCH", 0x222222, farfetch, show_brand=True),
+        build_embed("StockX", 0x006340, stockx, show_brand=False),
+        build_embed("SSENSE", 0x111111, ssense, show_brand=True),
+        build_embed("FARFETCH", 0x222222, farfetch, show_brand=True, title_suffix=f"メンズ新着 {min(len(farfetch), 10)} items"),
         build_embed("SNKRDUNK スニーカー", 0xFF5722, snkr_sneakers, show_brand=False),
         build_embed("SNKRDUNK ストリートウェア", 0xFF5722, snkr_apparel, show_brand=False),
     ]
@@ -941,6 +1141,8 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, farfetch, snkr_sneakers, 
         ("ZARA", zara, 0x000000),
         ("MUSINSA", musinsa, 0x1A1A1A),
         ("BUYMA", buyma, 0xE91E63),
+        ("StockX", stockx, 0x006340),
+        ("SSENSE", ssense, 0x111111),
         ("FARFETCH", farfetch, 0x222222),
         ("SNKRDUNK", snkr_sneakers, 0xFF5722),
         ("ZOZOTOWN", zozotown, 0x00A0E9),
@@ -976,7 +1178,21 @@ def main():
     # 2. BUYMA（Playwright）
     buyma_items = fetch_buyma()
 
-    # 3. FARFETCH（Playwright）
+    # 3. StockX（Playwright）
+    try:
+        stockx_items = fetch_stockx()
+    except Exception as e:
+        print(f"[StockX] 致命的エラー: {e}")
+        stockx_items = []
+
+    # 4. SSENSE（Playwright）
+    try:
+        ssense_items = fetch_ssense()
+    except Exception as e:
+        print(f"[SSENSE] 致命的エラー: {e}")
+        ssense_items = []
+
+    # 4. FARFETCH（Playwright）
     try:
         farfetch_items = fetch_farfetch()
     except Exception as e:
@@ -1007,16 +1223,18 @@ def main():
     print_summary("ZARA", zara_items)
     print_summary("MUSINSA", musinsa_items)
     print_summary("BUYMA", buyma_items)
-    print_summary("FARFETCH", farfetch_items)
+    print_summary("StockX", stockx_items)
+    print_summary("SSENSE", ssense_items)
+    print_summary("FARFETCH 新着", farfetch_items)
     print_summary("SNKRDUNK スニーカー", snkr_sneakers)
     print_summary("SNKRDUNK ストリートウェア", snkr_apparel)
     print_summary("ZOZOTOWN", zozotown_items)
 
     # 保存
-    json_path = save_json(zara_items, musinsa_items, buyma_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items)
-    html_path = save_html(zara_items, musinsa_items, buyma_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items)
+    json_path = save_json(zara_items, musinsa_items, buyma_items, stockx_items, ssense_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items)
+    html_path = save_html(zara_items, musinsa_items, buyma_items, stockx_items, ssense_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items)
 
-    total = len(zara_items) + len(musinsa_items) + len(buyma_items) + len(farfetch_items) + len(snkr_sneakers) + len(snkr_apparel) + len(zozotown_items)
+    total = len(zara_items) + len(musinsa_items) + len(buyma_items) + len(stockx_items) + len(ssense_items) + len(farfetch_items) + len(snkr_sneakers) + len(snkr_apparel) + len(zozotown_items)
     print(f"\n合計 {total} 件のランキングデータを取得しました。")
 
     # GitHub Pages に push（ローカル実行時のみ。CI では workflow が push する）
@@ -1033,7 +1251,7 @@ def main():
     # Discord に投稿
     webhook_url = load_webhook_url()
     if webhook_url:
-        post_to_discord(webhook_url, zara_items, musinsa_items, buyma_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items, html_path)
+        post_to_discord(webhook_url, zara_items, musinsa_items, buyma_items, stockx_items, ssense_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items, html_path)
     else:
         print("[Discord] Webhook 未設定のため Discord 投稿をスキップ")
 
