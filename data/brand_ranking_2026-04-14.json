@@ -1,0 +1,173 @@
+{
+  "date": "2026-04-14",
+  "fetched_at": "2026-04-14T18:35:22.909032",
+  "brands": {
+    "adidas": {
+      "name": "adidas",
+      "source": "https://www.adidas.jp/search?sort=newest-to-oldest",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "スーパースター II atmos ダイキ ツネタ ポイントレスジャーニー/ SUPERSTAR II atmos DAIKI TSUNETA POINTLESS JOURNEYJ",
+          "brand": "メンズ オリジナルス",
+          "price": "¥19,800",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/7c78d8fad3204180934584657d4c1730_9366/II_atmos_-_SUPERSTAR_II_atmos_DAIKI_TSUNETA_POINTLESS_JOURNEYJ_KJ8847_00_plp_standard.jpg",
+          "url": "https://www.adidas.jp/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC-ii-atmos-%E3%83%80%E3%82%A4%E3%82%AD-%E3%83%84%E3%83%8D%E3%82%BF-%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%AC%E3%82%B9%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8B%E3%83%BC--superstar-ii-atmos-daiki-tsuneta-pointless-journeyj/KJ8847.html"
+        },
+        {
+          "rank": 2,
+          "name": "スーパースター II atmos ダイキ ツネタ ポイントレスジャーニー/ SUPERSTAR II atmos DAIKI TSUNETA POINTLESS JOURNEY",
+          "brand": "メンズ オリジナルス",
+          "price": "¥19,800",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c889293f9d224f0faa6ca0d2648a2944_9366/II_atmos_-_SUPERSTAR_II_atmos_DAIKI_TSUNETA_POINTLESS_JOURNEY_KJ8846_00_plp_standard.jpg",
+          "url": "https://www.adidas.jp/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC-ii-atmos-%E3%83%80%E3%82%A4%E3%82%AD-%E3%83%84%E3%83%8D%E3%82%BF-%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%AC%E3%82%B9%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8B%E3%83%BC--superstar-ii-atmos-daiki-tsuneta-pointless-journey/KJ8846.html"
+        },
+        {
+          "rank": 3,
+          "name": "20TH ANN T-B-FASHION SHOW",
+          "brand": "レディース オリジナルス",
+          "price": "¥30,800",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/421ad9b4961a484fb34295050bd6ef23_9366/20TH_ANN_T-B-FASHION_SHOW_KJ5176_00_plp_standard.jpg",
+          "url": "https://www.adidas.jp/20th-ann-t-b-fashion-show/KJ5176.html"
+        },
+        {
+          "rank": 4,
+          "name": "20TH ANN FASHION SHOW J- BOWLING シューズ",
+          "brand": "オリジナルス",
+          "price": "¥30,800",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/5fd5e9a1979647edbe165d89d1d3b91c_9366/20TH_ANN_FASHION_SHOW_J-_BOWLING_KJ5142_00_plp_standard.jpg",
+          "url": "https://www.adidas.jp/20th-ann-fashion-show-j--bowling-%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA/KJ5142.html"
+        },
+        {
+          "rank": 5,
+          "name": "PREDATOR BOWLING",
+          "brand": "オリジナルス",
+          "price": "¥34,100",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c4b6b5efcefa416caa750c108a2f4174_9366/PREDATOR_BOWLING_KI9951_00_plp_standard.jpg",
+          "url": "https://www.adidas.jp/predator-bowling/KI9951.html"
+        },
+        {
+          "rank": 6,
+          "name": "Chavarria カーゴジャケット",
+          "brand": "メンズ オリジナルス",
+          "price": "¥49,500",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/6229d99dcb29414389bf9881f9fd9e59_9366/Chavarria_KW1732_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%82%AB%E3%83%BC%E3%82%B4%E3%82%B8%E3%83%A3%E3%82%B1%E3%83%83%E3%83%88/KW1732.html"
+        },
+        {
+          "rank": 7,
+          "name": "Chavarriaフルジップ ロゴ パーカー",
+          "brand": "メンズ オリジナルス",
+          "price": "¥33,000",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/dd38c1cfe06e4925b2586935dea02d1e_9366/Chavarria_KV2250_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria%E3%83%95%E3%83%AB%E3%82%B8%E3%83%83%E3%83%97-%E3%83%AD%E3%82%B4-%E3%83%91%E3%83%BC%E3%82%AB%E3%83%BC/KV2250.html"
+        },
+        {
+          "rank": 8,
+          "name": "Chavarria スウェットパンツ",
+          "brand": "メンズ オリジナルス",
+          "price": "¥29,700",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d3e60844f7654cdba21caa1d3cc77856_9366/Chavarria_KV2249_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%82%B9%E3%82%A6%E3%82%A7%E3%83%83%E3%83%88%E3%83%91%E3%83%B3%E3%83%84/KV2249.html"
+        },
+        {
+          "rank": 9,
+          "name": "CHAVARRIA ボンバージャケット",
+          "brand": "メンズ オリジナルス",
+          "price": "¥82,500",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d401271267504529aa3e34994cc12ee3_9366/CHAVARRIA_KV2248_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%83%9C%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A3%E3%82%B1%E3%83%83%E3%83%88/KV2248.html"
+        },
+        {
+          "rank": 10,
+          "name": "Chavarria ピンストライプ ロング ショーツ",
+          "brand": "メンズ オリジナルス",
+          "price": "¥36,300",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/aadab2f0338440418718f74c8e198768_9366/Chavarria_KV2247_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%83%94%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%83%97-%E3%83%AD%E3%83%B3%E3%82%B0-%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%84/KV2247.html"
+        },
+        {
+          "rank": 11,
+          "name": "CHAVARRIA ウーブントラックパンツ",
+          "brand": "メンズ オリジナルス",
+          "price": "¥39,600",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/7eb3ae256e704c6988a71fdb303565e4_9366/CHAVARRIA_KT2617_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%82%A6%E3%83%BC%E3%83%96%E3%83%B3%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%91%E3%83%B3%E3%83%84/KT2617.html"
+        },
+        {
+          "rank": 12,
+          "name": "Chavarria ウーブン トラックジャケット",
+          "brand": "メンズ オリジナルス",
+          "price": "¥46,200",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbc82a2656924857a31238034a7ce8bb_9366/Chavarria_KT2616_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%82%A6%E3%83%BC%E3%83%96%E3%83%B3-%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B8%E3%83%A3%E3%82%B1%E3%83%83%E3%83%88/KT2616.html"
+        },
+        {
+          "rank": 13,
+          "name": "Chavarriaロゴ 半袖Tシャツ",
+          "brand": "メンズ オリジナルス",
+          "price": "¥16,500",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/2393de9727e0416e90784bde0d1caa14_9366/Chavarria_T_KS6445_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria%E3%83%AD%E3%82%B4-%E5%8D%8A%E8%A2%96t%E3%82%B7%E3%83%A3%E3%83%84/KS6445.html"
+        },
+        {
+          "rank": 14,
+          "name": "Chavarria NY クルーネック スウェットシャツ",
+          "brand": "メンズ オリジナルス",
+          "price": "¥29,700",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/02fc0fcacebd48a89a7f1cb97af17690_9366/Chavarria_NY_KS6444_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-ny-%E3%82%AF%E3%83%AB%E3%83%BC%E3%83%8D%E3%83%83%E3%82%AF-%E3%82%B9%E3%82%A6%E3%82%A7%E3%83%83%E3%83%88%E3%82%B7%E3%83%A3%E3%83%84/KS6444.html"
+        },
+        {
+          "rank": 15,
+          "name": "Chavarria カーゴ ジップパンツ",
+          "brand": "メンズ オリジナルス",
+          "price": "¥42,900",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/1544fc260af4431c878d1efec4d92306_9366/Chavarria_KS6439_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%82%AB%E3%83%BC%E3%82%B4-%E3%82%B8%E3%83%83%E3%83%97%E3%83%91%E3%83%B3%E3%83%84/KS6439.html"
+        },
+        {
+          "rank": 16,
+          "name": "Chavarria 中わた入りベスト",
+          "brand": "メンズ オリジナルス",
+          "price": "¥33,000",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d3c19fada928443fab5950bddff61a10_9366/Chavarria_KS6437_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E4%B8%AD%E3%82%8F%E3%81%9F%E5%85%A5%E3%82%8A%E3%83%99%E3%82%B9%E3%83%88/KS6437.html"
+        },
+        {
+          "rank": 17,
+          "name": "Chavarria ピンストライプ トラックジャケット",
+          "brand": "メンズ オリジナルス",
+          "price": "¥58,300",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/7a6b957f96ad46a79774daa62ae86997_9366/Chavarria_KR8696_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%83%94%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%83%97-%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B8%E3%83%A3%E3%82%B1%E3%83%83%E3%83%88/KR8696.html"
+        },
+        {
+          "rank": 18,
+          "name": "Chavarria ピンストライプ トラックパンツ",
+          "brand": "メンズ オリジナルス",
+          "price": "¥49,500",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/f583210837db4772888418fb0338ed84_9366/Chavarria_KR8688_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%83%94%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%83%97-%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%91%E3%83%B3%E3%83%84/KR8688.html"
+        },
+        {
+          "rank": 19,
+          "name": "CHAVARRIA メッシュショーツ",
+          "brand": "メンズ オリジナルス",
+          "price": "¥23,100",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/a5911ea3dd004565851b126511c4c501_9366/CHAVARRIA_KR8682_000_plp_model.jpg",
+          "url": "https://www.adidas.jp/chavarria-%E3%83%A1%E3%83%83%E3%82%B7%E3%83%A5%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%84/KR8682.html"
+        },
+        {
+          "rank": 20,
+          "name": "Chavarria SST",
+          "brand": "メンズ オリジナルス",
+          "price": "¥26,400",
+          "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/ca660acd1b694d5eb3b934ba2905cb38_9366/Chavarria_SST_KJ2029_00_plp_standard.jpg",
+          "url": "https://www.adidas.jp/chavarria-sst/KJ2029.html"
+        }
+      ]
+    }
+  }
+}
