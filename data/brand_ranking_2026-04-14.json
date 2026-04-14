@@ -1,6 +1,6 @@
 {
   "date": "2026-04-14",
-  "fetched_at": "2026-04-14T19:12:31.632093",
+  "fetched_at": "2026-04-14T19:17:34.847087",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -901,6 +901,153 @@
           "price": "¥57,200",
           "image": "https://cdn.shopify.com/s/files/1/0774/7865/8352/files/HSH822.CO0221_251a3830-233e-4eda-8d62-13b03c30a74f.jpg?v=1775192816",
           "url": "https://www.amiparis.com/ja-jp/products/blue-cotton-boxy-embroidered-ami-de-coeur-shirt-hsh822co0221484"
+        }
+      ]
+    },
+    "acne_studios": {
+      "name": "Acne Studios",
+      "source": "https://www.acnestudios.com/jp/ja/man/new-arrivals/?sz=56",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "ロゴTシャツ - リラックスフィット",
+          "price": "¥72,600",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw947bee4f/images/AL/AL0535-/2000x/AL0535-DWF_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/rw-wn-tshi000004/AL0535-DWF.html?g=man"
+        },
+        {
+          "rank": 2,
+          "name": "スプレー加工ロゴTシャツ",
+          "price": "¥72,600",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwf5c56b73/images/CL/CL0445-/2000x/CL0445-AB9_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/sprayed-logo-t-shirt-mint-green/CL0445-AB9.html?g=man"
+        },
+        {
+          "rank": 3,
+          "name": "スプレー加工ロゴタンクトップ",
+          "price": "¥46,200",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw90328637/images/CL/CL0443-/2000x/CL0443-ABU_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/sprayed-logo-tank-top-light-yellow/CL0443-ABU.html?g=man"
+        },
+        {
+          "rank": 4,
+          "name": "デニムショーツ - ルーズフィット",
+          "price": "¥72,600",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwb0ea50e0/images/CE/CE0076-/2000x/CE0076-863_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/denim-shorts---loose-fit-mid-blue/CE0076-863.html?g=man"
+        },
+        {
+          "rank": 5,
+          "name": "ルーズフィットジーンズ - 2023",
+          "price": "¥119,900",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw8ed051f3/images/C0/C00091-/2000x/C00091-228_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/acne-studios-2023-u-trafalgar/C00091-228.html?g=man"
+        },
+        {
+          "rank": 6,
+          "name": "スプレー加工ロゴキャップ",
+          "price": "¥45,100",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwf2032674/images/C4/C40455-/2000x/C40455-AB9_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/sprayed-logo-cap-mint-green/C40455-AB9.html?g=man"
+        },
+        {
+          "rank": 7,
+          "name": "スプレー加工ロゴスウェットシャツ",
+          "price": "¥91,300",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw1de870b1/images/CI/CI0216-/2000x/CI0216-BG3_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/sprayed-logo-sweatshirt-navy/CI0216-BG3.html?g=man"
+        },
+        {
+          "rank": 8,
+          "name": "Camero Camera ショルダーバッグ",
+          "price": "¥649,000",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwe16ae564/images/C1/C10261-/2000x/C10261-295_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/camero-camera-rivets/C10261-295.html?g=man"
+        },
+        {
+          "rank": 9,
+          "name": "レギュラーフィットジーンズ - 2010",
+          "price": "¥128,700",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw09880cec/images/B0/B00480-/2000x/B00480-CV5_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/rw-mn-5pkt000002/B00480-CV5.html?g=man"
+        },
+        {
+          "rank": 10,
+          "name": "リバーシブルレザーベルト",
+          "price": "¥72,600",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw557a5930/images/CG/CG0319-/2000x/CG0319-AHD_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/ac-ux-slgs000030/CG0319-AHD.html?g=man"
+        },
+        {
+          "rank": 11,
+          "name": "スプレー仕上げ1996ロゴTシャツ",
+          "price": "¥59,400",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw10bcdd8c/images/CL/CL0197-/2000x/CL0197-CDI_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/sprayed-1996-logo-t-shirt-cornflower-blue/CL0197-CDI.html?g=man"
+        },
+        {
+          "rank": 12,
+          "name": "Faceスタッドキャップ",
+          "price": "¥33,000",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwbb8a2f10/images/C4/C40464-/2000x/C40464-969_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/face-stud-cap-washed-black/C40464-969.html?g=man"
+        },
+        {
+          "rank": 13,
+          "name": "レギュラーフィットジーンズ - 2021",
+          "price": "¥91,300",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc264e8db/images/B0/B00470-/2000x/B00470-100_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/acne-studios-2021m-white-trafalgar/B00470-100.html?g=man"
+        },
+        {
+          "rank": 14,
+          "name": "レザーバイカージャケット",
+          "price": "¥444,400",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwbe8545de/images/B7/B70164-/2000x/B70164-900_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/leather-biker-jacket-black/B70164-900.html?g=man"
+        },
+        {
+          "rank": 15,
+          "name": "グラフィックTシャツ",
+          "price": "¥59,400",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw0c89734c/images/CL/CL0459-/2000x/CL0459-ASA_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/sp-ux-tshi000072/CL0459-ASA.html?g=man"
+        },
+        {
+          "rank": 16,
+          "name": "ダメージ デニムショートパンツ",
+          "price": "¥86,900",
+          "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwb05073fb/images/BE/BE0218-/2000x/BE0218-100_A.jpg?sw=750&sh=1125",
+          "url": "https://www.acnestudios.com/jp/ja/distressed-denim-shorts-white/BE0218-100.html?g=man"
+        },
+        {
+          "rank": 17,
+          "name": "レザーローファー",
+          "price": "¥139,700",
+          "image": "",
+          "url": "https://www.acnestudios.com/jp/ja/ac-mn-shoe000014/BD0391-415.html?g=man"
+        },
+        {
+          "rank": 18,
+          "name": "ストライプボタンアップシャツ",
+          "price": "¥101,200",
+          "image": "",
+          "url": "https://www.acnestudios.com/jp/ja/rw-mn-shir000002/BB0698-AM4.html?g=man"
+        },
+        {
+          "rank": 19,
+          "name": "サテンラベル VネックTシャツ",
+          "price": "¥46,200",
+          "image": "",
+          "url": "https://www.acnestudios.com/jp/ja/satin-label-v-neck-t-shirt-optic-white/CL0425-183.html?g=man"
+        },
+        {
+          "rank": 20,
+          "name": "リペアトラウザーズ - レギュラーフィット",
+          "price": "¥146,300",
+          "image": "",
+          "url": "https://www.acnestudios.com/jp/ja/mended-trousers---regular-fit-black/BK0731-900.html?g=man"
         }
       ]
     }
