@@ -1,6 +1,6 @@
 {
   "date": "2026-04-14",
-  "fetched_at": "2026-04-14T18:51:42.391343",
+  "fetched_at": "2026-04-14T19:03:40.938519",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -460,6 +460,153 @@
           "price": "¥7,700",
           "image": "https://carhartt-wip.jp/cdn/shop/files/I030434_3IA_XX-ST-01_89955f0f-e580-433e-ac7f-0920e759e7ce.jpg?v=1775803088&width=1500",
           "url": "https://carhartt-wip.jp/products/i030434-26s-3iaxx"
+        }
+      ]
+    },
+    "diesel": {
+      "name": "DIESEL",
+      "source": "https://www.diesel.co.jp/ja/man/new-arrivals/apparel/",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "ジップアップシャツ",
+          "price": "¥56,100",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw80719866/images/large/A22983_0DLCM_5LE_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/shirts/s-alias-zip/A229830DLCM5LE.html"
+        },
+        {
+          "rank": 2,
+          "name": "パンツ",
+          "price": "¥50,600",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw34902568/images/large/A22692_0DLCM_5LE_C.jpg",
+          "url": "https://www.diesel.co.jp/ja/pants/p-ball/A226920DLCM5LE.html"
+        },
+        {
+          "rank": 3,
+          "name": "Tシャツ",
+          "price": "¥19,800",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dwefe06ca1/images/large/A22211_0NJCF_77F_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/t-shirts/t-norm-aa1/A222110NJCF77F.html"
+        },
+        {
+          "rank": 4,
+          "name": "Tシャツ",
+          "price": "¥19,800",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw6cb3e783/images/large/A22245_0AGCU_3DV_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/t-shirts/t-boxt-aa3/A222450AGCU3DV.html"
+        },
+        {
+          "rank": 5,
+          "name": "Tシャツ",
+          "price": "¥23,100",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw2256ad79/images/large/A22778_0EFBS_141A_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/t-shirts/t-adjust-notch/A227780EFBS141A.html"
+        },
+        {
+          "rank": 6,
+          "name": "半袖シャツ",
+          "price": "¥45,100",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dwe62d9688/images/large/A23974_0QMCE_5LEA_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/shirts/s-brad-qmce/A239740QMCE5LEA.html"
+        },
+        {
+          "rank": 7,
+          "name": "Windbreaker with abstract print",
+          "price": "¥71,500",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw2a708612/images/large/A21161_0BMCX_8ATA_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/jackets/j-squad-bmcx/A211610BMCX8ATA.html"
+        },
+        {
+          "rank": 8,
+          "name": "Blazer in treated fluid viscose",
+          "price": "¥91,300",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw869c6e20/images/large/A20501_0ALBG_97D_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/jackets/j-arman-albg/A205010ALBG97D.html"
+        },
+        {
+          "rank": 9,
+          "name": "Light jacket with denim-effect print",
+          "price": "¥59,400",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dwcfba5492/images/large/A20644_0CJBC_02_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/jackets/j-phil-cjbc/A206440CJBC02.html"
+        },
+        {
+          "rank": 10,
+          "name": "カーディガン",
+          "price": "¥71,500",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw407c643a/images/large/A22020_0IHBB_93R_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/sweaters/k-roquete/A220200IHBB93R.html"
+        },
+        {
+          "rank": 11,
+          "name": "プルオーバーニット",
+          "price": "¥59,400",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dwd6f2d3fb/images/large/A21427_0IHBB_93R_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/sweaters/k-roch/A214270IHBB93R.html"
+        },
+        {
+          "rank": 12,
+          "name": "プルオーバーニット",
+          "price": "¥59,400",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dwf0a51c82/images/large/A21427_0IHBB_61J_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/sweaters/k-roch/A214270IHBB61J.html"
+        },
+        {
+          "rank": 13,
+          "name": "Sponge-yarn jumper with abstract print",
+          "price": "¥59,400",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dwe8a4101a/images/large/A20813_0WICG_8ATA_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/sweaters/k-illum/A208130WICG8ATA.html"
+        },
+        {
+          "rank": 14,
+          "name": "Jumper in silk blend with piping",
+          "price": "¥39,600",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dwd133caa2/images/large/A21274_0GIBT_9XX_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/sweaters/k-verene/A212740GIBT9XX.html"
+        },
+        {
+          "rank": 15,
+          "name": "Cotton sweatshirt with back camo patch",
+          "price": "¥35,200",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dweca60b06/images/large/A19986_0EGEN_7FW_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/sweatshirt/s-ginn-v1/A199860EGEN7FW.html"
+        },
+        {
+          "rank": 16,
+          "name": "Sweatshirt with devorèe floating threads",
+          "price": "¥50,600",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dwaef06e63/images/large/A22014_0PLAI_100_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/sweatshirt/s-boxt-v1/A220140PLAI100.html"
+        },
+        {
+          "rank": 17,
+          "name": "Hoodie in camouflage-print organic cotton",
+          "price": "¥45,100",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw4725a67b/images/large/A20216_0WFCX_5DGA_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/sweatshirt/s-boxt-hood-v1/A202160WFCX5DGA.html"
+        },
+        {
+          "rank": 18,
+          "name": "Satin shirt with all-over camo print",
+          "price": "¥44,000",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw455961bb/images/large/A21880_0DMBN_8ATA_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/shirts/s-brack-dmbn/A218800DMBN8ATA.html"
+        },
+        {
+          "rank": 19,
+          "name": "Shirt in treated fluid viscose",
+          "price": "¥45,100",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw92f57d67/images/large/A21903_0ALBG_97D_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/shirts/s-kinny-albg/A219030ALBG97D.html"
+        },
+        {
+          "rank": 20,
+          "name": "Linen-blend shirt with short sleeves",
+          "price": "¥33,000",
+          "image": "https://www.diesel.co.jp/on/demandware.static/-/Sites-diesel-master-catalog/default/dw9cf55c9b/images/large/A20214_0PGBS_129_F.jpg",
+          "url": "https://www.diesel.co.jp/ja/shirts/s-brack-pgbs/A202140PGBS129.html"
         }
       ]
     }
