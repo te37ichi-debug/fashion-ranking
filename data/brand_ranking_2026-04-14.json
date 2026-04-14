@@ -1,6 +1,6 @@
 {
   "date": "2026-04-14",
-  "fetched_at": "2026-04-14T19:44:33.211842",
+  "fetched_at": "2026-04-14T19:50:32.904671",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -172,149 +172,8 @@
     "adidas_atmos": {
       "name": "adidas (atmos)",
       "source": "https://www.atmos-tokyo.com/category/all?brand=adidas",
-      "count": 20,
-      "items": [
-        {
-          "rank": 1,
-          "name": "adidas VIRGINIA VARIO FLAT EARTHER by Pharrell",
-          "price": "¥23,100",
-          "image": "https://assets.atmos-tokyo.com/items/S/ki7668-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/ki7668"
-        },
-        {
-          "rank": 2,
-          "name": "adidas VIRGINIA VARIO FLAT EARTHER by Pharrell",
-          "price": "¥23,100",
-          "image": "https://assets.atmos-tokyo.com/items/S/ki7669-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/ki7669"
-        },
-        {
-          "rank": 3,
-          "name": "adidas SATIN FOOTBALL JERSEY",
-          "price": "¥9,900",
-          "image": "https://assets.atmos-tokyo.com/items/S/ka2671-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/ka2671"
-        },
-        {
-          "rank": 4,
-          "name": "adidas KNITTED CROCHET FIREBIRD TRACKPANTS",
-          "price": "¥15,400",
-          "image": "https://assets.atmos-tokyo.com/items/S/ke0201-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/ke0201"
-        },
-        {
-          "rank": 5,
-          "name": "adidas MEGARIDE AG",
-          "price": "¥31,900",
-          "image": "https://assets.atmos-tokyo.com/items/S/ki6716-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/ki6716"
-        },
-        {
-          "rank": 6,
-          "name": "adidas MEGARIDE AG",
-          "price": "¥31,900",
-          "image": "https://assets.atmos-tokyo.com/items/S/ki6720-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/ki6720"
-        },
-        {
-          "rank": 7,
-          "name": "adidas WAFFLE SHORT SLEEVE POLO",
-          "price": "¥7,150",
-          "image": "https://assets.atmos-tokyo.com/items/S/jv9265-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/jv9265"
-        },
-        {
-          "rank": 8,
-          "name": "adidas WAFFLE SHORT SLEEVE POLO",
-          "price": "¥7,150",
-          "image": "https://assets.atmos-tokyo.com/items/S/jv9266-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/jv9266"
-        },
-        {
-          "rank": 9,
-          "name": "adidas WAFFLE SHORT SLEEVE POLO",
-          "price": "¥7,150",
-          "image": "https://assets.atmos-tokyo.com/items/S/kb5462-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kb5462"
-        },
-        {
-          "rank": 10,
-          "name": "adidas WAFFLE CLASSIC TRACK TOP",
-          "price": "¥14,300",
-          "image": "https://assets.atmos-tokyo.com/items/S/kq6863-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kq6863"
-        },
-        {
-          "rank": 11,
-          "name": "adidas WAFFLE CLASSIC TRACK TOP",
-          "price": "¥14,300",
-          "image": "https://assets.atmos-tokyo.com/items/S/kq6864-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kq6864"
-        },
-        {
-          "rank": 12,
-          "name": "adidas WAFFLE CLASSIC TRACK TOP",
-          "price": "¥14,300",
-          "image": "https://assets.atmos-tokyo.com/items/S/kq6865-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kq6865"
-        },
-        {
-          "rank": 13,
-          "name": "adidas WAFFLE LONG SLEEVE POLO",
-          "price": "¥8,800",
-          "image": "https://assets.atmos-tokyo.com/items/S/kq6866-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kq6866"
-        },
-        {
-          "rank": 14,
-          "name": "adidas WAFFLE LONG SLEEVE POLO",
-          "price": "¥8,800",
-          "image": "https://assets.atmos-tokyo.com/items/S/kq6867-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kq6867"
-        },
-        {
-          "rank": 15,
-          "name": "adidas ADIZERO ADIOS PRO 4 M",
-          "price": "¥28,600",
-          "image": "https://assets.atmos-tokyo.com/items/S/jq4445-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/jq4445"
-        },
-        {
-          "rank": 16,
-          "name": "adidas ADIZERO ADIOS PRO 4 W",
-          "price": "¥28,600",
-          "image": "https://assets.atmos-tokyo.com/items/S/jq4446-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/jq4446"
-        },
-        {
-          "rank": 17,
-          "name": "adidas ZX 8000 Made in Germany",
-          "price": "¥28,600",
-          "image": "https://assets.atmos-tokyo.com/items/S/jr4609-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/jr4609"
-        },
-        {
-          "rank": 18,
-          "name": "adidas ADILENIUM 5.0  TRACK TOP",
-          "price": "¥18,700",
-          "image": "https://assets.atmos-tokyo.com/items/S/kx4830-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kx4830"
-        },
-        {
-          "rank": 19,
-          "name": "adidas ADILENIUM 5.0  TRACK TOP",
-          "price": "¥18,700",
-          "image": "https://assets.atmos-tokyo.com/items/S/kx4831-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kx4831"
-        },
-        {
-          "rank": 20,
-          "name": "adidas ADILENIUM 5.0  TRACKPANT",
-          "price": "¥15,950",
-          "image": "https://assets.atmos-tokyo.com/items/S/kx4832-1s.jpg",
-          "url": "https://www.atmos-tokyo.com/item/adidas/kx4832"
-        }
-      ]
+      "count": 0,
+      "items": []
     },
     "carhartt": {
       "name": "Carhartt WIP",
@@ -792,17 +651,17 @@
         },
         {
           "rank": 5,
-          "name": "★SATUR★Teo Cotton All Day Hood Zip-up",
-          "price": "¥10,999",
-          "image": "https://cdn-images.buyma.com/imgdata/item/220824/0086251937/639346164/210.jpg",
-          "url": "https://www.buyma.com/item/86251937/"
-        },
-        {
-          "rank": 6,
           "name": "★SATUR★刺繍 ロゴ 半袖 Ｔシャツ",
           "price": "¥5,790",
           "image": "https://cdn-images.buyma.com/imgdata/item/250429/0118056330/694448051/210.jpg",
           "url": "https://www.buyma.com/item/118056330/"
+        },
+        {
+          "rank": 6,
+          "name": "★SATUR★Teo Cotton All Day Hood Zip-up",
+          "price": "¥10,999",
+          "image": "https://cdn-images.buyma.com/imgdata/item/220824/0086251937/639346164/210.jpg",
+          "url": "https://www.buyma.com/item/86251937/"
         },
         {
           "rank": 7,
@@ -1342,6 +1201,132 @@
           "price": "¥146,300",
           "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwf54f3870/images/BK/BK0731-/2000x/BK0731-900_A.jpg?sw=750&sh=1125",
           "url": "https://www.acnestudios.com/jp/ja/mended-trousers---regular-fit-black/BK0731-900.html?g=man"
+        }
+      ]
+    },
+    "stussy": {
+      "name": "Stüssy",
+      "source": "https://jp.stussy.com/collections/new-arrivals",
+      "count": 17,
+      "items": [
+        {
+          "rank": 1,
+          "name": "BUANA LOGO SWEATER",
+          "price": "¥41,800",
+          "image": "https://jp.stussy.com/cdn/shop/files/117294_PINK_2.jpg?v=1774989478&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/117294-buana-logo-sweater-pink"
+        },
+        {
+          "rank": 2,
+          "name": "MOCK NECK FLIGHT BOMBER",
+          "price": "¥71,500",
+          "image": "https://jp.stussy.com/cdn/shop/files/115903_BLAC_1.jpg?v=1773267384&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/115903-mock-neck-flight-bomber-black"
+        },
+        {
+          "rank": 3,
+          "name": "ELI SUNGLASSES",
+          "price": "¥36,300",
+          "image": "https://jp.stussy.com/cdn/shop/files/338444_HDGL_1.jpg?v=1774298243&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/338444-eli-sunglasses-honey-dark-green-lens"
+        },
+        {
+          "rank": 4,
+          "name": "4X4 SKULLCAP",
+          "price": "¥8,800",
+          "image": "https://jp.stussy.com/cdn/shop/files/1321258_BLAC_1.jpg?v=1774975410&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/1321258-4x4-skullcap-black"
+        },
+        {
+          "rank": 5,
+          "name": "DOUBLE COTTON HOODED JACKET",
+          "price": "¥44,000",
+          "image": "https://jp.stussy.com/cdn/shop/files/115930_SAND_1_58f78fb1-a31c-4cc5-89c4-cec71a326903.jpg?v=1773243467&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/115930-double-cotton-hooded-jacket-sand"
+        },
+        {
+          "rank": 6,
+          "name": "FLORAL HAWAIIAN SHIRT",
+          "price": "¥34,100",
+          "image": "https://jp.stussy.com/cdn/shop/files/1110386_PINK_1.jpg?v=1774989456&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/1110386-floral-hawaiian-shirt-pink"
+        },
+        {
+          "rank": 7,
+          "name": "NYCO SURPLUS PANT",
+          "price": "¥35,200",
+          "image": "https://jp.stussy.com/cdn/shop/files/116747_WHIT_1.jpg?v=1774989282&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/116747-nyco-surplus-pant-white"
+        },
+        {
+          "rank": 8,
+          "name": "ANY ANGLE TEE PIGMENT DYED",
+          "price": "¥10,450",
+          "image": "https://jp.stussy.com/cdn/shop/files/1905196_FBLA_2.jpg?v=1774975830&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/1905196-any-angle-tee-pigment-dyed-faded-black"
+        },
+        {
+          "rank": 9,
+          "name": "JULIAN SUNGLASSES",
+          "price": "¥36,300",
+          "image": "https://jp.stussy.com/cdn/shop/files/338423_FBOM_1.jpg?v=1774298030&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/338423-julian-sunglasses-frost-black-orange-mirror-lens"
+        },
+        {
+          "rank": 10,
+          "name": "PIGMENT DYED SS THERMAL",
+          "price": "¥15,400",
+          "image": "https://jp.stussy.com/cdn/shop/files/1140368_FBLA_1.jpg?v=1768584631&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/1140368-pigment-dyed-ss-thermal-faded-black"
+        },
+        {
+          "rank": 11,
+          "name": "SURF SIZE TEE PIGMENT DYED",
+          "price": "¥10,450",
+          "image": "https://jp.stussy.com/cdn/shop/files/1905180_INDO_2.jpg?v=1774975604&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/1905180-surf-size-tee-pigment-dyed-indigo"
+        },
+        {
+          "rank": 12,
+          "name": "JERSEY SHORT",
+          "price": "¥22,000",
+          "image": "https://jp.stussy.com/cdn/shop/files/112334U_BLAC_1.jpg?v=1774989366&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/112334u-jersey-short-black"
+        },
+        {
+          "rank": 13,
+          "name": "MIKEY POLARIZED SUNGLASSES",
+          "price": "¥38,500",
+          "image": "https://jp.stussy.com/cdn/shop/files/338445_RBPB_1.jpg?v=1774298168&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/338445-mikey-polarized-sunglasses-rubber-black-polar-dark-blue-lens"
+        },
+        {
+          "rank": 14,
+          "name": "BURLY THREADS TRUCKER",
+          "price": "",
+          "image": "https://jp.stussy.com/cdn/shop/files/1311200_BLAC_1.jpg?v=1773260118&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/1311200-mid-depth-burly-threads-trucker-black"
+        },
+        {
+          "rank": 15,
+          "name": "STANDARD SHIRT",
+          "price": "¥39,600",
+          "image": "https://jp.stussy.com/cdn/shop/files/1110357_WHIT_1_32a3b280-7acf-437a-8fe7-c0abb282bd42.jpg?v=1764783672&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/1110357-standard-shirt-white"
+        },
+        {
+          "rank": 16,
+          "name": "GARMENT DYED SS TEE",
+          "price": "¥13,200",
+          "image": "https://jp.stussy.com/cdn/shop/files/1140364_FAYE_1.jpg?v=1774989430&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/1140364-garment-dyed-ss-tee-faded-yellow"
+        },
+        {
+          "rank": 17,
+          "name": "SURF SIZE ZIP HOODIE",
+          "price": "¥29,700",
+          "image": "https://jp.stussy.com/cdn/shop/files/1975180_GOLD_1.jpg?v=1774975725&width=480",
+          "url": "https://jp.stussy.com/collections/new-arrivals/products/1975180-surf-size-zip-hoodie-yellow"
         }
       ]
     }
