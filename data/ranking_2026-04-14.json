@@ -1,0 +1,924 @@
+{
+  "date": "2026-04-14",
+  "fetched_at": "2026-04-14T06:22:14.478753",
+  "zara": {
+    "source": "zara.com (official API)",
+    "count": 20,
+    "items": [
+      {
+        "rank": 1,
+        "name": "バック・トゥ・ザ・フューチャー© UCS LLC & AMBLIN X DYLAN´S T-SHIRT CLUB X ZARA イラストTシャツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/37aa/2116/4d6040d2938c/f4375810a187/06224858016-e1/06224858016-e1.jpg?ts=1775747113330&w=563",
+        "url": "https://www.zara.com/jp/ja/-p06224858.html"
+      },
+      {
+        "rank": 2,
+        "name": "JAWS© UCS LLC AND AMBLIN X DYLAN´S T-SHIRT CLUB X ZARA イラストTシャツ",
+        "price": "¥5,990",
+        "image": "https://static.zara.net/assets/public/31ba/1472/665e4e289fd2/9e7678409b39/06224849016-e1/06224849016-e1.jpg?ts=1775720572463&w=563",
+        "url": "https://www.zara.com/jp/ja/-p06224849.html"
+      },
+      {
+        "rank": 3,
+        "name": "ダメージ加工バギーフィットデニムパンツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/0cb8/a211/90d94ee6a379/f485effa59e1/04048407400-e1/04048407400-e1.jpg?ts=1770655723876&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04048407.html"
+      },
+      {
+        "rank": 4,
+        "name": "100% リネンジップアップシャツジャケット",
+        "price": "¥10,990",
+        "image": "https://static.zara.net/assets/public/fd6d/4fee/32e5476c8f2d/ca235c015a1e/08281112800-e1/08281112800-e1.jpg?ts=1770978538445&w=563",
+        "url": "https://www.zara.com/jp/ja/-p08281112.html"
+      },
+      {
+        "rank": 5,
+        "name": "ロングスリーブTシャツ",
+        "price": "¥5,990",
+        "image": "https://static.zara.net/assets/public/685a/4bb8/e9a24cd2b28e/b8a15b91b15f/00722431803-e1/00722431803-e1.jpg?ts=1768821476698&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00722431.html"
+      },
+      {
+        "rank": 6,
+        "name": "オーバーサイズフィット キュプラ ボンバージャケット",
+        "price": "¥29,990",
+        "image": "https://static.zara.net/assets/public/931d/23d1/85204eb1a48c/7c71204e33e6/03918802704-e1/03918802704-e1.jpg?ts=1774373640938&w=563",
+        "url": "https://www.zara.com/jp/ja/-p03918802.html"
+      },
+      {
+        "rank": 7,
+        "name": "グレムリン™ & © X DYLAN´S T-SHIRT CLUB X ZARA イラストＴシャツ",
+        "price": "¥5,990",
+        "image": "https://static.zara.net/assets/public/d5f7/37bf/c156412391b4/aa470b24feac/06224857251-e1/06224857251-e1.jpg?ts=1775720576383&w=563",
+        "url": "https://www.zara.com/jp/ja/-p06224857.html"
+      },
+      {
+        "rank": 8,
+        "name": "フルイドチェックシャツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/5095/c00a/d93a4d49bf55/9670abfc1d02/04437227084-e1/04437227084-e1.jpg?ts=1773759837376&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04437227.html"
+      },
+      {
+        "rank": 9,
+        "name": "ボクシーフィットトグルボタンジャケット",
+        "price": "¥13,590",
+        "image": "https://static.zara.net/assets/public/810c/c24f/06464dffb9a5/c7ef523ba689/01300413800-e1/01300413800-e1.jpg?ts=1775731559719&w=563",
+        "url": "https://www.zara.com/jp/ja/-p01300413.html"
+      },
+      {
+        "rank": 10,
+        "name": "ベーシックスリムフィットTシャツ /01",
+        "price": "¥1,990",
+        "image": "https://static.zara.net/assets/public/8450/47b1/886245b8a7e6/fca1014ee004/05584361800-e1/05584361800-e1.jpg?ts=1756290169986&w=563",
+        "url": "https://www.zara.com/jp/ja/-p05584401.html"
+      },
+      {
+        "rank": 11,
+        "name": "ヘンリーネックワッフルニットTシャツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/00c0/5127/7bde4cd38e43/00e0213e837d/00526444898-e1/00526444898-e1.jpg?ts=1772093314414&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00526444.html"
+      },
+      {
+        "rank": 12,
+        "name": "ヘンリーネックTシャツ",
+        "price": "¥5,290",
+        "image": "https://static.zara.net/assets/public/fef0/7359/46844f13b0f6/d7c01da09a5a/00526403800-e1/00526403800-e1.jpg?ts=1765813441506&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00526403.html"
+      },
+      {
+        "rank": 13,
+        "name": "フレアフィットデニムパンツ",
+        "price": "¥8,590",
+        "image": "https://static.zara.net/assets/public/1d06/b9ec/a82b4eb2a6a8/4a5d454e5606/00840444800-e1/00840444800-e1.jpg?ts=1772118359934&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00840444.html"
+      },
+      {
+        "rank": 14,
+        "name": "テクスチャーヘンリーネックTシャツ",
+        "price": "¥5,290",
+        "image": "https://static.zara.net/assets/public/4d33/c208/f1a44e69a663/fa550655954e/04092405800-e1/04092405800-e1.jpg?ts=1770654787251&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04092405.html"
+      },
+      {
+        "rank": 15,
+        "name": "リラックスフィットプリーツパンツ",
+        "price": "¥8,590",
+        "image": "https://static.zara.net/assets/public/6366/d32a/4335489a8229/d4ff01ba363d/00706922052-e1/00706922052-e1.jpg?ts=1774943150210&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00706922.html"
+      },
+      {
+        "rank": 16,
+        "name": "テクスチャーヘンリーネックTシャツ",
+        "price": "¥5,290",
+        "image": "https://static.zara.net/assets/public/70a6/c572/cb2649cb8017/7068013d5ab3/04092405250-e1/04092405250-e1.jpg?ts=1770655727426&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04092405.html"
+      },
+      {
+        "rank": 17,
+        "name": "ヘンリーネックニットTシャツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/6a8a/8e9c/43c541fab05e/95f825f35203/04696430800-e1/04696430800-e1.jpg?ts=1773074392641&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04696430.html"
+      },
+      {
+        "rank": 18,
+        "name": "リブヘンリーネックTシャツ",
+        "price": "¥5,990",
+        "image": "https://static.zara.net/assets/public/f5ac/8904/ae9a4377849f/1bb0a4f5a83b/03665467922-e1/03665467922-e1.jpg?ts=1771841894981&w=563",
+        "url": "https://www.zara.com/jp/ja/-p03665467.html"
+      },
+      {
+        "rank": 19,
+        "name": "BLLN PNT",
+        "price": "¥15,990",
+        "image": "https://static.zara.net/assets/public/e2dc/fd04/2154477796f8/c3b0c9016b7e/01608335730-e1/01608335730-e1.jpg?ts=1775541535310&w=563",
+        "url": "https://www.zara.com/jp/ja/-p01608335.html"
+      },
+      {
+        "rank": 20,
+        "name": "RLL P SHRT",
+        "price": "¥10,990",
+        "image": "https://static.zara.net/assets/public/d2f5/49fe/ea2c41a98fb1/dc5d89a5ca92/04496307676-e1/04496307676-e1.jpg?ts=1775541542817&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04496307.html"
+      }
+    ]
+  },
+  "musinsa": {
+    "source": "global.musinsa.com/jp",
+    "count": 18,
+    "items": [
+      {
+        "rank": 1,
+        "name": "NYC LOCATION T-SHIRT (23COLOR) (LRAMCTR702P)",
+        "brand": "GROOVE RHYME",
+        "price": "¥2,236",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20260305/6084669/6084669_17726862036016_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/6084669"
+      },
+      {
+        "rank": 2,
+        "name": "[ON]ウォッシャブルストライプヘンリーネック半袖ニット - 2カラー",
+        "brand": "MINDBRIDGE",
+        "price": "¥4,034",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20260310/6109259/6109259_17760608276358_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/6109259"
+      },
+      {
+        "rank": 3,
+        "name": "SNYDER WIDE DENIM (BLUE)",
+        "brand": "2000ARCHIVES",
+        "price": "¥32,562",
+        "image": "https://image.msscdn.net/thumbnails/global_images/goods_img/20250912/5448897/5448897_17580045421172_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/5448897"
+      },
+      {
+        "rank": 4,
+        "name": "[2PACK] 190g シングル ザ レガシー 半袖Tシャツ (JR5TSU153BK)",
+        "brand": "JEEP",
+        "price": "¥4,983",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20220427/2518417/2518417_17685218387430_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/2518417"
+      },
+      {
+        "rank": 5,
+        "name": "[ON]ウォッシャブルマルチストライプカラー半袖ニット - 4カラー",
+        "brand": "MINDBRIDGE",
+        "price": "¥4,034",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20260310/6109248/6109248_17757204230136_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/6109248"
+      },
+      {
+        "rank": 6,
+        "name": "[ON]ウォッシャブルコットン混合カラー半袖ニット - 3色",
+        "brand": "MINDBRIDGE",
+        "price": "¥4,034",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20260310/6109237/6109237_17757872299300_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/6109237"
+      },
+      {
+        "rank": 7,
+        "name": "SHARPER - 809 (a)",
+        "brand": "KINCHI",
+        "price": "¥40,622",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20260209/5999527/5999527_17742591803727_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/5999527"
+      },
+      {
+        "rank": 8,
+        "name": "セミワイド隠しバンディングスラックス[ブラック]",
+        "brand": "MUSINSA STANDARD",
+        "price": "¥5,112",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20190910/1149329/1149329_17518465143526_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/1149329"
+      },
+      {
+        "rank": 9,
+        "name": "[ON]ウォッシャブルコットン混合ラウンドネック半袖ニット - 3カラー",
+        "brand": "MINDBRIDGE",
+        "price": "¥4,034",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20260310/6109239/6109239_17757871718935_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/6109239"
+      },
+      {
+        "rank": 10,
+        "name": "KAEL DRAPED JACKET (BLACK)",
+        "brand": "2000ARCHIVES",
+        "price": "¥29,149",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20260130/5964370/5964370_17697611437912_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/5964370"
+      },
+      {
+        "rank": 11,
+        "name": "FOAT - 505 (a)",
+        "brand": "KINCHI",
+        "price": "¥35,363",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20231006/3610860/3610860_16995101399808_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/3610860"
+      },
+      {
+        "rank": 12,
+        "name": "Deep One Tuck Sweat Pants [Grey]",
+        "brand": "XERO",
+        "price": "¥3,506",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20200818/1551840/1551840_1_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/1551840"
+      },
+      {
+        "rank": 13,
+        "name": "リラックスベーシックブレザー[ブラック]",
+        "brand": "MUSINSA STANDARD",
+        "price": "¥9,293",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20200820/1558197/1558197_17721583556525_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/1558197"
+      },
+      {
+        "rank": 14,
+        "name": "リアルワイドヒドゥンバンディングスラックス[ブラック]",
+        "brand": "MUSINSA STANDARD",
+        "price": "¥4,449",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20190927/1168922/1168922_17569508760902_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/1168922"
+      },
+      {
+        "rank": 15,
+        "name": "[シティレジャー] シアウィンドブレーカー ジャケット [ブラック]",
+        "brand": "MUSINSA STANDARD",
+        "price": "¥5,482",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20240112/3793565/3793565_17738965169888_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/3793565"
+      },
+      {
+        "rank": 16,
+        "name": "Deep One Tuck Sweat Pants [ブラック]",
+        "brand": "XERO",
+        "price": "¥3,506",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20200818/1551839/1551839_1_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/1551839"
+      },
+      {
+        "rank": 17,
+        "name": "レイヤードクルーネックTシャツ_通常丈 [ホワイト]",
+        "brand": "MUSINSA STANDARD",
+        "price": "¥1,849",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20210825/2086653/2086653_17048764754484_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/2086653"
+      },
+      {
+        "rank": 18,
+        "name": "ワイドヒドゥンバンディングスラックス[ブラック]",
+        "brand": "MUSINSA STANDARD",
+        "price": "¥5,635",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20190927/1168906/1168906_17224121763738_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/1168906"
+      }
+    ]
+  },
+  "buyma": {
+    "source": "buyma.com",
+    "count": 20,
+    "items": [
+      {
+        "rank": 1,
+        "name": "★SATUR★Waffle Henry Neck T-shirt",
+        "brand": "SATUR",
+        "price": "¥8,720",
+        "image": "https://cdn-images.buyma.com/imgdata/item/260313/0129253861/768569611/210.jpg",
+        "url": "https://www.buyma.com/item/129253861/"
+      },
+      {
+        "rank": 2,
+        "name": "★AMI DE COEUR SMALL HEART T-SHIRT ロゴ Tシャツ",
+        "brand": "AMI PARIS",
+        "price": "¥15,750",
+        "image": "https://cdn-images.buyma.com/imgdata/item/250610/0119224402/702401017/210.jpg",
+        "url": "https://www.buyma.com/item/119224402/"
+      },
+      {
+        "rank": 3,
+        "name": "★SATUR★Small Logo Hood Zip-up",
+        "brand": "SATUR",
+        "price": "¥11,220",
+        "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089297/752378126/210.jpg",
+        "url": "https://www.buyma.com/item/127089297/"
+      },
+      {
+        "rank": 4,
+        "name": "MM6 ショルダーバッグ SB5WG0025 P6416 ナンバリングロゴ",
+        "brand": "MM6 Maison Margiela",
+        "price": "¥59,780",
+        "image": "https://cdn-images.buyma.com/imgdata/item/250203/0115234644/675517062/210.jpg",
+        "url": "https://www.buyma.com/item/115234644/"
+      },
+      {
+        "rank": 5,
+        "name": "【Thug Club】Basic T-shirt◆　Ver.２　希少商品",
+        "brand": "Thug Club",
+        "price": "¥13,980",
+        "image": "https://cdn-images.buyma.com/imgdata/item/240716/0108756568/682633167/210.jpg",
+        "url": "https://www.buyma.com/item/108756568/"
+      },
+      {
+        "rank": 6,
+        "name": "【国内即発】MONCLER 胸ロゴ 左肩LOGO刺繍 Tシャツ",
+        "brand": "MONCLER",
+        "price": "¥36,800",
+        "image": "https://cdn-images.buyma.com/imgdata/item/260306/0128889346/765977392/210.jpg",
+        "url": "https://www.buyma.com/item/128889346/"
+      },
+      {
+        "rank": 7,
+        "name": "【STONE ISLAND】ストーンアイランド ロゴ ワッペン スウェット",
+        "brand": "STONE ISLAND",
+        "price": "¥39,600",
+        "image": "https://cdn-images.buyma.com/imgdata/item/251105/0124514771/736588306/210.jpg",
+        "url": "https://www.buyma.com/item/124514771/"
+      },
+      {
+        "rank": 8,
+        "name": "★SATUR★Essential Lawton Track Zip-up Jacket",
+        "brand": "SATUR",
+        "price": "¥10,420",
+        "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086480/752357772/210.jpg",
+        "url": "https://www.buyma.com/item/127086480/"
+      },
+      {
+        "rank": 9,
+        "name": "★関税送料込み★ Maison margiela 二つ折り財布 S56UI0140P4455",
+        "brand": "Maison Margiela",
+        "price": "¥48,450",
+        "image": "https://cdn-images.buyma.com/imgdata/item/230105/0090661791/625138024/210.jpg",
+        "url": "https://www.buyma.com/item/90661791/"
+      },
+      {
+        "rank": 10,
+        "name": "【Thug Club】TC Basic T-shirt◆",
+        "brand": "Thug Club",
+        "price": "¥11,900",
+        "image": "https://cdn-images.buyma.com/imgdata/item/240425/0106076859/682631880/210.jpg",
+        "url": "https://www.buyma.com/item/106076859/"
+      },
+      {
+        "rank": 11,
+        "name": "1-3日着/追跡【即発】COMME des GARCONS メンズ カットソー",
+        "brand": "COMME des GARCONS",
+        "price": "¥8,670",
+        "image": "https://cdn-images.buyma.com/imgdata/item/240201/0103284897/597430075/210.jpg",
+        "url": "https://www.buyma.com/item/103284897/"
+      },
+      {
+        "rank": 12,
+        "name": "COMME des GARCONS メンズ ハートロゴ 長袖 Tシャツ",
+        "brand": "COMME des GARCONS",
+        "price": "¥8,850",
+        "image": "https://cdn-images.buyma.com/imgdata/item/191011/0048042541/571973137/210.jpg",
+        "url": "https://www.buyma.com/item/48042541/"
+      },
+      {
+        "rank": 13,
+        "name": "[ノースフェイス]ESSENTIAL 長袖 ラウンドTシャツ★26SS★男女★",
+        "brand": "THE NORTH FACE",
+        "price": "¥5,100",
+        "image": "https://cdn-images.buyma.com/imgdata/item/260128/0127241211/765177769/210.jpg",
+        "url": "https://www.buyma.com/item/127241211/"
+      },
+      {
+        "rank": 14,
+        "name": "【関税込み】Rick Owens ハイカットスニーカー",
+        "brand": "RICK OWENS",
+        "price": "¥181,890",
+        "image": "https://cdn-images.buyma.com/imgdata/item/260107/0126579766/748901306/210.jpg",
+        "url": "https://www.buyma.com/item/126579766/"
+      },
+      {
+        "rank": 15,
+        "name": "【AMI PARIS】 アミ パリス パッチ Tシャツ 半袖",
+        "brand": "AMI PARIS",
+        "price": "¥29,650",
+        "image": "https://cdn-images.buyma.com/imgdata/item/251117/0124912890/738246051/210.jpg",
+        "url": "https://www.buyma.com/item/124912890/"
+      },
+      {
+        "rank": 16,
+        "name": "[ラルフローレン] パックTシャツ スリムフィット 3枚セット",
+        "brand": "Ralph Lauren",
+        "price": "¥13,900",
+        "image": "https://cdn-images.buyma.com/imgdata/item/250809/0121208078/777619489/210.jpg",
+        "url": "https://www.buyma.com/item/121208078/"
+      },
+      {
+        "rank": 17,
+        "name": "【Peaceminusone x 2025 MAMA】Peacemamaone T-Shirt",
+        "brand": "peaceminusone",
+        "price": "¥14,882",
+        "image": "https://cdn-images.buyma.com/imgdata/item/251126/0125243543/740411962/210.jpg",
+        "url": "https://www.buyma.com/item/125243543/"
+      },
+      {
+        "rank": 18,
+        "name": "【国内即発】DIESEL T-ADJUST-OD オーガニックコットンTシャツ",
+        "brand": "DIESEL",
+        "price": "¥10,500",
+        "image": "https://cdn-images.buyma.com/imgdata/item/250213/0115573509/684167919/210.jpg",
+        "url": "https://www.buyma.com/item/115573509/"
+      },
+      {
+        "rank": 19,
+        "name": "【STUSSY】Basic Thermal Woodland Camo",
+        "brand": "STUSSY",
+        "price": "¥18,900",
+        "image": "https://cdn-images.buyma.com/imgdata/item/250822/0121539650/728951563/210.jpg",
+        "url": "https://www.buyma.com/item/121539650/"
+      },
+      {
+        "rank": 20,
+        "name": "[ノースフェイス]TNF トラック ジャケット★新作・25AW★男女★",
+        "brand": "THE NORTH FACE",
+        "price": "¥8,300",
+        "image": "https://cdn-images.buyma.com/imgdata/item/251028/0124197892/735495626/210.jpg",
+        "url": "https://www.buyma.com/item/124197892/"
+      }
+    ]
+  },
+  "snkrdunk_sneakers": {
+    "source": "snkrdunk.com",
+    "count": 20,
+    "items": [
+      {
+        "rank": 1,
+        "name": "ナイキ コービー11 エリート プロトロ \"フェード トゥ ブラック\"",
+        "price": "¥33,990〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/598540d5-10df-4926-9e8f-e857514579cb.webp?size=m",
+        "url": "https://snkrdunk.com/products/IM4260-001"
+      },
+      {
+        "rank": 2,
+        "name": "ヴァージルアブローアーカイブ (V.A.A.) × ナイキ エアジョーダン1 レトロ ハイ OG \"アラスカ\"",
+        "price": "¥63,000〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/0e42fe08-36ae-4594-9389-95a86f070e3a.webp?size=m",
+        "url": "https://snkrdunk.com/products/AA3834-100"
+      },
+      {
+        "rank": 3,
+        "name": "ナイキ マインド001 ミュール \"ブラック/ハイパークリムゾン\"",
+        "price": "¥28,000〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251024021330-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/HQ4307-001"
+      },
+      {
+        "rank": 4,
+        "name": "ナイキ コービー11 プロトロ \"マンバデイ\" (2026)",
+        "price": "¥30,940〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/bc15d9f6-b98a-4abc-824a-ff4ad6f472da.webp?size=m",
+        "url": "https://snkrdunk.com/products/IU4902-900"
+      },
+      {
+        "rank": 5,
+        "name": "トムサックス × ナイキクラフト ウィメンズ ジェネラル パーパス シュー \"ブリコラージュ\"",
+        "price": "¥19,800〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230919043713-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/DA6672-100"
+      },
+      {
+        "rank": 6,
+        "name": "パレス スケートボード × ナイキ エアマックス95 ビッグバブル \"メタリックシルバー/アルミニウム\"",
+        "price": "¥32,999〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/baa8533b-9ccc-4322-ae36-f76c40a5632e.webp?size=m",
+        "url": "https://snkrdunk.com/products/IQ7708-095"
+      },
+      {
+        "rank": 7,
+        "name": "ニューバランス 9060 サマー \"レインクラウド/キャッスルロック\"",
+        "price": "¥23,289〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/39d525cd-a791-4f94-8fc7-f5412900e377.webp?size=m",
+        "url": "https://snkrdunk.com/products/U90603FA"
+      },
+      {
+        "rank": 8,
+        "name": "ニューバランス 2002R \"トリプルブラック\"",
+        "price": "¥13,200〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250924101133-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/U2002RBL"
+      },
+      {
+        "rank": 9,
+        "name": "ナイキ エアマックス95 OG ビッグバブル \"ネオンイエロー/イエローグラデ\" (2025/2026)",
+        "price": "¥26,350〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250320071217-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/HM4740-001"
+      },
+      {
+        "rank": 10,
+        "name": "ニューバランス 1906L \"リッチオークスウェード\"",
+        "price": "¥12,508〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250212033628-1.webp?size=m",
+        "url": "https://snkrdunk.com/products/U1906LNS"
+      },
+      {
+        "rank": 11,
+        "name": "ニューバランス 1906R \"ブラック\"",
+        "price": "¥14,150〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20231006094539-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/M1906RCH"
+      },
+      {
+        "rank": 12,
+        "name": "ナイキ エアフォース1 ロー '07 \"ホワイト/ホワイト\"",
+        "price": "¥12,999〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250601033340-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/CW2288-111"
+      },
+      {
+        "rank": 13,
+        "name": "シュプリーム × MM6メゾンマルジェラ × ティンバーランド マネー 6インチ プレミアム ウォータープルーフ ブーツ \"マルチカラー\" (26SS ウィーク4)",
+        "price": "¥51,500〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/fcf54011-c088-4801-8bce-504b6f792f1e.webp?size=m",
+        "url": "https://snkrdunk.com/products/TB0A5NG5ALP"
+      },
+      {
+        "rank": 14,
+        "name": "ナイキ マインド001 ミュール \"チームレッド\"",
+        "price": "¥16,000〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260309040857-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/HQ4307-601"
+      },
+      {
+        "rank": 15,
+        "name": "ジャックムス × ナイキ ウィメンズ ムーン シューズ \"ソフトパール\"",
+        "price": "¥26,490〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260310015432-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/HV8547-002"
+      },
+      {
+        "rank": 16,
+        "name": "ナイキ ハイパーダンク2017 ロー \"ピンクフォーム/ブラック\"",
+        "price": "¥12,000〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251009060540-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/IM3368-606"
+      },
+      {
+        "rank": 17,
+        "name": "アンディフィーテッド × ナイキ エアマックス95 SP \"セイル\"",
+        "price": "¥25,600〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251125064333-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/IB4453-100"
+      },
+      {
+        "rank": 18,
+        "name": "リーバイス × ナイキ エアジョーダン3 レトロ SP \"インディゴ アンド ジムレッド\" (リーバイスタブ)",
+        "price": "¥19,800〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260122014822-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/IH7959-400"
+      },
+      {
+        "rank": 19,
+        "name": "フラグメントデザイン × ユニオン × ナイキ エアジョーダン1 ハイ OG \"ブラック/バーシティレッド\"",
+        "price": "¥32,399〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260218012248-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/IO7847-002"
+      },
+      {
+        "rank": 20,
+        "name": "ナイキ ウィメンズ エアマックス95 OG ビッグバブル \"ミディアムグレー/ピンクフォーム\"",
+        "price": "¥20,899〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250417022346-0.webp?size=m",
+        "url": "https://snkrdunk.com/products/HJ5996-001"
+      }
+    ]
+  },
+  "snkrdunk_apparel": {
+    "source": "snkrdunk.com",
+    "count": 20,
+    "items": [
+      {
+        "rank": 1,
+        "name": "シュプリーム スティック Tシャツ \"ブラック\"",
+        "price": "¥9,799〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250831024343-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/687040?slide=right"
+      },
+      {
+        "rank": 2,
+        "name": "シュプリーム スティック Tシャツ \"ホワイト\"",
+        "price": "¥9,900〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250831024448-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/687041?slide=right"
+      },
+      {
+        "rank": 3,
+        "name": "リーバイス ビンテージクロージング S506XX 1944 ジャケット \"インディゴ\"",
+        "price": "¥74,000〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250808053008-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/656121?slide=right"
+      },
+      {
+        "rank": 4,
+        "name": "シュプリーム x MM6 メゾンマルジェラ スプリット ショートスリーブトップ \"ネイビー\"",
+        "price": "¥26,299〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/c69604e7-59e7-4491-80cd-91f3d7e45bca.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/781188?slide=right"
+      },
+      {
+        "rank": 5,
+        "name": "シュプリーム x MM6 メゾンマルジェラ スプリット ショートスリーブトップ \"ブラック\"",
+        "price": "¥26,897〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/c8a8a936-d99e-440d-8480-b2cec55a8078.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/781187?slide=right"
+      },
+      {
+        "rank": 6,
+        "name": "シュプリーム ウォッシュド チノツイル キャンプキャップ (26SS) \"ブラック\"",
+        "price": "¥10,509〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/f1314b8f-0423-4fcf-8674-17ac1d2379c3.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/770066?slide=right"
+      },
+      {
+        "rank": 7,
+        "name": "シュプリーム x MM6 メゾンマルジェラ ボックスロゴ ジップアップ フーデッドスウェットシャツ \"ネイビー\"",
+        "price": "¥91,500〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/78fdcb98-147d-424f-bd49-9cbc9aa7d426.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/781177?slide=right"
+      },
+      {
+        "rank": 8,
+        "name": "シュプリーム アラビックボックスロゴ Tシャツ \"ブラック\"",
+        "price": "¥11,785〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260228115235-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/769958?slide=right"
+      },
+      {
+        "rank": 9,
+        "name": "シュプリーム x MM6 メゾンマルジェラ ボックスロゴ ジップアップ フーデッドスウェットシャツ \"ブラック\"",
+        "price": "¥77,500〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/ac64dc36-688e-4c00-abfc-46cbf1ddeb70.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/781175?slide=right"
+      },
+      {
+        "rank": 10,
+        "name": "パレス x ナイキ フォントスウッシュ Tシャツ \"ブラック\"",
+        "price": "¥17,793〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/a249ced9-d089-479f-bc8a-9183a2667d5a.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/797913?slide=right"
+      },
+      {
+        "rank": 11,
+        "name": "シュプリーム x スパイダーマン Tシャツ \"ブラック\"",
+        "price": "¥16,496〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260228112018-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/769952?slide=right"
+      },
+      {
+        "rank": 12,
+        "name": "ヒステリックグラマー ギター ガール メッシュ キャップ \"ブラック\" 02233QH05",
+        "price": "¥10,700〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250705075615-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/307528?slide=right"
+      },
+      {
+        "rank": 13,
+        "name": "ナイキ ジョーダン x フラグメント x ユニオン Tシャツ \"ホワイト\"",
+        "price": "¥8,000〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260305054720-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/763097?slide=right"
+      },
+      {
+        "rank": 14,
+        "name": "シュプリーム デビル Sロゴ ジップアップ フーデッドスウェット \"ストライプ\"",
+        "price": "¥37,999〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/3d75b2b4-743f-41d3-a4da-3d3b49a4b99a.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/785735?slide=right"
+      },
+      {
+        "rank": 15,
+        "name": "シュプリーム スモールボックス ロングスリーブ Tシャツ (26SS) \"ブラック\"",
+        "price": "¥13,844〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260307092805-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/769945?slide=right"
+      },
+      {
+        "rank": 16,
+        "name": "ナイキ ボックス ラグマット \"オレンジ\"",
+        "price": "¥2,550〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250221071751-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/514296?slide=right"
+      },
+      {
+        "rank": 17,
+        "name": "シュプリーム ハード Tシャツ \"ブラック\"",
+        "price": "¥11,000〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/SUP-SS26-WEEK7-019-3.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/798997?slide=right"
+      },
+      {
+        "rank": 18,
+        "name": "パレス x ナイキ ジャージー \"ブラック\"",
+        "price": "¥25,999〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/06834d07-0d24-4ad6-9290-70ba486bab2a.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/797912?slide=right"
+      },
+      {
+        "rank": 19,
+        "name": "アディダス オリジナルス CTT チャイニーズ トラックトップ カジュアルジャケット \"グレー\"",
+        "price": "¥27,900〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260213055921-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/735761?slide=right"
+      },
+      {
+        "rank": 20,
+        "name": "シュプリーム x スパイダーマン Tシャツ \"ホワイト\"",
+        "price": "¥15,400〜",
+        "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260228112815-0.webp?size=m",
+        "url": "https://snkrdunk.com/apparels/769953?slide=right"
+      }
+    ]
+  },
+  "zozotown": {
+    "source": "zozo.jp (undetected-chromedriver)",
+    "count": 20,
+    "items": [
+      {
+        "rank": 1,
+        "name": "REFINED WAFFLE HENLEY NECK L/S TEE",
+        "brand": "WYM LIDNM",
+        "price": "¥3,300",
+        "image": "https://c.imgz.jp/837/103397837/103397837b_8_d_500.jpg",
+        "url": "https://zozo.jp/?c=gr&did=164672121&rid=1004"
+      },
+      {
+        "rank": 2,
+        "name": "VINTAGE WASHED CURVED DENIM",
+        "brand": "WYM LIDNM",
+        "price": "¥5,940",
+        "image": "https://c.imgz.jp/255/86488255/86488255b_165_d_500.jpg",
+        "url": "https://zozo.jp/?c=gr&did=151229244&rid=1004"
+      },
+      {
+        "rank": 3,
+        "name": "COOL DRY LAYERED TANK TOP",
+        "brand": "WYM LIDNM",
+        "price": "¥1,980",
+        "image": "https://c.imgz.jp/446/92941446/92941446b_20_d_500.jpg",
+        "url": "https://zozo.jp/?c=gr&did=148753142&rid=1004"
+      },
+      {
+        "rank": 4,
+        "name": "COOL TOUCH MICRO SPAN H/S SHIRT",
+        "brand": "WYM LIDNM",
+        "price": "¥3,960",
+        "image": "https://c.imgz.jp/010/105592010/105592010b_24_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=167824058&rid=1004"
+      },
+      {
+        "rank": 5,
+        "name": "新色追加 U.S. POLO ASSN. 別注コラボオーバーサイズワンポイントロゴ刺繍天竺半袖ハーフジップポロシャツ 無地/クレリック",
+        "brand": "U.S. POLO ASSN.",
+        "price": "¥4,950",
+        "image": "https://c.imgz.jp/888/104723888/104723888b_142_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=166543610&rid=1004"
+      },
+      {
+        "rank": 6,
+        "name": "GENUINE LEATHER PLAIN DERBY SHOES",
+        "brand": "WYM LIDNM",
+        "price": "¥9,900",
+        "image": "https://c.imgz.jp/664/99459664/99459664b_8_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=159012598&rid=1004"
+      },
+      {
+        "rank": 7,
+        "name": "【Alfred Alex】Gradient Checkered Shirt/グラデーションチェックシャツ",
+        "brand": "Alfred Alex",
+        "price": "¥2,860",
+        "image": "https://c.imgz.jp/426/86590426/86590426b_8_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=138841105&rid=1004"
+      },
+      {
+        "rank": 8,
+        "name": "【welise/ウェライズ】リッチドレープスムース ハーフスリーブ ドルマンシャツ",
+        "brand": "welise",
+        "price": "¥5,500",
+        "image": "https://c.imgz.jp/222/72033222/72033222b_2_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=116737728&rid=1004"
+      },
+      {
+        "rank": 9,
+        "name": "Chunky Hybrid Loafer  - +6.5cm - / チャンキーハイブリッドローファー",
+        "brand": "ADRER",
+        "price": "¥9,900",
+        "image": "https://c.imgz.jp/119/97704119/97704119b_10011_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=156229775&rid=1004"
+      },
+      {
+        "rank": 10,
+        "name": "ファイヤーバード トラックトップ / ジャージ / トラックジャケット / アディダスオリジナルス adidas Originals",
+        "brand": "adidas",
+        "price": "¥13,200",
+        "image": "https://c.imgz.jp/601/102541601/102541601b_158_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=167727420&rid=1004"
+      },
+      {
+        "rank": 11,
+        "name": "DOUBLE CLOTH DEEP TUCK SLACKS",
+        "brand": "WYM LIDNM",
+        "price": "¥6,600",
+        "image": "https://c.imgz.jp/009/105592009/105592009b_10010_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=167824038&rid=1004"
+      },
+      {
+        "rank": 12,
+        "name": "ヴィンテージメイクバギーセミワイドデニムパンツ",
+        "brand": "MONO-MART",
+        "price": "¥1,980",
+        "image": "https://c.imgz.jp/533/80706533/80706533b_10211_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=145064227&rid=1004"
+      },
+      {
+        "rank": 13,
+        "name": "SLIGHT FLARE DOUBLE CLOTH BAGGY SLACKS",
+        "brand": "WYM LIDNM",
+        "price": "¥5,940",
+        "image": "https://c.imgz.jp/587/92467587/92467587b_46_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=164056680&rid=1004"
+      },
+      {
+        "rank": 14,
+        "name": "【Alfred Alex】Vintage Wide Tapered Denim/ヴィンテージメイク ワイドデニムパンツ",
+        "brand": "Alfred Alex",
+        "price": "¥4,950",
+        "image": "https://c.imgz.jp/353/71483353/71483353b_33_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=123800886&rid=1004"
+      },
+      {
+        "rank": 15,
+        "name": "【累計販売枚数3.5万枚超】コンフォートリラックスシャツ /ウォッシャブル/オフィスカジュアル/防シワ/吸水速乾/通勤",
+        "brand": "PUBLIC TOKYO",
+        "price": "¥15,400",
+        "image": "https://c.imgz.jp/041/77157041/77157041b_5_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=150004132&rid=1004"
+      },
+      {
+        "rank": 16,
+        "name": "TRストレッチスーツ地 ストレート 1タック センタープレス ワイドパンツ/スラックス",
+        "brand": "EMMA CLOTHES",
+        "price": "¥4,730",
+        "image": "https://c.imgz.jp/530/63020530/63020530b_8_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=102651170&rid=1004"
+      },
+      {
+        "rank": 17,
+        "name": "【Alfred Alex】Chunky Metal Plate Shoes/ハイソール メタルプレート シューズ",
+        "brand": "Alfred Alex",
+        "price": "¥6,255",
+        "image": "https://c.imgz.jp/176/89305176/89305176b_8_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=143098865&rid=1004"
+      },
+      {
+        "rank": 18,
+        "name": "【CLEL】Functionary cotton heavyweight short sleeve T-shirt/ファンクショナリーコットン ヘビーウェイト半袖Tシャツ",
+        "brand": "CLEL",
+        "price": "¥1,980",
+        "image": "https://c.imgz.jp/836/83706836/83706836b_1_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=134593715&rid=1004"
+      },
+      {
+        "rank": 19,
+        "name": "ナイキ エア フォース 1 '07 メンズシューズ / Nike Air Force 1 '07 Men's Shoes CW2288-001 Black",
+        "brand": "NIKE",
+        "price": "¥16,500",
+        "image": "https://c.imgz.jp/489/89470489/89470489b_8_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=143327227&rid=1004"
+      },
+      {
+        "rank": 20,
+        "name": "NEW BALANCE ニューバランス U9060 915(D) U9060 915 BLACK(915)",
+        "brand": "New Balance",
+        "price": "¥19,800",
+        "image": "https://c.imgz.jp/666/105743666/105743666_8_d_215.jpg",
+        "url": "https://zozo.jp/?c=gr&did=168024211&rid=1004"
+      }
+    ]
+  }
+}
