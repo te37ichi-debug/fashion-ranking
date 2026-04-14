@@ -1,6 +1,6 @@
 {
   "date": "2026-04-14",
-  "fetched_at": "2026-04-14T19:50:32.904671",
+  "fetched_at": "2026-04-14T20:05:23.233515",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -172,8 +172,149 @@
     "adidas_atmos": {
       "name": "adidas (atmos)",
       "source": "https://www.atmos-tokyo.com/category/all?brand=adidas",
-      "count": 0,
-      "items": []
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "adidas VIRGINIA VARIO FLAT EARTHER by Pharrell",
+          "price": "¥23,100",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki7668-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki7668"
+        },
+        {
+          "rank": 2,
+          "name": "adidas VIRGINIA VARIO FLAT EARTHER by Pharrell",
+          "price": "¥23,100",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki7669-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki7669"
+        },
+        {
+          "rank": 3,
+          "name": "adidas SATIN FOOTBALL JERSEY",
+          "price": "¥9,900",
+          "image": "https://assets.atmos-tokyo.com/items/S/ka2671-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ka2671"
+        },
+        {
+          "rank": 4,
+          "name": "adidas KNITTED CROCHET FIREBIRD TRACKPANTS",
+          "price": "¥15,400",
+          "image": "https://assets.atmos-tokyo.com/items/S/ke0201-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ke0201"
+        },
+        {
+          "rank": 5,
+          "name": "adidas MEGARIDE AG",
+          "price": "¥31,900",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki6716-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki6716"
+        },
+        {
+          "rank": 6,
+          "name": "adidas MEGARIDE AG",
+          "price": "¥31,900",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki6720-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki6720"
+        },
+        {
+          "rank": 7,
+          "name": "adidas WAFFLE SHORT SLEEVE POLO",
+          "price": "¥7,150",
+          "image": "https://assets.atmos-tokyo.com/items/S/jv9265-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jv9265"
+        },
+        {
+          "rank": 8,
+          "name": "adidas WAFFLE SHORT SLEEVE POLO",
+          "price": "¥7,150",
+          "image": "https://assets.atmos-tokyo.com/items/S/jv9266-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jv9266"
+        },
+        {
+          "rank": 9,
+          "name": "adidas WAFFLE SHORT SLEEVE POLO",
+          "price": "¥7,150",
+          "image": "https://assets.atmos-tokyo.com/items/S/kb5462-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kb5462"
+        },
+        {
+          "rank": 10,
+          "name": "adidas WAFFLE CLASSIC TRACK TOP",
+          "price": "¥14,300",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6863-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6863"
+        },
+        {
+          "rank": 11,
+          "name": "adidas WAFFLE CLASSIC TRACK TOP",
+          "price": "¥14,300",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6864-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6864"
+        },
+        {
+          "rank": 12,
+          "name": "adidas WAFFLE CLASSIC TRACK TOP",
+          "price": "¥14,300",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6865-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6865"
+        },
+        {
+          "rank": 13,
+          "name": "adidas WAFFLE LONG SLEEVE POLO",
+          "price": "¥8,800",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6866-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6866"
+        },
+        {
+          "rank": 14,
+          "name": "adidas WAFFLE LONG SLEEVE POLO",
+          "price": "¥8,800",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6867-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6867"
+        },
+        {
+          "rank": 15,
+          "name": "adidas ADIZERO ADIOS PRO 4 M",
+          "price": "¥28,600",
+          "image": "https://assets.atmos-tokyo.com/items/S/jq4445-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jq4445"
+        },
+        {
+          "rank": 16,
+          "name": "adidas ADIZERO ADIOS PRO 4 W",
+          "price": "¥28,600",
+          "image": "https://assets.atmos-tokyo.com/items/S/jq4446-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jq4446"
+        },
+        {
+          "rank": 17,
+          "name": "adidas ZX 8000 Made in Germany",
+          "price": "¥28,600",
+          "image": "https://assets.atmos-tokyo.com/items/S/jr4609-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jr4609"
+        },
+        {
+          "rank": 18,
+          "name": "adidas ADILENIUM 5.0  TRACK TOP",
+          "price": "¥18,700",
+          "image": "https://assets.atmos-tokyo.com/items/S/kx4830-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kx4830"
+        },
+        {
+          "rank": 19,
+          "name": "adidas ADILENIUM 5.0  TRACK TOP",
+          "price": "¥18,700",
+          "image": "https://assets.atmos-tokyo.com/items/S/kx4831-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kx4831"
+        },
+        {
+          "rank": 20,
+          "name": "adidas ADILENIUM 5.0  TRACKPANT",
+          "price": "¥15,950",
+          "image": "https://assets.atmos-tokyo.com/items/S/kx4832-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kx4832"
+        }
+      ]
     },
     "carhartt": {
       "name": "Carhartt WIP",
@@ -987,17 +1128,17 @@
         },
         {
           "rank": 11,
-          "name": "★大人気★【Thug Club】TC PK Man★韓国発★",
-          "price": "¥24,950",
-          "image": "https://cdn-images.buyma.com/imgdata/item/250927/0123016774/726442476/210.jpg",
-          "url": "https://www.buyma.com/item/123016774/"
-        },
-        {
-          "rank": 12,
           "name": "★大人気★【Thug Club】TC Basic T-shirt ★ユニセックス★",
           "price": "¥10,257",
           "image": "https://cdn-images.buyma.com/imgdata/item/250412/0117572612/691006635/210.jpg",
           "url": "https://www.buyma.com/item/117572612/"
+        },
+        {
+          "rank": 12,
+          "name": "★大人気★【Thug Club】TC PK Man★韓国発★",
+          "price": "¥24,950",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250927/0123016774/726442476/210.jpg",
+          "url": "https://www.buyma.com/item/123016774/"
         },
         {
           "rank": 13,
