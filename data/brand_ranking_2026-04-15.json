@@ -1,6 +1,6 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T14:17:42.204821",
+  "fetched_at": "2026-04-15T14:31:36.242258",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -582,7 +582,7 @@
         {
           "rank": 19,
           "name": "Supreme × Nike SB Dunk Low \"Black\" (25FW Week2)",
-          "price": "¥31,080",
+          "price": "¥31,000",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250905024454-0.webp?size=m",
           "url": "https://snkrdunk.com/products/HQ8487-001"
         },
@@ -1821,7 +1821,7 @@
         {
           "rank": 3,
           "name": "HUMAN MADE Graphic L/S T-Shirt \"Black\"",
-          "price": "¥19,834",
+          "price": "¥19,833",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/6a34587f-279f-4b3b-8983-3a1d06c3c04f.webp?size=m",
           "url": "https://snkrdunk.com/apparels/784516"
         },
