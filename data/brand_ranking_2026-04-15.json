@@ -1,6 +1,6 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T08:39:36.672703",
+  "fetched_at": "2026-04-15T09:21:05.824806",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -400,31 +400,31 @@
         },
         {
           "rank": 12,
-          "name": "【Thug Club x Adidas】Adifom Iiinfinity Mule Core Black",
-          "price": "¥21,970",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260322/0129624242/772009929/210.jpg",
-          "url": "https://www.buyma.com/item/129624242/"
-        },
-        {
-          "rank": 13,
           "name": "★大人気★【Thug Club】TC PK Man★韓国発★",
           "price": "¥24,950",
           "image": "https://cdn-images.buyma.com/imgdata/item/250927/0123016774/726442476/210.jpg",
           "url": "https://www.buyma.com/item/123016774/"
         },
         {
-          "rank": 14,
-          "name": "【Thug Club】SUCK MY DICK ボクサーパンツ 男女兼用 [正規品]",
-          "price": "¥4,494",
-          "image": "https://cdn-images.buyma.com/imgdata/item/240219/0103921971/601336559/210.jpg",
-          "url": "https://www.buyma.com/item/103921971/"
+          "rank": 13,
+          "name": "【Thug Club x Adidas】Adifom Iiinfinity Mule Core Black",
+          "price": "¥21,970",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260322/0129624242/772009929/210.jpg",
+          "url": "https://www.buyma.com/item/129624242/"
         },
         {
-          "rank": 15,
+          "rank": 14,
           "name": "[THUG CLUB] TC PK /追跡付",
           "price": "¥26,000",
           "image": "https://cdn-images.buyma.com/imgdata/item/241112/0112550207/657684159/210.jpg",
           "url": "https://www.buyma.com/item/112550207/"
+        },
+        {
+          "rank": 15,
+          "name": "【Thug Club】SUCK MY DICK ボクサーパンツ 男女兼用 [正規品]",
+          "price": "¥4,494",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240219/0103921971/601336559/210.jpg",
+          "url": "https://www.buyma.com/item/103921971/"
         },
         {
           "rank": 16,
@@ -1492,17 +1492,17 @@
         },
         {
           "rank": 2,
-          "name": "★SATUR★Essential Lawton Track Zip-up Jacket",
-          "price": "¥10,420",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086480/752357772/210.jpg",
-          "url": "https://www.buyma.com/item/127086480/"
-        },
-        {
-          "rank": 3,
           "name": "★SATUR★Small Logo Hood Zip-up",
           "price": "¥11,220",
           "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089297/752378126/210.jpg",
           "url": "https://www.buyma.com/item/127089297/"
+        },
+        {
+          "rank": 3,
+          "name": "★SATUR★Essential Lawton Track Zip-up Jacket",
+          "price": "¥10,420",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086480/752357772/210.jpg",
+          "url": "https://www.buyma.com/item/127086480/"
         },
         {
           "rank": 4,
@@ -1922,8 +1922,302 @@
     "acne_studios_buyma": {
       "name": "Acne Studios (BUYMA)",
       "source": "https://www.buyma.com/rank/_ACNE-JEANS-%E3%82%A2%E3%82%AF%E3%83%8D%E3%82%B8%E3%83%BC%E3%83%B3%E3%82%BA/",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "Acne Studios ロゴTシャツ ユニセックス レギュラーフィット",
+          "price": "¥39,200",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260218/0128138970/763168427/210.jpg",
+          "url": "https://www.buyma.com/item/128138970/"
+        },
+        {
+          "rank": 2,
+          "name": "【関税込】新作◆ACNE STUDIOS アクネ◆手書き風ロゴ キャップ",
+          "price": "¥54,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250411/0117537196/698916102/210.jpg",
+          "url": "https://www.buyma.com/item/117537196/"
+        },
+        {
+          "rank": 3,
+          "name": "ACNE STUDIOS｜ハート プリント Tシャツ CL0344",
+          "price": "¥43,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250308/0116314609/689289352/210.jpg",
+          "url": "https://www.buyma.com/item/116314609/"
+        },
+        {
+          "rank": 4,
+          "name": "《ACNE STUDIOS》 CL0196 BM0 LOGO SHORT SLEEVE T SHIRT",
+          "price": "¥47,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240208/0103545660/599076674/210.jpg",
+          "url": "https://www.buyma.com/item/103545660/"
+        },
+        {
+          "rank": 5,
+          "name": "【Acne Studios】ロゴ ロンT",
+          "price": "¥58,500",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260204/0127540736/755758745/210.jpg",
+          "url": "https://www.buyma.com/item/127540736/"
+        },
+        {
+          "rank": 6,
+          "name": "ACNE STUDIOS｜マルチポケット ミニバッグ A10428",
+          "price": "¥119,000",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250211/0115498396/707132638/210.jpg",
+          "url": "https://www.buyma.com/item/115498396/"
+        },
+        {
+          "rank": 7,
+          "name": "【関税込み】Acne Studios ブラック ロゴ ジップセーター",
+          "price": "¥91,180",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250807/0121085340/714520789/210.jpg",
+          "url": "https://www.buyma.com/item/121085340/"
+        },
+        {
+          "rank": 8,
+          "name": "ACNE STUDIOS｜アクネストゥディオズ ジッパーウォレット",
+          "price": "¥28,420",
+          "image": "https://cdn-images.buyma.com/imgdata/item/220503/0082446495/538278590/210.jpg",
+          "url": "https://www.buyma.com/item/82446495/"
+        },
+        {
+          "rank": 9,
+          "name": "【関税込】ACNE STUDIOS アクネストゥディオズ◆ロゴ キャップ",
+          "price": "¥72,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260226/0128549186/763296564/210.jpg",
+          "url": "https://www.buyma.com/item/128549186/"
+        },
+        {
+          "rank": 10,
+          "name": "Cowboy Heart Buckle Shopper Bag - Acne Studios - Cotton - Bl",
+          "price": "¥68,820",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250902/0121871252/719804464/210.jpg",
+          "url": "https://www.buyma.com/item/121871252/"
+        },
+        {
+          "rank": 11,
+          "name": "【関税込み】Logo Shopper Bag - Acne Studios - Cotton - Blue",
+          "price": "¥90,890",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260306/0128873835/765848085/210.jpg",
+          "url": "https://www.buyma.com/item/128873835/"
+        },
+        {
+          "rank": 12,
+          "name": "【関税込み】Acne Studios Tシャツ",
+          "price": "¥50,130",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250807/0121085359/714520863/210.jpg",
+          "url": "https://www.buyma.com/item/121085359/"
+        },
+        {
+          "rank": 13,
+          "name": "【関税込】ACNE STUDIOS アクネストゥディオズ◆ロゴ キャップ",
+          "price": "¥45,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/251113/0124797763/766328596/210.jpg",
+          "url": "https://www.buyma.com/item/124797763/"
+        },
+        {
+          "rank": 14,
+          "name": "国内発送 Acne Studios ロゴスタンプ Tシャツ",
+          "price": "¥32,980",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240504/0106337997/636281677/210.jpg",
+          "url": "https://www.buyma.com/item/106337997/"
+        },
+        {
+          "rank": 15,
+          "name": "ACNE STUDIOS｜マルチポケットバッグ A10432",
+          "price": "¥139,000",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250211/0115499283/707132220/210.jpg",
+          "url": "https://www.buyma.com/item/115499283/"
+        },
+        {
+          "rank": 16,
+          "name": "関税負担なし☆Acne Studios  Musubi マイクロトートバッグ",
+          "price": "¥94,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/241010/0111327297/649816504/210.jpg",
+          "url": "https://www.buyma.com/item/111327297/"
+        },
+        {
+          "rank": 17,
+          "name": "Acne Studios 2021M Penicillin ルーズフィットジーンズ",
+          "price": "¥57,000",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250308/0116330450/741580531/210.jpg",
+          "url": "https://www.buyma.com/item/116330450/"
+        },
+        {
+          "rank": 18,
+          "name": "【関税込】◆ACNE STUDIOS アクネスタジオ◆ロゴ チェーン 財布",
+          "price": "¥49,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/241209/0113486790/716554560/210.jpg",
+          "url": "https://www.buyma.com/item/113486790/"
+        },
+        {
+          "rank": 19,
+          "name": "♦Acne Studios♦レディース トートバッグ☆正規品☆",
+          "price": "¥49,940",
+          "image": "https://cdn-images.buyma.com/imgdata/item/231228/0102152730/640253810/210.jpg",
+          "url": "https://www.buyma.com/item/102152730/"
+        },
+        {
+          "rank": 20,
+          "name": "【安心の国内発送】Acne Studios ロゴ　トート　バッグ",
+          "price": "¥46,600",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250326/0117001581/687101388/210.jpg",
+          "url": "https://www.buyma.com/item/117001581/"
+        }
+      ]
+    },
+    "humanmade": {
+      "name": "HUMAN MADE",
+      "source": "https://www.humanmade.jp/new-arrivals/",
       "count": 0,
       "items": []
+    },
+    "humanmade_snkrdunk": {
+      "name": "HUMAN MADE (SNKRDUNK)",
+      "source": "https://snkrdunk.com/search?brandIds=humanmade&searchCategoryIds=2&keywords=HUMAN+MADE+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "HUMAN MADE Heart Carabiner \"Silver\"",
+          "price": "¥1,925",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260224083655-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/751942"
+        },
+        {
+          "rank": 2,
+          "name": "HUMAN MADE x j-hope of BTS HUMAN HOPE Key Charm \"Silver\"",
+          "price": "¥5,889",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-FW25-WEEK16-015.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/728746"
+        },
+        {
+          "rank": 3,
+          "name": "HUMAN MADE Graphic L/S T-Shirt \"Black\"",
+          "price": "¥19,836",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/6a34587f-279f-4b3b-8983-3a1d06c3c04f.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/784516"
+        },
+        {
+          "rank": 4,
+          "name": "HUMAN MADE Tapered Denim Pants \"Indigo\"",
+          "price": "",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS26-WEEK10-002.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/797562"
+        },
+        {
+          "rank": 5,
+          "name": "HUMAN MADE x Coca-Cola Graphic T-Shirt \"White\"",
+          "price": "¥14,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/6fa4e671-da95-4ee1-b828-cb4375667419.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/787011"
+        },
+        {
+          "rank": 6,
+          "name": "HUMAN MADE x Pokemon Made Graphic T-Shirt (Pikachu) Harajuku \"Black\"",
+          "price": "¥17,900",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251016104400-3.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/709314"
+        },
+        {
+          "rank": 7,
+          "name": "HUMAN MADE x Pokemon Made Graphic T-Shirt (Pikachu) Online Store \"White\"",
+          "price": "¥27,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251014085726-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/709305"
+        },
+        {
+          "rank": 8,
+          "name": "HUMAN MADE Heart Socks \"Black\"",
+          "price": "¥3,156",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-FW25-WEEK7-013-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/704787"
+        },
+        {
+          "rank": 9,
+          "name": "HUMAN MADE Graphic L/S T-Shirt \"White\"",
+          "price": "¥19,520",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/f94e8c2a-c573-4134-a291-f26d5b6fd644.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/784518"
+        },
+        {
+          "rank": 10,
+          "name": "HUMAN MADE 6Panel Twill Cap \"Black\"",
+          "price": "¥12,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS26-WEEK1-012.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/758319"
+        },
+        {
+          "rank": 11,
+          "name": "HUMAN MADE Heart Badge T-Shirt \"White\"",
+          "price": "¥15,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240207075844-2.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/129076"
+        },
+        {
+          "rank": 12,
+          "name": "HUMAN MADE x Coca-Cola Tsuriami Sweatshirt \"White\"",
+          "price": "¥36,666",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS26-WEEK9-001.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/787010"
+        },
+        {
+          "rank": 13,
+          "name": "HUMAN MADE Denim Hat \"Indigo\"",
+          "price": "",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/8d79c608-45f1-47a2-b482-f716dee7c22f.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/781054"
+        },
+        {
+          "rank": 14,
+          "name": "HUMAN MADE Graphic T-Shirt \"White\"",
+          "price": "",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS25-WEEK17-004-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/582636"
+        },
+        {
+          "rank": 15,
+          "name": "HUMAN MADE Mickey Mouse Club Graphic T-Shirt \"White\"",
+          "price": "¥15,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/43a5a61d-a675-48da-a85b-495f6d5b92b4.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/781045"
+        },
+        {
+          "rank": 16,
+          "name": "HUMAN MADE x KAWS Kaws Made Graphic T-Shirt #4 \"Black\"",
+          "price": "¥14,100",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250606092229-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/317070"
+        },
+        {
+          "rank": 17,
+          "name": "HUMAN MADE x KAWS Kaws Made Graphic T-Shirt #4 \"White\"",
+          "price": "¥13,200",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/163ea698-b337-4838-a42b-1d734489c381.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/317071"
+        },
+        {
+          "rank": 18,
+          "name": "HUMAN MADE x KAWS MADE Graphic T-Shirt #3 \"White\"",
+          "price": "¥12,800",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260111034448-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/725959"
+        },
+        {
+          "rank": 19,
+          "name": "HUMAN MADE x Pokemon Made Graphic T-Shirt (Monster Ball) \"White\"",
+          "price": "¥12,990",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251010103430-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/708549"
+        },
+        {
+          "rank": 20,
+          "name": "HUMAN MADE Nylon Blouson \"Navy\"",
+          "price": "¥43,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS26-WEEK10-001-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/797560"
+        }
+      ]
     }
   }
 }
