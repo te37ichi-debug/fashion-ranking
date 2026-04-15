@@ -45,27 +45,47 @@ def load_brands():
 # adidas
 # ──────────────────────────────────────────────────────────
 
+def _launch_stealth_browser(playwright):
+    """bot検知回避用のブラウザを起動する"""
+    from playwright_stealth import Stealth
+    stealth = Stealth()
+    browser = playwright.chromium.launch(
+        headless=True,
+        channel=None if IS_CI else "chrome",
+        args=["--disable-blink-features=AutomationControlled"],
+    )
+    context = browser.new_context(
+        user_agent=UA,
+        viewport={"width": 1280, "height": 720},
+        locale="ja-JP",
+    )
+    page = context.new_page()
+    stealth.apply_stealth_sync(page)
+    return browser, page
+
+
 def fetch_adidas(max_items=20):
     print("[adidas] 新着アイテム取得中...")
     items = []
 
     from playwright.sync_api import sync_playwright
+    import re
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
-        page = browser.new_page(user_agent=UA)
+        browser, page = _launch_stealth_browser(p)
 
         try:
             page.goto("https://www.adidas.jp/search?sort=newest-to-oldest", wait_until="domcontentloaded", timeout=30000)
-            page.wait_for_timeout(8000)
+            page.wait_for_timeout(10000)
 
             for _ in range(5):
                 page.evaluate("window.scrollBy(0, 600)")
-                page.wait_for_timeout(500)
+                page.wait_for_timeout(800)
 
             soup = BeautifulSoup(page.content(), "html.parser")
 
             cards = soup.select("article[class*='product-card']")
+            print(f"[adidas] カード数: {len(cards)}")
             seen_names = set()
             for card in cards:
                 if len(items) >= max_items:
@@ -100,8 +120,6 @@ def fetch_adidas(max_items=20):
                 for el in card.select("[class*='price'], [class*='Price']"):
                     t = el.get_text(strip=True)
                     if "¥" in t:
-                        # "価格¥19,800CONFIRMEDアプリ限定" -> "¥19,800"
-                        import re
                         m = re.search(r'¥[\d,]+', t)
                         if m:
                             price = m.group()
@@ -141,22 +159,23 @@ def fetch_adidas_atmos(max_items=20):
     items = []
 
     from playwright.sync_api import sync_playwright
+    import re
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
-        page = browser.new_page(user_agent=UA)
+        browser, page = _launch_stealth_browser(p)
 
         try:
             page.goto("https://www.atmos-tokyo.com/category/all?brand=adidas", wait_until="domcontentloaded", timeout=30000)
-            page.wait_for_timeout(8000)
+            page.wait_for_timeout(10000)
 
             for _ in range(5):
                 page.evaluate("window.scrollBy(0, 600)")
-                page.wait_for_timeout(500)
+                page.wait_for_timeout(800)
 
             soup = BeautifulSoup(page.content(), "html.parser")
 
             cards = soup.select("li.lists-products-item")
+            print(f"[adidas (atmos)] カード数: {len(cards)}")
             seen_urls = set()
             for card in cards:
                 if len(items) >= max_items:
@@ -176,7 +195,6 @@ def fetch_adidas_atmos(max_items=20):
                     continue
 
                 # 価格
-                import re
                 price = ""
                 text = card.get_text(separator="|", strip=True)
                 m = re.search(r'¥[\d,]+', text)

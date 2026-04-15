@@ -4,3 +4,4 @@ undetected-chromedriver
 selenium
 setuptools
 playwright
+playwright-stealth
