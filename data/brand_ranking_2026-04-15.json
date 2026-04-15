@@ -1,18 +1,300 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T13:45:53.882620",
+  "fetched_at": "2026-04-15T13:56:50.665774",
   "brands": {
     "adidas": {
-      "name": "adidas",
-      "source": "https://www.adidas.jp/search?sort=newest-to-oldest",
-      "count": 0,
-      "items": []
+      "name": "adidas (SNKRDUNK)",
+      "source": "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=2&keywords=adidas+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "adidas Originals CTT Chinese Track Top Casual Jacket \"Grey\"",
+          "price": "¥27,900",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260213055921-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/735761"
+        },
+        {
+          "rank": 2,
+          "name": "adidas Women's Adilenium 5.0 Deconstructed Denim Pants \"ChalkyBrown\"",
+          "price": "¥25,387",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/a8bc2a4a-fdbb-4ebb-9d1a-07fda8c4232a.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/785556"
+        },
+        {
+          "rank": 3,
+          "name": "adidas x Oasis Tour Firebird Track Top \"Night Indigo\"",
+          "price": "¥18,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251002094111-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/628443"
+        },
+        {
+          "rank": 4,
+          "name": "adidas x Thug Club Padded Jacket \"Black/Silver Metallic\"",
+          "price": "¥43,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260204080943-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/710703"
+        },
+        {
+          "rank": 5,
+          "name": "adidas x Korn Long Sleeve T-shirt \"Black\"",
+          "price": "¥17,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/3ae16a9d-6f58-432b-87b9-1ced69b33f7c.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/427298"
+        },
+        {
+          "rank": 6,
+          "name": "adidas Originals CTT Chinese Track Top Casual Jacket \"Rose Red\"",
+          "price": "¥24,999",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260308083826-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/741314"
+        },
+        {
+          "rank": 7,
+          "name": "adidas Originals CTT Chinese Track Top Casual Jacket \"Light Blue\"",
+          "price": "¥29,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260308083849-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/741315"
+        },
+        {
+          "rank": 8,
+          "name": "adidas Originals CTT Chinese Track Top Casual Jacket \"Green\"",
+          "price": "¥30,915",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/ab2dea16-e66b-43ba-942c-da61c71230e7.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/741316"
+        },
+        {
+          "rank": 9,
+          "name": "adidas China Track Jacket \"Yellow\"",
+          "price": "¥23,998",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260211064057-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/747457"
+        },
+        {
+          "rank": 10,
+          "name": "adidas Real Madrid Lifestyle OG Track Top \"Charcoal/Dark Gray\"",
+          "price": "¥10,900",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250211083917-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/385310"
+        },
+        {
+          "rank": 11,
+          "name": "adidas x Oasis Tour Firebird Track Top \"Black\"",
+          "price": "¥19,999",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251003082447-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/628442"
+        },
+        {
+          "rank": 12,
+          "name": "adidas Adicolor Denim Firebird Track Top \"Indigo\"",
+          "price": "¥15,999",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/e65cad00-374f-4dd2-ae11-21f6396cf42b.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/753114"
+        },
+        {
+          "rank": 13,
+          "name": "adidas Manchester United Lifestyle OG Track Top \"Black/MUFC Red\"",
+          "price": "¥19,400",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250929095138-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/385317"
+        },
+        {
+          "rank": 14,
+          "name": "adidas Originals Loose Mesh Track Top \"Stone Khaki\"",
+          "price": "¥15,497",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/8c3c5436-3c84-4eb4-b335-f33298d9ca40.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/749872"
+        },
+        {
+          "rank": 15,
+          "name": "adidas Warm-Up Top \"Grey Two\"",
+          "price": "¥14,600",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250405031929-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/559485"
+        },
+        {
+          "rank": 16,
+          "name": "adidas Waffle Basketball Track Top \"White\" JV9263",
+          "price": "¥19,898",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250403025425-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/549085"
+        },
+        {
+          "rank": 17,
+          "name": "adidas Adicolor Denim Firebird Track Top \"True Black Denim\"",
+          "price": "¥16,999",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250404081401-11.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/558429"
+        },
+        {
+          "rank": 18,
+          "name": "adidas Track Denim Jacket (China Exclusive) \"Indigo\"",
+          "price": "¥27,100",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/AD-2016-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/506263"
+        },
+        {
+          "rank": 19,
+          "name": "adidas Women's Adilenium 5.0 Deconstructed Denim Pants \"LightBlue\"",
+          "price": "¥25,998",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/AD-4231-1-111.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/785559"
+        },
+        {
+          "rank": 20,
+          "name": "adidas Real Madrid 25/26 Long-Sleeve Home Uniform \"White\"",
+          "price": "¥16,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250906075437-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/694012"
+        }
+      ]
     },
     "adidas_atmos": {
-      "name": "adidas (atmos)",
-      "source": "https://www.atmos-tokyo.com/category/all?brand=adidas",
-      "count": 0,
-      "items": []
+      "name": "adidas スニーカー (SNKRDUNK)",
+      "source": "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=1&keywords=adidas+%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC&sort=popular",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "adidas Samba OG \"Cloud White/Core Black/Clear Granite\"",
+          "price": "¥10,968",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250328072257-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/B75806"
+        },
+        {
+          "rank": 2,
+          "name": "adidas Women's Gazelle Indoor \"Bliss Pink/Core Black/Collegiate Purple\"",
+          "price": "¥10,084",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240127081539-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/IE7002"
+        },
+        {
+          "rank": 3,
+          "name": "adidas Samba OG \"Core Black/Cloud White/Gum\"",
+          "price": "¥11,264",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250907065500-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/B75807"
+        },
+        {
+          "rank": 4,
+          "name": "adidas Tobacco \"Pantone/Mesa/Gum\"",
+          "price": "¥13,960",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230310023545-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/GY7396"
+        },
+        {
+          "rank": 5,
+          "name": "adidas Handball Spezial \"Light Blue/Footwear White\" (2019/2023)",
+          "price": "¥8,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250216092019-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/BD7632"
+        },
+        {
+          "rank": 6,
+          "name": "Pharrell Williams × adidas Jellyfish \"Carbon/Core Black\"",
+          "price": "¥52,358",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251210032631-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/KJ3841"
+        },
+        {
+          "rank": 7,
+          "name": "adidas Women's Handball Spezial \"Earth Strata/Off White/Gum\"",
+          "price": "¥14,999",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250523014943-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/IF6490"
+        },
+        {
+          "rank": 8,
+          "name": "adidas Tobacco \"Brown Desert\"",
+          "price": "¥10,112",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250220064017-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/JP9651"
+        },
+        {
+          "rank": 9,
+          "name": "adidas Tobacco Gruen \"Dark Brown\"",
+          "price": "¥16,878",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20231017102132-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/GX6941"
+        },
+        {
+          "rank": 10,
+          "name": "adidas Women's Samba OG \"Cow Print/Dark Brown\"",
+          "price": "¥15,780",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250220072408-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/JR1256"
+        },
+        {
+          "rank": 11,
+          "name": "adidas Superstar 2 \"Core Black/Cloud White/Core Black\"",
+          "price": "¥12,088",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250308040834-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/JI0079"
+        },
+        {
+          "rank": 12,
+          "name": "adidas Women's Samba LT \"Aurora Ink/Cream White/Gold Metallic\"",
+          "price": "¥11,997",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20241129091812-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/JH5705"
+        },
+        {
+          "rank": 13,
+          "name": "adidas Tokyo \"Grey Six/Aurora Ruby\"",
+          "price": "¥17,999",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260310080218-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/KJ0367"
+        },
+        {
+          "rank": 14,
+          "name": "adidas Samba OG \"Core Black/Supplier Colour/Gum\"",
+          "price": "¥10,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250905035005-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/KJ8858"
+        },
+        {
+          "rank": 15,
+          "name": "Kasina × Kim Jung Gi × adidas Campus 80s \"Hazy Yellow\"",
+          "price": "¥16,999",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230313085212-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/IE4810"
+        },
+        {
+          "rank": 16,
+          "name": "adidas Superstar 2 \"Core Black/Better Scarlet\"",
+          "price": "¥12,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250313022130-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/JQ2309"
+        },
+        {
+          "rank": 17,
+          "name": "Arsenal × adidas Gazelle \"Cloud White/Red/Collegiate Navy\"",
+          "price": "¥20,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250901101705-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/HQ0005"
+        },
+        {
+          "rank": 18,
+          "name": "adidas Adiracer Lo \"Better Scarlet/Cloud White/Core Black\"",
+          "price": "¥12,800",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250525034140-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/JP7013"
+        },
+        {
+          "rank": 19,
+          "name": "adidas Handball Spezial \"Wonder Beige/Core Black/Magic Beige\"",
+          "price": "¥12,689",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20231228043504-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/IE3698"
+        },
+        {
+          "rank": 20,
+          "name": "adidas Gazelle \"Triple Black\"",
+          "price": "¥11,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240124061706-0.webp?size=m",
+          "url": "https://snkrdunk.com/products/CQ2809"
+        }
+      ]
     },
     "thug_club_buyma": {
       "name": "Thug Club (BUYMA)",
@@ -303,7 +585,7 @@
     },
     "stussy_snkrdunk": {
       "name": "Stüssy (SNKRDUNK)",
-      "source": "https://snkrdunk.com/search?keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&searchCategoryIds=2&brandIds=stussy&sort=hottest&page=1",
+      "source": "https://snkrdunk.com/search?brandIds=stussy&searchCategoryIds=2&keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
       "count": 20,
       "items": [
         {
@@ -1198,7 +1480,7 @@
         {
           "rank": 2,
           "name": "★SATUR★Essential Lawton Track Zip-up Jacket",
-          "price": "¥10,420",
+          "price": "¥9,910",
           "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086480/752357772/210.jpg",
           "url": "https://www.buyma.com/item/127086480/"
         },
@@ -1309,24 +1591,24 @@
         },
         {
           "rank": 18,
-          "name": "★SATUR★Fatigue Cargo Sweatpants",
-          "price": "¥8,820",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086074/752350697/210.jpg",
-          "url": "https://www.buyma.com/item/127086074/"
-        },
-        {
-          "rank": 19,
           "name": "26SS SATUR Stitch Waffle Henley Neck Long Sleeve",
           "price": "¥8,960",
           "image": "https://cdn-images.buyma.com/imgdata/item/260202/0127459619/769391724/210.jpg",
           "url": "https://www.buyma.com/item/127459619/"
         },
         {
-          "rank": 20,
+          "rank": 19,
           "name": "★SATUR★Lawton All Day Track Zip-up Jacket",
           "price": "¥10,999",
           "image": "https://cdn-images.buyma.com/imgdata/item/230130/0091479078/679522100/210.jpg",
           "url": "https://www.buyma.com/item/91479078/"
+        },
+        {
+          "rank": 20,
+          "name": "SATUR Fleece Crew Neck Cardigan SA5D0640",
+          "price": "¥16,850",
+          "image": "https://cdn-images.buyma.com/imgdata/item/251002/0123262844/727801135/210.jpg",
+          "url": "https://www.buyma.com/item/123262844/"
         }
       ]
     },
@@ -1621,6 +1903,328 @@
           "price": "¥146,300",
           "image": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwf54f3870/images/BK/BK0731-/2000x/BK0731-900_A.jpg?sw=750&sh=1125",
           "url": "https://www.acnestudios.com/jp/ja/mended-trousers---regular-fit-black/BK0731-900.html?g=man"
+        }
+      ]
+    },
+    "acne_studios_buyma": {
+      "name": "Acne Studios (BUYMA)",
+      "source": "https://www.buyma.com/rank/_ACNE-JEANS-%E3%82%A2%E3%82%AF%E3%83%8D%E3%82%B8%E3%83%BC%E3%83%B3%E3%82%BA/",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "Acne Studios ロゴTシャツ ユニセックス レギュラーフィット",
+          "price": "¥39,200",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260218/0128138970/763168427/210.jpg",
+          "url": "https://www.buyma.com/item/128138970/"
+        },
+        {
+          "rank": 2,
+          "name": "【関税込】新作◆ACNE STUDIOS アクネ◆手書き風ロゴ キャップ",
+          "price": "¥54,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250411/0117537196/698916102/210.jpg",
+          "url": "https://www.buyma.com/item/117537196/"
+        },
+        {
+          "rank": 3,
+          "name": "【Acne Studios】ロゴ ロンT",
+          "price": "¥58,500",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260204/0127540736/755758745/210.jpg",
+          "url": "https://www.buyma.com/item/127540736/"
+        },
+        {
+          "rank": 4,
+          "name": "ACNE STUDIOS｜ハート プリント Tシャツ CL0344",
+          "price": "¥43,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250308/0116314609/689289352/210.jpg",
+          "url": "https://www.buyma.com/item/116314609/"
+        },
+        {
+          "rank": 5,
+          "name": "《ACNE STUDIOS》 CL0196 BM0 LOGO SHORT SLEEVE T SHIRT",
+          "price": "¥47,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240208/0103545660/599076674/210.jpg",
+          "url": "https://www.buyma.com/item/103545660/"
+        },
+        {
+          "rank": 6,
+          "name": "【関税込み】Acne Studios ブラック ロゴ ジップセーター",
+          "price": "¥91,180",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250807/0121085340/714520789/210.jpg",
+          "url": "https://www.buyma.com/item/121085340/"
+        },
+        {
+          "rank": 7,
+          "name": "【関税込】ACNE STUDIOS アクネストゥディオズ◆ロゴ キャップ",
+          "price": "¥72,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260226/0128549186/763296564/210.jpg",
+          "url": "https://www.buyma.com/item/128549186/"
+        },
+        {
+          "rank": 8,
+          "name": "ACNE STUDIOS｜アクネストゥディオズ ジッパーウォレット",
+          "price": "¥28,420",
+          "image": "https://cdn-images.buyma.com/imgdata/item/220503/0082446495/538278590/210.jpg",
+          "url": "https://www.buyma.com/item/82446495/"
+        },
+        {
+          "rank": 9,
+          "name": "【関税込み】Acne Studios Tシャツ",
+          "price": "¥50,130",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250807/0121085359/714520863/210.jpg",
+          "url": "https://www.buyma.com/item/121085359/"
+        },
+        {
+          "rank": 10,
+          "name": "Cowboy Heart Buckle Shopper Bag - Acne Studios - Cotton - Bl",
+          "price": "¥68,820",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250902/0121871252/719804464/210.jpg",
+          "url": "https://www.buyma.com/item/121871252/"
+        },
+        {
+          "rank": 11,
+          "name": "【関税込み】Logo Shopper Bag - Acne Studios - Cotton - Blue",
+          "price": "¥90,890",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260306/0128873835/765848085/210.jpg",
+          "url": "https://www.buyma.com/item/128873835/"
+        },
+        {
+          "rank": 12,
+          "name": "関税込み Acne Studios Engraved Logo leather belt ロゴベルト",
+          "price": "¥38,000",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250609/0119177918/708334828/210.jpg",
+          "url": "https://www.buyma.com/item/119177918/"
+        },
+        {
+          "rank": 13,
+          "name": "ACNE STUDIOS｜マルチポケットバッグ A10432",
+          "price": "¥139,000",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250211/0115499283/707132220/210.jpg",
+          "url": "https://www.buyma.com/item/115499283/"
+        },
+        {
+          "rank": 14,
+          "name": "【関税込】ACNE STUDIOS アクネストゥディオズ◆ロゴ キャップ",
+          "price": "¥45,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/251113/0124797763/766328596/210.jpg",
+          "url": "https://www.buyma.com/item/124797763/"
+        },
+        {
+          "rank": 15,
+          "name": "【関税込】◆ACNE STUDIOS アクネスタジオ◆ロゴ チェーン 財布",
+          "price": "¥49,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/241209/0113486790/716554560/210.jpg",
+          "url": "https://www.buyma.com/item/113486790/"
+        },
+        {
+          "rank": 16,
+          "name": "Acne Studios 2021M Penicillin ルーズフィットジーンズ",
+          "price": "¥57,000",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250308/0116330450/741580531/210.jpg",
+          "url": "https://www.buyma.com/item/116330450/"
+        },
+        {
+          "rank": 17,
+          "name": "♦Acne Studios♦レディース トートバッグ☆正規品☆",
+          "price": "¥49,940",
+          "image": "https://cdn-images.buyma.com/imgdata/item/231228/0102152730/640253810/210.jpg",
+          "url": "https://www.buyma.com/item/102152730/"
+        },
+        {
+          "rank": 18,
+          "name": "ACNE STUDIOS｜マルチポケット ミニバッグ A10428",
+          "price": "¥119,000",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250211/0115498396/707132638/210.jpg",
+          "url": "https://www.buyma.com/item/115498396/"
+        },
+        {
+          "rank": 19,
+          "name": "【関税込】◆ACNE STUDIOS アクネ◆シーズナルロゴ刺繍キャップ",
+          "price": "¥34,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240315/0104815979/617145535/210.jpg",
+          "url": "https://www.buyma.com/item/104815979/"
+        },
+        {
+          "rank": 20,
+          "name": "Acne Studios 　LOGO T-SHIRT - RELAXED FIT",
+          "price": "¥72,500",
+          "image": "https://cdn-images.buyma.com/imgdata/item/241121/0112855266/660080396/210.jpg",
+          "url": "https://www.buyma.com/item/112855266/"
+        }
+      ]
+    },
+    "humanmade": {
+      "name": "HUMAN MADE",
+      "source": "https://www.humanmade.jp/new-arrivals/",
+      "count": 3,
+      "items": [
+        {
+          "rank": 1,
+          "name": "DAILY S/S T-SHIRT #260415",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw7ea7c483/images/large/HM_1774508911309_jmohdy.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/t-shirts/HM31TE0415.html"
+        },
+        {
+          "rank": 2,
+          "name": "DAILY CAP #260415",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw4cb65e31/images/large/HM_1774508910857_3czmxl.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/cap-hat/HM31GD0415.html"
+        },
+        {
+          "rank": 3,
+          "name": "DAILY TOTE #260415",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwe4da1137/images/large/HM_1774508911117_td2ah6.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/bag-pouch/HM31HM0415.html"
+        }
+      ]
+    },
+    "humanmade_snkrdunk": {
+      "name": "HUMAN MADE (SNKRDUNK)",
+      "source": "https://snkrdunk.com/search?brandIds=humanmade&searchCategoryIds=2&keywords=HUMAN+MADE+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "HUMAN MADE Heart Carabiner \"Silver\"",
+          "price": "¥1,922",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260224083655-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/751942"
+        },
+        {
+          "rank": 2,
+          "name": "HUMAN MADE x j-hope of BTS HUMAN HOPE Key Charm \"Silver\"",
+          "price": "¥5,889",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-FW25-WEEK16-015.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/728746"
+        },
+        {
+          "rank": 3,
+          "name": "HUMAN MADE Graphic L/S T-Shirt \"Black\"",
+          "price": "¥19,834",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/6a34587f-279f-4b3b-8983-3a1d06c3c04f.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/784516"
+        },
+        {
+          "rank": 4,
+          "name": "HUMAN MADE Tapered Denim Pants \"Indigo\"",
+          "price": "",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS26-WEEK10-002.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/797562"
+        },
+        {
+          "rank": 5,
+          "name": "HUMAN MADE x Coca-Cola Graphic T-Shirt \"White\"",
+          "price": "¥14,400",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/6fa4e671-da95-4ee1-b828-cb4375667419.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/787011"
+        },
+        {
+          "rank": 6,
+          "name": "HUMAN MADE x Pokemon Made Graphic T-Shirt (Pikachu) Harajuku \"Black\"",
+          "price": "¥17,900",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251016104400-3.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/709314"
+        },
+        {
+          "rank": 7,
+          "name": "HUMAN MADE x Pokemon Made Graphic T-Shirt (Pikachu) Online Store \"White\"",
+          "price": "¥27,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251014085726-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/709305"
+        },
+        {
+          "rank": 8,
+          "name": "HUMAN MADE Heart Socks \"Black\"",
+          "price": "¥3,153",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-FW25-WEEK7-013-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/704787"
+        },
+        {
+          "rank": 9,
+          "name": "HUMAN MADE Graphic L/S T-Shirt \"White\"",
+          "price": "¥18,888",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/f94e8c2a-c573-4134-a291-f26d5b6fd644.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/784518"
+        },
+        {
+          "rank": 10,
+          "name": "HUMAN MADE 6Panel Twill Cap \"Black\"",
+          "price": "¥12,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS26-WEEK1-012.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/758319"
+        },
+        {
+          "rank": 11,
+          "name": "HUMAN MADE Heart Badge T-Shirt \"White\"",
+          "price": "¥15,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240207075844-2.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/129076"
+        },
+        {
+          "rank": 12,
+          "name": "HUMAN MADE x Coca-Cola Tsuriami Sweatshirt \"White\"",
+          "price": "¥36,666",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS26-WEEK9-001.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/787010"
+        },
+        {
+          "rank": 13,
+          "name": "HUMAN MADE Denim Hat \"Indigo\"",
+          "price": "",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/8d79c608-45f1-47a2-b482-f716dee7c22f.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/781054"
+        },
+        {
+          "rank": 14,
+          "name": "HUMAN MADE Graphic T-Shirt \"White\"",
+          "price": "",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS25-WEEK17-004-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/582636"
+        },
+        {
+          "rank": 15,
+          "name": "HUMAN MADE Mickey Mouse Club Graphic T-Shirt \"White\"",
+          "price": "¥15,500",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/43a5a61d-a675-48da-a85b-495f6d5b92b4.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/781045"
+        },
+        {
+          "rank": 16,
+          "name": "HUMAN MADE x KAWS Kaws Made Graphic T-Shirt #4 \"Black\"",
+          "price": "¥14,100",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250606092229-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/317070"
+        },
+        {
+          "rank": 17,
+          "name": "HUMAN MADE x KAWS Kaws Made Graphic T-Shirt #4 \"White\"",
+          "price": "¥13,200",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/163ea698-b337-4838-a42b-1d734489c381.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/317071"
+        },
+        {
+          "rank": 18,
+          "name": "HUMAN MADE x KAWS MADE Graphic T-Shirt #3 \"White\"",
+          "price": "¥12,800",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260111034448-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/725959"
+        },
+        {
+          "rank": 19,
+          "name": "HUMAN MADE x Pokemon Made Graphic T-Shirt (Monster Ball) \"White\"",
+          "price": "¥12,990",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251010103430-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/708549"
+        },
+        {
+          "rank": 20,
+          "name": "HUMAN MADE Nylon Blouson \"Navy\"",
+          "price": "¥41,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/HM-SS26-WEEK10-001-1.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/797560"
         }
       ]
     }

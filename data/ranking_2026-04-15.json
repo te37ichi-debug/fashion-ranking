@@ -1,6 +1,6 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T13:41:42.531105",
+  "fetched_at": "2026-04-15T13:53:33.279684",
   "zara": {
     "source": "zara.com (official API)",
     "count": 20,
@@ -63,87 +63,87 @@
       },
       {
         "rank": 9,
-        "name": "ベーシックリブタンクトップ",
-        "price": "¥2,590",
-        "image": "https://static.zara.net/assets/public/3b57/7e66/82be48bf87de/578294c20310/04087450250-e1/04087450250-e1.jpg?ts=1767867264397&w=563",
-        "url": "https://www.zara.com/jp/ja/-p04087450.html"
-      },
-      {
-        "rank": 10,
-        "name": "ヘビーウェイトベーシックTシャツ /03",
-        "price": "¥2,990",
-        "image": "https://static.zara.net/assets/public/9e73/0560/bd5b47558a8d/748c301070d9/01887410250-e1/01887410250-e1.jpg?ts=1765797809122&w=563",
-        "url": "https://www.zara.com/jp/ja/-p01887410.html"
-      },
-      {
-        "rank": 11,
         "name": "100% リネンジップアップシャツジャケット",
         "price": "¥10,990",
         "image": "https://static.zara.net/assets/public/fd6d/4fee/32e5476c8f2d/ca235c015a1e/08281112800-e1/08281112800-e1.jpg?ts=1770978538445&w=563",
         "url": "https://www.zara.com/jp/ja/-p08281112.html"
       },
       {
-        "rank": 12,
+        "rank": 10,
         "name": "リラックスフィットフルイドシャツ",
         "price": "¥6,590",
         "image": "https://static.zara.net/assets/public/cf9a/f460/451d426f81e1/1b143ad5084b/03715204472-e1/03715204472-e1.jpg?ts=1773668643078&w=563",
         "url": "https://www.zara.com/jp/ja/-p03715204.html"
       },
       {
-        "rank": 13,
+        "rank": 11,
         "name": "バギーフィットデニムパンツ",
         "price": "¥6,590",
         "image": "https://static.zara.net/assets/public/e38f/e7fc/d2394dfa87f2/79d2ba5569ea/04048407445-e1/04048407445-e1.jpg?ts=1770296424371&w=563",
         "url": "https://www.zara.com/jp/ja/-p04048407.html"
       },
       {
+        "rank": 12,
+        "name": "ヘビーウェイトベーシックTシャツ /03",
+        "price": "¥2,990",
+        "image": "https://static.zara.net/assets/public/9e73/0560/bd5b47558a8d/748c301070d9/01887410250-e1/01887410250-e1.jpg?ts=1765797809122&w=563",
+        "url": "https://www.zara.com/jp/ja/-p01887410.html"
+      },
+      {
+        "rank": 13,
+        "name": "ベーシックリブタンクトップ",
+        "price": "¥2,590",
+        "image": "https://static.zara.net/assets/public/3b57/7e66/82be48bf87de/578294c20310/04087450250-e1/04087450250-e1.jpg?ts=1767867264397&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04087450.html"
+      },
+      {
         "rank": 14,
-        "name": "ダメージ加工バギーフィットデニムパンツ",
-        "price": "¥6,590",
-        "image": "https://static.zara.net/assets/public/0cb8/a211/90d94ee6a379/f485effa59e1/04048407400-e1/04048407400-e1.jpg?ts=1770655723876&w=563",
-        "url": "https://www.zara.com/jp/ja/-p04048407.html"
-      },
-      {
-        "rank": 15,
-        "name": "バレルフィットツイストシームデニムパンツ",
-        "price": "¥10,990",
-        "image": "https://static.zara.net/assets/public/3d89/7447/345c4d9dbbf1/c375df35aa70/00840469407-e1/00840469407-e1.jpg?ts=1775631104666&w=563",
-        "url": "https://www.zara.com/jp/ja/-p00840469.html"
-      },
-      {
-        "rank": 16,
-        "name": "ヘンリーネックTシャツ",
-        "price": "¥5,290",
-        "image": "https://static.zara.net/assets/public/fef0/7359/46844f13b0f6/d7c01da09a5a/00526403800-e1/00526403800-e1.jpg?ts=1765813441506&w=563",
-        "url": "https://www.zara.com/jp/ja/-p00526403.html"
-      },
-      {
-        "rank": 17,
-        "name": "リラックスフィットテクスチャー素材ジャケット",
-        "price": "¥13,590",
-        "image": "https://static.zara.net/assets/public/7d65/5d85/83a449409301/a2aece5b4c1d/01437602800-e1/01437602800-e1.jpg?ts=1773995441361&w=563",
-        "url": "https://www.zara.com/jp/ja/-p01437602.html"
-      },
-      {
-        "rank": 18,
         "name": "フルイドチェックシャツ",
         "price": "¥6,590",
         "image": "https://static.zara.net/assets/public/5095/c00a/d93a4d49bf55/9670abfc1d02/04437227084-e1/04437227084-e1.jpg?ts=1773759837376&w=563",
         "url": "https://www.zara.com/jp/ja/-p04437227.html"
       },
       {
+        "rank": 15,
+        "name": "ダメージ加工バギーフィットデニムパンツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/0cb8/a211/90d94ee6a379/f485effa59e1/04048407400-e1/04048407400-e1.jpg?ts=1770655723876&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04048407.html"
+      },
+      {
+        "rank": 16,
+        "name": "リラックスフィットプリーツパンツ",
+        "price": "¥8,590",
+        "image": "https://static.zara.net/assets/public/01ab/0666/c7dc4c2c8baa/788891433922/00706950800-e1/00706950800-e1.jpg?ts=1754559534542&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00706950.html"
+      },
+      {
+        "rank": 17,
+        "name": "バレルフィットツイストシームデニムパンツ",
+        "price": "¥10,990",
+        "image": "https://static.zara.net/assets/public/3d89/7447/345c4d9dbbf1/c375df35aa70/00840469407-e1/00840469407-e1.jpg?ts=1775631104666&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00840469.html"
+      },
+      {
+        "rank": 18,
+        "name": "ヘンリーネックTシャツ",
+        "price": "¥5,290",
+        "image": "https://static.zara.net/assets/public/fef0/7359/46844f13b0f6/d7c01da09a5a/00526403800-e1/00526403800-e1.jpg?ts=1765813441506&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00526403.html"
+      },
+      {
         "rank": 19,
+        "name": "リラックスフィットテクスチャー素材ジャケット",
+        "price": "¥13,590",
+        "image": "https://static.zara.net/assets/public/7d65/5d85/83a449409301/a2aece5b4c1d/01437602800-e1/01437602800-e1.jpg?ts=1773995441361&w=563",
+        "url": "https://www.zara.com/jp/ja/-p01437602.html"
+      },
+      {
+        "rank": 20,
         "name": "バギーフィットデニムパンツ",
         "price": "¥6,590",
         "image": "https://static.zara.net/assets/public/4187/008a/f04a4e9e925e/7f5a8d9a9d41/04806409800-e1/04806409800-e1.jpg?ts=1770296415989&w=563",
         "url": "https://www.zara.com/jp/ja/-p04048407.html"
-      },
-      {
-        "rank": 20,
-        "name": "ベーシックスリムフィットTシャツ",
-        "price": "¥2,990",
-        "image": "https://static.zara.net/assets/public/16bb/4bac/c9c24204820b/e71a4115243b/05584390800-e1/05584390800-e1.jpg?ts=1756718318042&w=563",
-        "url": "https://www.zara.com/jp/ja/-p06019390.html"
       }
     ]
   },
@@ -361,7 +361,7 @@
         "rank": 8,
         "name": "★SATUR★Essential Lawton Track Zip-up Jacket",
         "brand": "SATUR",
-        "price": "¥10,420",
+        "price": "¥9,910",
         "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086480/752357772/210.jpg",
         "url": "https://www.buyma.com/item/127086480/"
       },
@@ -525,24 +525,24 @@
       },
       {
         "rank": 9,
-        "name": "Supreme MM6 Maison Margiela Cotton Football Jersey Black",
-        "price": "$235",
-        "image": "https://images.stockx.com/images/Supreme-MM6-Maison-Margiela-Cotton-Football-Jersey-Black-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1773930779",
-        "url": "https://stockx.com/ja-jp/supreme-mm6-maison-margiela-cotton-football-jersey-black"
-      },
-      {
-        "rank": 10,
         "name": "Supreme Grim Reaper Tee Black",
         "price": "$62",
         "image": "https://images.stockx.com/images/Supreme-Grim-Reaper-Tee-Black-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775747347",
         "url": "https://stockx.com/ja-jp/supreme-grim-reaper-tee-black"
       },
       {
-        "rank": 11,
+        "rank": 10,
         "name": "Nike Jordan x Levi's Full Zip Hoodie Black",
         "price": "$128",
         "image": "https://images.stockx.com/images/Nike-Jordan-x-Levis-Full-Zip-Hoodie-Black.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1770836506",
         "url": "https://stockx.com/ja-jp/nike-jordan-x-levis-full-zip-hoodie-black"
+      },
+      {
+        "rank": 11,
+        "name": "Supreme MM6 Maison Margiela Cotton Football Jersey Black",
+        "price": "$235",
+        "image": "https://images.stockx.com/images/Supreme-MM6-Maison-Margiela-Cotton-Football-Jersey-Black-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1773930779",
+        "url": "https://stockx.com/ja-jp/supreme-mm6-maison-margiela-cotton-football-jersey-black"
       },
       {
         "rank": 12,
@@ -560,17 +560,17 @@
       },
       {
         "rank": 14,
-        "name": "Sp5der Punk V2 Hoodie Cyan",
-        "price": "$175",
-        "image": "https://images.stockx.com/images/Sp5der-Punk-V2-Hoodie-Cyan.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1755613102",
-        "url": "https://stockx.com/ja-jp/sp5der-punk-v2-hoodie-cyan"
-      },
-      {
-        "rank": 15,
         "name": "Nike SB Dunk Low Pro Som Tum",
         "price": "$145",
         "image": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Pro-Som-Tum-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837732",
         "url": "https://stockx.com/ja-jp/nike-sb-dunk-low-pro-som-tum"
+      },
+      {
+        "rank": 15,
+        "name": "Sp5der Punk V2 Hoodie Cyan",
+        "price": "$175",
+        "image": "https://images.stockx.com/images/Sp5der-Punk-V2-Hoodie-Cyan.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1755613102",
+        "url": "https://stockx.com/ja-jp/sp5der-punk-v2-hoodie-cyan"
       },
       {
         "rank": 16,
@@ -618,160 +618,160 @@
         "name": "ブラック Concordians カシミヤ フード",
         "brand": "Rick Owens",
         "price": "¥32,600",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/252232M138004_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/17873171"
+        "image": "https://img.ssensemedia.com/images/252232M138004_1/rick-owens-black-concordians-cashmere-hood.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/rick-owens/black-concordians-cashmere-hood/17873171"
       },
       {
         "rank": 2,
         "name": "ブラウン スモール ベルト レザー バッグ",
         "brand": "LEMAIRE",
         "price": "¥210,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261646M172006_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18938511"
+        "image": "https://img.ssensemedia.com/images/261646M172006_1/lemaire-brown-small-belted-leather-bag.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/lemaire/brown-small-belted-leather-bag/18938511"
       },
       {
         "rank": 3,
         "name": "Wave ブレスレット",
         "brand": "OUR LEGACY",
         "price": "¥25,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261803M142000_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18882131"
+        "image": "https://img.ssensemedia.com/images/261803M142000_1/our-legacy-wave-bracelet.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/our-legacy/wave-bracelet/18882131"
       },
       {
         "rank": 4,
         "name": "ブラック Temple クルーネック スウェットシャツ",
         "brand": "Rick Owens DRKSHDW",
         "price": "¥54,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261126M204007_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/19096721"
+        "image": "https://img.ssensemedia.com/images/261126M204007_1/rick-owens-drkshdw-black-temple-crewneck-sweatshirt.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/rick-owens-drkshdw/black-temple-crewneck-sweatshirt/19096721"
       },
       {
         "rank": 5,
         "name": "ブラック Ten Pin ダービー",
         "brand": "OUR LEGACY",
         "price": "¥101,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261803M225002_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18883001"
+        "image": "https://img.ssensemedia.com/images/261803M225002_1/our-legacy-black-ten-pin-derbys.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/our-legacy/black-ten-pin-derbys/18883001"
       },
       {
         "rank": 6,
         "name": "ブラック Temple Strobe ジーンズ",
         "brand": "Rick Owens DRKSHDW",
         "price": "¥153,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261126M186003_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/19093391"
+        "image": "https://img.ssensemedia.com/images/261126M186003_1/rick-owens-drkshdw-black-temple-strobe-jeans.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/rick-owens-drkshdw/black-temple-strobe-jeans/19093391"
       },
       {
         "rank": 7,
         "name": "グレー Eyelet メッセンジャーバッグ",
         "brand": "mfpen",
         "price": "¥41,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261505M170002_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18889131"
+        "image": "https://img.ssensemedia.com/images/261505M170002_1/mfpen-gray-eyelet-messenger-bag.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/mfpen/gray-eyelet-messenger-bag/18889131"
       },
       {
         "rank": 8,
         "name": "ブラック ラージ Croissant バッグ",
         "brand": "LEMAIRE",
         "price": "¥178,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261646M170032_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18937991"
+        "image": "https://img.ssensemedia.com/images/261646M170032_1/lemaire-black-large-croissant-bag.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/lemaire/black-large-croissant-bag/18937991"
       },
       {
         "rank": 9,
         "name": "ブルー ボクシー デニムジャケット",
         "brand": "LEMAIRE",
         "price": "¥139,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261646M177003_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18941211"
+        "image": "https://img.ssensemedia.com/images/261646M177003_1/lemaire-blue-boxy-denim-jacket.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/lemaire/blue-boxy-denim-jacket/18941211"
       },
       {
         "rank": 10,
         "name": "グレー FU Educate リラックス Tシャツ",
         "brand": "Fear of God",
         "price": "¥23,700",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/252782M213003_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/17918861"
+        "image": "https://img.ssensemedia.com/images/252782M213003_1/fear-of-god-gray-relaxed-fu-educate-t-shirt.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/fear-of-god/gray-relaxed-fu-educate-t-shirt/17918861"
       },
       {
         "rank": 11,
         "name": "ネイビー＆カーキ Sponge Sweat & Nylon Twill フーディ",
         "brand": "sacai",
         "price": "¥103,500",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261445M202017_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18626271"
+        "image": "https://img.ssensemedia.com/images/261445M202017_1/sacai-navy-and-khaki-sponge-sweat-and-nylon-twill-hoodie.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/sacai/navy-and-khaki-sponge-sweat-and-nylon-twill-hoodie/18626271"
       },
       {
         "rank": 12,
         "name": "カーキ SL 72 PT スニーカー",
         "brand": "adidas Originals",
         "price": "¥30,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261751M237191_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18631731"
+        "image": "https://img.ssensemedia.com/images/261751M237191_1/adidas-originals-khaki-sl-72-pt-sneakers.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/adidas-originals/khaki-sl-72-pt-sneakers/18631731"
       },
       {
         "rank": 13,
         "name": "ブラック Gabardine Darts Casquette キャップ",
         "brand": "YOHJI YAMAMOTO",
         "price": "¥65,500",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261573M139002_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/19054161"
+        "image": "https://img.ssensemedia.com/images/261573M139002_1/yohji-yamamoto-black-gabardine-darts-casquette-cap.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/yohji-yamamoto/black-gabardine-darts-casquette-cap/19054161"
       },
       {
         "rank": 14,
         "name": "ブラウン Vamp スニーカー",
         "brand": "ERL",
         "price": "¥71,600",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/252260M237024_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18258491"
+        "image": "https://img.ssensemedia.com/images/252260M237024_1/erl-brown-vamp-sneakers.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/erl/brown-vamp-sneakers/18258491"
       },
       {
         "rank": 15,
         "name": "ブラック MA Floral オーバーサイズ Tシャツ",
         "brand": "AMIRI",
         "price": "¥82,500",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261886M213095_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18981461"
+        "image": "https://img.ssensemedia.com/images/261886M213095_1/amiri-black-ma-floral-oversized-t-shirt.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/amiri/black-ma-floral-oversized-t-shirt/18981461"
       },
       {
         "rank": 16,
         "name": "ブラウン UCU9P91-01 'Fuck' Pattern ポーチ",
         "brand": "UNDERCOVER",
         "price": "¥23,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261414M164000_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/19284731"
+        "image": "https://img.ssensemedia.com/images/261414M164000_1/undercover-brown-ucu9p91-01-fuck-pattern-pouch.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/undercover/brown-ucu9p91-01-fuck-pattern-pouch/19284731"
       },
       {
         "rank": 17,
         "name": "ベージュ Officer アシンメトリー ジャケット",
         "brand": "Mugler",
         "price": "¥184,100",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/252345M180002_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18258981"
+        "image": "https://img.ssensemedia.com/images/252345M180002_1/mugler-beige-asymmetric-officer-jacket.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/mugler/beige-asymmetric-officer-jacket/18258981"
       },
       {
         "rank": 18,
         "name": "グリーン Four Stitches カードケース",
         "brand": "Maison Margiela",
         "price": "¥46,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261168M163017_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18768061"
+        "image": "https://img.ssensemedia.com/images/261168M163017_1/maison-margiela-green-four-stitches-card-holder.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/maison-margiela/green-four-stitches-card-holder/18768061"
       },
       {
         "rank": 19,
         "name": "グレー＆ブラック 'Be Right Back' スニーカー",
         "brand": "Off-White",
         "price": "¥118,500",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261607M237086_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18701901"
+        "image": "https://img.ssensemedia.com/images/261607M237086_1/off-white-gray-and-black-be-right-back-sneakers.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/off-white/gray-and-black-be-right-back-sneakers/18701901"
       },
       {
         "rank": 20,
         "name": "Snake ループタイ ネックレス",
         "brand": "LEMAIRE",
         "price": "¥50,000",
-        "image": "https://res.cloudinary.com/ssenseweb/image/upload/__IMAGE_PARAMS__/261646M145006_1.jpg",
-        "url": "https://www.ssense.com/ja-jp/men/product/18939041"
+        "image": "https://img.ssensemedia.com/images/261646M145006_1/lemaire-snake-bolo-tie-necklace.jpg",
+        "url": "https://www.ssense.com/ja-jp/men/product/lemaire/snake-bolo-tie-necklace/18939041"
       }
     ]
   },
