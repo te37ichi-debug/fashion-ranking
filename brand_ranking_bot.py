@@ -88,7 +88,7 @@ def fetch_adidas(max_items=20):
     items = []
 
     try:
-        html = _scraper_api_get("https://www.adidas.jp/new_arrivals")
+        html = _scraper_api_get("https://www.adidas.jp/new_arrivals", render=False)
         soup = BeautifulSoup(html, "html.parser")
 
         title = soup.title.string if soup.title else "no title"

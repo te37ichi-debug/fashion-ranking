@@ -45,11 +45,6 @@ jobs:
           DISPLAY: ":99"
         run: xvfb-run --auto-servernum --server-args="-screen 0 1280x720x24" python ranking_bot.py
 
-      - name: Debug ScraperAPI
-        env:
-          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
-        run: python test_scraper.py
-
       - name: Run brand ranking bot
         env:
           BRAND_WEBHOOK_URL: ${{ secrets.BRAND_WEBHOOK_URL }}
