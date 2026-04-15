@@ -1,20 +1,20 @@
 [
   {
     "key": "adidas",
-    "name": "adidas",
-    "url": "https://www.adidas.jp/search?sort=newest-to-oldest",
-    "view_all": "https://www.adidas.jp/search?sort=newest-to-oldest",
+    "name": "adidas (SNKRDUNK)",
+    "url": "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=2&keywords=adidas+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
+    "view_all": "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=2&keywords=adidas+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
     "badge_color": "#000",
-    "badge_label": "NEW",
+    "badge_label": "POPULAR",
     "fetcher": "fetch_adidas"
   },
   {
     "key": "adidas_atmos",
-    "name": "adidas (atmos)",
-    "url": "https://www.atmos-tokyo.com/category/all?brand=adidas",
-    "view_all": "https://www.atmos-tokyo.com/category/all?brand=adidas",
+    "name": "adidas スニーカー (SNKRDUNK)",
+    "url": "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=1&keywords=adidas+%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC&sort=popular",
+    "view_all": "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=1&keywords=adidas+%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC&sort=popular",
     "badge_color": "#1a1a1a",
-    "badge_label": "NEW",
+    "badge_label": "POPULAR",
     "fetcher": "fetch_adidas_atmos"
   },
   {
@@ -38,8 +38,8 @@
   {
     "key": "stussy_snkrdunk",
     "name": "Stüssy (SNKRDUNK)",
-    "url": "https://snkrdunk.com/search?keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&searchCategoryIds=2&brandIds=stussy&sort=hottest&page=1",
-    "view_all": "https://snkrdunk.com/search?keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&searchCategoryIds=2&brandIds=stussy&sort=hottest&page=1",
+    "url": "https://snkrdunk.com/search?brandIds=stussy&searchCategoryIds=2&keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
+    "view_all": "https://snkrdunk.com/search?brandIds=stussy&searchCategoryIds=2&keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
     "badge_color": "#1a1a1a",
     "badge_label": "POPULAR",
     "fetcher": "fetch_stussy_snkrdunk"
@@ -115,5 +115,32 @@
     "badge_color": "#555",
     "badge_label": "NEW",
     "fetcher": "fetch_acne_studios"
+  },
+  {
+    "key": "acne_studios_buyma",
+    "name": "Acne Studios (BUYMA)",
+    "url": "https://www.buyma.com/rank/_ACNE-JEANS-%E3%82%A2%E3%82%AF%E3%83%8D%E3%82%B8%E3%83%BC%E3%83%B3%E3%82%BA/",
+    "view_all": "https://www.buyma.com/rank/_ACNE-JEANS-%E3%82%A2%E3%82%AF%E3%83%8D%E3%82%B8%E3%83%BC%E3%83%B3%E3%82%BA/",
+    "badge_color": "#555",
+    "badge_label": "POPULAR",
+    "fetcher": "fetch_acne_studios_buyma"
+  },
+  {
+    "key": "humanmade",
+    "name": "HUMAN MADE",
+    "url": "https://www.humanmade.jp/new-arrivals/",
+    "view_all": "https://www.humanmade.jp/new-arrivals/",
+    "badge_color": "#e63946",
+    "badge_label": "NEW",
+    "fetcher": "fetch_humanmade"
+  },
+  {
+    "key": "humanmade_snkrdunk",
+    "name": "HUMAN MADE (SNKRDUNK)",
+    "url": "https://snkrdunk.com/search?brandIds=humanmade&searchCategoryIds=2&keywords=HUMAN+MADE+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
+    "view_all": "https://snkrdunk.com/search?brandIds=humanmade&searchCategoryIds=2&keywords=HUMAN+MADE+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
+    "badge_color": "#e63946",
+    "badge_label": "POPULAR",
+    "fetcher": "fetch_humanmade_snkrdunk"
   }
 ]

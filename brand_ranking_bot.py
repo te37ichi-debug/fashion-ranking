@@ -66,95 +66,12 @@ def _launch_stealth_browser(playwright):
 
 
 def fetch_adidas(max_items=20):
-    print("[adidas] 新着アイテム取得中...")
-    items = []
-
-    from playwright.sync_api import sync_playwright
-    import re
-
-    with sync_playwright() as p:
-        browser, page = _launch_stealth_browser(p)
-
-        try:
-            page.goto("https://www.adidas.jp/search?sort=newest-to-oldest", wait_until="domcontentloaded", timeout=30000)
-            page.wait_for_timeout(10000)
-
-            for _ in range(5):
-                page.evaluate("window.scrollBy(0, 600)")
-                page.wait_for_timeout(800)
-
-            html = page.content()
-            soup = BeautifulSoup(html, "html.parser")
-
-            title = soup.title.string if soup.title else "no title"
-            print(f"[adidas] ページタイトル: {title}, HTML長: {len(html)}")
-
-            cards = soup.select("article[class*='product-card']")
-            if not cards:
-                # フォールバック: data-testid や他のセレクタを試す
-                cards = soup.select("[data-testid*='product'], [class*='product-card'], [class*='plp-grid'] a[href*='/products/']")
-            print(f"[adidas] カード数: {len(cards)}")
-            seen_names = set()
-            for card in cards:
-                if len(items) >= max_items:
-                    break
-
-                link = card.select_one("a[href]")
-                href = link.get("href", "") if link else ""
-                url = f"https://www.adidas.jp{href}" if href.startswith("/") else href
-
-                # 商品名（最初のname/title要素）
-                name = ""
-                for el in card.select("[class*='name'], [class*='Name'], [class*='title'], [class*='Title']"):
-                    t = el.get_text(strip=True)
-                    if t and len(t) > 3:
-                        name = t
-                        break
-
-                if not name or name in seen_names:
-                    continue
-                seen_names.add(name)
-
-                # カテゴリ
-                category = ""
-                for el in card.select("p, span"):
-                    t = el.get_text(strip=True)
-                    if "オリジナルス" in t or "メンズ" in t or "レディース" in t or "ランニング" in t:
-                        category = t
-                        break
-
-                # 価格
-                price = ""
-                for el in card.select("[class*='price'], [class*='Price']"):
-                    t = el.get_text(strip=True)
-                    if "¥" in t:
-                        m = re.search(r'¥[\d,]+', t)
-                        if m:
-                            price = m.group()
-                            break
-
-                # 画像
-                image = ""
-                img_el = card.select_one("img[src*='assets.adidas']")
-                if img_el:
-                    image = img_el.get("src", "")
-
-                items.append({
-                    "rank": len(items) + 1,
-                    "name": name,
-                    "brand": category,
-                    "price": price,
-                    "image": image,
-                    "url": url,
-                })
-
-        except Exception as e:
-            print(f"[adidas] 取得失敗: {e}")
-        finally:
-            browser.close()
-
-    print(f"[adidas] {len(items)} 件取得")
-    return items
+    # adidas.jp 公式はCI環境でbot検知されるため、SNKRDUNK経由で取得
+    return _fetch_snkrdunk_brand(
+        "adidas",
+        "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=2&keywords=adidas+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
+        max_items,
+    )
 
 
 # ──────────────────────────────────────────────────────────
@@ -163,80 +80,12 @@ def fetch_adidas(max_items=20):
 # ──────────────────────────────────────────────────────────
 
 def fetch_adidas_atmos(max_items=20):
-    print("[adidas (atmos)] 新着アイテム取得中...")
-    items = []
-
-    from playwright.sync_api import sync_playwright
-    import re
-
-    with sync_playwright() as p:
-        browser, page = _launch_stealth_browser(p)
-
-        try:
-            page.goto("https://www.atmos-tokyo.com/category/all?brand=adidas", wait_until="domcontentloaded", timeout=30000)
-            page.wait_for_timeout(10000)
-
-            for _ in range(5):
-                page.evaluate("window.scrollBy(0, 600)")
-                page.wait_for_timeout(800)
-
-            html = page.content()
-            soup = BeautifulSoup(html, "html.parser")
-
-            title = soup.title.string if soup.title else "no title"
-            print(f"[adidas (atmos)] ページタイトル: {title}, HTML長: {len(html)}")
-
-            cards = soup.select("li.lists-products-item")
-            if not cards:
-                # フォールバック: 他のセレクタを試す
-                cards = soup.select(".product-item, .product-card, [class*='product'] a[href*='/products/']")
-            print(f"[adidas (atmos)] カード数: {len(cards)}")
-            seen_urls = set()
-            for card in cards:
-                if len(items) >= max_items:
-                    break
-
-                link = card.select_one("a[href]")
-                href = link.get("href", "") if link else ""
-                if not href or href in seen_urls:
-                    continue
-                seen_urls.add(href)
-                url = href if href.startswith("http") else f"https://www.atmos-tokyo.com{href}"
-
-                # 商品名
-                name_el = card.select_one("h2")
-                name = name_el.get_text(strip=True) if name_el else ""
-                if not name:
-                    continue
-
-                # 価格
-                price = ""
-                text = card.get_text(separator="|", strip=True)
-                m = re.search(r'¥[\d,]+', text)
-                if m:
-                    price = m.group()
-
-                # 画像
-                image = ""
-                img_el = card.select_one("img.u-object-fit")
-                if img_el:
-                    image = img_el.get("src", "")
-
-                items.append({
-                    "rank": len(items) + 1,
-                    "name": name,
-                    "price": price,
-                    "image": image,
-                    "url": url,
-                })
-
-        except Exception as e:
-            print(f"[adidas (atmos)] 取得失敗: {e}")
-        finally:
-            browser.close()
-
-    print(f"[adidas (atmos)] {len(items)} 件取得")
-    return items
+    # atmos公式はbot検知(Access Denied)されるため、SNKRDUNK経由で取得
+    return _fetch_snkrdunk_brand(
+        "adidas (atmos)",
+        "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=1&keywords=adidas+%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC&sort=popular",
+        max_items,
+    )
 
 
 # ──────────────────────────────────────────────────────────
