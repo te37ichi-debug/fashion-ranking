@@ -537,6 +537,86 @@ def _fetch_buyma_brand(label, url, max_items=20):
     return items
 
 
+def _fetch_buyma_ranking(label, url, max_items=20):
+    """BUYMA のランキングページ（/rank/）から人気アイテムを取得する共通関数"""
+    print(f"[{label}] 人気アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+    import re
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(5000)
+
+            for _ in range(3):
+                page.evaluate("window.scrollBy(0, 800)")
+                page.wait_for_timeout(600)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select("li.bc-ranking__item")
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                text = card.get_text(separator="|", strip=True)
+                parts = [p.strip() for p in text.split("|") if p.strip()]
+
+                # 最初の数字（順位）をスキップして商品名を取得
+                name = ""
+                for part in parts:
+                    if part.isdigit():
+                        continue
+                    if "¥" in part or "OFF" in part or "送料" in part:
+                        break
+                    if len(part) > 3:
+                        name = part
+                        break
+
+                if not name:
+                    continue
+
+                # 価格
+                price = ""
+                m = re.search(r'¥[\d,]+', text)
+                if m:
+                    price = m.group()
+
+                # URL
+                item_url = ""
+                link = card.select_one("a[href*='/item/']")
+                if link:
+                    href = link.get("href", "")
+                    item_url = f"https://www.buyma.com{href}" if href.startswith("/") else href
+
+                # 画像
+                image = ""
+                img_el = card.select_one("img[src*='buyma']")
+                if img_el:
+                    image = img_el.get("src", "")
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": item_url,
+                })
+
+        except Exception as e:
+            print(f"[{label}] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[{label}] {len(items)} 件取得")
+    return items
+
+
 # ──────────────────────────────────────────────────────────
 # SATUR (BUYMA)
 # ──────────────────────────────────────────────────────────
@@ -629,6 +709,14 @@ def fetch_acne_studios(max_items=20):
 
     print(f"[Acne Studios] {len(items)} 件取得")
     return items
+
+
+def fetch_acne_studios_buyma(max_items=20):
+    return _fetch_buyma_ranking(
+        "Acne Studios (BUYMA)",
+        "https://www.buyma.com/rank/_ACNE-JEANS-%E3%82%A2%E3%82%AF%E3%83%8D%E3%82%B8%E3%83%BC%E3%83%B3%E3%82%BA/",
+        max_items,
+    )
 
 
 # ──────────────────────────────────────────────────────────
@@ -865,7 +953,93 @@ def fetch_supreme_snkrdunk(max_items=20):
 def fetch_stussy_snkrdunk(max_items=20):
     return _fetch_snkrdunk_brand(
         "Stüssy (SNKRDUNK)",
-        "https://snkrdunk.com/search?keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&searchCategoryIds=2&brandIds=stussy&sort=hottest&page=1",
+        "https://snkrdunk.com/search?brandIds=stussy&searchCategoryIds=2&keywords=Stussy+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
+        max_items,
+    )
+
+
+# ──────────────────────────────────────────────────────────
+# HUMAN MADE 公式
+# ──────────────────────────────────────────────────────────
+
+def fetch_humanmade(max_items=20):
+    print("[HUMAN MADE] 新着アイテム取得中...")
+    items = []
+
+    from playwright.sync_api import sync_playwright
+    import re
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel=None if IS_CI else "chrome")
+        page = browser.new_page(user_agent=UA)
+
+        try:
+            page.goto("https://www.humanmade.jp/new-arrivals/", wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
+
+            soup = BeautifulSoup(page.content(), "html.parser")
+
+            cards = soup.select(".product-tile-wrapper")
+            seen_names = set()
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                # 商品名（imgのalt or リンクテキスト）
+                img_el = card.select_one("img")
+                name = img_el.get("alt", "").strip() if img_el else ""
+                if not name:
+                    link = card.select_one("a[href]")
+                    name = link.get_text(strip=True) if link else ""
+                if not name or name in seen_names:
+                    continue
+                seen_names.add(name)
+
+                # URL
+                link = card.select_one("a[href]")
+                href = link.get("href", "") if link else ""
+                url = f"https://www.humanmade.jp{href}" if href.startswith("/") else href
+
+                # 価格
+                price = ""
+                text = card.get_text(separator="|", strip=True)
+                m = re.search(r'¥[\d,]+', text)
+                if m:
+                    price = m.group()
+
+                # 画像
+                image = ""
+                if img_el:
+                    src = img_el.get("src", "") or img_el.get("data-src", "")
+                    if src.startswith("//"):
+                        src = "https:" + src
+                    image = src
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": url,
+                })
+
+        except Exception as e:
+            print(f"[HUMAN MADE] 取得失敗: {e}")
+        finally:
+            browser.close()
+
+    print(f"[HUMAN MADE] {len(items)} 件取得")
+    return items
+
+
+def fetch_humanmade_snkrdunk(max_items=20):
+    return _fetch_snkrdunk_brand(
+        "HUMAN MADE (SNKRDUNK)",
+        "https://snkrdunk.com/search?brandIds=humanmade&searchCategoryIds=2&keywords=HUMAN+MADE+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
         max_items,
     )
 
@@ -1095,27 +1269,59 @@ def build_embed(brand_name, color, items, show_brand=False, badge_label="NEW"):
 
 
 def post_to_discord(brand_results, BRANDS):
+    import random
+
     print("[Discord] ブランドランキングを投稿中...")
 
+    # データがあるブランドのみ対象
+    active_keys = [k for k, items in brand_results.items() if items and k in BRANDS]
+
+    # ランダムで3ブランドをピックアップ
+    picked = random.sample(active_keys, min(3, len(active_keys)))
+    rest = [k for k in active_keys if k not in picked]
+
+    # ヘッダー
     header_payload = {
-        "content": f"## 👟 ブランド新着情報&人気ランキング - {TODAY}\nまとめはこちら👉 {PAGES_URL}",
+        "content": f"## ブランド新着情報&人気ランキング - {TODAY}",
     }
     resp = requests.post(BRAND_WEBHOOK_URL, json=header_payload, timeout=15)
     if resp.status_code in (200, 204):
         print("[Discord] ヘッダー投稿成功")
 
+    # ピックアップ3ブランドの Embed を投稿
     embeds = []
-    for key, items in brand_results.items():
+    for key in picked:
         conf = BRANDS[key]
         color = int(conf["badge_color"].lstrip("#"), 16)
-        embeds.append(build_embed(conf["name"], color, items, show_brand=True, badge_label=conf.get("badge_label", "NEW")))
+        embeds.append(build_embed(conf["name"], color, brand_results[key], show_brand=True, badge_label=conf.get("badge_label", "NEW")))
 
-    # 3件ずつ投稿
-    for i in range(0, len(embeds), 3):
+    if embeds:
         time.sleep(0.5)
-        requests.post(BRAND_WEBHOOK_URL, json={"embeds": embeds[i:i+3]}, timeout=15)
+        requests.post(BRAND_WEBHOOK_URL, json={"embeds": embeds}, timeout=15)
 
-    print("[Discord] 投稿完了")
+    # 残りのブランド + 全ブランド一覧を案内
+    # 同一ベースブランドの派生（atmos, BUYMA, SNKRDUNK）をまとめて表示
+    base_brands = []
+    seen_bases = set()
+    for k in BRANDS:
+        base = k.split("_buyma")[0].split("_snkrdunk")[0].split("_atmos")[0]
+        if base not in seen_bases:
+            seen_bases.add(base)
+            base_brands.append(BRANDS[k]["name"].split(" (")[0])
+
+    footer_lines = []
+
+    if rest:
+        rest_names = "、".join(BRANDS[k]["name"] for k in rest)
+        footer_lines.append(f"**⚡️ その他のブランド更新**\n{rest_names}")
+
+    footer_lines.append(f"\n**📋 監視中の全ブランド（{len(base_brands)}件）**\n{' / '.join(base_brands)}")
+    footer_lines.append(f"\n全ブランドの詳細はこちら 👉 {PAGES_URL}")
+
+    time.sleep(0.5)
+    requests.post(BRAND_WEBHOOK_URL, json={"content": "\n".join(footer_lines)}, timeout=15)
+
+    print(f"[Discord] 投稿完了（ピックアップ: {', '.join(BRANDS[k]['name'] for k in picked)}）")
 
 
 # ──────────────────────────────────────────────────────────
@@ -1161,6 +1367,9 @@ FETCHERS = {
     "fetch_supreme_snkrdunk": fetch_supreme_snkrdunk,
     "fetch_supreme": fetch_supreme,
     "fetch_stussy_snkrdunk": fetch_stussy_snkrdunk,
+    "fetch_acne_studios_buyma": fetch_acne_studios_buyma,
+    "fetch_humanmade": fetch_humanmade,
+    "fetch_humanmade_snkrdunk": fetch_humanmade_snkrdunk,
 }
 
 
