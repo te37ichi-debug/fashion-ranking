@@ -1,6 +1,6 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T06:28:14.765898",
+  "fetched_at": "2026-04-15T13:27:45.325302",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -35,17 +35,17 @@
         },
         {
           "rank": 3,
-          "name": "【Thug Club】TC Slim T-shirt◆　バックロゴT",
-          "price": "¥12,980",
-          "image": "https://cdn-images.buyma.com/imgdata/item/250224/0115920601/683698726/210.jpg",
-          "url": "https://www.buyma.com/item/115920601/"
-        },
-        {
-          "rank": 4,
           "name": "【Thug Club】TC PK",
           "price": "¥25,980",
           "image": "https://cdn-images.buyma.com/imgdata/item/240904/0110246825/779552640/210.jpg",
           "url": "https://www.buyma.com/item/110246825/"
+        },
+        {
+          "rank": 4,
+          "name": "【Thug Club】TC Slim T-shirt◆　バックロゴT",
+          "price": "¥12,980",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250224/0115920601/683698726/210.jpg",
+          "url": "https://www.buyma.com/item/115920601/"
         },
         {
           "rank": 5,
@@ -63,52 +63,52 @@
         },
         {
           "rank": 7,
-          "name": "【Thug Club】TC Jogger pants◆",
-          "price": "¥19,990",
-          "image": "https://cdn-images.buyma.com/imgdata/item/240404/0105410478/645658658/210.jpg",
-          "url": "https://www.buyma.com/item/105410478/"
-        },
-        {
-          "rank": 8,
           "name": "【Thug Club】Armor Hoodie [正規品] フーディ パーカー 韓国",
           "price": "¥20,760",
           "image": "https://cdn-images.buyma.com/imgdata/item/240213/0103692516/599925018/210.jpg",
           "url": "https://www.buyma.com/item/103692516/"
         },
         {
+          "rank": 8,
+          "name": "【Thug Club】TC Jogger pants◆",
+          "price": "¥19,990",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240404/0105410478/645658658/210.jpg",
+          "url": "https://www.buyma.com/item/105410478/"
+        },
+        {
           "rank": 9,
-          "name": "【THUG CLUB】Thug Club Armor Hoodie◆",
-          "price": "¥20,700",
-          "image": "https://cdn-images.buyma.com/imgdata/item/240317/0104863674/608466674/210.jpg",
-          "url": "https://www.buyma.com/item/104863674/"
-        },
-        {
-          "rank": 10,
-          "name": "★大人気★【Thug Club】TC Basic T-shirt ★ユニセックス★",
-          "price": "¥10,257",
-          "image": "https://cdn-images.buyma.com/imgdata/item/250412/0117572612/691006635/210.jpg",
-          "url": "https://www.buyma.com/item/117572612/"
-        },
-        {
-          "rank": 11,
-          "name": "【Thug Club】Basic Sleeve◆　長袖",
-          "price": "¥15,980",
-          "image": "https://cdn-images.buyma.com/imgdata/item/240425/0106077498/616079295/210.jpg",
-          "url": "https://www.buyma.com/item/106077498/"
-        },
-        {
-          "rank": 12,
           "name": "★大人気★【Thug Club】TC PK Man★韓国発★",
           "price": "¥24,950",
           "image": "https://cdn-images.buyma.com/imgdata/item/250927/0123016774/726442476/210.jpg",
           "url": "https://www.buyma.com/item/123016774/"
         },
         {
-          "rank": 13,
+          "rank": 10,
+          "name": "【THUG CLUB】Thug Club Armor Hoodie◆",
+          "price": "¥20,700",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240317/0104863674/608466674/210.jpg",
+          "url": "https://www.buyma.com/item/104863674/"
+        },
+        {
+          "rank": 11,
           "name": "【Thug Club x Adidas】Adifom Iiinfinity Mule Core Black",
           "price": "¥21,970",
           "image": "https://cdn-images.buyma.com/imgdata/item/260322/0129624242/772009929/210.jpg",
           "url": "https://www.buyma.com/item/129624242/"
+        },
+        {
+          "rank": 12,
+          "name": "★大人気★【Thug Club】TC Basic T-shirt ★ユニセックス★",
+          "price": "¥10,257",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250412/0117572612/691006635/210.jpg",
+          "url": "https://www.buyma.com/item/117572612/"
+        },
+        {
+          "rank": 13,
+          "name": "【Thug Club】Basic Sleeve◆　長袖",
+          "price": "¥15,980",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240425/0106077498/616079295/210.jpg",
+          "url": "https://www.buyma.com/item/106077498/"
         },
         {
           "rank": 14,
@@ -316,7 +316,7 @@
         {
           "rank": 2,
           "name": "Stussy x Our Legacy Work Shop Swirl Tee Pigment Dyed \"Natural\"",
-          "price": "¥12,000",
+          "price": "¥13,650",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260122095459-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/630633"
         },
@@ -350,17 +350,17 @@
         },
         {
           "rank": 7,
-          "name": "Stussy x Nike Fleece Pants (US Size) \"Grey\" DO9340-063",
-          "price": "¥29,599",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230214060538-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/112427"
-        },
-        {
-          "rank": 8,
           "name": "Nike x Stussy Short \"Black\"",
           "price": "¥20,000",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260217023107-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/166509"
+        },
+        {
+          "rank": 8,
+          "name": "Stussy x Nike Fleece Pants (US Size) \"Grey\" DO9340-063",
+          "price": "¥29,599",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230214060538-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/112427"
         },
         {
           "rank": 9,
@@ -372,7 +372,7 @@
         {
           "rank": 10,
           "name": "Stussy x Nike Washed Pants (US Size) \"Black\" DO5296-010",
-          "price": "¥23,000",
+          "price": "¥18,700",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230214060451-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/112426"
         },
@@ -427,17 +427,17 @@
         },
         {
           "rank": 18,
-          "name": "Stussy x Wales Bonner Ocean Song Tee \"Ivory\"",
-          "price": "¥11,000",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251101064501-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/704966"
-        },
-        {
-          "rank": 19,
           "name": "Stussy Paris Tee \"Faded Black\"",
           "price": "¥8,000",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250916064239-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/698621"
+        },
+        {
+          "rank": 19,
+          "name": "Stussy x Wales Bonner Ocean Song Tee \"Ivory\"",
+          "price": "¥11,000",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251101064501-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/704966"
         },
         {
           "rank": 20,
@@ -470,42 +470,42 @@
         {
           "rank": 3,
           "name": "Supreme x Spider-Man Tee \"Black\"",
-          "price": "¥16,493",
+          "price": "¥16,399",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260228112018-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/769952"
         },
         {
           "rank": 4,
           "name": "Supreme Devil S Logo Zip Up Hooded Sweatshirt \"Light Blue\"",
-          "price": "¥36,499",
+          "price": "¥36,999",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/1569bf8b-a982-4e44-9ab4-8116f128c1af.webp?size=m",
           "url": "https://snkrdunk.com/apparels/785739"
         },
         {
           "rank": 5,
           "name": "Supreme Monster S/S Top \"Black\"",
-          "price": "¥15,200",
+          "price": "¥15,199",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/9b8acea5-1ecc-4eb6-8afd-35fd860f700b.webp?size=m",
           "url": "https://snkrdunk.com/apparels/798975"
         },
         {
           "rank": 6,
           "name": "Supreme × Nike Air Force 1 Low \"Black\"",
-          "price": "¥19,298",
+          "price": "¥19,594",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20210902041113-0.webp?size=m",
           "url": "https://snkrdunk.com/products/CU9225-001"
         },
         {
           "rank": 7,
           "name": "Supreme × Nike Air Force 1 Low \"White/Black\"",
-          "price": "¥24,650",
+          "price": "¥24,450",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251009064102-0.webp?size=m",
           "url": "https://snkrdunk.com/products/CU9225-102"
         },
         {
           "rank": 8,
           "name": "Supreme x MM6 Maison Margiela Box Logo Zip Up Hooded Sweatshirt \"Black\"",
-          "price": "¥78,000",
+          "price": "¥81,489",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/ac64dc36-688e-4c00-abfc-46cbf1ddeb70.webp?size=m",
           "url": "https://snkrdunk.com/apparels/781175"
         },
@@ -526,7 +526,7 @@
         {
           "rank": 11,
           "name": "Supreme x MM6 Maison Margiela Split S/S Top \"Navy\"",
-          "price": "¥26,000",
+          "price": "¥26,296",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/c69604e7-59e7-4491-80cd-91f3d7e45bca.webp?size=m",
           "url": "https://snkrdunk.com/apparels/781188"
         },
@@ -561,7 +561,7 @@
         {
           "rank": 16,
           "name": "Supreme x Jordan Biggie S/S Top \"Black\"",
-          "price": "¥9,500",
+          "price": "¥9,700",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20241005075100-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/407102"
         },
@@ -1197,38 +1197,38 @@
         },
         {
           "rank": 2,
-          "name": "★SATUR★Small Logo Hood Zip-up",
-          "price": "¥11,220",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089297/752378126/210.jpg",
-          "url": "https://www.buyma.com/item/127089297/"
-        },
-        {
-          "rank": 3,
           "name": "★SATUR★Essential Lawton Track Zip-up Jacket",
           "price": "¥10,420",
           "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086480/752357772/210.jpg",
           "url": "https://www.buyma.com/item/127086480/"
         },
         {
-          "rank": 4,
-          "name": "★SATUR★Faro Over Size Boucle Cardigan",
-          "price": "¥10,999",
-          "image": "https://cdn-images.buyma.com/imgdata/item/241008/0111261892/649443801/210.jpg",
-          "url": "https://www.buyma.com/item/111261892/"
+          "rank": 3,
+          "name": "★SATUR★Small Logo Hood Zip-up",
+          "price": "¥11,220",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089297/752378126/210.jpg",
+          "url": "https://www.buyma.com/item/127089297/"
         },
         {
-          "rank": 5,
+          "rank": 4,
           "name": "★SATUR★刺繍 ロゴ 半袖 Ｔシャツ",
           "price": "¥5,790",
           "image": "https://cdn-images.buyma.com/imgdata/item/250429/0118056330/694448051/210.jpg",
           "url": "https://www.buyma.com/item/118056330/"
         },
         {
+          "rank": 5,
+          "name": "★SATUR★Mirrorball Vintage Graphic Long Sleeve",
+          "price": "¥7,370",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260327/0129913700/773339896/210.jpg",
+          "url": "https://www.buyma.com/item/129913700/"
+        },
+        {
           "rank": 6,
-          "name": "★SATUR★Teo Cotton All Day Hood Zip-up",
+          "name": "★SATUR★Faro Over Size Boucle Cardigan",
           "price": "¥10,999",
-          "image": "https://cdn-images.buyma.com/imgdata/item/220824/0086251937/639346164/210.jpg",
-          "url": "https://www.buyma.com/item/86251937/"
+          "image": "https://cdn-images.buyma.com/imgdata/item/241008/0111261892/649443801/210.jpg",
+          "url": "https://www.buyma.com/item/111261892/"
         },
         {
           "rank": 7,
@@ -1239,10 +1239,10 @@
         },
         {
           "rank": 8,
-          "name": "★SATUR★Mirrorball Vintage Graphic Long Sleeve",
-          "price": "¥7,771",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260327/0129913700/773339896/210.jpg",
-          "url": "https://www.buyma.com/item/129913700/"
+          "name": "★SATUR★Teo Cotton All Day Hood Zip-up",
+          "price": "¥10,999",
+          "image": "https://cdn-images.buyma.com/imgdata/item/220824/0086251937/639346164/210.jpg",
+          "url": "https://www.buyma.com/item/86251937/"
         },
         {
           "rank": 9,
@@ -1281,52 +1281,52 @@
         },
         {
           "rank": 14,
-          "name": "★SATUR★ストライプデニム ジャケット",
-          "price": "¥16,320",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260227/0128593903/763668392/210.jpg",
-          "url": "https://www.buyma.com/item/128593903/"
-        },
-        {
-          "rank": 15,
           "name": "[男女兼用]★SATUR★Classic Logo T-shirts★Tシャツ",
           "price": "¥6,720",
           "image": "https://cdn-images.buyma.com/imgdata/item/250520/0118598527/698202549/210.jpg",
           "url": "https://www.buyma.com/item/118598527/"
         },
         {
-          "rank": 16,
+          "rank": 15,
           "name": "★SATUR★Plain Long Sleeve Cardigan",
           "price": "¥9,420",
           "image": "https://cdn-images.buyma.com/imgdata/item/250718/0120419241/710381690/210.jpg",
           "url": "https://www.buyma.com/item/120419241/"
         },
         {
+          "rank": 16,
+          "name": "★SATUR★ストライプデニム ジャケット",
+          "price": "¥14,120",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260227/0128593903/763668392/210.jpg",
+          "url": "https://www.buyma.com/item/128593903/"
+        },
+        {
           "rank": 17,
-          "name": "SATUR Fleece Crew Neck Cardigan SA5D0640",
-          "price": "¥16,850",
-          "image": "https://cdn-images.buyma.com/imgdata/item/251002/0123262844/727801135/210.jpg",
-          "url": "https://www.buyma.com/item/123262844/"
+          "name": "【SATUR】Waffle Henry Neck T-shirt",
+          "price": "¥11,900",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260106/0126560359/769148210/210.jpg",
+          "url": "https://www.buyma.com/item/126560359/"
         },
         {
           "rank": 18,
+          "name": "★SATUR★Fatigue Cargo Sweatpants",
+          "price": "¥8,820",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086074/752350697/210.jpg",
+          "url": "https://www.buyma.com/item/127086074/"
+        },
+        {
+          "rank": 19,
           "name": "26SS SATUR Stitch Waffle Henley Neck Long Sleeve",
           "price": "¥8,960",
           "image": "https://cdn-images.buyma.com/imgdata/item/260202/0127459619/769391724/210.jpg",
           "url": "https://www.buyma.com/item/127459619/"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "name": "★SATUR★Lawton All Day Track Zip-up Jacket",
           "price": "¥10,999",
           "image": "https://cdn-images.buyma.com/imgdata/item/230130/0091479078/679522100/210.jpg",
           "url": "https://www.buyma.com/item/91479078/"
-        },
-        {
-          "rank": 20,
-          "name": "【SATUR】Waffle Henry Neck T-shirt",
-          "price": "¥11,900",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260106/0126560359/769148210/210.jpg",
-          "url": "https://www.buyma.com/item/126560359/"
         }
       ]
     },
@@ -1400,80 +1400,80 @@
         },
         {
           "rank": 10,
-          "name": "送料関税込☆AMI PARIS フリース　シェルパ ジャケット☆超人気",
-          "price": "¥56,500",
-          "image": "https://cdn-images.buyma.com/imgdata/item/230113/0090918159/512836539/210.jpg",
-          "url": "https://www.buyma.com/item/90918159/"
-        },
-        {
-          "rank": 11,
           "name": "送料関税込★AMI PARIS★Ami De Coeur ジップアップ パーカー",
           "price": "¥66,500",
           "image": "https://cdn-images.buyma.com/imgdata/item/250705/0120025375/707656194/210.jpg",
           "url": "https://www.buyma.com/item/120025375/"
         },
         {
-          "rank": 12,
+          "rank": 11,
           "name": "国内発【AMI PARIS】レザー Ami De Coeur ジップ/カードケース",
           "price": "¥42,800",
           "image": "https://cdn-images.buyma.com/imgdata/item/250716/0120337888/709858888/210.jpg",
           "url": "https://www.buyma.com/item/120337888/"
         },
         {
-          "rank": 13,
+          "rank": 12,
           "name": "【本物保証 /国内発送】AMIPARIS アミパリス ロゴ Tシャツ",
           "price": "¥34,800",
           "image": "https://cdn-images.buyma.com/imgdata/item/260310/0128994489/766853851/210.jpg",
           "url": "https://www.buyma.com/item/128994489/"
         },
         {
-          "rank": 14,
+          "rank": 13,
           "name": "☆SALE☆【即発】AMIPARIS Ami de Coeur 定番　ニット・セーター",
           "price": "¥39,800",
           "image": "https://cdn-images.buyma.com/imgdata/item/250917/0122572355/723912705/210.jpg",
           "url": "https://www.buyma.com/item/122572355/"
         },
         {
-          "rank": 15,
+          "rank": 14,
           "name": "★送料・関税込★AMI★レタリングカードウォレット★",
           "price": "¥15,819",
           "image": "https://cdn-images.buyma.com/imgdata/item/230828/0098317034/564068572/210.jpg",
           "url": "https://www.buyma.com/item/98317034/"
         },
         {
-          "rank": 16,
+          "rank": 15,
           "name": "★送料・関税込★AMI★ハートロゴ スウェット シャツ★",
           "price": "¥33,900",
           "image": "https://cdn-images.buyma.com/imgdata/item/250610/0119212603/702328448/210.jpg",
           "url": "https://www.buyma.com/item/119212603/"
         },
         {
-          "rank": 17,
+          "rank": 16,
           "name": "【国内発送関税無】AMI Paris ナイロンスタッズキャップ",
           "price": "¥23,500",
           "image": "https://cdn-images.buyma.com/imgdata/item/251012/0123604186/734870806/210.jpg",
           "url": "https://www.buyma.com/item/123604186/"
         },
         {
-          "rank": 18,
+          "rank": 17,
           "name": "AMIPARIS アミパリス　ブレスレット　メンズファッション",
           "price": "¥55,600",
           "image": "https://cdn-images.buyma.com/imgdata/item/260115/0126823498/750574101/210.jpg",
           "url": "https://www.buyma.com/item/126823498/"
         },
         {
-          "rank": 19,
+          "rank": 18,
           "name": "国内即発 AMIPARIS ナイロンキャンバス Marcel ショルダーバッグ",
           "price": "¥79,800",
           "image": "https://cdn-images.buyma.com/imgdata/item/260109/0126649674/749420069/210.jpg",
           "url": "https://www.buyma.com/item/126649674/"
         },
         {
-          "rank": 20,
+          "rank": 19,
           "name": "国内発【AMI PARIS】撥水ナイロン Marcel/クロスボディバッグ",
           "price": "¥84,800",
           "image": "https://cdn-images.buyma.com/imgdata/item/250717/0120376604/746470491/210.jpg",
           "url": "https://www.buyma.com/item/120376604/"
+        },
+        {
+          "rank": 20,
+          "name": "国内発【AMI PARIS】Voulez-Vousフォールド レザー/二つ折り財布",
+          "price": "¥63,800",
+          "image": "https://cdn-images.buyma.com/imgdata/item/250814/0121349967/760432845/210.jpg",
+          "url": "https://www.buyma.com/item/121349967/"
         }
       ]
     },
