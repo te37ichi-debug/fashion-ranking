@@ -1,6 +1,6 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T13:32:50.764973",
+  "fetched_at": "2026-04-15T13:41:42.531105",
   "zara": {
     "source": "zara.com (official API)",
     "count": 20,
@@ -140,10 +140,10 @@
       },
       {
         "rank": 20,
-        "name": "リラックスフィットプリーツパンツ",
-        "price": "¥8,590",
-        "image": "https://static.zara.net/assets/public/01ab/0666/c7dc4c2c8baa/788891433922/00706950800-e1/00706950800-e1.jpg?ts=1754559534542&w=563",
-        "url": "https://www.zara.com/jp/ja/-p00706950.html"
+        "name": "ベーシックスリムフィットTシャツ",
+        "price": "¥2,990",
+        "image": "https://static.zara.net/assets/public/16bb/4bac/c9c24204820b/e71a4115243b/05584390800-e1/05584390800-e1.jpg?ts=1756718318042&w=563",
+        "url": "https://www.zara.com/jp/ja/-p06019390.html"
       }
     ]
   },
