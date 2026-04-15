@@ -77,8 +77,7 @@ def _scraper_api_get(target_url, render=True):
     }
     if render:
         params["render"] = "true"
-        params["wait_for_selector"] = "article"
-    resp = requests.get("https://api.scraperapi.com", params=params, timeout=90)
+    resp = requests.get("https://api.scraperapi.com", params=params, timeout=120)
     resp.raise_for_status()
     return resp.text
 
