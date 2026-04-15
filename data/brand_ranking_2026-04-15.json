@@ -1,6 +1,6 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T14:31:36.242258",
+  "fetched_at": "2026-04-15T14:42:28.931665",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -11,8 +11,149 @@
     "adidas_atmos": {
       "name": "adidas (atmos)",
       "source": "https://www.atmos-tokyo.com/category/all?brand=adidas",
-      "count": 0,
-      "items": []
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "adidas HANDBALL SPEZIAL Made in Germany",
+          "price": "¥38,500",
+          "image": "https://assets.atmos-tokyo.com/items/S/ih6635-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ih6635"
+        },
+        {
+          "rank": 2,
+          "name": "adidas F50 TUNIT MEGA CONSORTIUM",
+          "price": "¥29,700",
+          "image": "https://assets.atmos-tokyo.com/items/S/kj1554-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kj1554"
+        },
+        {
+          "rank": 3,
+          "name": "adidas VIRGINIA VARIO FLAT EARTHER by Pharrell",
+          "price": "¥23,100",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki7668-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki7668"
+        },
+        {
+          "rank": 4,
+          "name": "adidas VIRGINIA VARIO FLAT EARTHER by Pharrell",
+          "price": "¥23,100",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki7669-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki7669"
+        },
+        {
+          "rank": 5,
+          "name": "adidas SATIN FOOTBALL JERSEY",
+          "price": "¥9,900",
+          "image": "https://assets.atmos-tokyo.com/items/S/ka2671-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ka2671"
+        },
+        {
+          "rank": 6,
+          "name": "adidas KNITTED CROCHET FIREBIRD TRACKPANTS",
+          "price": "¥15,400",
+          "image": "https://assets.atmos-tokyo.com/items/S/ke0201-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ke0201"
+        },
+        {
+          "rank": 7,
+          "name": "adidas MEGARIDE AG",
+          "price": "¥31,900",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki6716-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki6716"
+        },
+        {
+          "rank": 8,
+          "name": "adidas MEGARIDE AG",
+          "price": "¥31,900",
+          "image": "https://assets.atmos-tokyo.com/items/S/ki6720-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/ki6720"
+        },
+        {
+          "rank": 9,
+          "name": "adidas WAFFLE SHORT SLEEVE POLO",
+          "price": "¥7,150",
+          "image": "https://assets.atmos-tokyo.com/items/S/jv9265-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jv9265"
+        },
+        {
+          "rank": 10,
+          "name": "adidas WAFFLE SHORT SLEEVE POLO",
+          "price": "¥7,150",
+          "image": "https://assets.atmos-tokyo.com/items/S/jv9266-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jv9266"
+        },
+        {
+          "rank": 11,
+          "name": "adidas WAFFLE SHORT SLEEVE POLO",
+          "price": "¥7,150",
+          "image": "https://assets.atmos-tokyo.com/items/S/kb5462-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kb5462"
+        },
+        {
+          "rank": 12,
+          "name": "adidas WAFFLE CLASSIC TRACK TOP",
+          "price": "¥14,300",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6863-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6863"
+        },
+        {
+          "rank": 13,
+          "name": "adidas WAFFLE CLASSIC TRACK TOP",
+          "price": "¥14,300",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6864-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6864"
+        },
+        {
+          "rank": 14,
+          "name": "adidas WAFFLE LONG SLEEVE POLO",
+          "price": "¥8,800",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6866-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6866"
+        },
+        {
+          "rank": 15,
+          "name": "adidas WAFFLE LONG SLEEVE POLO",
+          "price": "¥8,800",
+          "image": "https://assets.atmos-tokyo.com/items/S/kq6867-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kq6867"
+        },
+        {
+          "rank": 16,
+          "name": "adidas ADIZERO ADIOS PRO 4 M",
+          "price": "¥28,600",
+          "image": "https://assets.atmos-tokyo.com/items/S/jq4445-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jq4445"
+        },
+        {
+          "rank": 17,
+          "name": "adidas ADIZERO ADIOS PRO 4 W",
+          "price": "¥28,600",
+          "image": "https://assets.atmos-tokyo.com/items/S/jq4446-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jq4446"
+        },
+        {
+          "rank": 18,
+          "name": "adidas ZX 8000 Made in Germany",
+          "price": "¥28,600",
+          "image": "https://assets.atmos-tokyo.com/items/S/jr4609-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/jr4609"
+        },
+        {
+          "rank": 19,
+          "name": "adidas ADILENIUM 5.0  TRACK TOP",
+          "price": "¥18,700",
+          "image": "https://assets.atmos-tokyo.com/items/S/kx4830-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kx4830"
+        },
+        {
+          "rank": 20,
+          "name": "adidas ADILENIUM 5.0  TRACK TOP",
+          "price": "¥18,700",
+          "image": "https://assets.atmos-tokyo.com/items/S/kx4831-1s.jpg",
+          "url": "https://www.atmos-tokyo.com/item/adidas/kx4831"
+        }
+      ]
     },
     "thug_club_buyma": {
       "name": "Thug Club (BUYMA)",
@@ -414,7 +555,7 @@
         {
           "rank": 16,
           "name": "Stussy Cherries Tee \"White\"",
-          "price": "¥9,579",
+          "price": "¥9,578",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240614015120-7.webp?size=m",
           "url": "https://snkrdunk.com/apparels/295758"
         },
@@ -1197,17 +1338,17 @@
         },
         {
           "rank": 2,
-          "name": "★SATUR★Essential Lawton Track Zip-up Jacket",
-          "price": "¥9,910",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086480/752357772/210.jpg",
-          "url": "https://www.buyma.com/item/127086480/"
-        },
-        {
-          "rank": 3,
           "name": "★SATUR★Small Logo Hood Zip-up",
           "price": "¥10,120",
           "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089297/752378126/210.jpg",
           "url": "https://www.buyma.com/item/127089297/"
+        },
+        {
+          "rank": 3,
+          "name": "★SATUR★Essential Lawton Track Zip-up Jacket",
+          "price": "¥9,910",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086480/752357772/210.jpg",
+          "url": "https://www.buyma.com/item/127086480/"
         },
         {
           "rank": 4,
@@ -1316,17 +1457,17 @@
         },
         {
           "rank": 19,
-          "name": "★SATUR★Lawton All Day Track Zip-up Jacket",
-          "price": "¥10,999",
-          "image": "https://cdn-images.buyma.com/imgdata/item/230130/0091479078/679522100/210.jpg",
-          "url": "https://www.buyma.com/item/91479078/"
-        },
-        {
-          "rank": 20,
           "name": "SATUR Fleece Crew Neck Cardigan SA5D0640",
           "price": "¥16,850",
           "image": "https://cdn-images.buyma.com/imgdata/item/251002/0123262844/727801135/210.jpg",
           "url": "https://www.buyma.com/item/123262844/"
+        },
+        {
+          "rank": 20,
+          "name": "★SATUR★Fatigue Cargo Sweatpants",
+          "price": "¥7,999",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127086074/752350697/210.jpg",
+          "url": "https://www.buyma.com/item/127086074/"
         }
       ]
     },
