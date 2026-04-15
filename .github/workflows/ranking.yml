@@ -48,6 +48,7 @@ jobs:
       - name: Run brand ranking bot
         env:
           BRAND_WEBHOOK_URL: ${{ secrets.BRAND_WEBHOOK_URL }}
+          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
           DISPLAY: ":99"
         run: xvfb-run --auto-servernum --server-args="-screen 0 1280x720x24" python brand_ranking_bot.py
 

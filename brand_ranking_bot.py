@@ -21,6 +21,9 @@ IS_CI = os.environ.get("CI") == "true"
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 
+# ScraperAPI（adidas.jp / atmos-tokyo.com のbot検知回避用）
+SCRAPER_API_KEY = os.environ.get("SCRAPER_API_KEY", "")
+
 # Discord Webhook（ブランドランキング専用チャンネル）
 BRAND_WEBHOOK_URL = os.environ.get("BRAND_WEBHOOK_URL", "https://discord.com/api/webhooks/1493543560463777872/UjBRzjBcRgHAWQtNuVwalFOpEr-Q5cPh2WGoLtkT1sTpewRyTY5OGfAFRyTvFXd9_gg1")
 
@@ -65,27 +68,157 @@ def _launch_stealth_browser(playwright):
     return browser, page
 
 
+def _scraper_api_get(target_url, render=True):
+    """ScraperAPI経由でページを取得する"""
+    params = {
+        "api_key": SCRAPER_API_KEY,
+        "url": target_url,
+        "country_code": "jp",
+    }
+    if render:
+        params["render"] = "true"
+        params["wait_for_selector"] = "article"
+    resp = requests.get("https://api.scraperapi.com", params=params, timeout=90)
+    resp.raise_for_status()
+    return resp.text
+
+
 def fetch_adidas(max_items=20):
-    # adidas.jp 公式はCI環境でbot検知されるため、SNKRDUNK経由で取得
-    return _fetch_snkrdunk_brand(
-        "adidas",
-        "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=2&keywords=adidas+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
-        max_items,
-    )
+    print("[adidas] 新着アイテム取得中...")
+    import re
+    items = []
+
+    try:
+        html = _scraper_api_get("https://www.adidas.jp/new_arrivals")
+        soup = BeautifulSoup(html, "html.parser")
+
+        title = soup.title.string if soup.title else "no title"
+        print(f"[adidas] ページタイトル: {title}, HTML長: {len(html)}")
+
+        cards = soup.select("article[class*='product-card']")
+        if not cards:
+            cards = soup.select("[data-testid*='product'], [class*='product-card']")
+        print(f"[adidas] カード数: {len(cards)}")
+
+        seen_names = set()
+        for card in cards:
+            if len(items) >= max_items:
+                break
+
+            link = card.select_one("a[href]")
+            href = link.get("href", "") if link else ""
+            url = f"https://www.adidas.jp{href}" if href.startswith("/") else href
+
+            name = ""
+            for el in card.select("[class*='name'], [class*='Name'], [class*='title'], [class*='Title']"):
+                t = el.get_text(strip=True)
+                if t and len(t) > 3:
+                    name = t
+                    break
+
+            if not name or name in seen_names:
+                continue
+            seen_names.add(name)
+
+            category = ""
+            for el in card.select("p, span"):
+                t = el.get_text(strip=True)
+                if "オリジナルス" in t or "メンズ" in t or "レディース" in t or "ランニング" in t:
+                    category = t
+                    break
+
+            price = ""
+            for el in card.select("[class*='price'], [class*='Price']"):
+                t = el.get_text(strip=True)
+                if "¥" in t:
+                    m = re.search(r'¥[\d,]+', t)
+                    if m:
+                        price = m.group()
+                        break
+
+            image = ""
+            img_el = card.select_one("img[src*='assets.adidas']")
+            if img_el:
+                image = img_el.get("src", "")
+
+            items.append({
+                "rank": len(items) + 1,
+                "name": name,
+                "brand": category,
+                "price": price,
+                "image": image,
+                "url": url,
+            })
+
+    except Exception as e:
+        print(f"[adidas] ScraperAPI取得失敗: {e}")
+
+    print(f"[adidas] {len(items)} 件取得")
+    return items
 
 
-# ──────────────────────────────────────────────────────────
 # ──────────────────────────────────────────────────────────
 # adidas (atmos)
 # ──────────────────────────────────────────────────────────
 
 def fetch_adidas_atmos(max_items=20):
-    # atmos公式はbot検知(Access Denied)されるため、SNKRDUNK経由で取得
-    return _fetch_snkrdunk_brand(
-        "adidas (atmos)",
-        "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=1&keywords=adidas+%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC&sort=popular",
-        max_items,
-    )
+    print("[adidas (atmos)] 新着アイテム取得中...")
+    import re
+    items = []
+
+    try:
+        html = _scraper_api_get("https://www.atmos-tokyo.com/category/all?brand=adidas")
+        soup = BeautifulSoup(html, "html.parser")
+
+        title = soup.title.string if soup.title else "no title"
+        print(f"[adidas (atmos)] ページタイトル: {title}, HTML長: {len(html)}")
+
+        cards = soup.select("li.lists-products-item")
+        if not cards:
+            cards = soup.select(".product-item, .product-card")
+        print(f"[adidas (atmos)] カード数: {len(cards)}")
+
+        seen_urls = set()
+        for card in cards:
+            if len(items) >= max_items:
+                break
+
+            link = card.select_one("a[href]")
+            href = link.get("href", "") if link else ""
+            if not href or href in seen_urls:
+                continue
+            seen_urls.add(href)
+            url = href if href.startswith("http") else f"https://www.atmos-tokyo.com{href}"
+
+            name_el = card.select_one("h2")
+            name = name_el.get_text(strip=True) if name_el else ""
+            if not name:
+                continue
+
+            price = ""
+            text = card.get_text(separator="|", strip=True)
+            m = re.search(r'¥[\d,]+', text)
+            if m:
+                price = m.group()
+
+            image = ""
+            img_el = card.select_one("img")
+            if img_el:
+                image = img_el.get("src", "") or img_el.get("data-src", "")
+
+            items.append({
+                "rank": len(items) + 1,
+                "name": name,
+                "price": price,
+                "image": image,
+                "url": url,
+            })
+
+    except Exception as e:
+        print(f"[adidas (atmos)] ScraperAPI取得失敗: {e}")
+
+    print(f"[adidas (atmos)] {len(items)} 件取得")
+    return items
 
 
 # ──────────────────────────────────────────────────────────
