@@ -1,300 +1,18 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T13:56:50.665774",
+  "fetched_at": "2026-04-15T14:17:42.204821",
   "brands": {
     "adidas": {
-      "name": "adidas (SNKRDUNK)",
-      "source": "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=2&keywords=adidas+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB&sort=popular",
-      "count": 20,
-      "items": [
-        {
-          "rank": 1,
-          "name": "adidas Originals CTT Chinese Track Top Casual Jacket \"Grey\"",
-          "price": "¥27,900",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260213055921-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/735761"
-        },
-        {
-          "rank": 2,
-          "name": "adidas Women's Adilenium 5.0 Deconstructed Denim Pants \"ChalkyBrown\"",
-          "price": "¥25,387",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/a8bc2a4a-fdbb-4ebb-9d1a-07fda8c4232a.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/785556"
-        },
-        {
-          "rank": 3,
-          "name": "adidas x Oasis Tour Firebird Track Top \"Night Indigo\"",
-          "price": "¥18,000",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251002094111-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/628443"
-        },
-        {
-          "rank": 4,
-          "name": "adidas x Thug Club Padded Jacket \"Black/Silver Metallic\"",
-          "price": "¥43,000",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260204080943-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/710703"
-        },
-        {
-          "rank": 5,
-          "name": "adidas x Korn Long Sleeve T-shirt \"Black\"",
-          "price": "¥17,000",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/3ae16a9d-6f58-432b-87b9-1ced69b33f7c.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/427298"
-        },
-        {
-          "rank": 6,
-          "name": "adidas Originals CTT Chinese Track Top Casual Jacket \"Rose Red\"",
-          "price": "¥24,999",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260308083826-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/741314"
-        },
-        {
-          "rank": 7,
-          "name": "adidas Originals CTT Chinese Track Top Casual Jacket \"Light Blue\"",
-          "price": "¥29,000",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260308083849-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/741315"
-        },
-        {
-          "rank": 8,
-          "name": "adidas Originals CTT Chinese Track Top Casual Jacket \"Green\"",
-          "price": "¥30,915",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/ab2dea16-e66b-43ba-942c-da61c71230e7.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/741316"
-        },
-        {
-          "rank": 9,
-          "name": "adidas China Track Jacket \"Yellow\"",
-          "price": "¥23,998",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260211064057-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/747457"
-        },
-        {
-          "rank": 10,
-          "name": "adidas Real Madrid Lifestyle OG Track Top \"Charcoal/Dark Gray\"",
-          "price": "¥10,900",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250211083917-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/385310"
-        },
-        {
-          "rank": 11,
-          "name": "adidas x Oasis Tour Firebird Track Top \"Black\"",
-          "price": "¥19,999",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251003082447-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/628442"
-        },
-        {
-          "rank": 12,
-          "name": "adidas Adicolor Denim Firebird Track Top \"Indigo\"",
-          "price": "¥15,999",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/e65cad00-374f-4dd2-ae11-21f6396cf42b.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/753114"
-        },
-        {
-          "rank": 13,
-          "name": "adidas Manchester United Lifestyle OG Track Top \"Black/MUFC Red\"",
-          "price": "¥19,400",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250929095138-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/385317"
-        },
-        {
-          "rank": 14,
-          "name": "adidas Originals Loose Mesh Track Top \"Stone Khaki\"",
-          "price": "¥15,497",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/8c3c5436-3c84-4eb4-b335-f33298d9ca40.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/749872"
-        },
-        {
-          "rank": 15,
-          "name": "adidas Warm-Up Top \"Grey Two\"",
-          "price": "¥14,600",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250405031929-1.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/559485"
-        },
-        {
-          "rank": 16,
-          "name": "adidas Waffle Basketball Track Top \"White\" JV9263",
-          "price": "¥19,898",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250403025425-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/549085"
-        },
-        {
-          "rank": 17,
-          "name": "adidas Adicolor Denim Firebird Track Top \"True Black Denim\"",
-          "price": "¥16,999",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250404081401-11.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/558429"
-        },
-        {
-          "rank": 18,
-          "name": "adidas Track Denim Jacket (China Exclusive) \"Indigo\"",
-          "price": "¥27,100",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/AD-2016-1.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/506263"
-        },
-        {
-          "rank": 19,
-          "name": "adidas Women's Adilenium 5.0 Deconstructed Denim Pants \"LightBlue\"",
-          "price": "¥25,998",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/AD-4231-1-111.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/785559"
-        },
-        {
-          "rank": 20,
-          "name": "adidas Real Madrid 25/26 Long-Sleeve Home Uniform \"White\"",
-          "price": "¥16,500",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250906075437-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/694012"
-        }
-      ]
+      "name": "adidas",
+      "source": "https://www.adidas.jp/new_arrivals",
+      "count": 0,
+      "items": []
     },
     "adidas_atmos": {
-      "name": "adidas スニーカー (SNKRDUNK)",
-      "source": "https://snkrdunk.com/search?brandIds=adidas&searchCategoryIds=1&keywords=adidas+%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC&sort=popular",
-      "count": 20,
-      "items": [
-        {
-          "rank": 1,
-          "name": "adidas Samba OG \"Cloud White/Core Black/Clear Granite\"",
-          "price": "¥10,968",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250328072257-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/B75806"
-        },
-        {
-          "rank": 2,
-          "name": "adidas Women's Gazelle Indoor \"Bliss Pink/Core Black/Collegiate Purple\"",
-          "price": "¥10,084",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240127081539-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/IE7002"
-        },
-        {
-          "rank": 3,
-          "name": "adidas Samba OG \"Core Black/Cloud White/Gum\"",
-          "price": "¥11,264",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250907065500-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/B75807"
-        },
-        {
-          "rank": 4,
-          "name": "adidas Tobacco \"Pantone/Mesa/Gum\"",
-          "price": "¥13,960",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230310023545-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/GY7396"
-        },
-        {
-          "rank": 5,
-          "name": "adidas Handball Spezial \"Light Blue/Footwear White\" (2019/2023)",
-          "price": "¥8,000",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250216092019-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/BD7632"
-        },
-        {
-          "rank": 6,
-          "name": "Pharrell Williams × adidas Jellyfish \"Carbon/Core Black\"",
-          "price": "¥52,358",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251210032631-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/KJ3841"
-        },
-        {
-          "rank": 7,
-          "name": "adidas Women's Handball Spezial \"Earth Strata/Off White/Gum\"",
-          "price": "¥14,999",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250523014943-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/IF6490"
-        },
-        {
-          "rank": 8,
-          "name": "adidas Tobacco \"Brown Desert\"",
-          "price": "¥10,112",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250220064017-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/JP9651"
-        },
-        {
-          "rank": 9,
-          "name": "adidas Tobacco Gruen \"Dark Brown\"",
-          "price": "¥16,878",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20231017102132-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/GX6941"
-        },
-        {
-          "rank": 10,
-          "name": "adidas Women's Samba OG \"Cow Print/Dark Brown\"",
-          "price": "¥15,780",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250220072408-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/JR1256"
-        },
-        {
-          "rank": 11,
-          "name": "adidas Superstar 2 \"Core Black/Cloud White/Core Black\"",
-          "price": "¥12,088",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250308040834-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/JI0079"
-        },
-        {
-          "rank": 12,
-          "name": "adidas Women's Samba LT \"Aurora Ink/Cream White/Gold Metallic\"",
-          "price": "¥11,997",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20241129091812-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/JH5705"
-        },
-        {
-          "rank": 13,
-          "name": "adidas Tokyo \"Grey Six/Aurora Ruby\"",
-          "price": "¥17,999",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260310080218-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/KJ0367"
-        },
-        {
-          "rank": 14,
-          "name": "adidas Samba OG \"Core Black/Supplier Colour/Gum\"",
-          "price": "¥10,500",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250905035005-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/KJ8858"
-        },
-        {
-          "rank": 15,
-          "name": "Kasina × Kim Jung Gi × adidas Campus 80s \"Hazy Yellow\"",
-          "price": "¥16,999",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230313085212-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/IE4810"
-        },
-        {
-          "rank": 16,
-          "name": "adidas Superstar 2 \"Core Black/Better Scarlet\"",
-          "price": "¥12,000",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250313022130-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/JQ2309"
-        },
-        {
-          "rank": 17,
-          "name": "Arsenal × adidas Gazelle \"Cloud White/Red/Collegiate Navy\"",
-          "price": "¥20,000",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250901101705-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/HQ0005"
-        },
-        {
-          "rank": 18,
-          "name": "adidas Adiracer Lo \"Better Scarlet/Cloud White/Core Black\"",
-          "price": "¥12,800",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250525034140-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/JP7013"
-        },
-        {
-          "rank": 19,
-          "name": "adidas Handball Spezial \"Wonder Beige/Core Black/Magic Beige\"",
-          "price": "¥12,689",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20231228043504-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/IE3698"
-        },
-        {
-          "rank": 20,
-          "name": "adidas Gazelle \"Triple Black\"",
-          "price": "¥11,000",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240124061706-0.webp?size=m",
-          "url": "https://snkrdunk.com/products/CQ2809"
-        }
-      ]
+      "name": "adidas (atmos)",
+      "source": "https://www.atmos-tokyo.com/category/all?brand=adidas",
+      "count": 0,
+      "items": []
     },
     "thug_club_buyma": {
       "name": "Thug Club (BUYMA)",
@@ -352,31 +70,31 @@
         },
         {
           "rank": 8,
-          "name": "【Thug Club】TC Jogger pants◆",
-          "price": "¥19,990",
-          "image": "https://cdn-images.buyma.com/imgdata/item/240404/0105410478/645658658/210.jpg",
-          "url": "https://www.buyma.com/item/105410478/"
-        },
-        {
-          "rank": 9,
           "name": "★大人気★【Thug Club】TC PK Man★韓国発★",
           "price": "¥24,950",
           "image": "https://cdn-images.buyma.com/imgdata/item/250927/0123016774/726442476/210.jpg",
           "url": "https://www.buyma.com/item/123016774/"
         },
         {
-          "rank": 10,
-          "name": "【THUG CLUB】Thug Club Armor Hoodie◆",
-          "price": "¥20,700",
-          "image": "https://cdn-images.buyma.com/imgdata/item/240317/0104863674/608466674/210.jpg",
-          "url": "https://www.buyma.com/item/104863674/"
+          "rank": 9,
+          "name": "【Thug Club】TC Jogger pants◆",
+          "price": "¥19,990",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240404/0105410478/645658658/210.jpg",
+          "url": "https://www.buyma.com/item/105410478/"
         },
         {
-          "rank": 11,
+          "rank": 10,
           "name": "【Thug Club x Adidas】Adifom Iiinfinity Mule Core Black",
           "price": "¥21,970",
           "image": "https://cdn-images.buyma.com/imgdata/item/260322/0129624242/772009929/210.jpg",
           "url": "https://www.buyma.com/item/129624242/"
+        },
+        {
+          "rank": 11,
+          "name": "【THUG CLUB】Thug Club Armor Hoodie◆",
+          "price": "¥20,700",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240317/0104863674/608466674/210.jpg",
+          "url": "https://www.buyma.com/item/104863674/"
         },
         {
           "rank": 12,
@@ -646,17 +364,17 @@
         },
         {
           "rank": 9,
-          "name": "Stussy 8 Ball Tee Pigment Dyed \"Black\"",
-          "price": "¥10,900",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250312083428-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/223430"
-        },
-        {
-          "rank": 10,
           "name": "Stussy x Nike Washed Pants (US Size) \"Black\" DO5296-010",
           "price": "¥18,700",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230214060451-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/112426"
+        },
+        {
+          "rank": 10,
+          "name": "Stussy 8 Ball Tee Pigment Dyed \"Black\"",
+          "price": "¥10,900",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250312083428-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/223430"
         },
         {
           "rank": 11,
@@ -709,24 +427,24 @@
         },
         {
           "rank": 18,
+          "name": "Stussy × Nike SS 8 Ball T-Shirt \"White\"",
+          "price": "¥25,800",
+          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250414011837-0.webp?size=m",
+          "url": "https://snkrdunk.com/apparels/90387"
+        },
+        {
+          "rank": 19,
           "name": "Stussy Paris Tee \"Faded Black\"",
           "price": "¥8,000",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250916064239-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/698621"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "name": "Stussy x Wales Bonner Ocean Song Tee \"Ivory\"",
           "price": "¥11,000",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251101064501-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/704966"
-        },
-        {
-          "rank": 20,
-          "name": "Stussy × Nike SS 8 Ball T-Shirt \"White\"",
-          "price": "¥25,800",
-          "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250414011837-0.webp?size=m",
-          "url": "https://snkrdunk.com/apparels/90387"
         }
       ]
     },
@@ -787,7 +505,7 @@
         {
           "rank": 8,
           "name": "Supreme x MM6 Maison Margiela Box Logo Zip Up Hooded Sweatshirt \"Black\"",
-          "price": "¥81,489",
+          "price": "¥81,000",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/ac64dc36-688e-4c00-abfc-46cbf1ddeb70.webp?size=m",
           "url": "https://snkrdunk.com/apparels/781175"
         },
