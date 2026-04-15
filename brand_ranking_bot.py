@@ -46,11 +46,12 @@ def load_brands():
 # ──────────────────────────────────────────────────────────
 
 def _launch_stealth_browser(playwright):
-    """bot検知回避用のブラウザを起動する"""
+    """bot検知回避用のブラウザを起動する（CI: xvfb上のGUIモード）"""
     from playwright_stealth import Stealth
     stealth = Stealth()
+    # CI環境ではxvfb上でGUIモード起動（headless検知回避）
     browser = playwright.chromium.launch(
-        headless=True,
+        headless=not IS_CI,
         channel=None if IS_CI else "chrome",
         args=["--disable-blink-features=AutomationControlled"],
     )
