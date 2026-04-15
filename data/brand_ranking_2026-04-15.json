@@ -1,6 +1,6 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T13:27:45.325302",
+  "fetched_at": "2026-04-15T13:36:53.340253",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -1205,7 +1205,7 @@
         {
           "rank": 3,
           "name": "★SATUR★Small Logo Hood Zip-up",
-          "price": "¥11,220",
+          "price": "¥10,120",
           "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089297/752378126/210.jpg",
           "url": "https://www.buyma.com/item/127089297/"
         },
@@ -1246,17 +1246,17 @@
         },
         {
           "rank": 9,
-          "name": "★SATUR★Loren Small Logo Basic Sweatshirt",
-          "price": "¥8,920",
-          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089701/752386442/210.jpg",
-          "url": "https://www.buyma.com/item/127089701/"
-        },
-        {
-          "rank": 10,
           "name": "SATUR Classic Small Logo T-Shirt 5SA019",
           "price": "¥6,690",
           "image": "https://cdn-images.buyma.com/imgdata/item/250404/0117305598/693441137/210.jpg",
           "url": "https://www.buyma.com/item/117305598/"
+        },
+        {
+          "rank": 10,
+          "name": "★SATUR★Loren Small Logo Basic Sweatshirt",
+          "price": "¥7,920",
+          "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089701/752386442/210.jpg",
+          "url": "https://www.buyma.com/item/127089701/"
         },
         {
           "rank": 11,

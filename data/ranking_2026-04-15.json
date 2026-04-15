@@ -1,6 +1,6 @@
 {
   "date": "2026-04-15",
-  "fetched_at": "2026-04-15T13:23:44.958194",
+  "fetched_at": "2026-04-15T13:32:50.764973",
   "zara": {
     "source": "zara.com (official API)",
     "count": 20,
@@ -35,38 +35,38 @@
       },
       {
         "rank": 5,
-        "name": "ヘビーウェイトベーシックTシャツ /03",
-        "price": "¥2,990",
-        "image": "https://static.zara.net/assets/public/6123/2012/aa1b423fa564/ea28565b2b28/01887410800-e1/01887410800-e1.jpg?ts=1765797799497&w=563",
-        "url": "https://www.zara.com/jp/ja/-p01887410.html"
-      },
-      {
-        "rank": 6,
         "name": "コントラスト テクニカルジャケット",
         "price": "¥8,590",
         "image": "https://static.zara.net/assets/public/14ab/f1fe/871a4a21b82c/5c5725963e31/03918430800-e1/03918430800-e1.jpg?ts=1771240153762&w=563",
         "url": "https://www.zara.com/jp/ja/-p03918430.html"
       },
       {
-        "rank": 7,
+        "rank": 6,
         "name": "ロングスリーブTシャツ",
         "price": "¥5,990",
         "image": "https://static.zara.net/assets/public/685a/4bb8/e9a24cd2b28e/b8a15b91b15f/00722431803-e1/00722431803-e1.jpg?ts=1768821476698&w=563",
         "url": "https://www.zara.com/jp/ja/-p00722431.html"
       },
       {
-        "rank": 8,
+        "rank": 7,
         "name": "バック・トゥ・ザ・フューチャー© UCS LLC & AMBLIN X DYLAN´S T-SHIRT CLUB X ZARA イラストTシャツ",
         "price": "¥6,590",
         "image": "https://static.zara.net/assets/public/37aa/2116/4d6040d2938c/f4375810a187/06224858016-e1/06224858016-e1.jpg?ts=1775747113330&w=563",
         "url": "https://www.zara.com/jp/ja/-p06224858.html"
       },
       {
+        "rank": 8,
+        "name": "ヘビーウェイトベーシックTシャツ /03",
+        "price": "¥2,990",
+        "image": "https://static.zara.net/assets/public/6123/2012/aa1b423fa564/ea28565b2b28/01887410800-e1/01887410800-e1.jpg?ts=1765797799497&w=563",
+        "url": "https://www.zara.com/jp/ja/-p01887410.html"
+      },
+      {
         "rank": 9,
-        "name": "ダメージ加工バギーフィットデニムパンツ",
-        "price": "¥6,590",
-        "image": "https://static.zara.net/assets/public/0cb8/a211/90d94ee6a379/f485effa59e1/04048407400-e1/04048407400-e1.jpg?ts=1770655723876&w=563",
-        "url": "https://www.zara.com/jp/ja/-p04048407.html"
+        "name": "ベーシックリブタンクトップ",
+        "price": "¥2,590",
+        "image": "https://static.zara.net/assets/public/3b57/7e66/82be48bf87de/578294c20310/04087450250-e1/04087450250-e1.jpg?ts=1767867264397&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04087450.html"
       },
       {
         "rank": 10,
@@ -77,73 +77,73 @@
       },
       {
         "rank": 11,
-        "name": "ベーシックリブタンクトップ",
-        "price": "¥2,590",
-        "image": "https://static.zara.net/assets/public/3b57/7e66/82be48bf87de/578294c20310/04087450250-e1/04087450250-e1.jpg?ts=1767867264397&w=563",
-        "url": "https://www.zara.com/jp/ja/-p04087450.html"
-      },
-      {
-        "rank": 12,
         "name": "100% リネンジップアップシャツジャケット",
         "price": "¥10,990",
         "image": "https://static.zara.net/assets/public/fd6d/4fee/32e5476c8f2d/ca235c015a1e/08281112800-e1/08281112800-e1.jpg?ts=1770978538445&w=563",
         "url": "https://www.zara.com/jp/ja/-p08281112.html"
       },
       {
-        "rank": 13,
+        "rank": 12,
         "name": "リラックスフィットフルイドシャツ",
         "price": "¥6,590",
         "image": "https://static.zara.net/assets/public/cf9a/f460/451d426f81e1/1b143ad5084b/03715204472-e1/03715204472-e1.jpg?ts=1773668643078&w=563",
         "url": "https://www.zara.com/jp/ja/-p03715204.html"
       },
       {
-        "rank": 14,
+        "rank": 13,
         "name": "バギーフィットデニムパンツ",
         "price": "¥6,590",
         "image": "https://static.zara.net/assets/public/e38f/e7fc/d2394dfa87f2/79d2ba5569ea/04048407445-e1/04048407445-e1.jpg?ts=1770296424371&w=563",
         "url": "https://www.zara.com/jp/ja/-p04048407.html"
       },
       {
-        "rank": 15,
-        "name": "スタッズ付きカーペンターパンツ",
-        "price": "¥8,590",
-        "image": "https://static.zara.net/assets/public/99ea/4721/46f144cfa682/b19ca9859304/00108406401-e1/00108406401-e1.jpg?ts=1767022386110&w=563",
-        "url": "https://www.zara.com/jp/ja/-p00108406.html"
+        "rank": 14,
+        "name": "ダメージ加工バギーフィットデニムパンツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/0cb8/a211/90d94ee6a379/f485effa59e1/04048407400-e1/04048407400-e1.jpg?ts=1770655723876&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04048407.html"
       },
       {
-        "rank": 16,
+        "rank": 15,
         "name": "バレルフィットツイストシームデニムパンツ",
         "price": "¥10,990",
         "image": "https://static.zara.net/assets/public/3d89/7447/345c4d9dbbf1/c375df35aa70/00840469407-e1/00840469407-e1.jpg?ts=1775631104666&w=563",
         "url": "https://www.zara.com/jp/ja/-p00840469.html"
       },
       {
-        "rank": 17,
-        "name": "レザーペニーローファートラックソール",
-        "price": "¥10,990",
-        "image": "https://static.zara.net/assets/public/2b5a/ed50/9dcb4fba9641/8e521960a490/12666620800-e1/12666620800-e1.jpg?ts=1759139998503&w=563",
-        "url": "https://www.zara.com/jp/ja/-p12666620.html"
-      },
-      {
-        "rank": 18,
-        "name": "リブヘンリーネックTシャツ",
-        "price": "¥5,990",
-        "image": "https://static.zara.net/assets/public/f5ac/8904/ae9a4377849f/1bb0a4f5a83b/03665467922-e1/03665467922-e1.jpg?ts=1771841894981&w=563",
-        "url": "https://www.zara.com/jp/ja/-p03665467.html"
-      },
-      {
-        "rank": 19,
+        "rank": 16,
         "name": "ヘンリーネックTシャツ",
         "price": "¥5,290",
         "image": "https://static.zara.net/assets/public/fef0/7359/46844f13b0f6/d7c01da09a5a/00526403800-e1/00526403800-e1.jpg?ts=1765813441506&w=563",
         "url": "https://www.zara.com/jp/ja/-p00526403.html"
       },
       {
-        "rank": 20,
+        "rank": 17,
         "name": "リラックスフィットテクスチャー素材ジャケット",
         "price": "¥13,590",
         "image": "https://static.zara.net/assets/public/7d65/5d85/83a449409301/a2aece5b4c1d/01437602800-e1/01437602800-e1.jpg?ts=1773995441361&w=563",
         "url": "https://www.zara.com/jp/ja/-p01437602.html"
+      },
+      {
+        "rank": 18,
+        "name": "フルイドチェックシャツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/5095/c00a/d93a4d49bf55/9670abfc1d02/04437227084-e1/04437227084-e1.jpg?ts=1773759837376&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04437227.html"
+      },
+      {
+        "rank": 19,
+        "name": "バギーフィットデニムパンツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/4187/008a/f04a4e9e925e/7f5a8d9a9d41/04806409800-e1/04806409800-e1.jpg?ts=1770296415989&w=563",
+        "url": "https://www.zara.com/jp/ja/-p04048407.html"
+      },
+      {
+        "rank": 20,
+        "name": "リラックスフィットプリーツパンツ",
+        "price": "¥8,590",
+        "image": "https://static.zara.net/assets/public/01ab/0666/c7dc4c2c8baa/788891433922/00706950800-e1/00706950800-e1.jpg?ts=1754559534542&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00706950.html"
       }
     ]
   },
@@ -321,7 +321,7 @@
         "rank": 3,
         "name": "★SATUR★Small Logo Hood Zip-up",
         "brand": "SATUR",
-        "price": "¥11,220",
+        "price": "¥10,120",
         "image": "https://cdn-images.buyma.com/imgdata/item/260123/0127089297/752378126/210.jpg",
         "url": "https://www.buyma.com/item/127089297/"
       },
@@ -568,7 +568,7 @@
       {
         "rank": 15,
         "name": "Nike SB Dunk Low Pro Som Tum",
-        "price": "$148",
+        "price": "$145",
         "image": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Pro-Som-Tum-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837732",
         "url": "https://stockx.com/ja-jp/nike-sb-dunk-low-pro-som-tum"
       },
