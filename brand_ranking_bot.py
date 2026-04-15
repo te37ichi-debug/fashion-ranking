@@ -82,9 +82,16 @@ def fetch_adidas(max_items=20):
                 page.evaluate("window.scrollBy(0, 600)")
                 page.wait_for_timeout(800)
 
-            soup = BeautifulSoup(page.content(), "html.parser")
+            html = page.content()
+            soup = BeautifulSoup(html, "html.parser")
+
+            title = soup.title.string if soup.title else "no title"
+            print(f"[adidas] ページタイトル: {title}, HTML長: {len(html)}")
 
             cards = soup.select("article[class*='product-card']")
+            if not cards:
+                # フォールバック: data-testid や他のセレクタを試す
+                cards = soup.select("[data-testid*='product'], [class*='product-card'], [class*='plp-grid'] a[href*='/products/']")
             print(f"[adidas] カード数: {len(cards)}")
             seen_names = set()
             for card in cards:
@@ -172,9 +179,16 @@ def fetch_adidas_atmos(max_items=20):
                 page.evaluate("window.scrollBy(0, 600)")
                 page.wait_for_timeout(800)
 
-            soup = BeautifulSoup(page.content(), "html.parser")
+            html = page.content()
+            soup = BeautifulSoup(html, "html.parser")
+
+            title = soup.title.string if soup.title else "no title"
+            print(f"[adidas (atmos)] ページタイトル: {title}, HTML長: {len(html)}")
 
             cards = soup.select("li.lists-products-item")
+            if not cards:
+                # フォールバック: 他のセレクタを試す
+                cards = soup.select(".product-item, .product-card, [class*='product'] a[href*='/products/']")
             print(f"[adidas (atmos)] カード数: {len(cards)}")
             seen_urls = set()
             for card in cards:
