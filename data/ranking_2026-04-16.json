@@ -1,6 +1,6 @@
 {
   "date": "2026-04-16",
-  "fetched_at": "2026-04-16T02:17:25.982690",
+  "fetched_at": "2026-04-16T02:29:49.389090",
   "zara": {
     "source": "zara.com (official API)",
     "count": 20,
@@ -112,17 +112,17 @@
       },
       {
         "rank": 16,
-        "name": "ベーシックスリムフィットTシャツ",
-        "price": "¥2,990",
-        "image": "https://static.zara.net/assets/public/16bb/4bac/c9c24204820b/e71a4115243b/05584390800-e1/05584390800-e1.jpg?ts=1756718318042&w=563",
-        "url": "https://www.zara.com/jp/ja/-p06019390.html"
-      },
-      {
-        "rank": 17,
         "name": "TRPL PLT PNT",
         "price": "¥19,990",
         "image": "https://static.zara.net/assets/public/2e1b/c020/7ffa4f92805c/9cb2165729a5/04484320822-e1/04484320822-e1.jpg?ts=1775541536308&w=563",
         "url": "https://www.zara.com/jp/ja/-p04484320.html"
+      },
+      {
+        "rank": 17,
+        "name": "ベーシックスリムフィットTシャツ",
+        "price": "¥2,990",
+        "image": "https://static.zara.net/assets/public/16bb/4bac/c9c24204820b/e71a4115243b/05584390800-e1/05584390800-e1.jpg?ts=1756718318042&w=563",
+        "url": "https://www.zara.com/jp/ja/-p06019390.html"
       },
       {
         "rank": 18,
@@ -161,14 +161,6 @@
       },
       {
         "rank": 2,
-        "name": "SHARPER - 809 (a)",
-        "brand": "KINCHI",
-        "price": "¥40,622",
-        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20260209/5999527/5999527_17742591803727_big.jpg",
-        "url": "https://global.musinsa.com/jp/goods/5999527"
-      },
-      {
-        "rank": 3,
         "name": "カーペンターパティグワークコットンパンツ(SAND GREY)",
         "brand": "TOFFEE",
         "price": "¥6,298",
@@ -176,15 +168,7 @@
         "url": "https://global.musinsa.com/jp/goods/4319523"
       },
       {
-        "rank": 4,
-        "name": "SNYDER DISTRESSED DENIM (BLUE)",
-        "brand": "2000ARCHIVES",
-        "price": "¥35,716",
-        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20260403/6250087/6250087_17760701268577_big.jpg",
-        "url": "https://global.musinsa.com/jp/goods/6250087"
-      },
-      {
-        "rank": 5,
+        "rank": 3,
         "name": "SNYDER WIDE DENIM (INDIGO)",
         "brand": "2000ARCHIVES",
         "price": "¥29,739",
@@ -192,7 +176,7 @@
         "url": "https://global.musinsa.com/jp/goods/6250081"
       },
       {
-        "rank": 6,
+        "rank": 4,
         "name": "ソンイソンイxヤセプラットフォームドットスニーカーライトグレー",
         "brand": "YASE",
         "price": "¥22,928",
@@ -200,7 +184,7 @@
         "url": "https://global.musinsa.com/jp/goods/6124863"
       },
       {
-        "rank": 7,
+        "rank": 5,
         "name": "ラグダービー R26H920 / ホースレザー ブラック",
         "brand": "ROMANTIC MOVE",
         "price": "¥15,927",
@@ -208,7 +192,7 @@
         "url": "https://global.musinsa.com/jp/goods/6078106"
       },
       {
-        "rank": 8,
+        "rank": 6,
         "name": "[シティレジャー] シアウィンドブレーカー ジャケット [ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥5,223",
@@ -216,7 +200,7 @@
         "url": "https://global.musinsa.com/jp/goods/3793565"
       },
       {
-        "rank": 9,
+        "rank": 7,
         "name": "ベーシッククルーネックTシャツ[ネイビー]",
         "brand": "MUSINSA STANDARD",
         "price": "¥1,860",
@@ -224,7 +208,7 @@
         "url": "https://global.musinsa.com/jp/goods/996501"
       },
       {
-        "rank": 10,
+        "rank": 8,
         "name": "リアルワイドヒドゥンバンディングスラックス[ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥4,449",
@@ -232,7 +216,7 @@
         "url": "https://global.musinsa.com/jp/goods/1168922"
       },
       {
-        "rank": 11,
+        "rank": 9,
         "name": "dress (black)",
         "brand": "PEMONT",
         "price": "¥18,799",
@@ -240,7 +224,7 @@
         "url": "https://global.musinsa.com/jp/goods/3115168"
       },
       {
-        "rank": 12,
+        "rank": 10,
         "name": "セミワイド隠しバンディングスラックス[ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥5,112",
@@ -248,7 +232,7 @@
         "url": "https://global.musinsa.com/jp/goods/1149329"
       },
       {
-        "rank": 13,
+        "rank": 11,
         "name": "Deep One Tuck Sweat Pants [ブラック]",
         "brand": "XERO",
         "price": "¥3,506",
@@ -256,7 +240,7 @@
         "url": "https://global.musinsa.com/jp/goods/1551839"
       },
       {
-        "rank": 14,
+        "rank": 12,
         "name": "[2PACK] 190g シングル ザ レガシー 半袖Tシャツ (JR5TSU153BK)",
         "brand": "JEEP",
         "price": "¥4,983",
@@ -264,7 +248,7 @@
         "url": "https://global.musinsa.com/jp/goods/2518417"
       },
       {
-        "rank": 15,
+        "rank": 13,
         "name": "Deep One Tuck Sweat Pants [Grey]",
         "brand": "XERO",
         "price": "¥3,506",
@@ -272,7 +256,7 @@
         "url": "https://global.musinsa.com/jp/goods/1551840"
       },
       {
-        "rank": 16,
+        "rank": 14,
         "name": "リラックスベーシックブレザー[ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥9,293",
@@ -280,7 +264,7 @@
         "url": "https://global.musinsa.com/jp/goods/1558197"
       },
       {
-        "rank": 17,
+        "rank": 15,
         "name": "ワンタッチワイドスウェットパンツブラック",
         "brand": "GAKKAI UNIONS",
         "price": "¥3,506",
@@ -288,12 +272,28 @@
         "url": "https://global.musinsa.com/jp/goods/2112061"
       },
       {
-        "rank": 18,
+        "rank": 16,
         "name": "クロップムーブカーディガン[ネイビー]",
         "brand": "MILLO ARCHIVE",
         "price": "¥9,708",
         "image": "https://image.msscdn.net/thumbnails/images/goods_img/20240909/4419823/4419823_17259531168323_big.jpg",
         "url": "https://global.musinsa.com/jp/goods/4419823"
+      },
+      {
+        "rank": 17,
+        "name": "OVATE - 500 (a) / BLACK",
+        "brand": "KINCHI",
+        "price": "¥35,363",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20230918/3568935/3568935_16995104812799_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/3568935"
+      },
+      {
+        "rank": 18,
+        "name": "マウンテンロングスリーブ（ホワイト/レッド）",
+        "brand": "TANSANMAGNESIUM",
+        "price": "¥7,366",
+        "image": "https://image.msscdn.net/thumbnails/global_images/goods_img/20250909/5432652/5432652_17667249983002_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/5432652"
       }
     ]
   },
