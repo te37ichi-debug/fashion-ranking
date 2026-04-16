@@ -1,6 +1,6 @@
 {
   "date": "2026-04-16",
-  "fetched_at": "2026-04-16T01:16:12.781162",
+  "fetched_at": "2026-04-16T01:29:21.833842",
   "zara": {
     "source": "zara.com (official API)",
     "count": 20,
@@ -28,17 +28,17 @@
       },
       {
         "rank": 4,
-        "name": "ヘンリーネックワッフルニットTシャツ",
-        "price": "¥6,590",
-        "image": "https://static.zara.net/assets/public/00c0/5127/7bde4cd38e43/00e0213e837d/00526444898-e1/00526444898-e1.jpg?ts=1772093314414&w=563",
-        "url": "https://www.zara.com/jp/ja/-p00526444.html"
-      },
-      {
-        "rank": 5,
         "name": "ロングスリーブTシャツ",
         "price": "¥5,990",
         "image": "https://static.zara.net/assets/public/685a/4bb8/e9a24cd2b28e/b8a15b91b15f/00722431803-e1/00722431803-e1.jpg?ts=1768821476698&w=563",
         "url": "https://www.zara.com/jp/ja/-p00722431.html"
+      },
+      {
+        "rank": 5,
+        "name": "ヘンリーネックワッフルニットTシャツ",
+        "price": "¥6,590",
+        "image": "https://static.zara.net/assets/public/00c0/5127/7bde4cd38e43/00e0213e837d/00526444898-e1/00526444898-e1.jpg?ts=1772093314414&w=563",
+        "url": "https://www.zara.com/jp/ja/-p00526444.html"
       },
       {
         "rank": 6,
@@ -49,17 +49,17 @@
       },
       {
         "rank": 7,
-        "name": "コントラスト テクニカルジャケット",
-        "price": "¥8,590",
-        "image": "https://static.zara.net/assets/public/14ab/f1fe/871a4a21b82c/5c5725963e31/03918430800-e1/03918430800-e1.jpg?ts=1771240153762&w=563",
-        "url": "https://www.zara.com/jp/ja/-p03918430.html"
-      },
-      {
-        "rank": 8,
         "name": "フルイドチェックシャツ",
         "price": "¥6,590",
         "image": "https://static.zara.net/assets/public/5095/c00a/d93a4d49bf55/9670abfc1d02/04437227084-e1/04437227084-e1.jpg?ts=1773759837376&w=563",
         "url": "https://www.zara.com/jp/ja/-p04437227.html"
+      },
+      {
+        "rank": 8,
+        "name": "コントラスト テクニカルジャケット",
+        "price": "¥8,590",
+        "image": "https://static.zara.net/assets/public/14ab/f1fe/871a4a21b82c/5c5725963e31/03918430800-e1/03918430800-e1.jpg?ts=1771240153762&w=563",
+        "url": "https://www.zara.com/jp/ja/-p03918430.html"
       },
       {
         "rank": 9,
@@ -140,10 +140,10 @@
       },
       {
         "rank": 20,
-        "name": "バギーフィットデニムパンツ",
-        "price": "¥6,590",
-        "image": "https://static.zara.net/assets/public/e14c/be25/42584affa16f/bef0d3975ad2/04048330802-e1/04048330802-e1.jpg?ts=1756974107580&w=563",
-        "url": "https://www.zara.com/jp/ja/-p04806330.html"
+        "name": "テクニカルプリーツジョガーパンツ",
+        "price": "¥8,590",
+        "image": "https://static.zara.net/assets/public/a260/4fbb/b87e46319bba/5858deee10df/06318416800-e1/06318416800-e1.jpg?ts=1771242748225&w=563",
+        "url": "https://www.zara.com/jp/ja/-p06318416.html"
       }
     ]
   },
@@ -233,14 +233,6 @@
       },
       {
         "rank": 11,
-        "name": "BOATY - 844 (a) / BROWN",
-        "brand": "KINCHI",
-        "price": "¥27,476",
-        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20250527/5150899/5150899_17500384307768_big.jpg",
-        "url": "https://global.musinsa.com/jp/goods/5150899"
-      },
-      {
-        "rank": 12,
         "name": "ラグダービー R26H920 / ホースレザー ブラック",
         "brand": "ROMANTIC MOVE",
         "price": "¥15,927",
@@ -248,7 +240,7 @@
         "url": "https://global.musinsa.com/jp/goods/6078106"
       },
       {
-        "rank": 13,
+        "rank": 12,
         "name": "[シティレジャー] シアウィンドブレーカー ジャケット [ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥5,223",
@@ -256,7 +248,7 @@
         "url": "https://global.musinsa.com/jp/goods/3793565"
       },
       {
-        "rank": 14,
+        "rank": 13,
         "name": "ベーシッククルーネックTシャツ[ネイビー]",
         "brand": "MUSINSA STANDARD",
         "price": "¥1,860",
@@ -264,7 +256,7 @@
         "url": "https://global.musinsa.com/jp/goods/996501"
       },
       {
-        "rank": 15,
+        "rank": 14,
         "name": "リアルワイドヒドゥンバンディングスラックス[ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥4,449",
@@ -272,7 +264,7 @@
         "url": "https://global.musinsa.com/jp/goods/1168922"
       },
       {
-        "rank": 16,
+        "rank": 15,
         "name": "dress (black)",
         "brand": "PEMONT",
         "price": "¥18,799",
@@ -280,7 +272,7 @@
         "url": "https://global.musinsa.com/jp/goods/3115168"
       },
       {
-        "rank": 17,
+        "rank": 16,
         "name": "モーションフレックス オブシディアンブラック",
         "brand": "AKIII CLASSIC",
         "price": "¥11,124",
@@ -288,12 +280,20 @@
         "url": "https://global.musinsa.com/jp/goods/4817487"
       },
       {
-        "rank": 18,
+        "rank": 17,
         "name": "セミワイド隠しバンディングスラックス[ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥5,112",
         "image": "https://image.msscdn.net/thumbnails/images/goods_img/20190910/1149329/1149329_17518465143526_big.jpg",
         "url": "https://global.musinsa.com/jp/goods/1149329"
+      },
+      {
+        "rank": 18,
+        "name": "Deep One Tuck Sweat Pants [ブラック]",
+        "brand": "XERO",
+        "price": "¥3,506",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20200818/1551839/1551839_1_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/1551839"
       }
     ]
   },
