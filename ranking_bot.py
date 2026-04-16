@@ -45,6 +45,7 @@ def fetch_zozotown(max_items=20):
             "api_key": SCRAPER_API_KEY,
             "url": "https://zozo.jp/ranking/all-sales-men.html",
             "country_code": "jp",
+            "render": "true",
         }
         resp = requests.get("https://api.scraperapi.com", params=params, timeout=120)
         resp.raise_for_status()
