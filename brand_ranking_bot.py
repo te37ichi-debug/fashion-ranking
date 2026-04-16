@@ -1119,9 +1119,9 @@ def save_html(brand_results, BRANDS):
             </div>''')
         return "\n".join(rows)
 
-    # 目次
-    toc_items = "\n".join(
-        f'    <li><a href="#{key}">{conf["name"]}</a></li>'
+    # プルダウン用のoption
+    select_options = "\n".join(
+        f'      <option value="#{key}">{conf["name"]}</option>'
         for key, conf in BRANDS.items()
     )
 
@@ -1171,53 +1171,45 @@ def save_html(brand_results, BRANDS):
   .price {{ display: block; font-size: 0.9em; font-weight: 600; color: #e44; }}
   .empty {{ color: #aaa; text-align: center; padding: 40px; }}
   .count {{ font-size: 0.8em; color: #999; font-weight: normal; }}
-  nav.toc {{ position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #ffffff; margin: 0; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }}
-  nav.toc ul {{ list-style: none; display: flex; flex-wrap: wrap; gap: 0; margin: 0; padding: 0; justify-content: center; }}
-  nav.toc li {{ flex-shrink: 0; }}
-  nav.toc li a {{ display: block; padding: 10px 14px; color: #555; text-decoration: none; font-size: 12px; font-weight: 600; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }}
-  nav.toc li a:hover, nav.toc li a.active {{ color: #000; border-bottom-color: #000; }}
-  @media (max-width: 600px) {{
-    body {{ padding-top: 80px; }}
-    nav.toc ul {{ justify-content: flex-start; }}
-    nav.toc li a {{ padding: 8px 11px; font-size: 11px; }}
-    .section {{ scroll-margin-top: 80px; }}
-  }}
-  .section {{ scroll-margin-top: 52px; }}
+  nav.toc {{ position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #ffffff; margin: 0; padding: 10px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 12px; }}
+  nav.toc select {{ flex: 1; padding: 10px 12px; font-size: 14px; font-weight: 600; border: 2px solid #ddd; border-radius: 8px; background: #fff; color: #333; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }}
+  nav.toc select:focus {{ outline: none; border-color: #333; }}
+  nav.toc .brand-count {{ font-size: 12px; color: #888; white-space: nowrap; }}
+  .section {{ scroll-margin-top: 60px; }}
   .btn-all {{ display: block; margin: 16px auto 0; padding: 10px 24px; background: #333; color: #fff; border: none; border-radius: 8px; font-size: 0.85em; font-weight: 600; text-decoration: none; text-align: center; width: fit-content; transition: background 0.2s; }}
   .btn-all:hover {{ background: #555; }}
 </style>
 </head>
 <body>
 <nav class="toc">
-  <ul>
-{toc_items}
-  </ul>
+  <select id="brand-select">
+    <option value="">ブランドを選択...</option>
+{select_options}
+  </select>
+  <span class="brand-count">{len(BRANDS)}ブランド</span>
 </nav>
 <h1>ブランド新着情報&人気ランキング</h1>
 <p class="date">{TODAY}</p>
 {sections}
 <script>
 (function(){{
-  var links = document.querySelectorAll('.toc a');
-  var sections = [];
-  links.forEach(function(a){{
-    var s = document.querySelector(a.getAttribute('href'));
-    if(s) sections.push({{el:s, link:a}});
-  }});
-  function update(){{
-    var scrollY = window.scrollY + 60;
-    var current = sections[0];
-    sections.forEach(function(s){{
-      if(s.el.offsetTop <= scrollY) current = s;
-    }});
-    links.forEach(function(a){{ a.classList.remove('active'); }});
-    if(current) {{
-      current.link.classList.add('active');
-      var nav = document.querySelector('.toc ul');
-      var linkLeft = current.link.offsetLeft;
-      var navWidth = nav.offsetWidth;
-      nav.scrollTo({{left: linkLeft - navWidth/2 + current.link.offsetWidth/2, behavior:'smooth'}});
+  var sel = document.getElementById('brand-select');
+  var sections = Array.from(document.querySelectorAll('.section'));
+
+  sel.addEventListener('change', function(){{
+    if(sel.value) {{
+      var target = document.querySelector(sel.value);
+      if(target) target.scrollIntoView({{behavior:'smooth'}});
     }}
+  }});
+
+  function update(){{
+    var scrollY = window.scrollY + 80;
+    var current = '';
+    sections.forEach(function(s){{
+      if(s.offsetTop <= scrollY) current = '#' + s.id;
+    }});
+    if(current && sel.value !== current) sel.value = current;
   }}
   window.addEventListener('scroll', update, {{passive:true}});
   update();
