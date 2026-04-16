@@ -112,23 +112,25 @@ def fetch_zozotown(max_items=20):
     finally:
         driver.quit()
 
-    # 方法2: ScraperAPI フォールバック
+    # 方法2: ScraperAPI フォールバック（render=false → SSR HTML取得）
     if SCRAPER_API_KEY:
-        try:
-            params = {
-                "api_key": SCRAPER_API_KEY,
-                "url": "https://zozo.jp/ranking/all-sales-men.html",
-                "country_code": "jp",
-                "render": "true",
-                "premium": "true",
-            }
-            resp = requests.get("https://api.scraperapi.com", params=params, timeout=180)
-            resp.raise_for_status()
-            items = _parse_zozotown_html(resp.text, max_items)
-            if items:
-                return items
-        except Exception as e:
-            print(f"[ZOZOTOWN] ScraperAPI取得失敗: {e}")
+        for render in [False, True]:
+            try:
+                params = {
+                    "api_key": SCRAPER_API_KEY,
+                    "url": "https://zozo.jp/ranking/all-sales-men.html",
+                    "country_code": "jp",
+                }
+                if render:
+                    params["render"] = "true"
+                print(f"[ZOZOTOWN] ScraperAPI (render={render}) で取得中...")
+                resp = requests.get("https://api.scraperapi.com", params=params, timeout=180)
+                resp.raise_for_status()
+                items = _parse_zozotown_html(resp.text, max_items)
+                if items:
+                    return items
+            except Exception as e:
+                print(f"[ZOZOTOWN] ScraperAPI (render={render}) 失敗: {e}")
 
     print("[ZOZOTOWN] 0 件取得")
     return []
