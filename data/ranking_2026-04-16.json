@@ -1,6 +1,6 @@
 {
   "date": "2026-04-16",
-  "fetched_at": "2026-04-16T02:03:25.631871",
+  "fetched_at": "2026-04-16T02:17:25.982690",
   "zara": {
     "source": "zara.com (official API)",
     "count": 20,
@@ -201,14 +201,6 @@
       },
       {
         "rank": 7,
-        "name": "EVERYDAYNESS DENIM (BLUE)",
-        "brand": "2000ARCHIVES",
-        "price": "¥32,562",
-        "image": "https://image.msscdn.net/thumbnails/global_images/goods_img/20250709/5234692/5234692_17534243771583_big.jpg",
-        "url": "https://global.musinsa.com/jp/goods/5234692"
-      },
-      {
-        "rank": 8,
         "name": "ラグダービー R26H920 / ホースレザー ブラック",
         "brand": "ROMANTIC MOVE",
         "price": "¥15,927",
@@ -216,7 +208,7 @@
         "url": "https://global.musinsa.com/jp/goods/6078106"
       },
       {
-        "rank": 9,
+        "rank": 8,
         "name": "[シティレジャー] シアウィンドブレーカー ジャケット [ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥5,223",
@@ -224,7 +216,7 @@
         "url": "https://global.musinsa.com/jp/goods/3793565"
       },
       {
-        "rank": 10,
+        "rank": 9,
         "name": "ベーシッククルーネックTシャツ[ネイビー]",
         "brand": "MUSINSA STANDARD",
         "price": "¥1,860",
@@ -232,7 +224,7 @@
         "url": "https://global.musinsa.com/jp/goods/996501"
       },
       {
-        "rank": 11,
+        "rank": 10,
         "name": "リアルワイドヒドゥンバンディングスラックス[ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥4,449",
@@ -240,7 +232,7 @@
         "url": "https://global.musinsa.com/jp/goods/1168922"
       },
       {
-        "rank": 12,
+        "rank": 11,
         "name": "dress (black)",
         "brand": "PEMONT",
         "price": "¥18,799",
@@ -248,7 +240,7 @@
         "url": "https://global.musinsa.com/jp/goods/3115168"
       },
       {
-        "rank": 13,
+        "rank": 12,
         "name": "セミワイド隠しバンディングスラックス[ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥5,112",
@@ -256,7 +248,7 @@
         "url": "https://global.musinsa.com/jp/goods/1149329"
       },
       {
-        "rank": 14,
+        "rank": 13,
         "name": "Deep One Tuck Sweat Pants [ブラック]",
         "brand": "XERO",
         "price": "¥3,506",
@@ -264,7 +256,7 @@
         "url": "https://global.musinsa.com/jp/goods/1551839"
       },
       {
-        "rank": 15,
+        "rank": 14,
         "name": "[2PACK] 190g シングル ザ レガシー 半袖Tシャツ (JR5TSU153BK)",
         "brand": "JEEP",
         "price": "¥4,983",
@@ -272,15 +264,7 @@
         "url": "https://global.musinsa.com/jp/goods/2518417"
       },
       {
-        "rank": 16,
-        "name": "Buffalo Leather S.Rider Jacket Black",
-        "brand": "ESPIONAGE",
-        "price": "¥55,731",
-        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20251222/5844915/5844915_17703426842551_big.jpg",
-        "url": "https://global.musinsa.com/jp/goods/5844915"
-      },
-      {
-        "rank": 17,
+        "rank": 15,
         "name": "Deep One Tuck Sweat Pants [Grey]",
         "brand": "XERO",
         "price": "¥3,506",
@@ -288,12 +272,28 @@
         "url": "https://global.musinsa.com/jp/goods/1551840"
       },
       {
-        "rank": 18,
+        "rank": 16,
         "name": "リラックスベーシックブレザー[ブラック]",
         "brand": "MUSINSA STANDARD",
         "price": "¥9,293",
         "image": "https://image.msscdn.net/thumbnails/images/goods_img/20200820/1558197/1558197_17721583556525_big.jpg",
         "url": "https://global.musinsa.com/jp/goods/1558197"
+      },
+      {
+        "rank": 17,
+        "name": "ワンタッチワイドスウェットパンツブラック",
+        "brand": "GAKKAI UNIONS",
+        "price": "¥3,506",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20210906/2112061/2112061_17459952841713_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/2112061"
+      },
+      {
+        "rank": 18,
+        "name": "クロップムーブカーディガン[ネイビー]",
+        "brand": "MILLO ARCHIVE",
+        "price": "¥9,708",
+        "image": "https://image.msscdn.net/thumbnails/images/goods_img/20240909/4419823/4419823_17259531168323_big.jpg",
+        "url": "https://global.musinsa.com/jp/goods/4419823"
       }
     ]
   },
