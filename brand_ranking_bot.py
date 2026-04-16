@@ -1321,7 +1321,7 @@ def post_to_discord(brand_results, BRANDS):
         rest_names = "、".join(BRANDS[k]["name"] for k in rest)
         footer_lines.append(f"**⚡️ その他のブランド更新**\n{rest_names}")
 
-    footer_lines.append(f"\n**📋 監視中の全ブランド（{len(base_brands)}件）**\n{' / '.join(base_brands)}")
+    footer_lines.append(f"\n**📋 チェック中の全ブランド（{len(base_brands)}件）**\n{' / '.join(base_brands)}")
     footer_lines.append(f"\n全ブランドの詳細はこちら 👉 {PAGES_URL}")
 
     time.sleep(0.5)
