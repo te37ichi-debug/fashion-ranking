@@ -36,53 +36,102 @@ def ensure_output_dir():
 
 # ─── ZOZOTOWN (undetected-chromedriver) ────────────────────
 
+def _parse_zozotown_html(html, max_items=20):
+    """ZOZOTOWNのHTMLから商品リストをパース"""
+    items = []
+    soup = BeautifulSoup(html, "html.parser")
+
+    title = soup.title.string if soup.title else "no title"
+    print(f"[ZOZOTOWN] ページタイトル: {title}, HTML長: {len(html)}")
+
+    product_elements = soup.select("li.catalog-item")
+    print(f"[ZOZOTOWN] {len(product_elements)} 件の商品を検出")
+
+    for i, el in enumerate(product_elements[:max_items], 1):
+        name_el = el.select_one(".catalog-property")
+        brand_el = el.select_one(".catalog-header-h")
+        price_el = el.select_one(".catalog-price-number")
+        img_el = el.select_one("img.catalog-img")
+        link_el = el.select_one("a.catalog-link")
+
+        name = name_el.get_text(strip=True) if name_el else ""
+        brand = brand_el.get_text(strip=True) if brand_el else ""
+        price = f"¥{price_el.get_text(strip=True)}" if price_el else ""
+        image = img_el.get("src", "") if img_el else ""
+        url = ""
+        if link_el:
+            href = link_el.get("href", "")
+            url = href if href.startswith("http") else f"https://zozo.jp{href}" if href else ""
+
+        if name:
+            items.append({"rank": i, "name": name, "brand": brand, "price": price, "image": image, "url": url})
+
+    return items
+
+
 def fetch_zozotown(max_items=20):
     print("[ZOZOTOWN] ランキングページ取得中...")
-    items = []
+
+    # 方法1: undetected-chromedriver（xvfb上のGUIモード）
+    import undetected_chromedriver as uc
+
+    options = uc.ChromeOptions()
+    options.add_argument("--lang=ja-JP")
+    options.add_argument("--window-size=1280,720")
+
+    chrome_path = os.environ.get("CHROME_PATH")
+    if chrome_path:
+        options.binary_location = chrome_path
+    version_main = None
+    if IS_CI and chrome_path:
+        import subprocess as _sp
+        try:
+            out = _sp.check_output([chrome_path, "--version"], text=True)
+            version_main = int(out.strip().split()[-1].split(".")[0])
+        except Exception:
+            pass
+    elif not IS_CI:
+        version_main = 146
+    driver = uc.Chrome(options=options, headless=False, version_main=version_main)
 
     try:
-        params = {
-            "api_key": SCRAPER_API_KEY,
-            "url": "https://zozo.jp/ranking/all-sales-men.html",
-            "country_code": "jp",
-            "render": "true",
-            "premium": "true",
-        }
-        resp = requests.get("https://api.scraperapi.com", params=params, timeout=180)
-        resp.raise_for_status()
-        html = resp.text
-        soup = BeautifulSoup(html, "html.parser")
+        driver.get("https://zozo.jp/ranking/all-sales-men.html")
+        time.sleep(8)
 
-        title = soup.title.string if soup.title else "no title"
-        print(f"[ZOZOTOWN] ページタイトル: {title}, HTML長: {len(html)}")
+        if "Access Denied" not in driver.page_source:
+            for _ in range(8):
+                driver.execute_script("window.scrollBy(0, 600)")
+                time.sleep(0.6)
+            items = _parse_zozotown_html(driver.page_source, max_items)
+            if items:
+                return items
 
-        product_elements = soup.select("li.catalog-item")
-        print(f"[ZOZOTOWN] {len(product_elements)} 件の商品を検出")
-
-        for i, el in enumerate(product_elements[:max_items], 1):
-            name_el = el.select_one(".catalog-property")
-            brand_el = el.select_one(".catalog-header-h")
-            price_el = el.select_one(".catalog-price-number")
-            img_el = el.select_one("img.catalog-img")
-            link_el = el.select_one("a.catalog-link")
-
-            name = name_el.get_text(strip=True) if name_el else ""
-            brand = brand_el.get_text(strip=True) if brand_el else ""
-            price = f"¥{price_el.get_text(strip=True)}" if price_el else ""
-            image = img_el.get("src", "") if img_el else ""
-            url = ""
-            if link_el:
-                href = link_el.get("href", "")
-                url = href if href.startswith("http") else f"https://zozo.jp{href}" if href else ""
-
-            if name:
-                items.append({"rank": i, "name": name, "brand": brand, "price": price, "image": image, "url": url})
-
+        print("[ZOZOTOWN] undetected-chromedriver でブロック、ScraperAPIにフォールバック...")
     except Exception as e:
-        print(f"[ZOZOTOWN] ScraperAPI取得失敗: {e}")
+        print(f"[ZOZOTOWN] chromedriver エラー: {e}")
+    finally:
+        driver.quit()
 
-    print(f"[ZOZOTOWN] {len(items)} 件取得")
-    return items
+    # 方法2: ScraperAPI フォールバック
+    if SCRAPER_API_KEY:
+        try:
+            params = {
+                "api_key": SCRAPER_API_KEY,
+                "url": "https://zozo.jp/ranking/all-sales-men.html",
+                "country_code": "jp",
+                "render": "true",
+                "premium": "true",
+            }
+            resp = requests.get("https://api.scraperapi.com", params=params, timeout=180)
+            resp.raise_for_status()
+            items = _parse_zozotown_html(resp.text, max_items)
+            if items:
+                return items
+        except Exception as e:
+            print(f"[ZOZOTOWN] ScraperAPI取得失敗: {e}")
+
+    print("[ZOZOTOWN] 0 件取得")
+    return []
 
 
 # ─── ZARA (公式サイト API / undetected-chromedriver) ───────
