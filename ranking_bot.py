@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
 Fashion Ranking Bot
-ZARA・MUSINSA・スニーカーダンク・ZOZOTOWN の人気ランキングを取得・保存するスクリプト
+ZARA・MUSINSA・スニーカーダンク 等の人気ランキングを取得・保存するスクリプト
 
 - ZARA: 公式サイト内部 API (undetected-chromedriver)
 - MUSINSA: 日本サイト (global.musinsa.com/jp)
 - スニーカーダンク: 人気スニーカー + ストリートウェア
-- ZOZOTOWN: undetected-chromedriver で Akamai WAF 回避
 """
 
 import json
@@ -32,108 +31,6 @@ SCRAPER_API_KEY = os.environ.get("SCRAPER_API_KEY", "")
 
 def ensure_output_dir():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-
-# ─── ZOZOTOWN (undetected-chromedriver) ────────────────────
-
-def _parse_zozotown_html(html, max_items=20):
-    """ZOZOTOWNのHTMLから商品リストをパース"""
-    items = []
-    soup = BeautifulSoup(html, "html.parser")
-
-    title = soup.title.string if soup.title else "no title"
-    print(f"[ZOZOTOWN] ページタイトル: {title}, HTML長: {len(html)}")
-
-    product_elements = soup.select("li.catalog-item")
-    print(f"[ZOZOTOWN] {len(product_elements)} 件の商品を検出")
-
-    for i, el in enumerate(product_elements[:max_items], 1):
-        name_el = el.select_one(".catalog-property")
-        brand_el = el.select_one(".catalog-header-h")
-        price_el = el.select_one(".catalog-price-number")
-        img_el = el.select_one("img.catalog-img")
-        link_el = el.select_one("a.catalog-link")
-
-        name = name_el.get_text(strip=True) if name_el else ""
-        brand = brand_el.get_text(strip=True) if brand_el else ""
-        price = f"¥{price_el.get_text(strip=True)}" if price_el else ""
-        image = img_el.get("src", "") if img_el else ""
-        url = ""
-        if link_el:
-            href = link_el.get("href", "")
-            url = href if href.startswith("http") else f"https://zozo.jp{href}" if href else ""
-
-        if name:
-            items.append({"rank": i, "name": name, "brand": brand, "price": price, "image": image, "url": url})
-
-    return items
-
-
-def fetch_zozotown(max_items=20):
-    print("[ZOZOTOWN] ランキングページ取得中...")
-
-    # 方法1: undetected-chromedriver（xvfb上のGUIモード）
-    import undetected_chromedriver as uc
-
-    options = uc.ChromeOptions()
-    options.add_argument("--lang=ja-JP")
-    options.add_argument("--window-size=1280,720")
-
-    chrome_path = os.environ.get("CHROME_PATH")
-    if chrome_path:
-        options.binary_location = chrome_path
-    version_main = None
-    if IS_CI and chrome_path:
-        import subprocess as _sp
-        try:
-            out = _sp.check_output([chrome_path, "--version"], text=True)
-            version_main = int(out.strip().split()[-1].split(".")[0])
-        except Exception:
-            pass
-    elif not IS_CI:
-        version_main = 146
-    driver = uc.Chrome(options=options, headless=False, version_main=version_main)
-
-    try:
-        driver.get("https://zozo.jp/ranking/all-sales-men.html")
-        time.sleep(8)
-
-        if "Access Denied" not in driver.page_source:
-            for _ in range(8):
-                driver.execute_script("window.scrollBy(0, 600)")
-                time.sleep(0.6)
-            items = _parse_zozotown_html(driver.page_source, max_items)
-            if items:
-                return items
-
-        print("[ZOZOTOWN] undetected-chromedriver でブロック、ScraperAPIにフォールバック...")
-    except Exception as e:
-        print(f"[ZOZOTOWN] chromedriver エラー: {e}")
-    finally:
-        driver.quit()
-
-    # 方法2: ScraperAPI フォールバック（render=false → SSR HTML取得）
-    if SCRAPER_API_KEY:
-        for render in [False, True]:
-            try:
-                params = {
-                    "api_key": SCRAPER_API_KEY,
-                    "url": "https://zozo.jp/ranking/all-sales-men.html",
-                    "country_code": "jp",
-                }
-                if render:
-                    params["render"] = "true"
-                print(f"[ZOZOTOWN] ScraperAPI (render={render}) で取得中...")
-                resp = requests.get("https://api.scraperapi.com", params=params, timeout=180)
-                resp.raise_for_status()
-                items = _parse_zozotown_html(resp.text, max_items)
-                if items:
-                    return items
-            except Exception as e:
-                print(f"[ZOZOTOWN] ScraperAPI (render={render}) 失敗: {e}")
-
-    print("[ZOZOTOWN] 0 件取得")
-    return []
 
 
 # ─── ZARA (公式サイト API / undetected-chromedriver) ───────
@@ -745,7 +642,7 @@ def fetch_snkrdunk_apparel(max_items=20):
 
 # ─── 保存 (JSON + HTML) ───────────────────────────────────
 
-def save_json(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snkr_apparel, zozotown):
+def save_json(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snkr_apparel):
     ensure_output_dir()
 
     result = {
@@ -791,11 +688,6 @@ def save_json(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
             "count": len(snkr_apparel),
             "items": snkr_apparel,
         },
-        "zozotown": {
-            "source": "zozo.jp (undetected-chromedriver)" if zozotown else "取得失敗",
-            "count": len(zozotown),
-            "items": zozotown,
-        },
     }
 
     filepath = os.path.join(OUTPUT_DIR, f"ranking_{TODAY}.json")
@@ -806,7 +698,7 @@ def save_json(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
     return filepath
 
 
-def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snkr_apparel, zozotown):
+def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snkr_apparel):
     ensure_output_dir()
 
     def render_items(items, show_brand=False):
@@ -906,7 +798,6 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
     <li><a href="#farfetch">FARFETCH</a></li>
     <li><a href="#snkrdunk-sneakers">SNKRDUNK スニーカー</a></li>
     <li><a href="#snkrdunk-streetwear">SNKRDUNK ストリート</a></li>
-    <li><a href="#zozotown">ZOZOTOWN</a></li>
   </ul>
 </nav>
 <h1>ショップ最新情報</h1>
@@ -976,13 +867,6 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
   <a href="https://snkrdunk.com/apparels?type=hottest&department=apparel" target="_blank" rel="noreferrer" class="btn-all">SNKRDUNK ストリートを全部見る</a>
 </div>
 
-<div class="section" id="zozotown">
-  <h2>ZOZOTOWN <span class="badge badge-zozo">JP</span> <span class="count">{len(zozotown)} items</span></h2>
-  <div class="items">
-    {render_items(zozotown, show_brand=True)}
-  </div>
-  <a href="https://zozo.jp/ranking/all-sales-men.html" target="_blank" rel="noreferrer" class="btn-all">ZOZOTOWN を全部見る</a>
-</div>
 
 <script>
 (function(){{
@@ -1124,7 +1008,7 @@ def build_embed(site_name, site_color, items, show_brand=False, title_suffix=Non
     }
 
 
-def post_to_discord(webhook_url, zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snkr_apparel, zozotown, html_path):
+def post_to_discord(webhook_url, zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snkr_apparel, html_path):
     """Discord Webhook にランキングを投稿"""
     print("[Discord] ランキングを投稿中...")
 
@@ -1156,10 +1040,6 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, stockx, ssense, farfetch,
     time.sleep(0.5)
     requests.post(webhook_url, json={"embeds": embeds[3:6]}, timeout=15)
 
-    # ZOZOTOWN は別メッセージで
-    time.sleep(0.5)
-    requests.post(webhook_url, json={"embeds": [build_embed("ZOZOTOWN", 0x00A0E9, zozotown, show_brand=True)]}, timeout=15)
-
     print("[Discord] 投稿完了")
 
 
@@ -1190,7 +1070,6 @@ def main():
     farfetch_items = fetch_with_retry("FARFETCH", fetch_farfetch)
     snkr_sneakers = fetch_with_retry("SNKRDUNK スニーカー", fetch_snkrdunk_sneakers)
     snkr_apparel = fetch_with_retry("SNKRDUNK ストリート", fetch_snkrdunk_apparel)
-    zozotown_items = fetch_with_retry("ZOZOTOWN", fetch_zozotown)
     zara_items = fetch_with_retry("ZARA", fetch_zara)
 
     # 結果表示
@@ -1202,13 +1081,12 @@ def main():
     print_summary("FARFETCH 新着", farfetch_items)
     print_summary("SNKRDUNK スニーカー", snkr_sneakers)
     print_summary("SNKRDUNK ストリートウェア", snkr_apparel)
-    print_summary("ZOZOTOWN", zozotown_items)
 
     # 保存
-    json_path = save_json(zara_items, musinsa_items, buyma_items, stockx_items, ssense_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items)
-    html_path = save_html(zara_items, musinsa_items, buyma_items, stockx_items, ssense_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items)
+    json_path = save_json(zara_items, musinsa_items, buyma_items, stockx_items, ssense_items, farfetch_items, snkr_sneakers, snkr_apparel)
+    html_path = save_html(zara_items, musinsa_items, buyma_items, stockx_items, ssense_items, farfetch_items, snkr_sneakers, snkr_apparel)
 
-    total = len(zara_items) + len(musinsa_items) + len(buyma_items) + len(stockx_items) + len(ssense_items) + len(farfetch_items) + len(snkr_sneakers) + len(snkr_apparel) + len(zozotown_items)
+    total = len(zara_items) + len(musinsa_items) + len(buyma_items) + len(stockx_items) + len(ssense_items) + len(farfetch_items) + len(snkr_sneakers) + len(snkr_apparel)
     print(f"\n合計 {total} 件のランキングデータを取得しました。")
 
     # GitHub Pages に push（ローカル実行時のみ。CI では workflow が push する）
@@ -1225,7 +1103,7 @@ def main():
     # Discord に投稿
     webhook_url = load_webhook_url()
     if webhook_url:
-        post_to_discord(webhook_url, zara_items, musinsa_items, buyma_items, stockx_items, ssense_items, farfetch_items, snkr_sneakers, snkr_apparel, zozotown_items, html_path)
+        post_to_discord(webhook_url, zara_items, musinsa_items, buyma_items, stockx_items, ssense_items, farfetch_items, snkr_sneakers, snkr_apparel, html_path)
     else:
         print("[Discord] Webhook 未設定のため Discord 投稿をスキップ")
 
