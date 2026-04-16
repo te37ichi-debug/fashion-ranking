@@ -1355,6 +1355,66 @@ def print_summary(brand_name, items):
 
 
 # ──────────────────────────────────────────────────────────
+# GAP
+# ──────────────────────────────────────────────────────────
+
+def fetch_gap(max_items=20):
+    print("[GAP] メンズ新着アイテム取得中...")
+    import re
+    items = []
+
+    try:
+        resp = requests.get(
+            "https://www.gap.co.jp/gap/men/new-arrivals-11900",
+            headers={"User-Agent": UA},
+            timeout=30,
+        )
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        tiles = soup.select(".product-tile")
+        print(f"[GAP] カード数: {len(tiles)}")
+
+        seen_names = set()
+        for tile in tiles:
+            if len(items) >= max_items:
+                break
+
+            name_el = tile.select_one(".pdp-link a.link")
+            name = name_el.get_text(strip=True) if name_el else ""
+            if not name or name in seen_names:
+                continue
+            seen_names.add(name)
+
+            href = name_el.get("href", "") if name_el else ""
+            url = f"https://www.gap.co.jp{href}" if href.startswith("/") else href
+
+            price = ""
+            price_el = tile.select_one(".price .sales .price-value")
+            if price_el:
+                price = price_el.get_text(strip=True)
+
+            image = ""
+            img_el = tile.select_one(".image-container img")
+            if img_el:
+                image = img_el.get("src", "") or img_el.get("data-src", "")
+
+            items.append({
+                "rank": len(items) + 1,
+                "name": name,
+                "price": price,
+                "image": image,
+                "url": url,
+            })
+
+    except Exception as e:
+        print(f"[GAP] 取得失敗: {e}")
+
+    print(f"[GAP] {len(items)} 件取得")
+    return items
+
+
+# ──────────────────────────────────────────────────────────
 # メイン
 # ──────────────────────────────────────────────────────────
 
@@ -1376,6 +1436,7 @@ FETCHERS = {
     "fetch_acne_studios_buyma": fetch_acne_studios_buyma,
     "fetch_humanmade": fetch_humanmade,
     "fetch_humanmade_snkrdunk": fetch_humanmade_snkrdunk,
+    "fetch_gap": fetch_gap,
 }
 
 

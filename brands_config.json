@@ -142,5 +142,14 @@
     "badge_color": "#e63946",
     "badge_label": "POPULAR",
     "fetcher": "fetch_humanmade_snkrdunk"
+  },
+  {
+    "key": "gap",
+    "name": "GAP",
+    "url": "https://www.gap.co.jp/gap/men/new-arrivals-11900",
+    "view_all": "https://www.gap.co.jp/gap/men/new-arrivals-11900",
+    "badge_color": "#000e52",
+    "badge_label": "NEW",
+    "fetcher": "fetch_gap"
   }
 ]
