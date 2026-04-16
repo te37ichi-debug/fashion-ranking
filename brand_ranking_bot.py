@@ -1302,8 +1302,11 @@ def post_to_discord(brand_results, BRANDS):
         embeds.append(build_embed(conf["name"], color, brand_results[key], show_brand=True, badge_label=conf.get("badge_label", "NEW")))
 
     if embeds:
-        time.sleep(0.5)
-        requests.post(BRAND_WEBHOOK_URL, json={"embeds": embeds}, timeout=15)
+        time.sleep(1)
+        resp = requests.post(BRAND_WEBHOOK_URL, json={"embeds": embeds}, timeout=15)
+        # embed投稿の完了を確認してからフッターを送信
+        if resp.status_code not in (200, 204):
+            print(f"[Discord] Embed投稿失敗: {resp.status_code}")
 
     # 残りのブランド + 全ブランド一覧を案内
     # 同一ベースブランドの派生（atmos, BUYMA, SNKRDUNK）をまとめて表示
@@ -1324,7 +1327,7 @@ def post_to_discord(brand_results, BRANDS):
     footer_lines.append(f"\n**📋 チェック中の全ブランド（{len(base_brands)}件）**\n{' / '.join(base_brands)}")
     footer_lines.append(f"\n全ブランドの詳細はこちら 👉 {PAGES_URL}")
 
-    time.sleep(0.5)
+    time.sleep(2)
     requests.post(BRAND_WEBHOOK_URL, json={"content": "\n".join(footer_lines)}, timeout=15)
 
     print(f"[Discord] 投稿完了（ピックアップ: {', '.join(BRANDS[k]['name'] for k in picked)}）")
