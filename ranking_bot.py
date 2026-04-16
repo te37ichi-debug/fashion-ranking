@@ -554,66 +554,9 @@ def fetch_farfetch(max_items=20):
 
 # ─── スニーカーダンク (snkrdunk.com) ──────────────────────
 
-def _parse_snkrdunk_items(soup, link_prefix, max_items=20):
-    """snkrdunk の item-block 要素をパース"""
-    items = []
-    products = soup.select(f"a.item-block[href*='/{link_prefix}/']")
-    if not products:
-        products = soup.select("a.item-block")
-
-    for el in products[:max_items]:
-        name_el = el.select_one("p.item-name")
-        price_el = el.select_one("p.item-price")
-        img_el = el.select_one("img")
-
-        name = name_el.get_text(strip=True) if name_el else ""
-        if not name:
-            continue
-
-        price_text = price_el.get_text(strip=True) if price_el else ""
-        # "¥12,878〜即購入可" → "¥12,878〜"
-        price = price_text.split("即")[0].strip() if "即" in price_text else price_text.split("出品")[0].strip()
-
-        image = img_el.get("data-src", "") or img_el.get("src", "") if img_el else ""
-        if "loading.png" in image:
-            image = img_el.get("data-src", "") if img_el else ""
-
-        href = el.get("href", "")
-        url = f"https://snkrdunk.com{href}" if href.startswith("/") else href
-
-        items.append({
-            "rank": len(items) + 1,
-            "name": name,
-            "price": price,
-            "image": image,
-            "url": url,
-        })
-
-    return items
-
-
-def fetch_snkrdunk_sneakers(max_items=20):
-    print("[スニーカーダンク] 人気スニーカー取得中...")
-    items = []
-
-    try:
-        resp = requests.get(
-            "https://snkrdunk.com/products?type=hottest",
-            headers={"User-Agent": UA, "Accept": "text/html"},
-            timeout=15,
-        )
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
-        items = _parse_snkrdunk_items(soup, "products", max_items)
-    except Exception as e:
-        print(f"[スニーカーダンク] スニーカー取得失敗: {e}")
-
-    print(f"[スニーカーダンク] スニーカー {len(items)} 件取得")
-    return items
-
-
-def fetch_snkrdunk_apparel(max_items=20):
-    print("[スニーカーダンク] 人気ストリートウェア取得中...")
+def _fetch_snkrdunk_page(label, url, max_items=20):
+    """Playwright で snkrdunk のページを取得し productTile をパース"""
+    import re
     items = []
 
     from playwright.sync_api import sync_playwright
@@ -623,21 +566,65 @@ def fetch_snkrdunk_apparel(max_items=20):
         page = browser.new_page(user_agent=UA)
 
         try:
-            page.goto("https://snkrdunk.com/apparels?type=hottest&department=apparel", wait_until="domcontentloaded", timeout=30000)
-            page.wait_for_timeout(5000)
-            for _ in range(3):
-                page.evaluate("window.scrollBy(0, 800)")
-                page.wait_for_timeout(600)
+            page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(8000)
+            for _ in range(5):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(500)
 
             soup = BeautifulSoup(page.content(), "html.parser")
-            items = _parse_snkrdunk_items(soup, "apparels", max_items)
+            cards = soup.select("a[class*='productTile']")
+            seen_names = set()
+
+            for card in cards:
+                if len(items) >= max_items:
+                    break
+
+                name_el = card.select_one("span[class*='productName']")
+                name = name_el.get_text(strip=True) if name_el else ""
+                if not name or name in seen_names:
+                    continue
+                seen_names.add(name)
+
+                href = card.get("href", "")
+                item_url = href if href.startswith("http") else f"https://snkrdunk.com{href}"
+
+                price = ""
+                text = card.get_text(separator="|", strip=True)
+                m = re.search(r'¥\|?([\d,]+)', text)
+                if m:
+                    price = f"¥{m.group(1)}"
+
+                image = ""
+                img_el = card.select_one("img")
+                if img_el:
+                    image = img_el.get("src", "") or img_el.get("data-src", "")
+
+                items.append({
+                    "rank": len(items) + 1,
+                    "name": name,
+                    "price": price,
+                    "image": image,
+                    "url": item_url,
+                })
+
         except Exception as e:
-            print(f"[スニーカーダンク] ストリートウェア取得失敗: {e}")
+            print(f"[{label}] 取得失敗: {e}")
         finally:
             browser.close()
 
-    print(f"[スニーカーダンク] ストリートウェア {len(items)} 件取得")
+    print(f"[{label}] {len(items)} 件取得")
     return items
+
+
+def fetch_snkrdunk_sneakers(max_items=20):
+    print("[スニーカーダンク] 人気スニーカー取得中...")
+    return _fetch_snkrdunk_page("スニーカーダンク スニーカー", "https://snkrdunk.com/products?type=hottest", max_items)
+
+
+def fetch_snkrdunk_apparel(max_items=20):
+    print("[スニーカーダンク] 人気ストリートウェア取得中...")
+    return _fetch_snkrdunk_page("スニーカーダンク ストリートウェア", "https://snkrdunk.com/apparels?type=hottest&department=apparel", max_items)
 
 
 # ─── 保存 (JSON + HTML) ───────────────────────────────────
