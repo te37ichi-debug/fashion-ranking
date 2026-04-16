@@ -26,6 +26,9 @@ IS_CI = os.environ.get("CI") == "true"
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 
+# ScraperAPI（Akamai WAF 回避用）
+SCRAPER_API_KEY = os.environ.get("SCRAPER_API_KEY", "")
+
 
 def ensure_output_dir():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -34,55 +37,25 @@ def ensure_output_dir():
 # ─── ZOZOTOWN (undetected-chromedriver) ────────────────────
 
 def fetch_zozotown(max_items=20):
-    print("[ZOZOTOWN] undetected-chromedriver でランキングページにアクセス中...")
+    print("[ZOZOTOWN] ランキングページ取得中...")
     items = []
 
-    import undetected_chromedriver as uc
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-
-    options = uc.ChromeOptions()
-    options.add_argument("--lang=ja-JP")
-    options.add_argument("--window-size=1280,720")
-
-    chrome_path = os.environ.get("CHROME_PATH")
-    if chrome_path:
-        options.binary_location = chrome_path
-    # Chrome バージョンを自動検出
-    version_main = None
-    if IS_CI and chrome_path:
-        import subprocess as _sp
-        try:
-            out = _sp.check_output([chrome_path, "--version"], text=True)
-            version_main = int(out.strip().split()[-1].split(".")[0])
-        except Exception:
-            pass
-    elif not IS_CI:
-        version_main = 146
-    driver = uc.Chrome(options=options, headless=False, version_main=version_main)
-
     try:
-        driver.get("https://zozo.jp/ranking/all-sales-men.html")
-        time.sleep(6)
-
-        # ページがブロックされていないか確認
-        if "Access Denied" in driver.page_source:
-            print("[ZOZOTOWN] Akamai WAF によりブロックされました")
-            return items
-
-        # スクロールして商品を読み込む
-        for _ in range(8):
-            driver.execute_script("window.scrollBy(0, 600)")
-            time.sleep(0.6)
-
-        html = driver.page_source
+        params = {
+            "api_key": SCRAPER_API_KEY,
+            "url": "https://zozo.jp/ranking/all-sales-men.html",
+            "country_code": "jp",
+        }
+        resp = requests.get("https://api.scraperapi.com", params=params, timeout=120)
+        resp.raise_for_status()
+        html = resp.text
         soup = BeautifulSoup(html, "html.parser")
 
-        # .catalog-item が ZOZOTOWN ランキングの商品要素
+        title = soup.title.string if soup.title else "no title"
+        print(f"[ZOZOTOWN] ページタイトル: {title}, HTML長: {len(html)}")
+
         product_elements = soup.select("li.catalog-item")
-        if product_elements:
-            print(f"[ZOZOTOWN] {len(product_elements)} 件の商品を検出")
+        print(f"[ZOZOTOWN] {len(product_elements)} 件の商品を検出")
 
         for i, el in enumerate(product_elements[:max_items], 1):
             name_el = el.select_one(".catalog-property")
@@ -104,9 +77,7 @@ def fetch_zozotown(max_items=20):
                 items.append({"rank": i, "name": name, "brand": brand, "price": price, "image": image, "url": url})
 
     except Exception as e:
-        print(f"[ZOZOTOWN] エラー: {e}")
-    finally:
-        driver.quit()
+        print(f"[ZOZOTOWN] ScraperAPI取得失敗: {e}")
 
     print(f"[ZOZOTOWN] {len(items)} 件取得")
     return items
@@ -820,7 +791,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Men's Fashion Ranking {TODAY}</title>
+<title>ショップ最新情報 {TODAY}</title>
 <style>
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
   body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #333; padding: 20px; padding-top: 60px; }}
@@ -885,7 +856,7 @@ def save_html(zara, musinsa, buyma, stockx, ssense, farfetch, snkr_sneakers, snk
     <li><a href="#zozotown">ZOZOTOWN</a></li>
   </ul>
 </nav>
-<h1>Men's Fashion Ranking</h1>
+<h1>ショップ最新情報</h1>
 <p class="date">{TODAY}</p>
 
 <div class="section" id="zara">
@@ -1117,7 +1088,7 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, stockx, ssense, farfetch,
 
     # まとめリンクを一番上に投稿
     header_payload = {
-        "content": f"## 👟 Men's Fashion Ranking - {TODAY}\nまとめはこちら👉 {PAGES_URL}",
+        "content": f"## 👟 ショップ最新情報 - {TODAY}\nまとめはこちら👉 <{PAGES_URL}>",
     }
     resp = requests.post(webhook_url, json=header_payload, timeout=15)
     if resp.status_code in (200, 204):
@@ -1170,7 +1141,7 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, stockx, ssense, farfetch,
 # ─── メイン ─────────────────────────────────────────────────
 
 def main():
-    print(f"=== Men's Fashion Ranking Bot ({TODAY}) ===\n")
+    print(f"=== ショップ最新情報 Bot ({TODAY}) ===\n")
 
     def fetch_with_retry(name, fetcher, max_retries=3):
         items = []
