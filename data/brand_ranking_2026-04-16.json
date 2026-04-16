@@ -1,6 +1,6 @@
 {
   "date": "2026-04-16",
-  "fetched_at": "2026-04-16T02:07:26.876075",
+  "fetched_at": "2026-04-16T03:04:48.444065",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -877,7 +877,7 @@
         {
           "rank": 17,
           "name": "Supreme Hard Tee \"White\"",
-          "price": "¥10,888",
+          "price": "¥10,887",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/SUP-SS26-WEEK7-019-5.webp?size=m",
           "url": "https://snkrdunk.com/apparels/798999"
         },
@@ -2083,7 +2083,7 @@
     "humanmade": {
       "name": "HUMAN MADE",
       "source": "https://www.humanmade.jp/new-arrivals/",
-      "count": 3,
+      "count": 18,
       "items": [
         {
           "rank": 1,
@@ -2105,6 +2105,111 @@
           "price": "",
           "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwac1832ea/images/large/HM_1774508911126_31gvof.jpg?sw=720&sh=720&sm=fit",
           "url": "https://www.humanmade.jp/en/bag-pouch/HM31HM0416.html"
+        },
+        {
+          "rank": 4,
+          "name": "FISHING JACKET",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwa5f5a89f/images/large/HM_1776219828889_7s5cx3.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/outerwear/HM31JK016.html"
+        },
+        {
+          "rank": 5,
+          "name": "HUNTING VEST",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw85b6f418/images/large/HM_1776149326857_ujur9h.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/outerwear/HM31JK015.html"
+        },
+        {
+          "rank": 6,
+          "name": "CARGO SHORTS",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw03ad8fe2/images/large/HM_1776149326899_na14f5.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/pants/HM31PT008.html"
+        },
+        {
+          "rank": 7,
+          "name": "HUNTING SHIRT",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwe0db0609/images/large/HM_1776219828898_xi976i.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/shirts/HM31SH010.html"
+        },
+        {
+          "rank": 8,
+          "name": "PRINTED SHIRT",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw92793c72/images/large/HM_1776149326935_l3d67k.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/shirts/HM31SH011.html"
+        },
+        {
+          "rank": 9,
+          "name": "GRAPHIC L/S T-SHIRT",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw274e41d1/images/large/HM_1776149326757_3ruxae.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/t-shirts/HM31CS038.html"
+        },
+        {
+          "rank": 10,
+          "name": "GRAPHIC T-SHIRT",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw7593e664/images/large/HM_1776149326941_1tq8ht.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/t-shirts/HM31TE016.html"
+        },
+        {
+          "rank": 11,
+          "name": "LONGBILL CAP",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwe2a0c823/images/large/HM_1776149326775_cbzedc.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/cap-hat/HM31GD014.html"
+        },
+        {
+          "rank": 12,
+          "name": "HUNTING BACKPACK",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwb2def4df/images/large/HM_1776149326782_vq5qv0.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/bag-pouch/HM31GD045.html"
+        },
+        {
+          "rank": 13,
+          "name": "SHOULDER BAG",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwf6ff49a3/images/large/HM_1776149326797_l4pe8q.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/bag-pouch/HM31GD046.html"
+        },
+        {
+          "rank": 14,
+          "name": "CANVAS TOTE LARGE",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw287ddb51/images/large/HM_1776149326816_h8jz07.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/bag-pouch/HM31GD055.html"
+        },
+        {
+          "rank": 15,
+          "name": "CANVAS TOTE SMALL",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw8896720c/images/large/HM_1776149326808_dohpax.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/bag-pouch/HM31GD054.html"
+        },
+        {
+          "rank": 16,
+          "name": "BIG BANDANA",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw6867eb53/images/large/HM_1776149326834_h2qsvy.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/accessories/HM31GD100.html"
+        },
+        {
+          "rank": 17,
+          "name": "DUCK COMPACT UMBRELLA",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw5fec093d/images/large/HM_1776149326842_4yiny4.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/home-lifestyle/HM31GD104.html"
+        },
+        {
+          "rank": 18,
+          "name": "DUCK PLUSH DOLL TISSUE CASE",
+          "price": "",
+          "image": "https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw5c8f5803/images/large/HM_1776149326731_x6o829.jpg?sw=720&sh=720&sm=fit",
+          "url": "https://www.humanmade.jp/en/home-lifestyle/HM29GD150.html"
         }
       ]
     },

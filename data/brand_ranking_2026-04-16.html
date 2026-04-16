@@ -30,42 +30,37 @@
   .price { display: block; font-size: 0.9em; font-weight: 600; color: #e44; }
   .empty { color: #aaa; text-align: center; padding: 40px; }
   .count { font-size: 0.8em; color: #999; font-weight: normal; }
-  nav.toc { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #ffffff; margin: 0; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-  nav.toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0; margin: 0; padding: 0; justify-content: center; }
-  nav.toc li { flex-shrink: 0; }
-  nav.toc li a { display: block; padding: 10px 14px; color: #555; text-decoration: none; font-size: 12px; font-weight: 600; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
-  nav.toc li a:hover, nav.toc li a.active { color: #000; border-bottom-color: #000; }
-  @media (max-width: 600px) {
-    body { padding-top: 80px; }
-    nav.toc ul { justify-content: flex-start; }
-    nav.toc li a { padding: 8px 11px; font-size: 11px; }
-    .section { scroll-margin-top: 80px; }
-  }
-  .section { scroll-margin-top: 52px; }
+  nav.toc { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #ffffff; margin: 0; padding: 10px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 12px; }
+  nav.toc select { flex: 1; padding: 10px 12px; font-size: 14px; font-weight: 600; border: 2px solid #ddd; border-radius: 8px; background: #fff; color: #333; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+  nav.toc select:focus { outline: none; border-color: #333; }
+  nav.toc .brand-count { font-size: 12px; color: #888; white-space: nowrap; }
+  .section { scroll-margin-top: 60px; }
   .btn-all { display: block; margin: 16px auto 0; padding: 10px 24px; background: #333; color: #fff; border: none; border-radius: 8px; font-size: 0.85em; font-weight: 600; text-decoration: none; text-align: center; width: fit-content; transition: background 0.2s; }
   .btn-all:hover { background: #555; }
 </style>
 </head>
 <body>
 <nav class="toc">
-  <ul>
-    <li><a href="#adidas">adidas</a></li>
-    <li><a href="#adidas_atmos">adidas (atmos)</a></li>
-    <li><a href="#thug_club_buyma">Thug Club (BUYMA)</a></li>
-    <li><a href="#stussy">Stüssy</a></li>
-    <li><a href="#stussy_snkrdunk">Stüssy (SNKRDUNK)</a></li>
-    <li><a href="#supreme_snkrdunk">Supreme (SNKRDUNK)</a></li>
-    <li><a href="#supreme">Supreme</a></li>
-    <li><a href="#carhartt">Carhartt WIP</a></li>
-    <li><a href="#diesel">DIESEL</a></li>
-    <li><a href="#satur">SATUR</a></li>
-    <li><a href="#satur_buyma">SATUR (BUYMA)</a></li>
-    <li><a href="#ami_paris">AMI PARIS (BUYMA)</a></li>
-    <li><a href="#acne_studios">Acne Studios</a></li>
-    <li><a href="#acne_studios_buyma">Acne Studios (BUYMA)</a></li>
-    <li><a href="#humanmade">HUMAN MADE</a></li>
-    <li><a href="#humanmade_snkrdunk">HUMAN MADE (SNKRDUNK)</a></li>
-  </ul>
+  <select id="brand-select">
+    <option value="">ブランドを選択...</option>
+      <option value="#adidas">adidas</option>
+      <option value="#adidas_atmos">adidas (atmos)</option>
+      <option value="#thug_club_buyma">Thug Club (BUYMA)</option>
+      <option value="#stussy">Stüssy</option>
+      <option value="#stussy_snkrdunk">Stüssy (SNKRDUNK)</option>
+      <option value="#supreme_snkrdunk">Supreme (SNKRDUNK)</option>
+      <option value="#supreme">Supreme</option>
+      <option value="#carhartt">Carhartt WIP</option>
+      <option value="#diesel">DIESEL</option>
+      <option value="#satur">SATUR</option>
+      <option value="#satur_buyma">SATUR (BUYMA)</option>
+      <option value="#ami_paris">AMI PARIS (BUYMA)</option>
+      <option value="#acne_studios">Acne Studios</option>
+      <option value="#acne_studios_buyma">Acne Studios (BUYMA)</option>
+      <option value="#humanmade">HUMAN MADE</option>
+      <option value="#humanmade_snkrdunk">HUMAN MADE (SNKRDUNK)</option>
+  </select>
+  <span class="brand-count">16ブランド</span>
 </nav>
 <h1>ブランド新着情報&人気ランキング</h1>
 <p class="date">2026-04-16</p>
@@ -1275,7 +1270,7 @@
               <div class="info">
                 <div class="name"><a href="https://snkrdunk.com/apparels/798999" target="_blank" rel="noreferrer">Supreme Hard Tee "White"</a></div>
                 
-                <span class="price">¥10,888</span>
+                <span class="price">¥10,887</span>
               </div>
             </div>
 
@@ -2969,7 +2964,7 @@
 </div>
 
 <div class="section" id="humanmade">
-  <h2>HUMAN MADE <span class="badge" style="background:#e63946">NEW</span> <span class="count">3 items</span></h2>
+  <h2>HUMAN MADE <span class="badge" style="background:#e63946">NEW</span> <span class="count">18 items</span></h2>
   <div class="items">
     
             <div class="item">
@@ -2997,6 +2992,156 @@
               <div class="img-wrap"><a href="https://www.humanmade.jp/en/bag-pouch/HM31HM0416.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwac1832ea/images/large/HM_1774508911126_31gvof.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
               <div class="info">
                 <div class="name"><a href="https://www.humanmade.jp/en/bag-pouch/HM31HM0416.html" target="_blank" rel="noreferrer">DAILY TOTE #260416</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#4</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/outerwear/HM31JK016.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwa5f5a89f/images/large/HM_1776219828889_7s5cx3.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/outerwear/HM31JK016.html" target="_blank" rel="noreferrer">FISHING JACKET</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#5</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/outerwear/HM31JK015.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw85b6f418/images/large/HM_1776149326857_ujur9h.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/outerwear/HM31JK015.html" target="_blank" rel="noreferrer">HUNTING VEST</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#6</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/pants/HM31PT008.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw03ad8fe2/images/large/HM_1776149326899_na14f5.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/pants/HM31PT008.html" target="_blank" rel="noreferrer">CARGO SHORTS</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#7</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/shirts/HM31SH010.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwe0db0609/images/large/HM_1776219828898_xi976i.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/shirts/HM31SH010.html" target="_blank" rel="noreferrer">HUNTING SHIRT</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#8</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/shirts/HM31SH011.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw92793c72/images/large/HM_1776149326935_l3d67k.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/shirts/HM31SH011.html" target="_blank" rel="noreferrer">PRINTED SHIRT</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#9</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/t-shirts/HM31CS038.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw274e41d1/images/large/HM_1776149326757_3ruxae.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/t-shirts/HM31CS038.html" target="_blank" rel="noreferrer">GRAPHIC L/S T-SHIRT</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#10</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/t-shirts/HM31TE016.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw7593e664/images/large/HM_1776149326941_1tq8ht.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/t-shirts/HM31TE016.html" target="_blank" rel="noreferrer">GRAPHIC T-SHIRT</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#11</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/cap-hat/HM31GD014.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwe2a0c823/images/large/HM_1776149326775_cbzedc.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/cap-hat/HM31GD014.html" target="_blank" rel="noreferrer">LONGBILL CAP</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#12</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/bag-pouch/HM31GD045.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwb2def4df/images/large/HM_1776149326782_vq5qv0.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/bag-pouch/HM31GD045.html" target="_blank" rel="noreferrer">HUNTING BACKPACK</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#13</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/bag-pouch/HM31GD046.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dwf6ff49a3/images/large/HM_1776149326797_l4pe8q.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/bag-pouch/HM31GD046.html" target="_blank" rel="noreferrer">SHOULDER BAG</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#14</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/bag-pouch/HM31GD055.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw287ddb51/images/large/HM_1776149326816_h8jz07.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/bag-pouch/HM31GD055.html" target="_blank" rel="noreferrer">CANVAS TOTE LARGE</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#15</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/bag-pouch/HM31GD054.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw8896720c/images/large/HM_1776149326808_dohpax.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/bag-pouch/HM31GD054.html" target="_blank" rel="noreferrer">CANVAS TOTE SMALL</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#16</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/accessories/HM31GD100.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw6867eb53/images/large/HM_1776149326834_h2qsvy.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/accessories/HM31GD100.html" target="_blank" rel="noreferrer">BIG BANDANA</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#17</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/home-lifestyle/HM31GD104.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw5fec093d/images/large/HM_1776149326842_4yiny4.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/home-lifestyle/HM31GD104.html" target="_blank" rel="noreferrer">DUCK COMPACT UMBRELLA</a></div>
+                
+                
+              </div>
+            </div>
+
+            <div class="item">
+              <span class="rank">#18</span>
+              <div class="img-wrap"><a href="https://www.humanmade.jp/en/home-lifestyle/HM29GD150.html" target="_blank" rel="noreferrer"><img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw5c8f5803/images/large/HM_1776149326731_x6o829.jpg?sw=720&sh=720&sm=fit" alt="" loading="lazy"></a></div>
+              <div class="info">
+                <div class="name"><a href="https://www.humanmade.jp/en/home-lifestyle/HM29GD150.html" target="_blank" rel="noreferrer">DUCK PLUSH DOLL TISSUE CASE</a></div>
                 
                 
               </div>
@@ -3214,26 +3359,23 @@
 
 <script>
 (function(){
-  var links = document.querySelectorAll('.toc a');
-  var sections = [];
-  links.forEach(function(a){
-    var s = document.querySelector(a.getAttribute('href'));
-    if(s) sections.push({el:s, link:a});
-  });
-  function update(){
-    var scrollY = window.scrollY + 60;
-    var current = sections[0];
-    sections.forEach(function(s){
-      if(s.el.offsetTop <= scrollY) current = s;
-    });
-    links.forEach(function(a){ a.classList.remove('active'); });
-    if(current) {
-      current.link.classList.add('active');
-      var nav = document.querySelector('.toc ul');
-      var linkLeft = current.link.offsetLeft;
-      var navWidth = nav.offsetWidth;
-      nav.scrollTo({left: linkLeft - navWidth/2 + current.link.offsetWidth/2, behavior:'smooth'});
+  var sel = document.getElementById('brand-select');
+  var sections = Array.from(document.querySelectorAll('.section'));
+
+  sel.addEventListener('change', function(){
+    if(sel.value) {
+      var target = document.querySelector(sel.value);
+      if(target) target.scrollIntoView({behavior:'smooth'});
     }
+  });
+
+  function update(){
+    var scrollY = window.scrollY + 80;
+    var current = '';
+    sections.forEach(function(s){
+      if(s.offsetTop <= scrollY) current = '#' + s.id;
+    });
+    if(current && sel.value !== current) sel.value = current;
   }
   window.addEventListener('scroll', update, {passive:true});
   update();
