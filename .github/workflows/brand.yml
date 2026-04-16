@@ -1,4 +1,4 @@
-name: ショップ最新情報
+name: ブランド最新情報
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ permissions:
   contents: write
 
 jobs:
-  ranking:
+  brand:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -37,17 +37,17 @@ jobs:
       - name: Install xvfb
         run: sudo apt-get install -y xvfb
 
-      - name: Run ranking bot
+      - name: Run brand ranking bot
         env:
-          RANKING_WEBHOOK_URL: ${{ secrets.RANKING_WEBHOOK_URL }}
+          BRAND_WEBHOOK_URL: ${{ secrets.BRAND_WEBHOOK_URL }}
           SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
           DISPLAY: ":99"
-        run: xvfb-run --auto-servernum --server-args="-screen 0 1280x720x24" python ranking_bot.py
+        run: xvfb-run --auto-servernum --server-args="-screen 0 1280x720x24" python brand_ranking_bot.py
 
       - name: Commit and push results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ docs/
-          git diff --staged --quiet || git commit -m "Update shop ranking $(date +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "Update brand ranking $(date +%Y-%m-%d)"
           git push

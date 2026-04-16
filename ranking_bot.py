@@ -48,7 +48,7 @@ def fetch_zozotown(max_items=20):
             "render": "true",
             "premium": "true",
         }
-        resp = requests.get("https://api.scraperapi.com", params=params, timeout=120)
+        resp = requests.get("https://api.scraperapi.com", params=params, timeout=180)
         resp.raise_for_status()
         html = resp.text
         soup = BeautifulSoup(html, "html.parser")
