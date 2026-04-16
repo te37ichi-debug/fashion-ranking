@@ -1109,34 +1109,6 @@ def post_to_discord(webhook_url, zara, musinsa, buyma, stockx, ssense, farfetch,
     time.sleep(0.5)
     requests.post(webhook_url, json={"embeds": [build_embed("ZOZOTOWN", 0x00A0E9, zozotown, show_brand=True)]}, timeout=15)
 
-    # 各サイト TOP1 の画像を個別に大きく投稿
-    for site_name, items, color in [
-        ("ZARA", zara, 0x000000),
-        ("MUSINSA", musinsa, 0x1A1A1A),
-        ("BUYMA", buyma, 0xE91E63),
-        ("StockX", stockx, 0x006340),
-        ("SSENSE", ssense, 0x111111),
-        ("FARFETCH", farfetch, 0x222222),
-        ("SNKRDUNK", snkr_sneakers, 0xFF5722),
-        ("ZOZOTOWN", zozotown, 0x00A0E9),
-    ]:
-        if not items:
-            continue
-        top = items[0]
-        if not top.get("image"):
-            continue
-
-        image_embed = {
-            "embeds": [{
-                "title": f"{site_name} #1: {top.get('name', '')[:60]}",
-                "image": {"url": top["image"]},
-                "color": color,
-                "footer": {"text": f"{top.get('brand', '')}  {top.get('price', '')}".strip()},
-            }]
-        }
-        time.sleep(0.5)
-        requests.post(webhook_url, json=image_embed, timeout=15)
-
     print("[Discord] 投稿完了")
 
 
