@@ -1,6 +1,6 @@
 {
   "date": "2026-04-16",
-  "fetched_at": "2026-04-16T02:29:49.389090",
+  "fetched_at": "2026-04-16T02:40:45.389336",
   "zara": {
     "source": "zara.com (official API)",
     "count": 20,
@@ -63,17 +63,17 @@
       },
       {
         "rank": 9,
-        "name": "ウォッシュ加工ジッパー仕様フーディ",
-        "price": "¥7,990",
-        "image": "https://static.zara.net/assets/public/89c8/0f8d/0c1844e0b0e7/9ad46e432c57/03443334922-e1/03443334922-e1.jpg?ts=1756300898476&w=563",
-        "url": "https://www.zara.com/jp/ja/-p03443334.html"
-      },
-      {
-        "rank": 10,
         "name": "ベーシックリブタンクトップ",
         "price": "¥2,590",
         "image": "https://static.zara.net/assets/public/3b57/7e66/82be48bf87de/578294c20310/04087450250-e1/04087450250-e1.jpg?ts=1767867264397&w=563",
         "url": "https://www.zara.com/jp/ja/-p04087450.html"
+      },
+      {
+        "rank": 10,
+        "name": "ウォッシュ加工ジッパー仕様フーディ",
+        "price": "¥7,990",
+        "image": "https://static.zara.net/assets/public/89c8/0f8d/0c1844e0b0e7/9ad46e432c57/03443334922-e1/03443334922-e1.jpg?ts=1756300898476&w=563",
+        "url": "https://www.zara.com/jp/ja/-p03443334.html"
       },
       {
         "rank": 11,
