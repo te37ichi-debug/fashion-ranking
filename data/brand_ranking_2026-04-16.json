@@ -1,6 +1,6 @@
 {
   "date": "2026-04-16",
-  "fetched_at": "2026-04-16T03:04:48.444065",
+  "fetched_at": "2026-04-16T03:48:58.226587",
   "brands": {
     "adidas": {
       "name": "adidas",
@@ -442,24 +442,24 @@
         },
         {
           "rank": 18,
+          "name": "【Thug Club】Rock WALLET◆　牛革 財布",
+          "price": "¥25,980",
+          "image": "https://cdn-images.buyma.com/imgdata/item/240328/0105227226/609983302/210.jpg",
+          "url": "https://www.buyma.com/item/105227226/"
+        },
+        {
+          "rank": 19,
           "name": "★早期完売★【Thug Club】TC Slim T-shirt 7色★ユニセックス★",
           "price": "¥10,519",
           "image": "https://cdn-images.buyma.com/imgdata/item/250421/0117833332/692878910/210.jpg",
           "url": "https://www.buyma.com/item/117833332/"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "name": "【Thug Club】レザーロゴ フーディ パーカー サグクラブ",
           "price": "¥36,430",
           "image": "https://cdn-images.buyma.com/imgdata/item/241001/0111021965/655951697/210.jpg",
           "url": "https://www.buyma.com/item/111021965/"
-        },
-        {
-          "rank": 20,
-          "name": "【Thug Club】Rock WALLET◆　牛革 財布",
-          "price": "¥25,980",
-          "image": "https://cdn-images.buyma.com/imgdata/item/240328/0105227226/609983302/210.jpg",
-          "url": "https://www.buyma.com/item/105227226/"
         }
       ]
     },
@@ -877,7 +877,7 @@
         {
           "rank": 17,
           "name": "Supreme Hard Tee \"White\"",
-          "price": "¥10,887",
+          "price": "¥10,111",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/SUP-SS26-WEEK7-019-5.webp?size=m",
           "url": "https://snkrdunk.com/apparels/798999"
         },
@@ -2357,6 +2357,153 @@
           "price": "¥15,950",
           "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260202050808-0.webp?size=m",
           "url": "https://snkrdunk.com/apparels/730971"
+        }
+      ]
+    },
+    "gap": {
+      "name": "GAP",
+      "source": "https://www.gap.co.jp/gap/men/new-arrivals-11900",
+      "count": 20,
+      "items": [
+        {
+          "rank": 1,
+          "name": "キャンバス チョアジャケット",
+          "price": "¥ 17,900",
+          "image": "https://www2.assets-gap.com/webcontent/0061/888/438/cn61888438.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/canvas-chore-jacket/871086016.html?dwvar_871086016_color=871086016&cid=11900"
+        },
+        {
+          "rank": 2,
+          "name": "'90s ルーズフィット キャンバス ダブルニー カーペンターパンツ",
+          "price": "¥ 12,900",
+          "image": "https://www2.assets-gap.com/webcontent/0061/888/527/cn61888527.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/%2790s-loose-canvas-double-knee-carpenter-pants/887072016.html?dwvar_887072016_color=887072016&cid=11900"
+        },
+        {
+          "rank": 3,
+          "name": "フレンチテリー リラックスフィット GAP1969ロゴ  ジップアップパーカー",
+          "price": "¥ 7,990",
+          "image": "https://www2.assets-gap.com/webcontent/0062/277/063/cn62277063.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/french-terry-relaxed-gap-1969-logo-zip-hoodie/898689026.html?dwvar_898689026_color=898689026&cid=11900"
+        },
+        {
+          "rank": 4,
+          "name": "フレンチテリー バギー GAP1969ロゴ スウェットパンツ",
+          "price": "¥ 7,990",
+          "image": "https://www2.assets-gap.com/webcontent/0062/277/218/cn62277218.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/french-terry-baggy-gap-1969-logo-sweat-pants/898691026.html?dwvar_898691026_color=898691026&cid=11900"
+        },
+        {
+          "rank": 5,
+          "name": "オーバーサイズ GAPロゴ フレンチテリーTシャツ",
+          "price": "¥ 6,990",
+          "image": "https://www2.assets-gap.com/webcontent/0062/378/339/cn62378339.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/oversized-gap-logo-french-terry-t-shirt/894498006.html?dwvar_894498006_color=894498006&cid=11900"
+        },
+        {
+          "rank": 6,
+          "name": "リラックスフィット GAPロゴ フレンチテリー ショートパンツ",
+          "price": "¥ 5,490",
+          "image": "https://www2.assets-gap.com/webcontent/0062/286/022/cn62286022.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/relaxed-gap-logo-french-terry-shorts/894567036.html?dwvar_894567036_color=894567036&cid=11900"
+        },
+        {
+          "rank": 7,
+          "name": "スーパーバギー デニムカーペンター ショートパンツ",
+          "price": "¥ 8,990",
+          "image": "https://www2.assets-gap.com/webcontent/0061/816/308/cn61816308.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/extra-baggy-denim-carpenter-shorts/864399006.html?dwvar_864399006_color=864399006&cid=11900"
+        },
+        {
+          "rank": 8,
+          "name": "スーパーバギー ダブルニー カーペンターデニム",
+          "price": "¥ 11,900",
+          "image": "https://www2.assets-gap.com/webcontent/0061/457/497/cn61457497.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/extra-baggy-double-knee-carpenter-jeans/889852006.html?dwvar_889852006_color=889852006&cid=11900"
+        },
+        {
+          "rank": 9,
+          "name": "Young Miko ヘビーウェイト ロゴパーカー",
+          "price": "¥ 12,900",
+          "image": "https://www2.assets-gap.com/webcontent/0062/011/849/cn62011849.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/young-miko-adult-heavyweight-logo-hoodie/910779006.html?dwvar_910779006_color=910779006&cid=11900"
+        },
+        {
+          "rank": 10,
+          "name": "11インチ エッセンシャル カーゴショートパンツ",
+          "price": "¥ 6,990",
+          "image": "https://www2.assets-gap.com/webcontent/0061/658/686/cn61658686.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/11%22-essential-cargo-shorts/703768056.html?dwvar_703768056_color=703768056&cid=11900"
+        },
+        {
+          "rank": 11,
+          "name": "ヴィンテージソフト フレンチテリー GAPロゴ スウェットシャツ",
+          "price": "¥ 6,990",
+          "image": "https://www2.assets-gap.com/webcontent/0062/049/059/cn62049059.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/vintagesoft-terry-logo-sweatshirt/887941026.html?dwvar_887941026_color=887941026&cid=11900"
+        },
+        {
+          "rank": 12,
+          "name": "ヴィンテージソフト フレンチテリー GAPロゴ スウェットショートパンツ",
+          "price": "¥ 5,490",
+          "image": "https://www2.assets-gap.com/webcontent/0062/025/300/cn62025300.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/vintagesoft-terry-logo-sweat-shorts/887930006.html?dwvar_887930006_color=887930006&cid=11900"
+        },
+        {
+          "rank": 13,
+          "name": "ボクシー アイコンデニムジャケット",
+          "price": "¥ 10,900",
+          "image": "https://www2.assets-gap.com/webcontent/0061/561/102/cn61561102.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/boxy-icon-denim-jacket/873714006.html?dwvar_873714006_color=873714006&cid=11900"
+        },
+        {
+          "rank": 14,
+          "name": "リラックスフィット クロップド ストレートヘム GAPロゴ オックスフォードシャツ",
+          "price": "¥ 8,990",
+          "image": "https://www2.assets-gap.com/webcontent/0061/955/964/cn61955964.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/relaxed-crop-straight-hem-logo-oxford-shirt/868348026.html?dwvar_868348026_color=868348026&cid=11900"
+        },
+        {
+          "rank": 15,
+          "name": "コットンリネン リラックスフィット ストレートヘムシャツ",
+          "price": "¥ 7,990",
+          "image": "https://www2.assets-gap.com/webcontent/0061/561/475/cn61561475.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/linen-cotton-relaxed-straight-hem-shirt/883206106.html?dwvar_883206106_color=883206106&cid=11900"
+        },
+        {
+          "rank": 16,
+          "name": "クロシェ ニットポロシャツ",
+          "price": "¥ 5,990",
+          "image": "https://www2.assets-gap.com/webcontent/0061/658/810/cn61658810.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/crochet-sweater-polo-shirt/887946016.html?dwvar_887946016_color=887946016&cid=11900"
+        },
+        {
+          "rank": 17,
+          "name": "キース・ヘリング アイコンデニムジャケット",
+          "price": "¥ 15,900",
+          "image": "https://www2.assets-gap.com/webcontent/0062/266/399/cn62266399.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/keith-haring-icon-denim-jacket/900699006.html?dwvar_900699006_color=900699006&cid=11900"
+        },
+        {
+          "rank": 18,
+          "name": "キース・ヘリング ヘビーウェイト クロップド ジップアップパーカー",
+          "price": "¥ 12,900",
+          "image": "https://www2.assets-gap.com/webcontent/0061/976/598/cn61976598.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/keith-haring-heavyweight-crop-zip-hoodie/900702006.html?dwvar_900702006_color=900702006&cid=11900"
+        },
+        {
+          "rank": 19,
+          "name": "キース・ヘリング ヘビーウェイト ロゴ スウェットシャツ",
+          "price": "¥ 11,900",
+          "image": "https://www2.assets-gap.com/webcontent/0061/956/015/cn61956015.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/keith-haring-heavyweight-logo-sweatshirt/900704006.html?dwvar_900704006_color=900704006&cid=11900"
+        },
+        {
+          "rank": 20,
+          "name": "キース・ヘリング テクスチャーシャツ",
+          "price": "¥ 10,900",
+          "image": "https://www2.assets-gap.com/webcontent/0062/266/462/cn62266462.jpg?q=h&w=300",
+          "url": "https://www.gap.co.jp/gap/keith-haring-textured-shirt/900697006.html?dwvar_900697006_color=900697006&cid=11900"
         }
       ]
     }
